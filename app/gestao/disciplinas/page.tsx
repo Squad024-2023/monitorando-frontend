@@ -11,10 +11,14 @@ type Disciplinas = {
     id: string;
     nome: string;
     professores: Professores[];
+    turmas: Turmas[];
 };
 
 type Professores = {
     nome: string;
+};
+type Turmas = {
+    materiaTurma: string;
 };
 
 export default function Disciplinas() {
@@ -41,6 +45,7 @@ export default function Disciplinas() {
                             <th>ID</th>
                             <th>Nome</th>
                             <th>Professores</th>
+                            <th>Turmas</th>
                             <th>Ações</th>
                         </tr>
                     </thead>
@@ -52,6 +57,10 @@ export default function Disciplinas() {
                                 <td>{disciplina.nome}</td>
                                 <td>{disciplina.professores.map((professor, index) => (
                                     <span key={index}>{professor.nome}</span>
+                                ))}
+                                </td>
+                                <td>{disciplina.turmas.map((turma, index) => (
+                                    <span key={index}>{turma.materiaTurma}</span>
                                 ))}
                                 </td>
                                 <td>

@@ -7,29 +7,31 @@ import edit from '@/public/icons/edit-32-32.svg';
 import deleteI from '@/public/icons/delete-32-32.svg'
 import styles from '../gestao.module.css';
 
-type Professores = {
+type Turmas = {
     id: string;
-    nome: string;
-    telefone: string;
-    dataNascimento: string;
-    email: string;
-    tipoUsuario: string;
-    profDescricao: string;
-    disciplinas: Disciplina[];
+    materiaTurma: string;
+    tipoTurma: string;
+    dataAula: string;
+    professor: Professor;
+    alunos: Aluno[];
 };
 
-type Disciplina = {
+type Aluno = {
     nome: string;
 };
+type Professor = {
+    nome: string;
+};
+
 
 export default function Turmas() {
-    const [professores, setProfessores] = useState<Professores[]>([]);
+    const [turmas, setTurmas] = useState<Turmas[]>([]);
     useEffect(() => {
         // Faça uma chamada GET para a API Spring Boot
         axios
-            .get('http://localhost:8080/professores')
+            .get('http://localhost:8080/turmas')
             .then((response) => {
-                setProfessores(response.data);
+                setTurmas(response.data);
                 console.log(response.data);
             })
             .catch((error) => {
@@ -37,36 +39,32 @@ export default function Turmas() {
             });
     }, []);
     return (
-        <section className={styles.professores}>
+        <section className={styles.turmas}>
             <div className={styles.tableWrapper}>
-                <h1>Professores</h1>
+                <h1>Turmas</h1>
                 <table className={styles.table}>
                     <thead>
                         <tr>
                             <th>ID</th>
-                            <th>Nome</th>
-                            <th>Telefone</th>
-                            <th>Data de Nascimento</th>
-                            <th>E-Mail</th>
-                            <th>Credencial</th>
-                            <th>Descrição</th>
-                            <th>Disciplinas</th>
+                            <th>Matéria</th>
+                            <th>Tipo da Turma</th>
+                            <th>Data da Aula</th>
+                            <th>Professor</th>
+                            <th>Alunos</th>
                             <th>Ações</th>
                         </tr>
                     </thead>
                     <tbody>
                         {/* Map through the entities to generate the table rows */}
-                        {professores.map((professor, index) => (
+                        {turmas.map((turma, index) => (
                             <tr className={styles.tr} key={index}>
-                                <td key={index}>{professor.id}</td>
-                                <td>{professor.nome}</td>
-                                <td>{professor.telefone}</td>
-                                <td>{professor.dataNascimento}</td>
-                                <td>{professor.email}</td>
-                                <td>{professor.tipoUsuario}</td>
-                                <td>{professor.profDescricao}</td>
-                                <td>{professor.disciplinas.map((disciplina, index) => (
-                                    <span key={index}>{disciplina.nome}</span>
+                                <td key={index}>{turma.id}</td>
+                                <td>{turma.materiaTurma}</td>
+                                <td>{turma.tipoTurma}</td>
+                                <td>{turma.dataAula}</td>
+                                <td>{turma.professor.nome}</td>
+                                <td>{turma.alunos.map((aluno, index) => (
+                                    <span key={index}>{aluno.nome}</span>
                                 ))}
                                 </td>
                                 <td>

@@ -33,7 +33,7 @@ export default function Professores() {
                 console.log(response.data);
             })
             .catch((error) => {
-                console.error("Erro ao buscar a lista de clientes:", error);
+                console.error("Erro ao buscar a lista de professores:", error);
             });
     }, []);
     return (
