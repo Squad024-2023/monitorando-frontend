@@ -22,7 +22,7 @@ type Disciplina = {
     nome: string;
 };
 
-export default function Professores() {
+export default function Turmas() {
     const [professores, setProfessores] = useState<Professores[]>([]);
     useEffect(() => {
         // Faça uma chamada GET para a API Spring Boot
