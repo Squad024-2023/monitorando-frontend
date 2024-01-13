@@ -1,0 +1,7 @@
+.sidenav {
+    display: flex;
+    width: 80px;
+    height: 90vh;
+    background-color: red;
+    align-self: stretch;
+}
