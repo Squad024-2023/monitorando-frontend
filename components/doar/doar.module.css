@@ -1,0 +1,22 @@
+.botaoDoar {
+    border: solid .2rem rgb(var(--rosa-escuro-rgb));
+    border-radius: 1rem;
+    padding: .5rem 2rem;
+    cursor: pointer;
+    transition: 0.5s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.pig {
+    width: 32px;
+    aspect-ratio: 1/1;
+}
+
+.botaoDoar span {
+    font-size: 2rem;
+    color: rgb(var(--rosa-escuro-rgb));
+    font-weight: 800;
+}

@@ -55,7 +55,7 @@ export default function Professores() {
                         </tr>
                     </thead>
                     <tbody>
-                        {/* Map through the entities to generate the table rows */}
+                        {/* Map para listar os alunos dentro do vetor */}
                         {professores.map((professor, index) => (
                             <tr className={styles.tr} key={index}>
                                 <td key={index}>{professor.id}</td>

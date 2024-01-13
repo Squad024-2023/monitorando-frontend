@@ -7,7 +7,7 @@ import edit from '@/public/icons/edit-32-32.svg';
 import deleteI from '@/public/icons/delete-32-32.svg'
 import styles from '../gestao.module.css';
 
-type Alunos= {
+type Alunos = {
     id: string;
     nome: string;
     telefone: string;
@@ -53,7 +53,7 @@ export default function Alunos() {
                         </tr>
                     </thead>
                     <tbody>
-                        {/* Map through the entities to generate the table rows */}
+                        {/* Map para listar os alunos dentro do vetor */}
                         {alunos.map((aluno, index) => (
                             <tr className={styles.tr} key={index}>
                                 <td key={index}>{aluno.id}</td>

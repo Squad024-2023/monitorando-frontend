@@ -55,7 +55,7 @@ export default function Turmas() {
                         </tr>
                     </thead>
                     <tbody>
-                        {/* Map through the entities to generate the table rows */}
+                        {/* Map para listar os alunos dentro do vetor */}
                         {turmas.map((turma, index) => (
                             <tr className={styles.tr} key={index}>
                                 <td key={index}>{turma.id}</td>

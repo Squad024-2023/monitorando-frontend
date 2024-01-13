@@ -1,12 +1,13 @@
+.gestao,
 .professores,
 .alunos,
 .turmas,
 .disciplinas {
+    padding: var(--espaco-interno) 2rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 100%;
-    height: 100%;
     transition: all 0.3s ease-in-out;
     background-image: linear-gradient(to right bottom,
             #4d004d, #5a005a, #680068, #770177,
@@ -19,7 +20,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 2rem;
+    gap: var(--espaco-interno);
 }
 
 .tableWrapper h1::first-letter {

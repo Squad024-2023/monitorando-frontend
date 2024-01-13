@@ -1,13 +1,13 @@
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import { inter, pacifico } from './fonts'
 import './globals.css'
 import Nav from '@/components/nav/nav'
 
-const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: 'monitorando',
   description: '',
+  
 }
 
 export default function RootLayout({
@@ -17,7 +17,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={`${inter.variable} ${pacifico.variable}`}>
       <Nav />
         {children}</body>
     </html>

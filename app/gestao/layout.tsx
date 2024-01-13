@@ -16,9 +16,10 @@ export default function GestaoLayout({
   children: React.ReactNode
 }) {
   return (
-      <main className={styles.mainGestao}>
-        <Sidenav />
-        {children}
-        </main>
+
+    <main className={styles.mainGestao}>
+      <Sidenav />
+      {children}
+    </main>
   )
 }

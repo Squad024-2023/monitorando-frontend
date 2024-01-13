@@ -50,7 +50,7 @@ export default function Disciplinas() {
                         </tr>
                     </thead>
                     <tbody>
-                        {/* Map through the entities to generate the table rows */}
+                       {/* Map para listar os alunos dentro do vetor */}
                         {disciplinas.map((disciplina, index) => (
                             <tr className={styles.tr} key={index}>
                                 <td key={index}>{disciplina.id}</td>

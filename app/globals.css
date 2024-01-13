@@ -9,10 +9,11 @@
   --rosa-rgb: 153, 1, 153;
   --rosa-escuro-rgb: 77, 0, 77;
   --verde-claro-rgb: 72, 201, 2;
-  --verde-escuro-rbg: 52, 148, 0;
+  --verde-escuro-rgb: 52, 148, 0;
   --sal-rgb: 248, 247, 244;
   --max-width: 1100px;
   --border-radius: 5px;
+  --espaco-interno:4rem;
 }
 
 html {
@@ -40,6 +41,7 @@ body {
   min-height: 100vh;
   font-size: 1.4rem;
   background-color: white;
+  font-family: var(--font-inter);
 }
 
 
@@ -68,24 +70,6 @@ a {
 @viewport {
   width: device-width;
 }
-
-/* @font-face {
-  font-family: 'sun_seedregular';
-  src: url("sun-seed-webfont.woff2") format('woff2'), url("sun-seed-webfont.woff") format('woff');
-  font-weight: normal;
-  font-style: normal;
-} */
-
-section {
-  display: flex;
-  width: 100%;
-  min-height: calc(100vh - 4rem);
-  padding: 5.5rem 1rem 0;
-  border-bottom: solid 0.5rem white;
-
-}
-
-
 @keyframes animation1 {
   0% {
     opacity: 0;
