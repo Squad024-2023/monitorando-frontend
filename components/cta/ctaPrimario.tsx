@@ -1,23 +1,31 @@
 'use client'
 import Link from 'next/link'
-import styles from './doar.module.css'
-import pigAnimation from '@/public/icons/pig.json'
+import styles from './cta.module.css'
 import lottie from "lottie-web";
 import { useRef, useEffect } from 'react';
 
 
-export default function CtaSecundario() {
+type Props = {
+    link: string   //link para onde o botão vai
+    conteudo: string   //conteúdo do botão
+    ani: any        //usado para o lottie de animação do botão
+}
 
-    const container = useRef<HTMLDivElement | null>(null);;
+export default function CtaPrimario({ link, conteudo, ani }: Props) {
+
+
+    const container = useRef<HTMLDivElement | null>(null) //necessário para a animação do lottie funcionar no hover do botão inteiro
     const aniInstanceRef = useRef<any>(null) //necessário para cada botão ter sua própria instância do lottie 
 
     useEffect(() => {
         if (container.current) {
             aniInstanceRef.current = lottie.loadAnimation({
                 container: container.current,
-                loop: true,
+                loop: false,
                 autoplay: false,
-                animationData: pigAnimation,
+                animationData: ani,
+          
+
             })
 
             return () => {
@@ -26,17 +34,16 @@ export default function CtaSecundario() {
                 }
             }
         }
-    }, [pigAnimation])
-
+    }, [ani])
     return (
-        <Link className={styles.botaoDoar}
-            href='/'
+        <Link className={styles.ctaPrimario}
+            href={link}
             onMouseEnter={() => aniInstanceRef.current && aniInstanceRef.current.play()}
             onMouseLeave={() => aniInstanceRef.current && aniInstanceRef.current.pause()}
         >
-            <span>Doar</span>
+            <span>{conteudo}</span>
             <div ref={container}
-                className={styles.pig}>
+                className={styles.lottie}>
             </div>
         </Link>
     )

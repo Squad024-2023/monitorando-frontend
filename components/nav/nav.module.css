@@ -19,6 +19,7 @@
 }
 
 .menuNav li a{
+    color: rgb(var(--rosa-escuro-rgb));
     display: flex;
     align-items: center;
     justify-content: center;

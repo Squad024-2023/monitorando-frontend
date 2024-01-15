@@ -7,7 +7,7 @@ import Nav from '@/components/nav/nav'
 export const metadata: Metadata = {
   title: 'monitorando',
   description: '',
-  
+
 }
 
 export default function RootLayout({
@@ -16,10 +16,11 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
+    <html lang="pt">
       <body className={`${inter.variable} ${pacifico.variable}`}>
-      <Nav />
-        {children}</body>
+        <Nav />
+        {children}
+      </body>
     </html>
   )
 }
