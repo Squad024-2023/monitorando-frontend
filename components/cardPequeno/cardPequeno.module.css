@@ -1,0 +1,42 @@
+.cardWrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    max-width: 30rem;
+    gap: 2rem;
+    border-radius: 1rem;
+    transition: .3s;
+}
+
+.lottie {
+    width: clamp(6rem, 8vw, 10rem);
+    height: auto;
+    object-fit: contain;
+}
+
+.cardTexto {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+
+
+.cardTexto h4 {
+    color: rgb(var(--rosa-escuro-rgb));
+    width: 100%;
+    font-size:clamp(2rem, 3vw, 3.5rem);
+    font-weight: 800;
+}
+
+.cardTexto p {
+    font-size:clamp(1.5rem, 2vw, 2rem);
+    font-weight: 300;
+}
+
+.cardWrapper:hover {
+    transform: scale(1.05);
+}

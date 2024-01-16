@@ -19,8 +19,6 @@ export default function CardGrande({ titulo, img }: Props) {
                 src={img}
                 alt='imagem de um professor'
             />
-
-
             <h2>{titulo}</h2>
         </Link>
     )

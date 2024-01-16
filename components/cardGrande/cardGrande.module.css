@@ -4,25 +4,26 @@
     flex-direction: column;
     align-items: center;
     background-color: rgb(var(--rosa-escuro-rgb));
-    width: 25%;
-    padding: 2rem;
-    gap:2rem;
+    padding:2rem;
+    width: 100%;
+    max-width: 350px;
     border-radius: 1rem;
     transition: .3s;
 }
 
 .cardWrapper img {
-    width: 120px;
+    width: clamp(8rem, 10vw, 12rem);
     height: auto;
     object-fit: contain;
 }
 
 .cardWrapper h2 {
-    font-size: 4rem;
+    font-size: clamp(3rem, 3.5vw, 3rem);
     font-weight: 200;
     font-family: var(--font-pacifico);
     color: rgb(var(--sal-rgb));
 }
-.cardWrapper:hover{
+
+.cardWrapper:hover {
     transform: scale(1.05);
 }
