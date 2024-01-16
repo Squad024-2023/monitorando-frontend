@@ -15,7 +15,7 @@ export default function CtaSecundario() {
         if (container.current) {
             aniInstanceRef.current = lottie.loadAnimation({
                 container: container.current,
-                loop: true,
+                loop: false,
                 autoplay: false,
                 animationData: pigAnimation,
             })
@@ -32,7 +32,7 @@ export default function CtaSecundario() {
         <Link className={styles.botaoDoar}
             href='/'
             onMouseEnter={() => aniInstanceRef.current && aniInstanceRef.current.play()}
-            onMouseLeave={() => aniInstanceRef.current && aniInstanceRef.current.pause()}
+            onMouseLeave={() => aniInstanceRef.current && aniInstanceRef.current.stop()}
         >
             <span>Doar</span>
             <div ref={container}

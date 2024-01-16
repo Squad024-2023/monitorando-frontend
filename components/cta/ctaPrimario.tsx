@@ -13,7 +13,6 @@ type Props = {
 
 export default function CtaPrimario({ link, conteudo, ani }: Props) {
 
-
     const container = useRef<HTMLDivElement | null>(null) //necessário para a animação do lottie funcionar no hover do botão inteiro
     const aniInstanceRef = useRef<any>(null) //necessário para cada botão ter sua própria instância do lottie 
 
@@ -24,22 +23,21 @@ export default function CtaPrimario({ link, conteudo, ani }: Props) {
                 loop: false,
                 autoplay: false,
                 animationData: ani,
-          
-
-            })
+            });
 
             return () => {
                 if (aniInstanceRef.current) {
-                    aniInstanceRef.current.destroy()
+                    aniInstanceRef.current.destroy();
                 }
-            }
+            };
         }
-    }, [ani])
+    }, [ani]);
+
     return (
         <Link className={styles.ctaPrimario}
             href={link}
             onMouseEnter={() => aniInstanceRef.current && aniInstanceRef.current.play()}
-            onMouseLeave={() => aniInstanceRef.current && aniInstanceRef.current.pause()}
+            onMouseLeave={() => aniInstanceRef.current && aniInstanceRef.current.stop()}
         >
             <span>{conteudo}</span>
             <div ref={container}

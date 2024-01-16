@@ -38,7 +38,7 @@ export default function CtaSecundario({ link, conteudo, ani }: Props) {
     <Link className={styles.ctaSecundario}
       href={link}
       onMouseEnter={() => aniInstanceRef.current && aniInstanceRef.current.play()}
-      onMouseLeave={() => aniInstanceRef.current && aniInstanceRef.current.pause()}
+      onMouseLeave={() => aniInstanceRef.current && aniInstanceRef.current.stop()}
     >
       <span>{conteudo}</span>
       <div ref={container}

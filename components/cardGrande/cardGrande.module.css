@@ -1,0 +1,28 @@
+.cardWrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(var(--rosa-escuro-rgb));
+    width: 25%;
+    padding: 2rem;
+    gap:2rem;
+    border-radius: 1rem;
+    transition: .3s;
+}
+
+.cardWrapper img {
+    width: 120px;
+    height: auto;
+    object-fit: contain;
+}
+
+.cardWrapper h2 {
+    font-size: 4rem;
+    font-weight: 200;
+    font-family: var(--font-pacifico);
+    color: rgb(var(--sal-rgb));
+}
+.cardWrapper:hover{
+    transform: scale(1.05);
+}

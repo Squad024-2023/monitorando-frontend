@@ -1,22 +1,25 @@
 .ctaPrimario {
-    background-color: rgb(var(--rosa-escuro-rgb));
+    background-color: rgb(var(--sal-rgb));
     border-radius: 1rem;
     padding: 1.2rem 2rem;
     cursor: pointer;
-    transition: 0.5s;
+    transition: 0.3s;
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 1rem;
+    /* box-shadow: 0 .5rem 0 0 #BEBDBA; */
 }
+
 
 .ctaPrimario span {
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 2rem;
-    color: rgb(var(--sal-rgb));
+    color: rgb(var(--rosa-escuro-rgb));
     font-weight: 800;
+
 }
 
 .ctaSecundario {
@@ -24,14 +27,23 @@
     border-radius: 1rem;
     padding: 1rem 2rem;
     cursor: pointer;
-    transition: 0.5s;
+    transition: 0.3s;
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 1rem;
+    /* box-shadow: 0 .5rem 0 0 #BEBDBA */
+}
+.ctaPrimario:active,
+.ctaSecundario:active {
+    transform: scale(0.98);
+    /* box-shadow: 0 0 0 0 #BEBDBA; */
 }
 
 .ctaSecundario span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-size: 2rem;
     color: rgb(var(--sal-rgb));
     font-weight: 800;
@@ -40,4 +52,7 @@
 .lottie {
     width: 32px;
     aspect-ratio: 1/1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
