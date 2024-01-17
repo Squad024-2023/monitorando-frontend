@@ -5,13 +5,15 @@
   /*--rosa-escuro: #4d004d;*/
   /*--verde-claro: #48c902; */
   /*--verde-escuro: #349400; */
-  /*--sal: #F8F7F4; */
+  /*--sal:  ; */
+  /*--cinza-escuro: #191716; */
   --rosa-claro-rgb: 230, 2, 230;
   --rosa-rgb: 153, 1, 153;
   --rosa-escuro-rgb: 77, 0, 77;
   --verde-claro-rgb: 72, 201, 2;
   --verde-escuro-rgb: 52, 148, 0;
   --sal-rgb: 248, 247, 244;
+  --cinza-escuro-rgb: 25, 23, 22;
   --max-width: 1100px;
   --border-radius: 5px;
   --espaco-interno:4rem;

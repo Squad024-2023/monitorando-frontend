@@ -48,7 +48,6 @@ export default function Alunos() {
                             <th>Data de Nascimento</th>
                             <th>E-Mail</th>
                             <th>Credencial</th>
-                            <th>Turmas</th>
                             <th>Ações</th>
                         </tr>
                     </thead>
@@ -62,10 +61,6 @@ export default function Alunos() {
                                 <td>{aluno.dataNascimento}</td>
                                 <td>{aluno.email}</td>
                                 <td>{aluno.tipoUsuario}</td>
-                                <td>{aluno.turmas.map((turma, index) => (
-                                    <span key={index}>{turma.materiaTurma}</span>
-                                ))}
-                                </td>
                                 <td>
                                     <div className={styles.bts}>
                                         <Link className={styles.edit} href={'/'}><Image

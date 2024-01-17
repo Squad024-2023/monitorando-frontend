@@ -8,7 +8,7 @@ export const inter = Inter({
 })
  
 export const sunSeed = localFont({
-  src: './sun-seed-webfont.woff2',
+  src: './sunSeedBold.woff2',
   variable:'--font-sun',
 })
 

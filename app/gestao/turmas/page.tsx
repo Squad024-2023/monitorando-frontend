@@ -44,6 +44,7 @@ export default function Turmas() {
                 <h1>Turmas</h1>
                 <table className={styles.table}>
                     <thead>
+           
                         <tr>
                             <th>ID</th>
                             <th>Matéria</th>
@@ -57,6 +58,7 @@ export default function Turmas() {
                     <tbody>
                         {/* Map para listar os alunos dentro do vetor */}
                         {turmas.map((turma, index) => (
+                              
                             <tr className={styles.tr} key={index}>
                                 <td key={index}>{turma.id}</td>
                                 <td>{turma.materiaTurma}</td>

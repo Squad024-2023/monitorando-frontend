@@ -5,7 +5,6 @@
   justify-content: space-between;
   align-items: center;
   min-height: 100vh;
-  gap: 10rem;
 }
 
 .section1 {
@@ -15,19 +14,17 @@
   align-items: center;
   width: 100%;
   min-height: 100vh;
+  padding: 0 5%;
   background-color: rgb(var(--sal-rgb));
 
 }
 
 .heroImage {
-
   position: absolute;
   display: block;
   height: 90vh;
   width: 100%;
   background-color: rgba(var(--rosa-escuro-rgb), 0.2);
-
-
 }
 
 .heroImage img {
@@ -35,10 +32,6 @@
   object-position: bottom;
   filter: contrast(0.7) brightness(0.5);
   mix-blend-mode: hard-light;
-
-
-
-
 }
 
 .tela1 {
@@ -51,6 +44,7 @@
   min-height: 100vh;
   max-width: 1240px;
   z-index: 1;
+  margin-bottom: 8rem;
 }
 
 .textoTela1 {
@@ -102,16 +96,79 @@
 }
 
 .section2 {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 100vh;
+  margin-top: 5%;
+  padding: 0 5%;
+}
+
+.tela2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 5% 0 0;
+  gap: 5%;
+  height: 100%;
+  background-color: rgba(var(--sal-rgb), 1);
+  border-radius: 50% 0 50% 50%;
+  box-shadow:  .4rem .5rem 1rem rgba(var(--cinza-escuro-rgb), 0.2);
+}
+
+.imgTela2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: clamp(30rem, 30vw, 50rem);
+  height: clamp(30rem, 30vw, 50rem);
+  object-fit: cover;
+  border: solid 2rem rgba(var(--verde-claro-rgb), 1);
+  border-radius: 50% 0 50% 50%;
+  box-shadow: 0px 0px 0px 1rem rgba(var(--verde-claro-rgb), 0.3);
+}
+
+.textoTela2 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2rem;
+  max-width: 40rem;
+  height: 100%;
+}
+
+.textoTela2 h1 {
+  color: rgb(var(--verde-claro-rgb));
+  font-size: 3rem;
+  line-height: 0.8;
+}
+
+.textoTela2 p {
+  color: rgba(var(--cinza-escuro-rgb), 0.8);
+  font-size: 1.8rem;
+  font-weight: 400;
+  line-height: 1.2;
+}
+.textoTela2 p span {
+  color: rgb(var(--rosa-escuro-rgb));
+  font-weight: 700;
+}
+
+.section3 {
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   margin-top: 5%;
-  background-color: #ffffff;
+  padding: 0 5%;
+  background-color: rgb(var(--sal-rgb));
 }
 
-.tela2 {
+.tela3 {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -121,40 +178,25 @@
   height: 100%;
 }
 
-.tela2 h1 {
+.tela3 h1 {
   font-size: 4rem;
   color: rgb(var(--rosa-escuro-rgb));
   line-height: 0.8;
 }
 
-.tela2 h1 span {
+.tela3 h1 span {
   color: rgb(var(--rosa-escuro-rgb));
   padding: 1rem;
   font-family: var(--font-sun);
-  border-radius: 1rem;
-  font-weight: bolder;
+  text-shadow: 0px .4rem .4rem rgba(var(--rosa-escuro-rgb), 0.5);
 }
 
 
-.cardContainer2 {
+.cardContainer3 {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   width: 80%;
   height: 100%;
   gap: 5%;
   padding: 1rem;
-}
-
-
-
-.section2Header {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 5rem;
-  color: rgb(var(--rosa-escuro-rgb));
-  line-height: 0.8;
-  height: 40%;
-  width: 100%;
-  background-color: red;
 }

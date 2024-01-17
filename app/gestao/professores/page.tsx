@@ -50,7 +50,6 @@ export default function Professores() {
                             <th>E-Mail</th>
                             <th>Credencial</th>
                             <th>Descrição</th>
-                            <th>Disciplinas</th>
                             <th>Ações</th>
                         </tr>
                     </thead>
@@ -65,10 +64,6 @@ export default function Professores() {
                                 <td>{professor.email}</td>
                                 <td>{professor.tipoUsuario}</td>
                                 <td>{professor.profDescricao}</td>
-                                <td>{professor.disciplinas.map((disciplina, index) => (
-                                    <span key={index}>{disciplina.nome}</span>
-                                ))}
-                                </td>
                                 <td>
                                     <div className={styles.bts}>
                                         <Link className={styles.edit} href={'/'}><Image

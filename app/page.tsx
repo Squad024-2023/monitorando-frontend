@@ -10,6 +10,7 @@ import CardGrande from '@/components/cardGrande/cardGrande'
 import teacher from '@/public/icons/teacher.png'
 import students from '@/public/icons/students.png'
 import review from '@/public/icons/review.png'
+import cansada from '@/public/images/studentTired.webp'
 import CardPequeno from '@/components/cardPequeno/cardPequeno'
 import monitores from '@/public/images/osMonitores.svg'
 import linguagem from '@/public/images/aLinguagem.svg'
@@ -55,12 +56,30 @@ export default function Home() {
             <CardGrande titulo='Depoimentos' img={review} />
           </div>
         </div>
-
       </section>
       <section className={styles.section2}>
         <div className={styles.tela2}>
+          <Image
+            className={styles.imgTela2}
+            sizes="50vw"
+            quality={100}
+            placeholder='blur'
+            alt='Imagem de estudante cansada'
+            src={cansada}
+          ></Image>
+          <div className={styles.textoTela2}>
+            <h1>Quando o sonho se torna pesadelo</h1>
+            <p> É comum que estudantes se sintam perdidos e desmotivados, principalmente nos primeiros semestres.
+              O sentimento de incapacidade e frustração, pode levar a depressão e ansiedade.
+              Experimente como <span>monitorando</span> pode ser aquele parceirão que você não sabia que precisava.
+            </p>
+          </div>
+        </div>
+      </section>
+      <section className={styles.section3}>
+        <div className={styles.tela3}>
           <h1>Por que escolher a <span>monitorando</span>?</h1>
-          <div className={styles.cardContainer2}>
+          <div className={styles.cardContainer3}>
             <CardPequeno titulo='Os Monitores'
               texto='Estão sempre prontos pra tirar suas dúvidas. Seja no computador ou no telefone.'
               ani={monitores} />
@@ -72,13 +91,12 @@ export default function Home() {
             <CardPequeno titulo='Você Escolhe'
               texto='Se quer monitoria individual ou fazer parte de uma turma.'
               ani={voceEscolhe} />
-            <CardPequeno titulo='Um Monitor'
+            <CardPequeno titulo='Você Monitor'
               texto='Pode usar as suas horas de monitoria como horas extracurriculares.'
               ani={umMonitor} />
             <CardPequeno titulo='Conecte-se'
               texto='Com outros estudantes, espanda sua network e faça amizades.'
               ani={conectSe} />
-
           </div>
         </div>
       </section>
