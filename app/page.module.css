@@ -34,7 +34,7 @@
   object-fit: cover;
   object-position: bottom;
   filter: contrast(0.7) brightness(0.5);
-  mix-blend-mode:hard-light;
+  mix-blend-mode: hard-light;
 
 
 
@@ -125,6 +125,14 @@
   font-size: 4rem;
   color: rgb(var(--rosa-escuro-rgb));
   line-height: 0.8;
+}
+
+.tela2 h1 span {
+  color: rgb(var(--rosa-escuro-rgb));
+  padding: 1rem;
+  font-family: var(--font-sun);
+  border-radius: 1rem;
+  font-weight: bolder;
 }
 
 

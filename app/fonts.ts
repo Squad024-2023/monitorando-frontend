@@ -9,7 +9,7 @@ export const inter = Inter({
  
 export const sunSeed = localFont({
   src: './sun-seed-webfont.woff2',
-  weight: '800',
+  variable:'--font-sun',
 })
 
 export const pacifico = Pacifico({

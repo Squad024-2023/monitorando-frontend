@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { inter, pacifico } from './fonts'
+import { inter, pacifico, sunSeed } from './fonts'
 import './globals.css'
 import Nav from '@/components/nav/nav'
 
@@ -17,7 +17,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="pt">
-      <body className={`${inter.variable} ${pacifico.variable}`}>
+      <body className={`${inter.variable} ${pacifico.variable} ${sunSeed.variable}`}>
         <Nav />
         {children}
       </body>

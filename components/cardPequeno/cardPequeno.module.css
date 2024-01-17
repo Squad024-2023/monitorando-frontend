@@ -4,13 +4,13 @@
     flex-direction: column;
     padding: 2rem;
     max-width: 30rem;
-    gap: 2rem;
+    gap: 1rem;
     border-radius: 1rem;
     transition: .3s;
 }
 
-.lottie {
-    width: clamp(6rem, 8vw, 10rem);
+.cardWrapper img {
+    width: clamp(10rem, 15vw, 30rem);
     height: auto;
     object-fit: contain;
 }
@@ -22,7 +22,6 @@
     align-items: center;
     gap: 1rem;
 }
-
 
 
 .cardTexto h4 {
