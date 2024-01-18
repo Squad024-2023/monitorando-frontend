@@ -3,6 +3,7 @@ import styles from './page.module.css'
 import Image from 'next/image'
 import seta from '@/public/icons/arrow-rosa.json'
 import professor from '@/public/icons/teacher.json'
+import HeroImage from '@/components/heroImage/heroImage'
 import heroImage from '@/public/images/studentsBG3.webp'
 import CtaPrimario from '@/components/cta/ctaPrimario'
 import CtaSecundario from '@/components/cta/ctaSecundario'
@@ -24,26 +25,12 @@ export default function Home() {
   return (
     <main className={styles.main}>
       <section className={styles.section1}>
-        <div className={styles.heroImage}>
-          <Image
-            fill
-            sizes="100vw"
-            priority
-            quality={100}
-            placeholder='blur'
-            alt='Imagem de estudantes'
-            src={heroImage}
-            style={{
-              objectFit: 'cover',
-            }}
-          ></Image>
-        </div>
+        <HeroImage img={heroImage} />
         <div className={styles.tela1}>
           <div className={styles.textoTela1}>
             <h1>Seu <span>sucesso acadêmico começa aqui</span></h1>
-            <p>Estudantes passam por inúmeras dificuldades durante sua graduação,
-              principalmente nos primeiros semestres. Nossos monitores e mentores estão revolucionando
-              a forma de ensino e aprendizagem, assim garantindo chances iguais de sucesso para todos.
+            <p>Com monitorias e mentorias personalizadas, didáticas atuais e uma boa dose de empatia,
+              a gente tá virando o jogo no jeito de aprender e ensinar. É tudo pra todo mundo ter chances iguais sucesso.
             </p>
           </div>
           <div className={styles.tela1Bts}>
@@ -69,9 +56,9 @@ export default function Home() {
           ></Image>
           <div className={styles.textoTela2}>
             <h1>Quando o sonho se torna pesadelo</h1>
-            <p> É comum que estudantes se sintam perdidos e desmotivados, principalmente nos primeiros semestres.
-              O sentimento de incapacidade e frustração, pode levar a depressão e ansiedade.
-              Experimente como <span>monitorando</span> pode ser aquele parceirão que você não sabia que precisava.
+            <p>É normal bater aquela confusão e desânimo na faculdade, especialmente nos primeiros semestres.
+              O sentimento de incapacidade e frustração, pode acabar afetando nossa saúde mental.
+              Experimente como <span>monitorando</span> pode ser aquele suporte que você não sabia que precisava.
             </p>
           </div>
         </div>
@@ -86,7 +73,8 @@ export default function Home() {
             <CardPequeno titulo='A Linguagem'
               texto='É dinâmica para facilitar o entendimento, tornando-a acessível para todos.'
               ani={linguagem} />
-            <CardPequeno titulo='Desenvolva' texto='Disciplinas acadêmicas e também suas habilidades comportamentais.'
+            <CardPequeno titulo='Desenvolva'
+              texto='Disciplinas acadêmicas e também suas habilidades comportamentais.'
               ani={desenvolva} />
             <CardPequeno titulo='Você Escolhe'
               texto='Se quer monitoria individual ou fazer parte de uma turma.'
@@ -99,6 +87,37 @@ export default function Home() {
               ani={conectSe} />
           </div>
         </div>
+      </section>
+      <section className={styles.section4}>
+        <div className={styles.tela4}>
+          <ol className={styles.timeline}>
+            <div className={styles.linhaClara}></div>
+            <div className={styles.linhaCor}></div>
+            <li className={styles.timeElemento1}>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Temporibus voluptates, recusandae fugiat qui iure cum sunt doloremque,
+                similique enim dicta obcaecati eius facilis nulla facere ad distinctio,
+                dignissimos nam quo.</p>
+
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Temporibus voluptates, recusandae fugiat qui iure cum sunt doloremque,
+                similique enim dicta obcaecati eius facilis nulla facere ad distinctio,
+                dignissimos nam quo.</p>
+            </li>
+            <li className={styles.timeElemento2}>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Temporibus voluptates, recusandae fugiat qui iure cum sunt doloremque,
+                similique enim dicta obcaecati eius facilis nulla facere ad distinctio,
+                dignissimos nam quo.</p>
+
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Temporibus voluptates, recusandae fugiat qui iure cum sunt doloremque,
+                similique enim dicta obcaecati eius facilis nulla facere ad distinctio,
+                dignissimos nam quo.</p>
+            </li>
+          </ol>
+        </div>
+
       </section>
     </main>
   )

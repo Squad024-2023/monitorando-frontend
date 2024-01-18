@@ -19,22 +19,8 @@
 
 }
 
-.heroImage {
-  position: absolute;
-  display: block;
-  height: 90vh;
-  width: 100%;
-  background-color: rgba(var(--rosa-escuro-rgb), 0.2);
-}
-
-.heroImage img {
-  object-fit: cover;
-  object-position: bottom;
-  filter: contrast(0.7) brightness(0.5);
-  mix-blend-mode: hard-light;
-}
-
 .tela1 {
+  padding: 2rem;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -43,8 +29,8 @@
   width: 100%;
   min-height: 100vh;
   max-width: 1240px;
-  z-index: 1;
   margin-bottom: 8rem;
+
 }
 
 .textoTela1 {
@@ -74,6 +60,7 @@
   max-width: 900px;
   font-size: 2.2rem;
   color: #ffffff;
+  text-shadow: 0px .4rem .4rem rgba(0, 0, 0, 0.5);
 }
 
 .tela1Bts {
@@ -91,7 +78,6 @@
   align-items: center;
   width: 100%;
   gap: 5%;
-  padding: 1rem 0;
   place-items: center;
 }
 
@@ -116,7 +102,7 @@
   height: 100%;
   background-color: rgba(var(--sal-rgb), 1);
   border-radius: 50% 0 50% 50%;
-  box-shadow:  .4rem .5rem 1rem rgba(var(--cinza-escuro-rgb), 0.2);
+  box-shadow: .4rem .5rem 1rem rgba(var(--cinza-escuro-rgb), 0.2);
 }
 
 .imgTela2 {
@@ -135,7 +121,8 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 2rem;
+  gap: 1rem;
+  padding: 0 1rem;
   max-width: 40rem;
   height: 100%;
 }
@@ -143,15 +130,16 @@
 .textoTela2 h1 {
   color: rgb(var(--verde-claro-rgb));
   font-size: 3rem;
-  line-height: 0.8;
+  line-height: 0.9;
 }
 
 .textoTela2 p {
   color: rgba(var(--cinza-escuro-rgb), 0.8);
   font-size: 1.8rem;
   font-weight: 400;
-  line-height: 1.2;
+  text-align: justify;
 }
+
 .textoTela2 p span {
   color: rgb(var(--rosa-escuro-rgb));
   font-weight: 700;
@@ -191,7 +179,6 @@
   text-shadow: 0px .4rem .4rem rgba(var(--rosa-escuro-rgb), 0.5);
 }
 
-
 .cardContainer3 {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -199,4 +186,67 @@
   height: 100%;
   gap: 5%;
   padding: 1rem;
+}
+
+.section4 {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  min-height: 100vh;
+  margin-top: 5%;
+  padding: 0 5%;
+}
+
+.tela4 {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 5%;
+  width: 60%;
+  min-height: 100vh;
+  background-color: peru;
+}
+
+.linhaClara {
+  position: absolute;
+  left: 20%;
+  top: 0;
+  height: 100%;
+  width: .5rem;
+  background-color: rgba(var(--cinza-escuro-rgb), 0.2);
+}
+
+.linhaCor {
+  position: absolute;
+  left: 20%;
+  top: 0;
+  height: 50%;
+  width: .5rem;
+  background-color: rgba(var(--rosa-escuro-rgb), 1);
+  z-index: 1;
+}
+
+.timeElemento1,
+.timeElemento2 {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  right: -20%;
+  gap: 1rem;
+  width: 40%;
+  height: 100%;
+  padding: 1rem;
+  background-color: aqua;
+}
+.timeElemento1{
+  top: -50%;
+}
+.timeElemento2{
+  top: 50%;
 }
