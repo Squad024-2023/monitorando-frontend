@@ -1,4 +1,5 @@
 'use client'
+import { useState } from 'react'
 import styles from './page.module.css'
 import Image from 'next/image'
 import seta from '@/public/icons/arrow-rosa.json'
@@ -21,6 +22,13 @@ import umMonitor from '@/public/images/umMonitor.svg'
 import conectSe from '@/public/images/conecteSe.svg'
 
 export default function Home() {
+
+  const [switcher, setSwitch] = useState<boolean>(true);
+  const handleClickEvent = () => {
+    setSwitch(!switcher);
+  }
+
+
 
   return (
     <main className={styles.main}>
@@ -90,10 +98,33 @@ export default function Home() {
       </section>
       <section className={styles.section4}>
         <div className={styles.tela4}>
+          <h1 className={`${styles.comoComeçar}
+             ${switcher ? styles.alunoH : styles.professorH}`}>
+            Como Começar?
+          </h1>
+          <div className={styles.switcherWrapper}>
+            <span
+              className={`${styles.labelSwitcher} 
+              ${switcher ? styles.alunoH : ''}`}>
+              Alunos
+            </span>
+            <div className={`${styles.switcher} ${switcher ? styles.alunoSwitcher : styles.professorSwitcher}`}>
+              <button
+                className={switcher ? styles.alunoBtn : styles.professorBtn}
+                type='button'
+                onClick={handleClickEvent}>
+              </button>
+            </div>
+            <span className={`${styles.labelSwitcher}
+             ${switcher ? '' : styles.professorH}`}>
+              Professor
+            </span>
+          </div>
           <ol className={styles.timeline}>
             <div className={styles.linhaClara}></div>
-            <div className={styles.linhaCor}></div>
-            <li className={styles.timeElemento1}>
+            <div className={`${styles.linhaCor}
+             ${switcher ? styles.alunoB : styles.professorB}`}></div>
+            <li className={styles.timeElemento}>
               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Temporibus voluptates, recusandae fugiat qui iure cum sunt doloremque,
                 similique enim dicta obcaecati eius facilis nulla facere ad distinctio,
@@ -104,7 +135,40 @@ export default function Home() {
                 similique enim dicta obcaecati eius facilis nulla facere ad distinctio,
                 dignissimos nam quo.</p>
             </li>
-            <li className={styles.timeElemento2}>
+            <li className={styles.timeElemento}>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Temporibus voluptates, recusandae fugiat qui iure cum sunt doloremque,
+                similique enim dicta obcaecati eius facilis nulla facere ad distinctio,
+                dignissimos nam quo.</p>
+
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Temporibus voluptates, recusandae fugiat qui iure cum sunt doloremque,
+                similique enim dicta obcaecati eius facilis nulla facere ad distinctio,
+                dignissimos nam quo.</p>
+            </li>
+            <li className={styles.timeElemento}>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Temporibus voluptates, recusandae fugiat qui iure cum sunt doloremque,
+                similique enim dicta obcaecati eius facilis nulla facere ad distinctio,
+                dignissimos nam quo.</p>
+
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Temporibus voluptates, recusandae fugiat qui iure cum sunt doloremque,
+                similique enim dicta obcaecati eius facilis nulla facere ad distinctio,
+                dignissimos nam quo.</p>
+            </li>
+            <li className={styles.timeElemento}>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Temporibus voluptates, recusandae fugiat qui iure cum sunt doloremque,
+                similique enim dicta obcaecati eius facilis nulla facere ad distinctio,
+                dignissimos nam quo.</p>
+
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Temporibus voluptates, recusandae fugiat qui iure cum sunt doloremque,
+                similique enim dicta obcaecati eius facilis nulla facere ad distinctio,
+                dignissimos nam quo.</p>
+            </li>
+            <li className={styles.timeElemento}>
               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Temporibus voluptates, recusandae fugiat qui iure cum sunt doloremque,
                 similique enim dicta obcaecati eius facilis nulla facere ad distinctio,
