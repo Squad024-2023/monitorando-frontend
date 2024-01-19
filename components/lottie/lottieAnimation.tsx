@@ -12,7 +12,6 @@ export default function LottieAnimation({ ani }: Props) {
     const aniInstanceRef = useRef<any>(null) //necessário para cada botão ter sua própria instância do lottie 
 
     useEffect(() => {
-        console.log('Animation Data:', ani);
         if (container.current) {
             aniInstanceRef.current = lottie.loadAnimation({
                 container: container.current,

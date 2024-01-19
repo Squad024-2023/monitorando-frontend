@@ -241,8 +241,26 @@ export default function Home() {
         </div>
 
       </section>
-      <section className={styles.section4}>
+      <section className={styles.section5}>
+        <h1>O melhor a gente deixa pro final</h1>
+        <div className={styles.tela5}>
 
+          <CardPequeno titulo='Alunos'
+            texto='Cursando graduação através de bolsas fornecidas pelo FIES ou PROUNI não paga nada na nossa plataforma!
+              É tudo de graça pra te dar aquela força, sem comprometer sua vida financeira.'
+            ani={teacher} />
+
+          <CardPequeno titulo='Esudantes'
+            texto='Que não se encaixam no nosso programa de gratuidade, também pode utilizar nossa plataforma
+              pagando o valor das horas de cada professor.'
+            ani={teacher} />
+
+          <CardPequeno titulo='Monitores'
+            texto='receberão por horas lecionadas independente de atender Alunos
+              que se encaixam no nosso programa de gratuidade ou não.'
+            ani={teacher} />
+
+        </div>
       </section>
     </main>
   )
