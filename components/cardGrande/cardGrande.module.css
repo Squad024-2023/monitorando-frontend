@@ -3,8 +3,9 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: flex-start;
     background-color: rgb(var(--rosa-escuro-rgb));
-    padding:2rem;
+    padding: clamp(.5rem, 2vw, 2rem);
     width: 100%;
     max-width: 350px;
     border-radius: 1rem;
@@ -12,13 +13,13 @@
 }
 
 .cardWrapper img {
-    width: clamp(8rem, 10vw, 12rem);
+    width: clamp(2rem, 10vw, 12rem);
     height: auto;
     object-fit: contain;
 }
 
 .cardWrapper h2 {
-    font-size: clamp(3rem, 3.5vw, 3rem);
+    font-size: clamp(1.5rem, 3.5vw, 3rem);
     font-weight: 200;
     font-family: var(--font-pacifico);
     color: rgb(var(--sal-rgb));

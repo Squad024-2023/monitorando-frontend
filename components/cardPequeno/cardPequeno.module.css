@@ -2,16 +2,20 @@
     position: relative;
     display: flex;
     flex-direction: column;
-    padding: 2rem;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
     max-width: 30rem;
-    gap: 1rem;
+    height: 38rem;
+    gap: .5rem;
     border-radius: 1rem;
     transition: .3s;
+    
 }
 
 .cardWrapper img {
-    width: clamp(10rem, 15vw, 30rem);
-    height: auto;
+    width: auto;
+    height: clamp(10rem, 22vh, 25rem);
     object-fit: contain;
 }
 

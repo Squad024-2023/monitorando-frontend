@@ -5,7 +5,7 @@
   /*--rosa-escuro: #4d004d;*/
   /*--verde-claro: #48c902; */
   /*--verde-escuro: #349400; */
-  /*--sal:  ; */
+  /*--sal:f8f7f4; */
   /*--cinza-escuro: #191716; */
   --rosa-claro-rgb: 230, 2, 230;
   --rosa-rgb: 153, 1, 153;
@@ -37,6 +37,7 @@ html,
 body {
   max-width: 100vw;
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 

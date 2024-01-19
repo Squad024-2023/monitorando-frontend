@@ -1,5 +1,5 @@
 'use client'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import styles from './page.module.css'
 import Image from 'next/image'
 import seta from '@/public/icons/arrow-rosa.json'
@@ -22,13 +22,37 @@ import umMonitor from '@/public/images/umMonitor.svg'
 import conectSe from '@/public/images/conecteSe.svg'
 
 export default function Home() {
-
   const [switcher, setSwitch] = useState<boolean>(true);
   const handleClickEvent = () => {
     setSwitch(!switcher);
   }
 
+  const [visivel, setVisivel] = useState<{ [key: string]: boolean }>({});
 
+  const handleScroll = () => {
+    const marcadores = document.querySelectorAll('[id^="marcador"]');
+
+    marcadores.forEach((element) => {
+      const elementRect = element.getBoundingClientRect();
+      const threshold = 0.7;
+      const triggerPosition = window.innerHeight * threshold;
+
+      const isElementVisible = elementRect.top < triggerPosition;
+
+      setVisivel((prevVisibility) => ({
+        ...prevVisibility,
+        [element.id]: isElementVisible,
+      }));
+    });
+  };
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
 
   return (
     <main className={styles.main}>
@@ -66,7 +90,7 @@ export default function Home() {
             <h1>Quando o sonho se torna pesadelo</h1>
             <p>É normal bater aquela confusão e desânimo na faculdade, especialmente nos primeiros semestres.
               O sentimento de incapacidade e frustração, pode acabar afetando nossa saúde mental.
-              Experimente como <span>monitorando</span> pode ser aquele suporte que você não sabia que precisava.
+              Venha descobrir como <span>monitorando</span> pode ser aquele suporte que você não sabia que precisava.
             </p>
           </div>
         </div>
@@ -85,7 +109,7 @@ export default function Home() {
               texto='Disciplinas acadêmicas e também suas habilidades comportamentais.'
               ani={desenvolva} />
             <CardPequeno titulo='Você Escolhe'
-              texto='Se quer monitoria individual ou fazer parte de uma turma.'
+              texto='O formato da sua monitoria se vai ser individual ou vai fazer parte de uma turma.'
               ani={voceEscolhe} />
             <CardPequeno titulo='Você Monitor'
               texto='Pode usar as suas horas de monitoria como horas extracurriculares.'
@@ -123,64 +147,68 @@ export default function Home() {
           <ol className={styles.timeline}>
             <div className={styles.linhaClara}></div>
             <div className={`${styles.linhaCor}
-             ${switcher ? styles.alunoB : styles.professorB}`}></div>
-            <li className={styles.timeElemento}>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Temporibus voluptates, recusandae fugiat qui iure cum sunt doloremque,
-                similique enim dicta obcaecati eius facilis nulla facere ad distinctio,
-                dignissimos nam quo.</p>
+             ${switcher ? styles.alunoB : styles.professorB}`}
+            style={{ height: visivel.marcador1 ? visivel.marcador2 ? visivel.marcador3 ? '85%' : '40%' : '0%' : '0%' }} 
+            
+            
+             >
+            </div>
+            <div className={styles.marcadorWrapper}>
 
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Temporibus voluptates, recusandae fugiat qui iure cum sunt doloremque,
-                similique enim dicta obcaecati eius facilis nulla facere ad distinctio,
-                dignissimos nam quo.</p>
-            </li>
-            <li className={styles.timeElemento}>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Temporibus voluptates, recusandae fugiat qui iure cum sunt doloremque,
-                similique enim dicta obcaecati eius facilis nulla facere ad distinctio,
-                dignissimos nam quo.</p>
+              <div id='marcador1'
+                className={`${styles.marcador} ${visivel.marcador1 ? switcher ? styles.alunoB : styles.professorB : ''}`}>
+              </div>
 
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Temporibus voluptates, recusandae fugiat qui iure cum sunt doloremque,
-                similique enim dicta obcaecati eius facilis nulla facere ad distinctio,
-                dignissimos nam quo.</p>
-            </li>
-            <li className={styles.timeElemento}>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Temporibus voluptates, recusandae fugiat qui iure cum sunt doloremque,
-                similique enim dicta obcaecati eius facilis nulla facere ad distinctio,
-                dignissimos nam quo.</p>
+              <div id='marcador2' className={`${styles.marcador} ${visivel.marcador2 ? switcher ? styles.alunoB : styles.professorB : ''}`}>
+              </div>
 
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Temporibus voluptates, recusandae fugiat qui iure cum sunt doloremque,
-                similique enim dicta obcaecati eius facilis nulla facere ad distinctio,
-                dignissimos nam quo.</p>
-            </li>
-            <li className={styles.timeElemento}>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Temporibus voluptates, recusandae fugiat qui iure cum sunt doloremque,
-                similique enim dicta obcaecati eius facilis nulla facere ad distinctio,
-                dignissimos nam quo.</p>
+              <div id='marcador3' className={`${styles.marcador} ${visivel.marcador3 ? switcher ? styles.alunoB : styles.professorB : ''}`}>
+              </div>
 
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Temporibus voluptates, recusandae fugiat qui iure cum sunt doloremque,
-                similique enim dicta obcaecati eius facilis nulla facere ad distinctio,
-                dignissimos nam quo.</p>
-            </li>
-            <li className={styles.timeElemento}>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Temporibus voluptates, recusandae fugiat qui iure cum sunt doloremque,
-                similique enim dicta obcaecati eius facilis nulla facere ad distinctio,
-                dignissimos nam quo.</p>
+            </div>
 
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Temporibus voluptates, recusandae fugiat qui iure cum sunt doloremque,
-                similique enim dicta obcaecati eius facilis nulla facere ad distinctio,
-                dignissimos nam quo.</p>
+            <li className={switcher ? styles.alu : styles.pro}>
+              <div className={styles.timeAluno}>
+                <h5>Realize o seu cadastro como aluno.</h5>
+                <div className={styles.quadrado}></div>
+              </div>
+              <div className={styles.timeProfessor}>
+                <h5>Realize o seu cadastro como professor .</h5>
+                <div className={styles.quadrado}></div>
+              </div>
             </li>
+
+
+
+            <li className={switcher ? styles.alu : styles.pro}>
+              <div className={styles.timeAluno}>
+                <h5>Realize o seu cadastro como aluno.</h5>
+                <div className={styles.quadrado}></div>
+              </div>
+              <div className={styles.timeProfessor}>
+                <h5>Realize o seu cadastro como professor .</h5>
+                <div className={styles.quadrado}></div>
+              </div>
+            </li>
+
+
+            <li className={switcher ? styles.alu : styles.pro}>
+              <div className={styles.timeAluno}>
+                <h5>Realize o seu cadastro como aluno.</h5>
+                <div className={styles.quadrado}></div>
+              </div>
+              <div className={styles.timeProfessor}>
+                <h5>Realize o seu cadastro como professor .</h5>
+                <div className={styles.quadrado}></div>
+              </div>
+            </li>
+
+
           </ol>
         </div>
+
+      </section>
+      <section className={styles.section4}>
 
       </section>
     </main>
