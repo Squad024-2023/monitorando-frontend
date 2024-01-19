@@ -1,0 +1,12 @@
+.lottieContainer{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.lottie{
+    width: 100%;
+    height: 100%;
+
+}

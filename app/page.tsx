@@ -20,9 +20,13 @@ import desenvolva from '@/public/images/desenvolva.svg'
 import voceEscolhe from '@/public/images/voceEscolhe.svg'
 import umMonitor from '@/public/images/umMonitor.svg'
 import conectSe from '@/public/images/conecteSe.svg'
+import LottieAnimation from '@/components/lottie/lottieAnimation'
+import exclamacao from '@/public/icons/exclamation.json'
+import interogacao from '@/public/icons/question.json'
 
 export default function Home() {
   const [switcher, setSwitch] = useState<boolean>(true);
+
   const handleClickEvent = () => {
     setSwitch(!switcher);
   }
@@ -186,44 +190,44 @@ export default function Home() {
             <li className={switcher ? styles.alu : styles.pro}>
               <div className={styles.timeAluno}>
                 <h5>Realize o seu cadastro como aluno.</h5>
-                <div className={styles.quadrado}></div>
+                <div className={styles.quadrado}><LottieAnimation ani={interogacao} /></div>
               </div>
               <div className={styles.timeProfessor}>
                 <h5>Realize o seu cadastro como professor .</h5>
-                <div className={styles.quadrado}></div>
+                <div className={styles.quadrado}><LottieAnimation ani={exclamacao} /></div>
               </div>
             </li>
 
             <li className={switcher ? styles.alu : styles.pro}>
               <div className={styles.timeAluno}>
                 <h5>Escolha uma das monitorias disponíveis no nosso site.</h5>
-                <div className={styles.quadrado}></div>
+                <div className={styles.quadrado}><LottieAnimation ani={seta} /></div>
               </div>
               <div className={styles.timeProfessor}>
                 <h5>Escolha qual disciplina você irá lecionar.</h5>
-                <div className={styles.quadrado}></div>
+                <div className={styles.quadrado}><LottieAnimation ani={seta} /></div>
               </div>
             </li>
 
             <li className={switcher ? styles.alu : styles.pro}>
               <div className={styles.timeAluno}>
                 <h5>Escolha a data e o horário da sua monitoria.</h5>
-                <div className={styles.quadrado}></div>
+                <div className={styles.quadrado}><LottieAnimation ani={seta} /></div>
               </div>
               <div className={styles.timeProfessor}>
                 <h5>Defina a data e o horário que você estará disponível.</h5>
-                <div className={styles.quadrado}></div>
+                <div className={styles.quadrado}><LottieAnimation ani={seta} /></div>
               </div>
             </li>
 
             <li className={switcher ? styles.alu : styles.pro}>
               <div className={styles.timeAluno}>
                 <h5>Agora é só esperar sua aula começar!</h5>
-                <div className={styles.quadrado}></div>
+                <div className={styles.quadrado}><LottieAnimation ani={seta} /></div>
               </div>
               <div className={styles.timeProfessor}>
                 <h5>Agora é só confirmar quando uma monitoria for solicitada!</h5>
-                <div className={styles.quadrado}></div>
+                <div className={styles.quadrado}><LottieAnimation ani={seta} /></div>
               </div>
             </li>
 
