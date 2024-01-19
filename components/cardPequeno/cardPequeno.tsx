@@ -15,7 +15,7 @@ export default function CardPequeno({ titulo, texto, ani }: Props) {
             <Image
                 className={styles.cardImg}
                 src={ani}
-                alt='Ícone de porquinho'
+                alt='imagem do card'
             />
             <div className={styles.cardTexto}>
                 <h4>{titulo}</h4>

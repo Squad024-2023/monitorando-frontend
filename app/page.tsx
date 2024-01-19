@@ -29,6 +29,9 @@ import alarme from '@/public/icons/alarm.json'
 import calendario from '@/public/icons/calendar.json'
 import notificacao from '@/public/icons/bell.json'
 import check from '@/public/icons/check.json'
+import gratis from '@/public/images/gratis.svg'
+import comprar from '@/public/images/comprar.svg'
+import dinheiro from '@/public/images/dinheiro.svg'
 
 export default function Home() {
   const [switcher, setSwitch] = useState<boolean>(true);
@@ -112,19 +115,19 @@ export default function Home() {
               texto='Estão sempre prontos pra tirar suas dúvidas. Seja no computador ou no telefone.'
               ani={monitores} />
             <CardPequeno titulo='A Linguagem'
-              texto='É dinâmica para facilitar o entendimento, tornando-a acessível para todos.'
+              texto='É dinâmica e fácil de entender, nossa preocupação também é ser acessível pra todos.'
               ani={linguagem} />
             <CardPequeno titulo='Desenvolva'
-              texto='Disciplinas acadêmicas e também suas habilidades comportamentais.'
+              texto='Suas disciplinas acadêmicas até as habilidades comportamentais. O pacote completo.'
               ani={desenvolva} />
             <CardPequeno titulo='Você Escolhe'
               texto='O formato da sua monitoria se vai ser individual ou vai fazer parte de uma turma.'
               ani={voceEscolhe} />
             <CardPequeno titulo='Você Monitor'
-              texto='Pode usar as suas horas de monitoria como horas extracurriculares.'
+              texto='Pode usar horas de monitoria lencionadas aqui como horas extracurriculares.'
               ani={umMonitor} />
             <CardPequeno titulo='Conecte-se'
-              texto='Com outros estudantes, espanda sua network e faça amizades.'
+              texto='Com outros alunos e monitores, espanda sua network e faça amizades.'
               ani={conectSe} />
           </div>
         </div>
@@ -246,19 +249,19 @@ export default function Home() {
         <div className={styles.tela5}>
 
           <CardPequeno titulo='Alunos'
-            texto='Cursando graduação através de bolsas fornecidas pelo FIES ou PROUNI não paga nada na nossa plataforma!
+            texto='Cursando graduação através do FIES ou PROUNI não pagam!
               É tudo de graça pra te dar aquela força, sem comprometer sua vida financeira.'
-            ani={teacher} />
+            ani={gratis} />
 
-          <CardPequeno titulo='Esudantes'
-            texto='Que não se encaixam no nosso programa de gratuidade, também pode utilizar nossa plataforma
+          <CardPequeno titulo='Estudantes'
+            texto='Que não se encaixam na nossa gratuidade, também podem utilizar nossa plataforma
               pagando o valor das horas de cada professor.'
-            ani={teacher} />
+            ani={comprar} />
 
           <CardPequeno titulo='Monitores'
-            texto='receberão por horas lecionadas independente de atender Alunos
+            texto='Recebem por horas lecionadas na plataforma, independente de atender alunos
               que se encaixam no nosso programa de gratuidade ou não.'
-            ani={teacher} />
+            ani={dinheiro} />
 
         </div>
       </section>

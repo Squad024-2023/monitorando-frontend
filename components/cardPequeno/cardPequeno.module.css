@@ -10,14 +10,15 @@
     min-height: 38rem;
     gap: .5rem;
     border-radius: 1rem;
-    transition: .3s;
-    
+    overflow: hidden;
+
 }
 
 .cardWrapper img {
-    width: auto;
+    width: 100%;
     height: clamp(10rem, 22vh, 25rem);
     object-fit: contain;
+
 }
 
 .cardTexto {
@@ -29,19 +30,25 @@
 
 }
 
+.cardImg {
+    transition: all 600ms ease;
+}
+
 
 .cardTexto h4 {
     color: rgb(var(--rosa-escuro-rgb));
     width: 100%;
-    font-size:clamp(2rem, 3vw, 3.5rem);
+    font-size: clamp(2rem, 3vw, 3.5rem);
     font-weight: 800;
+    text-align: center;
 }
 
 .cardTexto p {
-    font-size:clamp(1.5rem, 2vw, 2rem);
+    font-size: clamp(1.5rem, 2vw, 1.8rem);
     font-weight: 300;
+    width: 100%;
 }
 
-.cardWrapper:hover {
+.cardWrapper:hover .cardImg {
     transform: scale(1.05);
 }
