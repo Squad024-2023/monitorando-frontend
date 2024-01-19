@@ -151,16 +151,35 @@ export default function Home() {
                 height: visivel.marcador1
                   ? visivel.marcador2
                     ? visivel.marcador3
-                      ? '85%' : '40%' : '0%' : '0%'
+                      ? visivel.marcador4 ?
+                        '90%' : '60%' : '30%' : '0%' : '0%'
               }}>
             </div>
             <div className={styles.marcadorWrapper}>
               <div id='marcador1'
-                className={`${styles.marcador} ${visivel.marcador1 ? switcher ? styles.alunoB : styles.professorB : ''}`}>
+                className={`${styles.marcador}
+                 ${visivel.marcador1
+                    ? switcher
+                      ? styles.alunoB : styles.professorB : ''}`}>
+                1
               </div>
-              <div id='marcador2' className={`${styles.marcador} ${visivel.marcador2 ? switcher ? styles.alunoB : styles.professorB : ''}`}>
+              <div id='marcador2'
+                className={`${styles.marcador} ${visivel.marcador2
+                  ? switcher
+                    ? styles.alunoB : styles.professorB : ''}`}>
+                2
               </div>
-              <div id='marcador3' className={`${styles.marcador} ${visivel.marcador3 ? switcher ? styles.alunoB : styles.professorB : ''}`}>
+              <div id='marcador3'
+                className={`${styles.marcador} ${visivel.marcador3
+                  ? switcher
+                    ? styles.alunoB : styles.professorB : ''}`}>
+                3
+              </div>
+              <div id='marcador4'
+                className={`${styles.marcador} ${visivel.marcador4
+                  ? switcher
+                    ? styles.alunoB : styles.professorB : ''}`}>
+                4
               </div>
             </div>
 
@@ -177,22 +196,33 @@ export default function Home() {
 
             <li className={switcher ? styles.alu : styles.pro}>
               <div className={styles.timeAluno}>
-                <h5>Realize o seu cadastro como aluno.</h5>
+                <h5>Escolha uma das monitorias disponíveis no nosso site.</h5>
                 <div className={styles.quadrado}></div>
               </div>
               <div className={styles.timeProfessor}>
-                <h5>Realize o seu cadastro como professor .</h5>
+                <h5>Escolha qual disciplina você irá lecionar.</h5>
                 <div className={styles.quadrado}></div>
               </div>
             </li>
 
             <li className={switcher ? styles.alu : styles.pro}>
               <div className={styles.timeAluno}>
-                <h5>Realize o seu cadastro como aluno.</h5>
+                <h5>Escolha a data e o horário da sua monitoria.</h5>
                 <div className={styles.quadrado}></div>
               </div>
               <div className={styles.timeProfessor}>
-                <h5>Realize o seu cadastro como professor .</h5>
+                <h5>Defina a data e o horário que você estará disponível.</h5>
+                <div className={styles.quadrado}></div>
+              </div>
+            </li>
+
+            <li className={switcher ? styles.alu : styles.pro}>
+              <div className={styles.timeAluno}>
+                <h5>Agora é só esperar sua aula começar!</h5>
+                <div className={styles.quadrado}></div>
+              </div>
+              <div className={styles.timeProfessor}>
+                <h5>Agora é só confirmar quando uma monitoria for solicitada!</h5>
                 <div className={styles.quadrado}></div>
               </div>
             </li>

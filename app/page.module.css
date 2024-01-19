@@ -208,7 +208,7 @@
 }
 
 .section4 * {
-  transition: all 300ms ease;
+  transition: all 600ms ease;
 }
 
 .tela4 {
@@ -266,7 +266,6 @@
 }
 
 .switcher button {
-  transition: all 300ms;
   border: none;
   padding: 2rem;
   border-radius: 5rem;
@@ -304,9 +303,9 @@
 
 .linhaClara {
   position: absolute;
-  top: 8%;
+  top: 6%;
   left: 0;
-  height: 85%;
+  height: 90%;
   width: .5rem;
   z-index: -2;
   background-color: rgba(var(--cinza-escuro-rgb), 0.4);
@@ -314,7 +313,7 @@
 
 .linhaCor {
   position: absolute;
-  top: 8%;
+  top: 6%;
   left: 0;
   width: .5rem;
   background-color: rgba(var(--rosa-escuro-rgb), 1);
@@ -334,13 +333,14 @@
   border-radius: 1rem;
   box-shadow: .4rem .5rem 1rem rgba(var(--cinza-escuro-rgb), 0.2);
   background-color: rgb(var(--sal-rgb));
-  transition: all 300ms ease;
   overflow-y: hidden;
 
 }
+
 .timeline li:last-child {
   margin-bottom: 0;
 }
+
 .marcadorWrapper {
   position: absolute;
   display: flex;
@@ -349,14 +349,19 @@
   top: 4%;
   left: -1rem;
   height: 100%;
-  gap:25.5rem;
+  gap: 25.5rem;
   width: 25px;
-  z-index: -1;
+  z-index: 1;
 }
 
 .marcador {
   align-self: flex-start;
   position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgb(var(--sal-rgb));
+  font-size: 1.8rem;
   border-radius: 50%;
   width: 25px;
   z-index: 1;
@@ -366,8 +371,10 @@
 }
 
 .quadrado {
-  width: 100px;
-  height: 100px;
+  display: flex;
+  width: 90px;
+  height: 90px;
+  border-radius: 1rem;
 }
 
 .timeAluno .quadrado {
@@ -385,11 +392,12 @@
   flex-shrink: 0;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-evenly;
   width: 100%;
   height: 10rem;
-  gap: 2%;
-  font-size: 2rem;
+  padding: .5rem;
+  gap: .5rem;
+  font-size: clamp(1.6rem, 2vw, 2rem);
   transform: translateY(-100%);
 }
 
@@ -402,11 +410,13 @@
 }
 
 .timeAluno h5 {
+  max-width: 50%;
   color: rgba(var(--rosa-escuro-rgb), 1);
 
 }
 
 .timeProfessor h5 {
+  max-width: 50%;
   color: rgba(var(--verde-escuro-rgb), 1);
 
 }
