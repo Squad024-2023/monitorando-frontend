@@ -36,7 +36,6 @@ export default function Home() {
       const elementRect = element.getBoundingClientRect();
       const threshold = 0.7;
       const triggerPosition = window.innerHeight * threshold;
-
       const isElementVisible = elementRect.top < triggerPosition;
 
       setVisivel((prevVisibility) => ({
@@ -148,23 +147,21 @@ export default function Home() {
             <div className={styles.linhaClara}></div>
             <div className={`${styles.linhaCor}
              ${switcher ? styles.alunoB : styles.professorB}`}
-            style={{ height: visivel.marcador1 ? visivel.marcador2 ? visivel.marcador3 ? '85%' : '40%' : '0%' : '0%' }} 
-            
-            
-             >
+              style={{
+                height: visivel.marcador1
+                  ? visivel.marcador2
+                    ? visivel.marcador3
+                      ? '85%' : '40%' : '0%' : '0%'
+              }}>
             </div>
             <div className={styles.marcadorWrapper}>
-
               <div id='marcador1'
                 className={`${styles.marcador} ${visivel.marcador1 ? switcher ? styles.alunoB : styles.professorB : ''}`}>
               </div>
-
               <div id='marcador2' className={`${styles.marcador} ${visivel.marcador2 ? switcher ? styles.alunoB : styles.professorB : ''}`}>
               </div>
-
               <div id='marcador3' className={`${styles.marcador} ${visivel.marcador3 ? switcher ? styles.alunoB : styles.professorB : ''}`}>
               </div>
-
             </div>
 
             <li className={switcher ? styles.alu : styles.pro}>
@@ -178,8 +175,6 @@ export default function Home() {
               </div>
             </li>
 
-
-
             <li className={switcher ? styles.alu : styles.pro}>
               <div className={styles.timeAluno}>
                 <h5>Realize o seu cadastro como aluno.</h5>
@@ -191,7 +186,6 @@ export default function Home() {
               </div>
             </li>
 
-
             <li className={switcher ? styles.alu : styles.pro}>
               <div className={styles.timeAluno}>
                 <h5>Realize o seu cadastro como aluno.</h5>
@@ -202,7 +196,6 @@ export default function Home() {
                 <div className={styles.quadrado}></div>
               </div>
             </li>
-
 
           </ol>
         </div>
