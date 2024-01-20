@@ -265,6 +265,7 @@
   padding: .5rem 2rem;
   position: relative;
   background-color: rgba(var(--rosa-escuro-rgb), 1);
+  cursor: pointer;
   transition: all 600ms ease;
 }
 

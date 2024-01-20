@@ -8,11 +8,11 @@ export default function Logo(){
     return(
         <Link className={styles.logo} href="/">
       <Image src={logo}
-      fill
+      className={styles.logo}
       quality={100}
       alt="Logo da Monitorando"
       style={{
-        objectFit: 'contain'
+        objectFit: 'contain',
       }}
       /></Link>
     )

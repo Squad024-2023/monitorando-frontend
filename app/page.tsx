@@ -144,7 +144,8 @@ export default function Home() {
               ${switcher ? styles.alunoH : ''}`}>
               Alunos
             </span>
-            <div className={`${styles.switcher} ${switcher ? styles.alunoSwitcher : styles.professorSwitcher}`}>
+            <div className={`${styles.switcher} ${switcher ? styles.alunoSwitcher : styles.professorSwitcher}`}
+              onClick={handleClickEvent}>
               <button
                 className={switcher ? styles.alunoBtn : styles.professorBtn}
                 type='button'
@@ -164,8 +165,8 @@ export default function Home() {
                 height: visivel.marcador1
                   ? visivel.marcador2
                     ? visivel.marcador3
-                      ? visivel.marcador4 ?
-                        '90%' : '60%' : '30%' : '0%' : '0%'
+                      ? visivel.marcador4
+                        ? '90%' : '60%' : '30%' : '0%' : '0%'
               }}>
             </div>
             <div className={styles.marcadorWrapper}>
