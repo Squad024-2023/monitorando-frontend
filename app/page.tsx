@@ -93,11 +93,12 @@ export default function Home() {
             <CtaPrimario link='/' conteudo='Quero aprender' ani={seta} />
             <CtaSecundario link='/' conteudo='Quero ensinar' ani={professor} />
           </div>
-          <div className={styles.cardContainer}>
-            <CardGrande titulo='Monitores' img={teacher} />
-            <CardGrande titulo='Monitorias' img={students} />
-            <CardGrande titulo='Depoimentos' img={review} />
-          </div>
+
+        </div>
+        <div className={styles.cardContainer}>
+          <CardGrande titulo='Monitores' img={teacher} />
+          <CardGrande titulo='Monitorias' img={students} />
+          <CardGrande titulo='Depoimentos' img={review} />
         </div>
       </section>
       <section className={styles.section2}>
@@ -252,9 +253,9 @@ export default function Home() {
             </li>
 
             <li id='marcadorLi4'
-                className={`${switcher ? styles.alu : styles.pro} 
+              className={`${switcher ? styles.alu : styles.pro} 
                 ${visivel.marcadorLi4 ? '' : styles.invis}`}
-              >
+            >
               <div className={styles.timeAluno}>
                 <h5>Agora é só esperar sua aula começar!</h5>
                 <div className={styles.quadrado}><LottieAnimation ani={notificacao} /></div>
