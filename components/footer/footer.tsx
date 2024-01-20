@@ -5,6 +5,8 @@ import Link from 'next/link'
 import Logo from '../logo/logo';
 import SociaisLink from '../sociaisLink/sociaisLink';
 import alarme from '@/public/icons/alarm.json'
+import linkedin from '@/public/icons/linkedin.json'
+import github from '@/public/icons/github.json'
 
 export default function Footer() {
 
@@ -36,41 +38,36 @@ export default function Footer() {
                         <li>
                             <div className={styles.sociaisElement}>
                                 <span className={styles.sociaisNome}>Arthur Bernard</span>
-                                <SociaisLink link='/' ani={alarme}/>
-                                <SociaisLink link='/' ani={alarme}/>
-                                <SociaisLink link='/' ani={alarme}/>
+                                <SociaisLink link='https://www.linkedin.com/in/ber-arthur/' ani={linkedin} />
+                                <SociaisLink link='https://github.com/Daedaluzz' ani={github} />
                             </div>
                         </li>
                         <li>
                             <div className={styles.sociaisElement}>
-                                <span className={styles.sociaisNome}>Arthur Bernard</span>
-                                <SociaisLink link='/' ani={alarme}/>
-                                <SociaisLink link='/' ani={alarme}/>
-                                <SociaisLink link='/' ani={alarme}/>
+                                <span className={styles.sociaisNome}>Nayara Pereira</span>
+                                <SociaisLink link='https://www.linkedin.com/in/nayarabpereira' ani={linkedin} />
+                                <SociaisLink link='https://github.com/nxyara' ani={github} />
                             </div>
                         </li>
                         <li>
                             <div className={styles.sociaisElement}>
-                                <span className={styles.sociaisNome}>Arthur Bernard</span>
-                                <SociaisLink link='/' ani={alarme}/>
-                                <SociaisLink link='/' ani={alarme}/>
-                                <SociaisLink link='/' ani={alarme}/>
+                                <span className={styles.sociaisNome}>Kauã Alves</span>
+                                <SociaisLink link='https://www.linkedin.com/in/kaua-amelo96' ani={linkedin} />
+                                <SociaisLink link='https://github.com/kauaamelo' ani={github} />
                             </div>
                         </li>
                         <li>
                             <div className={styles.sociaisElement}>
-                                <span className={styles.sociaisNome}>Arthur Bernard</span>
-                                <SociaisLink link='/' ani={alarme}/>
-                                <SociaisLink link='/' ani={alarme}/>
-                                <SociaisLink link='/' ani={alarme}/>
+                                <span className={styles.sociaisNome}>Mariana Moreira</span>
+                                <SociaisLink link='https://www.linkedin.com/in/mariana-moreira-santos-39417828a' ani={linkedin} />
+                                <SociaisLink link='https://github.com/mari-moreira' ani={github} />
                             </div>
                         </li>
                         <li>
                             <div className={styles.sociaisElement}>
-                                <span className={styles.sociaisNome}>Arthur Bernard</span>
-                                <SociaisLink link='/' ani={alarme}/>
-                                <SociaisLink link='/' ani={alarme}/>
-                                <SociaisLink link='/' ani={alarme}/>
+                                <span className={styles.sociaisNome}>Bianca Tayla</span>
+                                <SociaisLink link='https://www.linkedin.com/in/bianca-t-7b5972255' ani={linkedin} />
+                                <SociaisLink link='https://github.com/Y777-CoderTech' ani={github} />
                             </div>
                         </li>
                     </ul>

@@ -35,6 +35,7 @@ export default function SociaisLink({ ani, link }: Props) {
         <Link
          className={styles.sociaisLink}
             href={link}
+            target="_blank"
             onMouseEnter={() => aniInstanceRef.current && aniInstanceRef.current.play()}
             onMouseLeave={() => aniInstanceRef.current && aniInstanceRef.current.stop()}
         >

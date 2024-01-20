@@ -35,18 +35,18 @@
     width: 100%;
     height: 100%;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
     flex-wrap: wrap;
     gap: 5rem;
     padding: 1rem;
-    background-color: rgba(var(--rosa-escuro-rgb), 1);
+    background-color: rgba(var(--cinza-escuro-rgb), 1);
 }
 
 .mapaFooter {
     width: 100%;
     height: 100%;
-    max-width: 35rem;
+    max-width: 22rem;
     list-style: none;
     display: flex;
     flex-direction: column;
@@ -69,8 +69,8 @@
 }
 
 .mapaFooter li a:hover {
-    color: rgb(var(--rosa-claro-rgb));
-    border-left: solid .3rem rgba(var(--rosa-claro-rgb), 1);
+    color: rgb(var(--verde-claro-rgb));
+    border-left: solid .3rem rgba(var(--verde-claro-rgb), 1);
 }
 
 .sociaisFooter {
@@ -82,7 +82,6 @@
     align-items: center;
     flex-wrap: wrap;
     gap: 1rem;
-
 }
 
 .sociaisFooter ul {
@@ -99,15 +98,27 @@
 .sociaisElement {
     display: flex;
     gap: 1rem;
-    padding: .5rem;
+    padding: .5rem 1rem;
+    border-radius: 1rem;
+    transition: all .3s ease-in-out;
+}
+
+.sociaisElement:hover {
+    backdrop-filter: brightness(0.5);
+}
+
+.sociaisElement:hover .sociaisNome {
+    color: rgb(var(--verde-claro-rgb));
+
 }
 
 .sociaisNome {
+    min-width: 14rem;
     font-size: 1.8rem;
     display: flex;
     align-items: center;
     color: rgba(var(--sal-rgb), 1);
-
+    transition: all .3s ease-in-out;
 }
 
 .copyFooter {
