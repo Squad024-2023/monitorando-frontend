@@ -144,7 +144,7 @@
     flex-direction: column;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 1rem;
+    gap: 2rem;
 }
 
 .contatoFooter h2 {
@@ -178,6 +178,15 @@
     border-left: solid .3rem rgba(var(--sal-rgb), 1);
 }
 
+
+.contatoFooter :nth-child(4) {
+    background-color: rgba(var(--sal-rgb), 1);
+    border: none;
+}
+
+.contatoFooter span:nth-child(1) {
+    color: rgba(var(--rosa-escuro-rgb), 1);
+}
 
 @media screen and (max-width: 809px) {
     .sociaisFooter {

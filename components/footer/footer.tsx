@@ -5,14 +5,14 @@ import styles from './footer.module.css'
 import Link from 'next/link'
 import Logo from '../logo/logo';
 import SociaisLink from '../sociaisLink/sociaisLink';
-import alarme from '@/public/icons/alarm.json'
 import linkedin from '@/public/icons/linkedin.json'
 import github from '@/public/icons/github.json'
+import Doar from '@/components/doar/doar'
 
 export default function Footer() {
 
     const pathname = usePathname();
-    const [drop, setDrop] = useState<boolean>(true);
+    const [drop, setDrop] = useState<boolean>(false);
 
     const handleClickEvent = () => {
         setDrop(!drop);
@@ -84,7 +84,7 @@ export default function Footer() {
                     <h2>Contatos</h2>
                     <span>monitorando@hotmail.com</span>
                     <span>(11)9 7233-5888</span>
-
+                    <Doar/>
                 </div>
             </div>
             <div className={styles.copyFooter}>

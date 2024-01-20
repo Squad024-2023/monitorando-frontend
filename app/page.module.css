@@ -29,7 +29,7 @@
   height: 90vh;
   width: 100%;
   max-width: 1240px;
-
+  margin-bottom: clamp(15rem, 18vw, 18rem);
 }
 
 .textoTela1 {

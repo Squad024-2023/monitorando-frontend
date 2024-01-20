@@ -1,18 +1,17 @@
 .heroImage {
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 90vh;
-    min-width: 100%;
-    background-color: rgba(var(--rosa-escuro-rgb), 0.2);
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+  min-width: 100%;
+  background-color: rgba(var(--rosa-escuro-rgb), 0.2);
 
-  }
-  
-  .heroImage img {
-    object-fit: cover;
-    object-position: 80%;
-    filter: contrast(0.7) brightness(0.5);
-    mix-blend-mode: hard-light;
-    
-  }
+}
+
+.heroImage img {
+  object-fit: cover;
+  object-position: 80%;
+  filter: contrast(0.7) brightness(0.5);
+
+}
