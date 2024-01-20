@@ -22,7 +22,7 @@
 
 }
 
-.monitorandoFooter span {
+.monitorandoFooter>span {
     font-size: clamp(1.8rem, 3vw, 2.5rem);
     font-weight: 700;
     max-width: 80rem;
@@ -152,7 +152,7 @@
     color: rgba(var(--sal-rgb), 1);
 }
 
-.contatoFooter span {
+.contatoFooter>span {
     font-size: 1.8rem;
     color: rgba(var(--sal-rgb), 1);
 }
@@ -176,16 +176,6 @@
     font-weight: 700;
     color: rgba(var(--rosa-escuro-rgb), 1);
     border-left: solid .3rem rgba(var(--sal-rgb), 1);
-}
-
-
-.contatoFooter :nth-child(4) {
-    background-color: rgba(var(--sal-rgb), 1);
-    border: none;
-}
-
-.contatoFooter span:nth-child(1) {
-    color: rgba(var(--rosa-escuro-rgb), 1);
 }
 
 @media screen and (max-width: 809px) {

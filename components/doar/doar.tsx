@@ -6,7 +6,7 @@ import lottie from "lottie-web";
 import { useRef, useEffect } from 'react';
 
 
-export default function CtaSecundario() {
+export default function Doar() {
 
     const container = useRef<HTMLDivElement | null>(null);;
     const aniInstanceRef = useRef<any>(null) //necessário para cada botão ter sua própria instância do lottie 

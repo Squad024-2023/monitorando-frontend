@@ -4,6 +4,7 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  gap: 20rem;
   min-height: 100vh;
   width: 100%;
   background-color: rgb(var(--sal-rgb));
@@ -16,7 +17,6 @@
   align-items: center;
   width: 100%;
   min-height: 100vh;
-  padding: 0 5%;
   background-color: rgb(var(--sal-rgb));
 }
 
@@ -24,35 +24,44 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  justify-content: flex-end;
+  padding: 2rem;
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
+  background-color: rgba(var(--cinza-escuro-rgb), 0.6);
+  background-image: url("../../public/images/duvidas.webp");
+  background-blend-mode: saturation;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
 }
 
 .textoTela1 {
   display: flex;
   flex-direction: column;
   width: 100%;
+  max-width: 600px;
+  height: 100%;
   margin-bottom: 5rem;
   gap: 5rem;
+  padding: 3rem;
+  border-radius: 2rem;
+  /* background-color: rgba(var(--verde-escuro-rgb), 1); */
 
 }
 
 .textoTela1 h1 {
-  font-size: calc(4rem + 4vw);
-  max-width: 90rem;
-  color: #ffffff;
+  font-size: calc(2rem + 2vw);
+  color: rgb(var(--sal-rgb));
   line-height: 0.8;
-  text-shadow: 0px .4rem .4rem rgba(0, 0, 0, 0.5);
 }
 
 .textoTela1 h2 {
-  font-size: calc(1.5rem + 2vw);
-  max-width: 90rem;
+  font-size: calc(1.6rem + 1vw);
   font-weight: 300;
-  color: #ffffff;
-  line-height: 0.8;
+  color: rgba(var(--sal-rgb), 1);
 }
 
 .textoTela1 p {
@@ -60,8 +69,7 @@
   font-weight: 200;
   max-width: 90rem;
   font-size: calc(1.6rem + .5vw);
-  color: #ffffff;
-  text-shadow: 0px .4rem .4rem rgba(0, 0, 0, 0.5);
+  color: rgb(var(--sal-rgb));
 }
 
 .section2 {
@@ -83,9 +91,5 @@
   align-items: center;
   width: 100%;
   height: 100vh;
-  background-image: url("../../public/images/duvidas.webp");
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+
 }
