@@ -88,28 +88,18 @@
     }
 
     .menuNav li a {
+        position: relative;
         border-radius: 0;
         padding: 1rem 2rem;
         color: rgb(var(--sal-rgb));
         justify-content: flex-start;
     }
 
-    .menuNav>li>a::after {
-        position: absolute;
-        content: '';
-        width: 2rem;
-        height: 2rem;
-        bottom: 0rem;
-        right: 0;
-        background-color: rgb(var(--rosa-rgb));
-        z-index: 10;
-        transition: all .6s ease;
-    }
-
     .menuNav li:nth-child(6) a {
         border-radius: 1rem;
         margin-left: 2rem;
         padding: 1rem 2rem;
+        border: none;
         background-color: rgba(var(--sal-rgb), 1);
     }
 
