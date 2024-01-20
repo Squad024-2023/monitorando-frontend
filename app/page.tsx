@@ -101,7 +101,7 @@ export default function Home() {
           <div className={styles.textoTela2}>
             <h1>Quando o sonho se torna pesadelo</h1>
             <p>É normal bater aquela confusão e desânimo na faculdade, especialmente nos primeiros semestres.
-              O sentimento de incapacidade e frustração, pode acabar afetando nossa saúde mental.
+              O sentimento de incapacidade e frustração pode acabar afetando nossa saúde mental.
               Venha descobrir como <span>monitorando</span> pode ser aquele suporte que você não sabia que precisava.
             </p>
           </div>
@@ -112,7 +112,7 @@ export default function Home() {
           <h1>Por que escolher a <span>monitorando</span>?</h1>
           <div className={styles.cardContainer3}>
             <CardPequeno titulo='Os Monitores'
-              texto='Estão sempre prontos pra tirar suas dúvidas. Seja no computador ou no telefone.'
+              texto='Estão sempre prontos para tirar suas dúvidas. Seja no computador ou no telefone.'
               ani={monitores} />
             <CardPequeno titulo='A Linguagem'
               texto='É dinâmica e fácil de entender, nossa preocupação também é ser acessível pra todos.'
@@ -121,13 +121,13 @@ export default function Home() {
               texto='Suas disciplinas acadêmicas até as habilidades comportamentais. O pacote completo.'
               ani={desenvolva} />
             <CardPequeno titulo='Você Escolhe'
-              texto='O formato da sua monitoria se vai ser individual ou vai fazer parte de uma turma.'
+              texto='O formato da sua monitoria, se vai ser individual ou vai fazer parte de uma turma.'
               ani={voceEscolhe} />
-            <CardPequeno titulo='Você Monitor'
+            <CardPequeno titulo='Você, Monitor'
               texto='Pode usar horas de monitoria lencionadas aqui como horas extracurriculares.'
               ani={umMonitor} />
             <CardPequeno titulo='Conecte-se'
-              texto='Com outros alunos e monitores, espanda sua network e faça amizades.'
+              texto='Com outros alunos e monitores, expanda sua network e faça amizades.'
               ani={conectSe} />
           </div>
         </div>
@@ -246,21 +246,22 @@ export default function Home() {
       </section>
       <section className={styles.section5}>
         <h1>O melhor a gente deixa pro final</h1>
-        <div className={styles.tela5}>
+        <div className={styles.tela5}
+        >
 
           <CardPequeno titulo='Alunos'
             texto='Cursando graduação através do FIES ou PROUNI não pagam!
-              É tudo de graça pra te dar aquela força, sem comprometer sua vida financeira.'
+              É tudo de graça para te dar aquela força, sem comprometer sua vida financeira.'
             ani={gratis} />
 
           <CardPequeno titulo='Estudantes'
-            texto='Que não se encaixam na nossa gratuidade, também podem utilizar nossa plataforma
+            texto='Que não se encaixam na nossa gratuidade também podem utilizar nossa plataforma
               pagando o valor das horas de cada professor.'
             ani={comprar} />
 
           <CardPequeno titulo='Monitores'
             texto='Recebem por horas lecionadas na plataforma, independente de atender alunos
-              que se encaixam no nosso programa de gratuidade ou não.'
+              que se encaixam no nosso programa de gratuidade.'
             ani={dinheiro} />
 
         </div>

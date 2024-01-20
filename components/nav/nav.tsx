@@ -15,9 +15,8 @@ export default function Nav() {
       <menu className={styles.menuNav}>
         <li><Link className={pathname === '/'?styles.active:''} href='/'>Quem Somos</Link></li>
         <li><Link href='/'>O Que Fazemos</Link></li>
-        <li><Link href='/'>Seja um Professor</Link></li>
         <li><Link href='/'>Monitorias</Link></li>
-        <li><Link href='/'>Nossa Missão</Link></li>
+        <li><Link href='/'>Login</Link></li>
         <li><Link href='/gestao'>Gestão</Link></li>
       </menu>
       <Doar />

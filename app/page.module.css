@@ -341,6 +341,7 @@
   background-color: rgb(var(--sal-rgb));
   overflow-y: hidden;
 
+
 }
 
 .timeline li:last-child {
@@ -407,6 +408,7 @@
   gap: .5rem;
   font-size: clamp(1.6rem, 2vw, 2rem);
   transform: translateY(-100%);
+  transition: all 600ms ease;
 
 }
 

@@ -1,0 +1,120 @@
+.footerContainer {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: red;
+    border-top: .1rem solid rgba(var(--cinza-escuro-rgb), 1);
+
+}
+
+.monitorandoFooter {
+    width: 100%;
+    height: 40rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: .5rem;
+    background-color: rgba(var(--sal-rgb));
+
+}
+
+.monitorandoFooter span {
+    font-size: clamp(1.8rem, 3vw, 2.5rem);
+    font-weight: 700;
+    max-width: 80rem;
+    text-align: center;
+    color: rgba(var(--rosa-escuro-rgb), 1);
+
+}
+
+.footerMain {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 5rem;
+    padding: 1rem;
+    background-color: rgba(var(--rosa-escuro-rgb), 1);
+}
+
+.mapaFooter {
+    width: 100%;
+    height: 100%;
+    max-width: 35rem;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+    font-size: 2rem;
+
+}
+
+.mapaFooter li a {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 1rem 2rem;
+    color: rgb(var(--sal-rgb));
+    border-left: solid .1rem rgba(var(--sal-rgb), 1);
+    transition: all .3s ease-in-out;
+}
+
+.mapaFooter li a:hover {
+    color: rgb(var(--rosa-claro-rgb));
+    border-left: solid .3rem rgba(var(--rosa-claro-rgb), 1);
+}
+
+.sociaisFooter {
+    width: 100%;
+    max-width: 50rem;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+
+}
+
+.sociaisFooter ul {
+    list-style: none;
+    padding-left: 2rem;
+    border-left: solid .1rem rgba(var(--sal-rgb), 1);
+}
+
+.sociaisFooter h2 {
+    font-size: 2.5rem;
+    color: rgba(var(--sal-rgb), 1);
+}
+
+.sociaisElement {
+    display: flex;
+    gap: 1rem;
+    padding: .5rem;
+}
+
+.sociaisNome {
+    font-size: 1.8rem;
+    display: flex;
+    align-items: center;
+    color: rgba(var(--sal-rgb), 1);
+
+}
+
+.copyFooter {
+    height: 100%;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}

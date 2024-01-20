@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { inter, pacifico, sunSeed } from './fonts'
 import './globals.css'
 import Nav from '@/components/nav/nav'
+import Footer from '@/components/footer/footer'
 
 
 export const metadata: Metadata = {
@@ -20,6 +21,7 @@ export default function RootLayout({
       <body className={`${inter.variable} ${pacifico.variable} ${sunSeed.variable}`}>
         <Nav />
         {children}
+        <Footer />
       </body>
     </html>
   )
