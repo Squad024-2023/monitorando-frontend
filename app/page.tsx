@@ -44,10 +44,22 @@ export default function Home() {
 
   const handleScroll = () => {
     const marcadores = document.querySelectorAll('[id^="marcador"]');
+    const marcadoresLi = document.querySelectorAll('[id^="marcadorLi"]');
 
     marcadores.forEach((element) => {
       const elementRect = element.getBoundingClientRect();
       const threshold = 0.7;
+      const triggerPosition = window.innerHeight * threshold;
+      const isElementVisible = elementRect.top < triggerPosition;
+
+      setVisivel((prevVisibility) => ({
+        ...prevVisibility,
+        [element.id]: isElementVisible,
+      }));
+    });
+    marcadoresLi.forEach((element) => {
+      const elementRect = element.getBoundingClientRect();
+      const threshold = 0.65;
       const triggerPosition = window.innerHeight * threshold;
       const isElementVisible = elementRect.top < triggerPosition;
 
@@ -197,7 +209,10 @@ export default function Home() {
               </div>
             </div>
 
-            <li className={switcher ? styles.alu : styles.pro}>
+            <li id='marcadorLi1'
+              className={`${switcher ? styles.alu : styles.pro} 
+              ${visivel.marcadorLi1 ? '' : styles.invis}`}
+            >
               <div className={styles.timeAluno}>
                 <h5>Realize o seu cadastro como aluno.</h5>
                 <div className={styles.quadrado}><LottieAnimation ani={interogacao} /></div>
@@ -208,7 +223,10 @@ export default function Home() {
               </div>
             </li>
 
-            <li className={switcher ? styles.alu : styles.pro}>
+            <li id='marcadorLi2'
+              className={`${switcher ? styles.alu : styles.pro} 
+            ${visivel.marcadorLi2 ? '' : styles.invis}`}
+            >
               <div className={styles.timeAluno}>
                 <h5>Escolha uma das monitorias disponíveis no nosso site.</h5>
                 <div className={styles.quadrado}><LottieAnimation ani={busca} /></div>
@@ -219,7 +237,10 @@ export default function Home() {
               </div>
             </li>
 
-            <li className={switcher ? styles.alu : styles.pro}>
+            <li id='marcadorLi3'
+              className={`${switcher ? styles.alu : styles.pro} 
+                ${visivel.marcadorLi3 ? '' : styles.invis}`}
+            >
               <div className={styles.timeAluno}>
                 <h5>Escolha a data e o horário da sua monitoria.</h5>
                 <div className={styles.quadrado}><LottieAnimation ani={alarme} /></div>
@@ -230,7 +251,10 @@ export default function Home() {
               </div>
             </li>
 
-            <li className={switcher ? styles.alu : styles.pro}>
+            <li id='marcadorLi4'
+                className={`${switcher ? styles.alu : styles.pro} 
+                ${visivel.marcadorLi4 ? '' : styles.invis}`}
+              >
               <div className={styles.timeAluno}>
                 <h5>Agora é só esperar sua aula começar!</h5>
                 <div className={styles.quadrado}><LottieAnimation ani={notificacao} /></div>

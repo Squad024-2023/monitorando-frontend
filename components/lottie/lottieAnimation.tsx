@@ -18,6 +18,7 @@ export default function LottieAnimation({ ani }: Props) {
                 loop: false,
                 autoplay: false,
                 animationData: ani,
+
             });
 
             return () => {
