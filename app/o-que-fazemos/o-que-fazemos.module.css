@@ -1,0 +1,61 @@
+.main {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 100vh;
+  width: 100%;
+}
+
+.section1 {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  min-height: 100vh;
+  padding: 0 5%;
+  background-color: black;
+}
+
+.section2 {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  min-height: 100vh;
+  padding: 0 5%;
+  background-color: navy;
+
+}
+
+
+.tela1 {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  background-color: aqua;
+
+
+}
+
+.tela2 {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 100%;
+  height: 100%;
+  background-color: bisque;
+
+}
+.conteudo{
+  width: 40rem;
+  height: 40rem;
+  background-color: seagreen;
+}
