@@ -184,14 +184,14 @@
 .textoComo h2 {
   color: rgb(var(--rosa-escuro-rgb));
   font-size: calc(1.8rem + 1vw);
-  font-weight: 600;
+  font-family: var(--font-pacifico);
 }
 
 .textoComo h5 {
   font-weight: 400;
   max-width: 50rem;
-  font-size: calc(1.5rem + .2vw);
-  color: rgb(var(--rosa-escuro-rgb));
+  font-size: 1.6rem;
+  color: rgba(var(--cinza-escuro-rgb), 0.8);
 }
 
 .imagemTextoComo1 {
@@ -202,9 +202,22 @@
   height: 40rem;
   object-fit: cover;
   object-position: fixed;
-  border-radius: 10% 20% 50% 30%;
-  border-left: 2rem solid rgb(var(--rosa-escuro-rgb));
-  box-shadow: .6rem .2rem 1rem rgba(var(--cinza-escuro-rgb), 0.3);
+  border-radius: 10% 20% 20% 30%;
+  border: 2rem solid white;
+  box-shadow: .6rem .2rem 1rem rgba(var(--cinza-escuro-rgb), 0.2);
+}
+
+.imagemTextoComo2 {
+  position: relative;
+  display: flex;
+  width: 100%;
+  max-width: 40rem;
+  height: 40rem;
+  object-fit: cover;
+  object-position: fixed;
+  border-radius: 20% 10% 30% 20%;
+  border: 2rem solid white;
+  box-shadow: -.6rem .2rem 1rem rgba(var(--cinza-escuro-rgb), 0.2);
 }
 
 
