@@ -101,7 +101,7 @@
   justify-content: center;
   width: 100vw;
   min-height: 100vh;
-  padding: 2rem 5%;
+  padding: 2rem 0;
 
 }
 
@@ -115,7 +115,6 @@
   width: 100%;
   height: 100%;
   gap: 10rem;
-  padding: 2rem;
 
 }
 
@@ -128,6 +127,7 @@
   height: 100%;
   margin-bottom: 5rem;
   gap: 2rem;
+  padding: 2rem;
   z-index: 1;
 
 }
@@ -144,6 +144,7 @@
 
 .textoTela2 h5 {
   font-weight: 400;
+  width: 100%;
   max-width: 50rem;
   font-size: calc(1.6rem + .2vw);
   color: rgba(var(--cinza-escuro-rgb), 0.7);
@@ -152,6 +153,7 @@
 
 .textoTela2 p {
   font-weight: 300;
+  width: 100%;
   max-width: 50rem;
   font-size: calc(1.5rem + .1vw);
   color: rgb(var(--cinza-escuro-rgb));
@@ -174,10 +176,12 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  width: auto;
   height: 100%;
-  margin-bottom: 5rem;
   gap: 2rem;
   z-index: 1;
+
+
 
 }
 
@@ -189,9 +193,11 @@
 
 .textoComo h5 {
   font-weight: 400;
+  width: 100%;
   max-width: 50rem;
   font-size: 1.6rem;
   color: rgba(var(--cinza-escuro-rgb), 0.8);
+
 }
 
 .imagemTextoComo1 {
@@ -199,9 +205,8 @@
   display: flex;
   width: 100%;
   max-width: 40rem;
-  height: 40rem;
+  height: auto;
   object-fit: cover;
-  object-position: fixed;
   border-radius: 10% 20% 20% 30%;
   border: 2rem solid white;
   box-shadow: .6rem .2rem 1rem rgba(var(--cinza-escuro-rgb), 0.2);
@@ -212,34 +217,15 @@
   display: flex;
   width: 100%;
   max-width: 40rem;
-  height: 40rem;
+  height: auto;
   object-fit: cover;
-  object-position: fixed;
   border-radius: 20% 10% 30% 20%;
   border: 2rem solid white;
   box-shadow: -.6rem .2rem 1rem rgba(var(--cinza-escuro-rgb), 0.2);
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.conteudo {
-  flex-shrink: 1;
-  width: 40rem;
-  height: 40rem;
-  background-color: seagreen;
+@media screen and (max-width: 425px) {
+  .comoContainer {
+    border-bottom: solid 1rem rgba(var(--cinza-escuro-rgb), 0.2);
+  }
 }
