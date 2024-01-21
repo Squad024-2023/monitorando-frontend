@@ -31,8 +31,8 @@ export default function QuemSomos() {
             <section className={styles.section2}>
                 <div className={styles.descricaoTela2}>
                     <h1>Nosso Time</h1>
-                    <p>Nosso time sentiu todas as dificuldades que um aluno de faculdade pode passar. Juntos nessa ideia
-                        de ajudar os outros, criamos o monitorando para que todos possam ter uma oportunidade de seguir seus sonhos.
+                    <p>sentiu todas as dificuldades que um aluno de faculdade pode passar. Juntos nessa ideia
+                        de ajudar o próximo, criamos o monitorando para que todos possam ter uma oportunidade de seguir seus sonhos.
                     </p>
                 </div>
                 <div className={styles.cardsTela2}>
