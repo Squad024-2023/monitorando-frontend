@@ -1,36 +1,122 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+![Logo](https://private-user-images.githubusercontent.com/142227461/284445758-82e728e1-2823-4830-96d1-19a1992804b0.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MDU3ODc3MjcsIm5iZiI6MTcwNTc4NzQyNywicGF0aCI6Ii8xNDIyMjc0NjEvMjg0NDQ1NzU4LTgyZTcyOGUxLTI4MjMtNDgzMC05NmQxLTE5YTE5OTI4MDRiMC5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjQwMTIwJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI0MDEyMFQyMTUwMjdaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT1lM2NiNmFmZTljM2VmZjU4NmZhMTBiNzA2MTZmNmFjMDljOGUzNTUwMmMwMmFhYTVlNThjYmYyYzM4YThhZDhjJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCZhY3Rvcl9pZD0wJmtleV9pZD0wJnJlcG9faWQ9MCJ9.YS84v-4UuUMSCgdSOFrxS4oblYQ3kPvXJ-vdv3MtIJA)
+Seu sucesso acadêmico começa aqui! 🎓
 
-## Getting Started
+## Índice
+- <a href="##-sobre-o-projeto"> Sobre o projeto </a>
+- <a href="##-Como-podemos-ajudar?"> Como podemos ajudar? </a>
+- <a href="##-Como-contribuir-conosco"> Como contribuir conosco: </a>
+- <a href="#-tecnologias-utilizadas"> Tecnologias Utilizadas </a>
+- <a href="##-Layout"> Layout </a>
+- <a href="##-Instalação"> Instalação </a>
+- <a href="#-Uso"> Uso </a>
 
-First, run the development server:
+<br>
+
+## Sobre o projeto
+O Monitorando é uma iniciativa dedicada a apoiar estudantes em suas jornadas acadêmicas. Nosso objetivo é fornecer assistência aos estudantes para superar as dificuldades enfrentadas, especialmente por egressos do ensino público e que possuem recursos limitados. Com o Monitorando, possibilitamos que os estudantes superem as dificuldades e continuem em seus cursos de graduação, técnicos e profissionalizantes.
+
+    Acreditamos em um Brasil onde ninguém desiste do sonho de ser quem quiser ser.
+
+
+
+### Como podemos ajudar?
+
+Oferecemos um ambiente de aprendizado colaborativo, onde os estudantes podem acessar monitorias sobre uma variedade de assuntos. Nossos monitores são alunos avançados em graduações, professores e especialistas formados que compartilham seu conhecimento para facilitar o processo de aprendizado dos estudantes.
+
+
+### Como contribuir conosco:
+
+Você pode contribuir para o Monitorando de várias maneiras:
+
+* Participando como Monitor: Se você é um aluno avançado, professor ou especialista e deseja fazer uma renda extra enquanto contribui para a nossa causa, entre em contato conosco para se tornar um monitor.
+
+* Sugira Melhorias: Fique à vontade para abrir problemas relatando bugs, sugerindo novos recursos ou melhorias.
+
+* Compartilhe a Iniciativa: Ajude-nos a alcançar mais estudantes compartilhando o Monitorando com sua rede.
+
+<br>
+
+## 🛠️ Tecnologias Utilizadas
+
+O Monitorando foi construído em NextJS, versão 14. Para executar, é preciso ter instalados as seguintes dependências:
+
+
+* NextJS: biblioteca react para a base do projeto;
+npx create-next-app@latest monitorando-frontend
 
 ```bash
+# Would you like to use TypeScript? ...  Yes
+# Would you like to use ESLint? ... No 
+# Would you like to use Tailwind CSS? ... No 
+# Would you like to use `src/` directory? ... No 
+# Would you like to use App Router? (recommended) ...  Yes
+# Would you like to customize the default import alias (@/*)? ... No 
+  ```
+* Axios: biblioteca para fazer a ligação com back-end;
+* Framer Motion: biblioteca de animações para elevar a interatividade do usuário;
+* Lottie Player: biblioteca criada pela Airbnb usada para implementar animações de ícones em formato .json. Ester ícones tem uma qualidade elevada, são extremamente leves e podem ser animados
+
+
+
+
+### ⚙️ Instalação
+
+clonar o repositorio
+
+* NextJS
+```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+* Axios
+```
+npm i axios
+  ```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+* Framer Motion
+```
+npm install framer-motion
+  ```
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+* Lottie Player
+```
+npm install --save @lottiefiles/react-lottie-player
+  ```
 
-## Learn More
+* Para executar
+```
+npm rum dev
+  ```
 
-To learn more about Next.js, take a look at the following resources:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+<br>
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## 🖼️ Layout
 
-## Deploy on Vercel
+//print da primeira tela
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+<br>
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+### 💻 Uso
+
+
+
+
+## Contruibuição
+
+
+
+
+## Colaboradores
+
+
+
+
+## Seja um doador
+
+
+
+## Licença 
+
