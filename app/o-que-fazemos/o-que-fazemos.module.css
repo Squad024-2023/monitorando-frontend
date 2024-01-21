@@ -114,10 +114,11 @@
   flex-wrap: wrap;
   width: 100%;
   height: 100%;
-  gap: 2rem;
+  gap: 10rem;
   padding: 2rem;
 
 }
+
 .textoTela2 {
   position: relative;
   display: flex;
@@ -156,8 +157,55 @@
   color: rgb(var(--cinza-escuro-rgb));
 }
 
+.comoContainer {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+  height: auto;
+  gap: 2rem;
+  padding: 2rem;
+}
 
+.textoComo {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  margin-bottom: 5rem;
+  gap: 2rem;
+  z-index: 1;
 
+}
+
+.textoComo h2 {
+  color: rgb(var(--rosa-escuro-rgb));
+  font-size: calc(1.8rem + 1vw);
+  font-weight: 600;
+}
+
+.textoComo h5 {
+  font-weight: 400;
+  max-width: 50rem;
+  font-size: calc(1.5rem + .2vw);
+  color: rgb(var(--rosa-escuro-rgb));
+}
+
+.imagemTextoComo1 {
+  position: relative;
+  display: flex;
+  width: 100%;
+  max-width: 40rem;
+  height: 40rem;
+  object-fit: cover;
+  object-position: fixed;
+  border-radius: 10% 20% 50% 30%;
+  border-left: 2rem solid rgb(var(--rosa-escuro-rgb));
+  box-shadow: .6rem .2rem 1rem rgba(var(--cinza-escuro-rgb), 0.3);
+}
 
 
 
