@@ -138,8 +138,8 @@
   align-items: center;
   width: 20rem;
   height: 20rem;
+  object-fit: contain;
   border-radius: 50% 50% 0 50%;
-  border: solid 1rem rgb(var(--rosa-escuro-rgb));
   box-shadow: .5rem .5rem 1rem rgba(var(--cinza-escuro-rgb), 0.5);
 
 }

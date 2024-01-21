@@ -2,6 +2,7 @@ import HeroImage from '@/components/heroImage/heroImage'
 import Image from 'next/image'
 import styles from './quem-somos.module.css'
 import Doar from '@/components/doar/doar'
+import arthur from '@/public/images/arthur.webp'
 
 
 
@@ -32,15 +33,18 @@ export default function QuemSomos() {
                 </div>
                 <div className={styles.cardsTela2}>
                     <div className={styles.cardContainer}>
-                        <div className={styles.cardFoto}>
-                        </div>
+                        <Image
+                            className={styles.cardFoto}
+                            src={arthur}
+                            quality={100}
+                            placeholder='blur'
+                            alt='Imagem de arthur'
+                        />
                         <div className={styles.cardTexto}>
                             <h1>Arthur Bernard</h1>
-                            <p>VAMO DALE PRA NÃO TOMALE CARAI
-                                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                                Nobis dolores, fugit laudantium, distinctio eum itaque laboriosam
-                                nemo sequi cumque culpa doloribus vitae. Accusantium vero doloremque
-                                provident hic saepe itaque quibusdam.
+                            <p>HTML | CSS | Oratória | Gestão de projetos
+                                Desenvolvedor frontend formando em design gráfico
+                                Ajuda com apresentações, trabalhos em grupos e organização é comigo!
                             </p>
                         </div>
                     </div>
@@ -50,11 +54,9 @@ export default function QuemSomos() {
                         </div>
                         <div className={styles.cardTexto}>
                             <h1>Nayara Pereira</h1>
-                            <p>Função Função Função Função Função
-                                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                                Nobis dolores, fugit laudantium, distinctio eum itaque laboriosam
-                                nemo sequi cumque culpa doloribus vitae. Accusantium vero doloremque
-                                provident hic saepe itaque quibusdam.
+                            <p>Mestre em História | Estudante de Desenvolvimento Full Stack
+                                Técnica em informática, licenciada e mestre em história
+                                Auxílio em matérias na área de Ciências Humanas, acolhimento e orientações da vida acadêmica.
 
                             </p>
                         </div>
@@ -64,8 +66,10 @@ export default function QuemSomos() {
                         <div className={styles.cardFoto}>
                         </div>
                         <div className={styles.cardTexto}>
-                            <h1>Nome</h1>
-                            <p>Função</p>
+                            <h1>Mariana Moreira</h1>
+                            <p>HTML | CSS | Java | WordPress
+                                Técnica em informática e graduanda em Sistema de Informação
+                                Ajudar com desenvolvimento de websites utilizando gerenciador de conteúdo WordPress e palavras de conforto.</p>
                         </div>
                     </div>
 
@@ -73,8 +77,10 @@ export default function QuemSomos() {
                         <div className={styles.cardFoto}>
                         </div>
                         <div className={styles.cardTexto}>
-                            <h1>Nome</h1>
-                            <p>Função</p>
+                            <h1>Kauã Alves</h1>
+                            <p>Desenvolvedor Web | JavaScript | CSS | Técnico de Logística
+                                Estudande full stack formando em logística
+                                Empatia e compreensão como fundamentos pra tirar suas dúvidas.</p>
                         </div>
                     </div>
 
@@ -82,8 +88,10 @@ export default function QuemSomos() {
                         <div className={styles.cardFoto}>
                         </div>
                         <div className={styles.cardTexto}>
-                            <h1>Nome</h1>
-                            <p>Função</p>
+                            <h1>Bianca Tayla</h1>
+                            <p>MySQL | Java | Data Analysis | Full Stack Developer
+                                Estudante de Desenvolvimento Full Stack
+                                Ajuda em limpeza de dados, programação utilizando R, análises usando Tableu e auxílio com pesquisa usando Big Query e Kaggle.</p>
                         </div>
                     </div>
 
