@@ -46,10 +46,7 @@ export default function QuemSomos() {
                         />
                         <div className={styles.cardTexto}>
                             <h1>Arthur Bernard</h1>
-                            <p>HTML | CSS | Oratória | Gestão de projetos
-                                Desenvolvedor frontend formando em design gráfico
-                                Ajuda com apresentações, trabalhos em grupos e organização é comigo!
-                            </p>
+                            <p>HTML | CSS | Oratória | Gestão de projetos Desenvolvedor frontend formando em design gráfico. Ajuda com apresentações, trabalhos em grupos e organização é comigo!</p>
                         </div>
                     </div>
 
@@ -63,10 +60,7 @@ export default function QuemSomos() {
                         />
                         <div className={styles.cardTexto}>
                             <h1>Nayara Pereira</h1>
-                            <p>Mestre em História | Estudante de Desenvolvimento Full Stack
-                                Técnica em informática, licenciada e mestre em história
-                                Auxílio em matérias na área de Ciências Humanas, acolhimento e orientações da vida acadêmica.
-
+                            <p>Mestre em História | Estudante de Desenvolvimento Full Stack Técnica em informática, licenciada e mestre em história. Auxílio em matérias na área de Ciências Humanas, acolhimento e orientações da vida acadêmica.
                             </p>
                         </div>
                     </div>
@@ -81,9 +75,7 @@ export default function QuemSomos() {
                         />
                         <div className={styles.cardTexto}>
                             <h1>Mariana Moreira</h1>
-                            <p>HTML | CSS | Java | WordPress
-                                Técnica em informática e graduanda em Sistema de Informação
-                                Ajudar com desenvolvimento de websites utilizando gerenciador de conteúdo WordPress e palavras de conforto.</p>
+                            <p>HTML | CSS | Java | WordPress Técnica em informática e graduanda em Sistema de Informação. Ajuda com desenvolvimento de websites utilizando gerenciador de conteúdo WordPress e palavras de conforto.</p>
                         </div>
                     </div>
 
@@ -97,9 +89,7 @@ export default function QuemSomos() {
                         />
                         <div className={styles.cardTexto}>
                             <h1>Kauã Alves</h1>
-                            <p>Desenvolvedor Web | JavaScript | CSS | Técnico de Logística
-                                Estudande full stack formando em logística
-                                Empatia e compreensão como fundamentos pra tirar suas dúvidas.</p>
+                            <p>Desenvolvedor Web | JavaScript | CSS | Técnico de Logística Estudande full stack formando em logística. Empatia e compreensão como fundamentos pra tirar suas dúvidas.</p>
                         </div>
                     </div>
 
@@ -113,16 +103,10 @@ export default function QuemSomos() {
                         />
                         <div className={styles.cardTexto}>
                             <h1>Bianca Tayla</h1>
-                            <p>MySQL | Java | Data Analysis | Full Stack Developer
-                                Estudante de Desenvolvimento Full Stack
-                                Ajuda em limpeza de dados, programação utilizando R, análises usando Tableu e auxílio com pesquisa usando Big Query e Kaggle.</p>
+                            <p>MySQL | Java | Data Analysis | Full Stack Developer Estudante de Desenvolvimento Full Stack. Ajuda em limpeza de dados, programação utilizando R, análises usando Tableu e auxílio com pesquisa usando Big Query e Kaggle.</p>
                         </div>
                     </div>
-
-
                 </div>
-
-
             </section>
         </main>
     )

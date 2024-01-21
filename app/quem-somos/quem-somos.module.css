@@ -2,7 +2,7 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   gap: 20rem;
   min-height: 100vh;
@@ -24,7 +24,7 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: center;
   padding: 2rem 10%;
   width: 100%;
   min-height: 100vh;
@@ -48,6 +48,7 @@
   gap: 5rem;
   padding: 3rem;
   border-radius: 2rem;
+  backdrop-filter: brightness(0.8);
 
 }
 
@@ -71,28 +72,28 @@
   max-width: 90rem;
   font-size: calc(1.6rem + .2vw);
   color: rgb(var(--sal-rgb));
-  text-shadow: .2rem .2rem .2rem rgba(var(--cinza-escuro-rgb), 1);
+  text-shadow: .2rem .2rem .1rem rgba(var(--sal-escuro-rgb), 1);
 }
 
 .section2 {
   display: flex;
   align-items: flex-start;
   justify-content: center;
+  flex-wrap: wrap;
   width: 80%;
   min-height: 100vh;
   overflow: visible;
-  padding: 2rem 0;
+  padding: 4rem 0;
   gap: 2rem;
 }
 
 .descricaoTela2 {
   position: -webkit-sticky;
   position: sticky;
-  top: 5rem;
+  top: 20rem;
   display: flex;
   flex-direction: column;
-  gap: 5rem;
-  /* Add this line to make sure it's visually above other elements */
+  gap: 2rem;
 }
 
 .descricaoTela2 h1 {
@@ -115,20 +116,21 @@
   display: flex;
   flex-direction: column;
   height: 100%;
-  gap: 10rem;
+  gap: 30rem;
 
 }
 
 .cardContainer {
   display: flex;
   align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
   padding: 1rem 2rem;
   gap: 2rem;
   border-radius: 1rem;
   background-color: rgb(var(--sal-rgb));
-  
-}
 
+}
 
 .cardFoto {
   position: relative;
@@ -140,7 +142,7 @@
   height: 20rem;
   object-fit: contain;
   border-radius: 50% 50% 0 50%;
-  box-shadow: .5rem .5rem 1rem rgba(var(--cinza-escuro-rgb), 0.5);
+  transition: all 0.5s ease;
 
 }
 
@@ -153,4 +155,17 @@
   /* box-shadow: .5rem .5rem 1rem rgba(var(--cinza-escuro-rgb), 0.5); */
   padding: 1rem 2rem;
   border-radius: 2rem 2rem 2rem 0;
+  box-shadow: .5rem .5rem 1rem rgba(var(--cinza-escuro-rgb), 0.5);
+}
+
+.cardTexto h1 {
+  font-size: calc(2rem + .4vw);
+  color: rgb(var(--rosa-escuro-rgb));
+  line-height: 0.8;
+}
+
+.cardTexto p {
+  font-weight: 300;
+  font-size: calc(1.6rem + .1vw);
+  color: rgb(var(--cinza-escuro-rgb));
 }
