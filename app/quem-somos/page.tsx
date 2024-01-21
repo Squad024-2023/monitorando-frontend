@@ -3,6 +3,10 @@ import Image from 'next/image'
 import styles from './quem-somos.module.css'
 import Doar from '@/components/doar/doar'
 import arthur from '@/public/images/arthur.webp'
+import kaua from '@/public/images/kaua.webp'
+import mariana from '@/public/images/mariana.webp'
+import nayara from '@/public/images/nayara.webp'
+import bianca from '@/public/images/bianca.webp'
 
 
 
@@ -50,8 +54,13 @@ export default function QuemSomos() {
                     </div>
 
                     <div className={styles.cardContainer}>
-                        <div className={styles.cardFoto}>
-                        </div>
+                        <Image
+                            className={styles.cardFoto}
+                            src={nayara}
+                            quality={100}
+                            placeholder='blur'
+                            alt='Imagem de nayara'
+                        />
                         <div className={styles.cardTexto}>
                             <h1>Nayara Pereira</h1>
                             <p>Mestre em História | Estudante de Desenvolvimento Full Stack
@@ -63,8 +72,13 @@ export default function QuemSomos() {
                     </div>
 
                     <div className={styles.cardContainer}>
-                        <div className={styles.cardFoto}>
-                        </div>
+                        <Image
+                            className={styles.cardFoto}
+                            src={mariana}
+                            quality={100}
+                            placeholder='blur'
+                            alt='Imagem de mariana'
+                        />
                         <div className={styles.cardTexto}>
                             <h1>Mariana Moreira</h1>
                             <p>HTML | CSS | Java | WordPress
@@ -74,8 +88,13 @@ export default function QuemSomos() {
                     </div>
 
                     <div className={styles.cardContainer}>
-                        <div className={styles.cardFoto}>
-                        </div>
+                        <Image
+                            className={styles.cardFoto}
+                            src={kaua}
+                            quality={100}
+                            placeholder='blur'
+                            alt='Imagem de kaua'
+                        />
                         <div className={styles.cardTexto}>
                             <h1>Kauã Alves</h1>
                             <p>Desenvolvedor Web | JavaScript | CSS | Técnico de Logística
@@ -85,8 +104,13 @@ export default function QuemSomos() {
                     </div>
 
                     <div className={styles.cardContainer}>
-                        <div className={styles.cardFoto}>
-                        </div>
+                        <Image
+                            className={styles.cardFoto}
+                            src={bianca}
+                            quality={100}
+                            placeholder='blur'
+                            alt='Imagem de bianca'
+                        />
                         <div className={styles.cardTexto}>
                             <h1>Bianca Tayla</h1>
                             <p>MySQL | Java | Data Analysis | Full Stack Developer
