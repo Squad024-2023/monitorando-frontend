@@ -90,12 +90,14 @@
     align-items: center;
     flex-wrap: wrap;
     gap: 1rem;
+
 }
 
 .sociaisFooter ul {
     list-style: none;
     padding-left: 2rem;
     border-left: solid .1rem rgba(var(--sal-rgb), 0.2);
+  
 }
 
 .sociaisFooter h2 {

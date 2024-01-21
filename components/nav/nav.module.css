@@ -10,10 +10,6 @@
     z-index: 9;
 }
 
-.btn {
-    display: none;
-}
-
 .menuNav {
     display: flex;
     align-items: center;
@@ -50,16 +46,33 @@
     font-weight: 800;
 }
 
+.btn {
+    display: none;
+    border-radius: 1rem;
+    background-color: rgb(var(--sal-rgb));
+
+}
+
+.lottie {
+    width: 5rem;
+    aspect-ratio: 1/1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 @media screen and (max-width: 910px) {
     .nav {
         gap: 1rem;
-        align-items: space-between;
+        justify-content: space-between;
 
     }
 
     .btn {
-        display: block;
+        display: flex;
     }
+
+
 
     .menuNav {
         position: absolute;
