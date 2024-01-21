@@ -1,0 +1,97 @@
+.main {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 100vh;
+  width: 100%;
+}
+
+.section1 {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  padding: 0 5%;
+  background-color: rgb(var(--sal-rgb));
+
+}
+
+.tela1 {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+  width: 100%;
+  max-width: 1240px;
+
+}
+
+.textoTela1 {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-bottom: 5rem;
+  gap: 5rem;
+
+}
+
+.section1 h1 {
+  font-size: calc(4rem + 4vw);
+  max-width: 90rem;
+  color: #ffffff;
+  line-height: 0.8;
+  text-shadow: 0px .4rem .4rem rgba(0, 0, 0, 0.5);
+}
+
+.section1 h1 span {
+  color: rgb(var(--sal-rgb));
+
+}
+
+.section1 p {
+  align-self: flex-start;
+  max-width: 900px;
+  font-size: calc(1.6rem + .5vw);
+  color: #ffffff;
+  text-shadow: 0px .4rem .4rem rgba(0, 0, 0, 0.5);
+}
+
+.tela1Bts {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  width: 100%;
+}
+
+.cardContainer {
+  position: absolute;
+  bottom: 1rem;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: clamp(15rem, 18vw, 18rem);
+  max-width: 1240px;
+  gap: 5%;
+}
+
+.section2 {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 100vh;
+  margin-top: 5%;
+  padding: 5rem 2rem;
+}
+
