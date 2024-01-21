@@ -8,6 +8,7 @@
   width: 100%;
   gap: 10rem;
   margin-bottom: 5rem;
+  overflow-x: hidden;
 }
 
 .section1 {
@@ -16,7 +17,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 100%;
+  width: 100vw;
   min-height: 100vh;
   padding: 2rem 5%;
 }
@@ -26,11 +27,11 @@
 .tela1 {
   position: relative;
   display: flex;
-  align-items: center;
   justify-content: center;
   width: 100%;
   height: 100%;
   gap: 2rem;
+  padding: 2rem;
 
 }
 
@@ -46,10 +47,11 @@
 }
 
 .textoTela1 h1 {
-  color: rgb(var(--verde-escuro-rgb));
+  color: rgb(var(--sal-rgb));
   font-size: calc(2rem + 2vw);
   font-weight: 900;
-  line-height: 0.8;
+  padding: .5rem;
+  background-color: rgb(var(--verde-escuro-rgb));
 }
 
 .textoTela1 h5 {
@@ -59,47 +61,50 @@
   color: rgba(var(--verde-escuro-rgb), 1);
 }
 
-  .textoTela1 p {
-    font-weight: 300;
-    max-width: 50rem;
-    font-size: calc(1.6rem + .2vw);
-    color: rgb(var(--cinza-escuro-rgb));
-  }
+.textoTela1 p {
+  font-weight: 300;
+  max-width: 50rem;
+  font-size: calc(1.5rem + .1vw);
+  color: rgb(var(--cinza-escuro-rgb));
+}
 
-  .imagemTela1 {
-    height: 90vh;
-    width: auto;
-    object-fit: contain;
-    border-radius: 1rem;
-    box-shadow: .2rem .2rem 1rem rgba(var(--cinza-escuro-rgb), 0.5);
+.imagemTela1 {
+  position: relative;
+  max-width: 40rem;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 1rem;
+  box-shadow: .2rem .2rem 1rem rgba(var(--cinza-escuro-rgb), 0.5);
+}
 
-  }
 
-  .section2 {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    min-height: 100vh;
-    padding: 0 5%;
-    background-color: navy;
 
-  }
 
-  .tela2 {
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    width: 100%;
-    height: 100%;
-    background-color: bisque;
+.section2 {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  min-height: 100vh;
+  padding: 0 5%;
+  background-color: navy;
 
-  }
+}
 
-  .conteudo {
-    width: 40rem;
-    height: 40rem;
-    background-color: seagreen;
-  }
+.tela2 {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 100%;
+  height: 100%;
+  background-color: bisque;
+
+}
+
+.conteudo {
+  width: 40rem;
+  height: 40rem;
+  background-color: seagreen;
+}

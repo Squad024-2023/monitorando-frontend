@@ -12,6 +12,10 @@ export default function OqueFazemos() {
         <div className={styles.tela1}>
           <div className={styles.textoTela1}>
             <h1>O Que Fazemos?</h1>
+
+            {/* <h5>Nos desenvolvemos monitorias e mentorias com um método de ensino voltado para facilitar a aprendizagem e a comunicação.
+              Visamos transmitir conhecimento de forma simples e objetiva, para que o aluno possa aprender de forma mais rápida e eficiente.
+            </h5> */}
             <h5>Atualmente temos mais de 200 mil horas de aprendizado, divididas entre mentorias e monitorias para alunos em mais de 15 estados brasileiros e 300 universidades diferentes.</h5>
           </div>
 
@@ -21,7 +25,7 @@ export default function OqueFazemos() {
             priority
             quality={100}
             placeholder='blur'
-            alt='Imagem de arthur'
+            alt='Imagem de estudante com notebook'
           />
 
         </div>
