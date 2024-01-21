@@ -25,7 +25,7 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  padding: 2rem;
+  padding: 2rem 10%;
   width: 100%;
   min-height: 100vh;
   background-color: rgba(var(--cinza-escuro-rgb), 0.6);
@@ -48,7 +48,6 @@
   gap: 5rem;
   padding: 3rem;
   border-radius: 2rem;
-  /* background-color: rgba(var(--verde-escuro-rgb), 1); */
 
 }
 
@@ -56,40 +55,102 @@
   font-size: calc(2rem + 2vw);
   color: rgb(var(--sal-rgb));
   line-height: 0.8;
+  text-shadow: .2rem .2rem .2rem rgba(var(--cinza-escuro-rgb), 1);
 }
 
 .textoTela1 h2 {
   font-size: calc(1.6rem + 1vw);
   font-weight: 300;
   color: rgba(var(--sal-rgb), 1);
+  text-shadow: .2rem .2rem .2rem rgba(var(--cinza-escuro-rgb), 1);
 }
 
 .textoTela1 p {
   align-self: flex-start;
-  font-weight: 200;
+  font-weight: 300;
   max-width: 90rem;
-  font-size: calc(1.6rem + .5vw);
+  font-size: calc(1.6rem + .2vw);
   color: rgb(var(--sal-rgb));
+  text-shadow: .2rem .2rem .2rem rgba(var(--cinza-escuro-rgb), 1);
 }
 
 .section2 {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  width: 80%;
+  min-height: 100vh;
+  overflow: visible;
+  padding: 2rem 0;
+  gap: 2rem;
+}
+
+.descricaoTela2 {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+  /* Add this line to make sure it's visually above other elements */
+}
+
+.descricaoTela2 h1 {
+  font-size: calc(2rem + 2vw);
+  color: rgb(var(--rosa-escuro-rgb));
+  font-family: var(--font-pacifico);
+  max-width: 35rem;
+  line-height: 0.8;
+}
+
+.descricaoTela2 p {
+  font-weight: 400;
+  max-width: 35rem;
+  font-size: calc(1.6rem + .1vw);
+  color: rgb(var(--rosa-escuro-rgb));
+}
+
+.cardsTela2 {
   position: relative;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  width: 100%;
-  min-height: 100vh;
-  padding: 0 5%;
-  background-color: rgb(var(--sal-rgb));
+  height: 100%;
+  gap: 10rem;
+
 }
 
-.tela2 {
+.cardContainer {
+  display: flex;
+  align-items: center;
+  padding: 1rem 2rem;
+  gap: 2rem;
+  border-radius: 1rem;
+  background-color: rgb(var(--sal-rgb));
+  
+}
+
+
+.cardFoto {
   position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 100%;
-  height: 100vh;
+  width: 20rem;
+  height: 20rem;
+  border-radius: 50% 50% 0 50%;
+  border: solid 1rem rgb(var(--rosa-escuro-rgb));
+  box-shadow: .5rem .5rem 1rem rgba(var(--cinza-escuro-rgb), 0.5);
 
+}
+
+.cardTexto {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 40rem;
+  background-color: rgb(var(--sal-rgb));
+  /* box-shadow: .5rem .5rem 1rem rgba(var(--cinza-escuro-rgb), 0.5); */
+  padding: 1rem 2rem;
+  border-radius: 2rem 2rem 2rem 0;
 }
