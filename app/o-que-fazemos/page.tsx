@@ -3,6 +3,8 @@ import Image from 'next/image'
 import student from '@/public/images/studentNotebook.webp'
 import students from '@/public/images/studentsNotebook.webp'
 import problems from '@/public/images/problems.webp'
+import solucao from '@/public/images/solucao.webp'
+import results from '@/public/images/results.webp'
 
 export default function OqueFazemos() {
 
@@ -34,7 +36,6 @@ export default function OqueFazemos() {
         </div>
       </section>
 
-
       <section className={styles.section2}>
         <div className={styles.tela2}>
           <div className={styles.textoTela2}>
@@ -43,7 +44,6 @@ export default function OqueFazemos() {
               Visamos transmitir conhecimento de forma simples e objetiva, para que o aluno possa aprender de forma mais rápida e eficiente.
             </h5>
           </div>
-
 
           <div className={styles.comoContainer}>
             <div className={styles.textoComo}>
@@ -61,11 +61,10 @@ export default function OqueFazemos() {
             />
           </div>
 
-
           <div className={styles.comoContainer}>
             <Image
               className={styles.imagemTextoComo2}
-              src={problems}
+              src={solucao}
               priority
               quality={100}
               placeholder='blur'
@@ -78,7 +77,6 @@ export default function OqueFazemos() {
             </div>
           </div>
 
-
           <div className={styles.comoContainer}>
             <div className={styles.textoComo}>
               <h2>Verificando Resultados</h2>
@@ -87,22 +85,18 @@ export default function OqueFazemos() {
             </div>
             <Image
               className={styles.imagemTextoComo1}
-              src={problems}
+              src={results}
               priority
               quality={100}
               placeholder='blur'
               alt='Imagem de estudante com notebook'
             />
           </div>
-
           <div className={styles.textoTela2}>
             <h1>Repetir e Melhorar</h1>
             <h5>A medida que mais alunos e mais ciclos se iniciam, repetimos o processo de identificação de problemas e soluções, sempre buscando melhorar a qualidade do nosso trabalho e a eficiência das nossas aulas e orientações.
             </h5>
           </div>
-
-
-
         </div>
       </section>
     </main>
