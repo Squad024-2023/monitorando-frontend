@@ -1,6 +1,7 @@
 import styles from './o-que-fazemos.module.css'
 import Image from 'next/image'
 import student from '@/public/images/studentNotebook.webp'
+import students from '@/public/images/studentsNotebook.webp'
 
 export default function OqueFazemos() {
 
@@ -17,6 +18,15 @@ export default function OqueFazemos() {
               Visamos transmitir conhecimento de forma simples e objetiva, para que o aluno possa aprender de forma mais rápida e eficiente.
             </h5> */}
             <h5>Atualmente temos mais de 200 mil horas de aprendizado, divididas entre mentorias e monitorias para alunos em mais de 15 estados brasileiros e 300 universidades diferentes.</h5>
+            
+          <Image
+            className={styles.imagemTextoTela1}
+            src={students}
+            priority
+            quality={100}
+            placeholder='blur'
+            alt='Imagem de estudante com notebook'
+          />
           </div>
 
           <Image
@@ -27,7 +37,6 @@ export default function OqueFazemos() {
             placeholder='blur'
             alt='Imagem de estudante com notebook'
           />
-
         </div>
 
       </section>

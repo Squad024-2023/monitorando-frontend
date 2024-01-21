@@ -9,6 +9,7 @@
   gap: 10rem;
   margin-bottom: 5rem;
   overflow-x: hidden;
+  background-color: rgba(var(--sal-rgb), 1);
 }
 
 .section1 {
@@ -22,12 +23,12 @@
   padding: 2rem 5%;
 }
 
-
-
 .tela1 {
   position: relative;
   display: flex;
   justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
   width: 100%;
   height: 100%;
   gap: 2rem;
@@ -36,13 +37,13 @@
 }
 
 .textoTela1 {
+  position: relative;
   display: flex;
   flex-direction: column;
   height: 100%;
   margin-bottom: 5rem;
   gap: 5rem;
-  padding: .5rem;
-  border-bottom: solid .2rem rgb(var(--verde-escuro-rgb));
+  z-index: 1;
 
 }
 
@@ -51,7 +52,9 @@
   font-size: calc(2rem + 2vw);
   font-weight: 900;
   padding: .5rem;
+  border-radius: 1rem;
   background-color: rgb(var(--verde-escuro-rgb));
+  z-index: 1;
 }
 
 .textoTela1 h5 {
@@ -68,15 +71,25 @@
   color: rgb(var(--cinza-escuro-rgb));
 }
 
+.imagemTextoTela1 {
+  position: relative;
+  width: 100%;
+  max-width: 50rem;
+  height: auto;
+  object-fit: contain;
+  border-radius: 1rem;
+  box-shadow: 0 2rem 0 rgba(var(--verde-escuro-rgb), 1);
+}
+
 .imagemTela1 {
   position: relative;
   max-width: 40rem;
-  height: 100%;
+  width: 100%;
+  height: auto;
   object-fit: contain;
   border-radius: 1rem;
-  box-shadow: .2rem .2rem 1rem rgba(var(--cinza-escuro-rgb), 0.5);
+  box-shadow: 2rem 0 0 rgba(var(--verde-escuro-rgb), 1);
 }
-
 
 
 
@@ -104,6 +117,7 @@
 }
 
 .conteudo {
+  flex-shrink: 1;
   width: 40rem;
   height: 40rem;
   background-color: seagreen;
