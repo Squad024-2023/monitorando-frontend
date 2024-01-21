@@ -1,4 +1,3 @@
-import HeroImage from '@/components/heroImage/heroImage'
 import Image from 'next/image'
 import styles from './quem-somos.module.css'
 import Doar from '@/components/doar/doar'

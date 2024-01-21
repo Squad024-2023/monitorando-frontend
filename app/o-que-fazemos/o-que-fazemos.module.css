@@ -6,6 +6,8 @@
   align-items: center;
   min-height: 100vh;
   width: 100%;
+  gap: 10rem;
+  margin-bottom: 5rem;
 }
 
 .section1 {
@@ -13,23 +15,12 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   width: 100%;
   min-height: 100vh;
-  padding: 0 5%;
-  background-color: black;
+  padding: 2rem 5%;
 }
 
-.section2 {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-  min-height: 100vh;
-  padding: 0 5%;
-  background-color: navy;
-
-}
 
 
 .tela1 {
@@ -39,23 +30,76 @@
   justify-content: center;
   width: 100%;
   height: 100%;
-  background-color: aqua;
-
+  gap: 2rem;
 
 }
 
-.tela2 {
-  position: relative;
+.textoTela1 {
   display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  width: 100%;
+  flex-direction: column;
   height: 100%;
-  background-color: bisque;
+  margin-bottom: 5rem;
+  gap: 5rem;
+  padding: .5rem;
+  border-bottom: solid .2rem rgb(var(--verde-escuro-rgb));
 
 }
-.conteudo{
-  width: 40rem;
-  height: 40rem;
-  background-color: seagreen;
+
+.textoTela1 h1 {
+  color: rgb(var(--verde-escuro-rgb));
+  font-size: calc(2rem + 2vw);
+  font-weight: 900;
+  line-height: 0.8;
 }
+
+.textoTela1 h5 {
+  font-weight: 400;
+  max-width: 50rem;
+  font-size: calc(1.6rem + .2vw);
+  color: rgba(var(--verde-escuro-rgb), 1);
+}
+
+  .textoTela1 p {
+    font-weight: 300;
+    max-width: 50rem;
+    font-size: calc(1.6rem + .2vw);
+    color: rgb(var(--cinza-escuro-rgb));
+  }
+
+  .imagemTela1 {
+    height: 90vh;
+    width: auto;
+    object-fit: contain;
+    border-radius: 1rem;
+    box-shadow: .2rem .2rem 1rem rgba(var(--cinza-escuro-rgb), 0.5);
+
+  }
+
+  .section2 {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    min-height: 100vh;
+    padding: 0 5%;
+    background-color: navy;
+
+  }
+
+  .tela2 {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 100%;
+    height: 100%;
+    background-color: bisque;
+
+  }
+
+  .conteudo {
+    width: 40rem;
+    height: 40rem;
+    background-color: seagreen;
+  }

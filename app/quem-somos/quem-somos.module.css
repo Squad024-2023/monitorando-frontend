@@ -8,6 +8,7 @@
   min-height: 100vh;
   width: 100%;
   background-color: rgb(var(--sal-rgb));
+  margin-bottom: 5rem;
 }
 
 .section1 {
