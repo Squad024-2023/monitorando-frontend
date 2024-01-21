@@ -5,7 +5,6 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border-top: .1rem solid rgba(var(--cinza-escuro-rgb), 1);
 
 }
 

@@ -6,7 +6,7 @@
     height: 8rem;
     gap: 1rem;
     padding: 1rem 2rem;
-    background-color: #fff;
+    background-color: rgba(var(--sal-rgb), 1);
     z-index: 9;
 }
 
@@ -53,7 +53,6 @@
 @media screen and (max-width: 910px) {
     .nav {
         gap: 1rem;
-        flex-wrap: wrap;
         align-items: space-between;
 
     }

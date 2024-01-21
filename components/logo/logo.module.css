@@ -2,7 +2,7 @@
     display: flex;
     align-items: center;
     position: relative;
-    width: clamp(30rem, 30vw, 50rem);
+    width: clamp(20rem, 30vw, 50rem);
     height: auto;
     /*precisa ser relative pra Image do next funcionar*/
 }

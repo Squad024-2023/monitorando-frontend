@@ -55,6 +55,7 @@
 .textoTela1 h1 {
   font-size: calc(2rem + 2vw);
   color: rgb(var(--sal-rgb));
+  font-family: var(--font-pacifico);
   line-height: 0.8;
   text-shadow: .2rem .2rem .2rem rgba(var(--cinza-escuro-rgb), 1);
 }
@@ -79,7 +80,6 @@
   display: flex;
   align-items: flex-start;
   justify-content: center;
-  flex-wrap: wrap;
   width: 80%;
   min-height: 100vh;
   overflow: visible;
@@ -168,4 +168,14 @@
   font-weight: 300;
   font-size: calc(1.6rem + .1vw);
   color: rgb(var(--cinza-escuro-rgb));
+}
+@media screen and (max-width: 760px) {
+  .section2 {
+    flex-wrap: wrap;
+  }
+  .descricaoTela2{
+    position: static;
+    margin-bottom: 10rem;
+  }
+  
 }
