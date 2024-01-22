@@ -18,6 +18,10 @@ import foco from '@/public/icons/foco.json'
 import quimica from '@/public/icons/quimica.json'
 import coms from '@/public/icons/coms.json'
 import histo from '@/public/icons/histo.json'
+import bio from '@/public/icons/bio.json'
+import phis from '@/public/icons/phis.json'
+import apresentacao from '@/public/icons/apresentacao.json'
+import crit from '@/public/icons/feed.json'
 
 export default function Monitorias() {
 
@@ -167,6 +171,34 @@ export default function Monitorias() {
               className={styles.card}
               href='#historia'><LottieAnimation ani={histo} />
               História
+            </Link>
+
+            <Link
+              id='biologia'
+              className={styles.card}
+              href='#biologia'><LottieAnimation ani={bio} />
+              Biologia
+            </Link>
+
+            <Link
+              id='fisica'
+              className={styles.card}
+              href='#fisica'><LottieAnimation ani={phis} />
+              Física
+            </Link>
+
+            <Link
+              id='apresentacao'
+              className={styles.card}
+              href='#apresentacao'><LottieAnimation ani={apresentacao} />
+              Apresentação de Projetos
+            </Link>
+
+            <Link
+              id='criticas'
+              className={styles.card}
+              href='#criticas'><LottieAnimation ani={crit} />
+              Dar e Receber Críticas
             </Link>
 
 
