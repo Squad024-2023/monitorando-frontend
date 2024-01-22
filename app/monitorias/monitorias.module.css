@@ -43,6 +43,7 @@
   padding: .5rem;
   border-radius: 1rem;
   z-index: 1;
+  text-align: center;
   margin: 5rem 0;
 }
 
@@ -56,12 +57,14 @@
   padding: .5rem;
 }
 
+
 .busca {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
   border-radius: 1rem;
+  transition: all 0.3s ease-in-out;
 }
 
 .busca input {
@@ -76,8 +79,19 @@
 }
 
 .busca input::placeholder {
-  color: rgba(var(--cinza-escuro-rgb), 1);
-  font-size: calc(1.5rem + .1vw);
+  opacity: 0;
+}
+
+.form label {
+  position: relative;
+  width: 100%;
+}
+
+.form label:focus-within>span,
+input:not(:placeholder-shown)+.span {
+  color: rgba(var(--cinza-escuro-rgb), 0.5);
+  transform: translateY(-1.2rem);
+  font-size: 1.6rem;
 }
 
 .busca input:focus {
@@ -86,6 +100,7 @@
 
 .busca:focus-within {
   transform: scale(1.01);
+
 }
 
 .buscaBtn {
@@ -168,16 +183,16 @@
 
 
 .radioContainer label {
-  display: grid;
-  grid-template-columns: 1em auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: auto;
   gap: 0.5em;
   color: rgba(var(--cinza-escuro-rgb), 1);
-  font-size: calc(1.7rem + .1vw);
+  font-size: calc(1.6rem + .1vw);
   font-weight: bold;
   line-height: 1.1;
-  display: grid;
-  place-content: center;
-  cursor: pointer;
+
 }
 
 .radioContainer label:focus-within {
@@ -279,9 +294,158 @@
   border: none;
 }
 
+.section3 {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 100vh;
+  margin-top: 5%;
+  padding: 5rem 2rem;
+}
+
+.tela3 {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  max-width: 1240px;
+  padding: 2rem;
+  gap: 2rem;
+  border-radius: 2rem;
+
+}
+
+.tela3 h1 {
+  color: rgb(var(--rosa-escuro-rgb));
+  font-size: calc(1.6rem + 1.5vw);
+  padding: .5rem;
+  max-width: 80rem;
+  text-align: center;
+  border-radius: 1rem;
+  z-index: 1;
+}
+
+.tela3 h4 {
+  color: rgba(var(--rosa-escuro-rgb), 0.8);
+  font-size: 2rem;
+  padding: 1rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+
+}
+
+.formSection3 {
+  width: 80%;
+  max-width: 80rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 1rem;
+  border-radius: 1rem;
+}
+
+.formSection3 > label > input {
+  height: 5rem;
+  width: 100%;
+  border-radius: 1rem;
+  padding-left: 2rem;
+  color: rgba(var(--rosa-escuro-rgb), 1);
+  font-size: calc(1.5rem + .1vw);
+  border: none;
+  outline: none;
+  box-shadow: .6rem .2rem 1rem rgba(var(--cinza-escuro-rgb), 0.2);
+  transition: all 0.3s ease-in-out;
+
+}
+
+.formSection3 label {
+  position: relative;
+}
+
+.formSection3 input::placeholder {
+  opacity: 0;
+}
+
+.formSection3 input:focus {
+  outline: none;
+  background-color: rgb(var(--sal-rgb));
+}
 
 
+.span {
+  position: absolute;
+  left: 2rem;
+  top: 0;
+  z-index: 2;
+  color: rgba(var(--rosa-escuro-rgb), 1);
+  transform: translateY(1.2rem);
+  font-size: calc(1.5rem + .1vw);
+  font-weight: 500;
+  transition-duration: 300ms;
+  pointer-events: none;
+}
 
+.formSection3 label:focus-within>span,
+input:not(:placeholder-shown)+.span {
+  color: rgba(var(--cinza-escuro-rgb), 0.5);
+  transform: translateY(-1.2rem);
+  font-size: 1.6rem;
+}
+
+
+.duvidas textarea{
+  width: 100%;
+  height: 20rem;
+  border-radius: 1rem;
+  padding: 1rem 0 0 2rem;
+  color: rgba(var(--cinza-escuro-rgb), 1);
+  font-size: calc(1.5rem + .1vw);
+  border: none;
+  outline: none;
+  box-shadow: .6rem .2rem 1rem rgba(var(--cinza-escuro-rgb), 0.2);
+}
+
+.duvidas textarea::placeholder {
+  opacity: 0;
+}
+
+.duvidas textarea:focus {
+  outline: none;
+  background-color: rgb(var(--sal-rgb));
+}
+
+.duvidas label:focus-within>span,
+textarea:not(:placeholder-shown)+.span {
+  color: rgba(var(--cinza-escuro-rgb), 0.5);
+  transform: translateY(-1.2rem);
+  font-size: 1.6rem;
+}
+.formSection3 button{
+  width: 100%;
+  height: 5rem;
+  border-radius: 1rem;
+  background-color: rgb(var(--rosa-escuro-rgb));
+  color: rgb(var(--sal-rgb));
+  font-size: calc(1.5rem + .1vw);
+  font-weight: 500;
+  border: none;
+  outline: none;
+  box-shadow: .6rem .2rem 1rem rgba(var(--cinza-escuro-rgb), 0.2);
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.formSection3 button:hover{
+  color: rgb(var(--rosa-escuro-rgb));
+  background-color: #fff;
+}
 
 
 @media screen and (max-width: 490px) {

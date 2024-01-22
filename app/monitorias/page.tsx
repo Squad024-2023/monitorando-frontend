@@ -22,6 +22,8 @@ import bio from '@/public/icons/bio.json'
 import phis from '@/public/icons/phis.json'
 import apresentacao from '@/public/icons/apresentacao.json'
 import crit from '@/public/icons/feed.json'
+import CtaPrimario from '@/components/cta/ctaPrimario'
+import seta from '@/public/icons/arrow-rosa.json'
 
 export default function Monitorias() {
 
@@ -33,7 +35,10 @@ export default function Monitorias() {
           <h1>Encontre seu monitor particular ou turma</h1>
           <form className={styles.form}>
             <div className={styles.busca}>
-              <input type="text" placeholder="Procure sua disciplina"></input>
+              <label htmlFor="disciplina">
+                <input type="text" placeholder="Procure sua disciplina" name='disciplina' />
+                <span className={styles.span}>Buscar Disciplina</span>
+              </label>
               <button type='button' className={styles.buscaBtn}>Buscar</button>
             </div>
             <h4>Selecione o tipo de aula</h4>
@@ -200,9 +205,51 @@ export default function Monitorias() {
               href='#criticas'><LottieAnimation ani={crit} />
               Dar e Receber Críticas
             </Link>
-
-
           </div>
+        </div>
+      </section>
+      <section className={styles.section3}>
+        <div className={styles.tela3}>
+          <h1>Não encontrou o que precisa ou ficou com dúvidas?</h1>
+          <h4>Entre em contato com nosso time! </h4>
+          <form
+            className={styles.formSection3}
+            action="">
+            <label htmlFor="nome">
+              <input type="text" placeholder="Nome" name='nome' />
+              <span className={styles.span}>Nome</span>
+            </label>
+
+            <label htmlFor="email">
+              <input type="text" placeholder="Email" name='email' />
+              <span className={styles.span}>E-mail</span>
+            </label>
+
+            <label htmlFor="telefone">
+              <input type="text" placeholder='Telefone' name='telefone' />
+              <span className={styles.span}>Telefone</span>
+            </label>
+
+            <div className={styles.radioContainer}>
+              <label>
+                <input type='radio' id='estudante' name='turma' value="estudante" />
+                Estudante
+              </label>
+              <label>
+                <input type='radio' id='professor' name='turma' value="professor" />
+                Professor</label>
+            </div>
+
+            <label htmlFor="duvidas"
+              className={styles.duvidas} >
+              <textarea placeholder='Dúvidas ou sugestões' name='duvidas' />
+              <span className={styles.span}>Dúvidas ou sugestões</span>
+            </label>
+            <button type='submit'> Enviar</button>
+
+
+
+          </form>
         </div>
       </section>
     </main>
