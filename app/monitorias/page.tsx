@@ -246,9 +246,6 @@ export default function Monitorias() {
               <span className={styles.span}>Dúvidas ou sugestões</span>
             </label>
             <button type='submit'> Enviar</button>
-
-
-
           </form>
         </div>
       </section>

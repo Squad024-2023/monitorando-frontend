@@ -258,9 +258,10 @@ input:not(:placeholder-shown)+.span {
 }
 
 .cardWrapperTela2 {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(23rem, 1fr));
-  place-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
   gap: 2rem;
   width: 100%;
   gap: 2rem;
@@ -277,7 +278,6 @@ input:not(:placeholder-shown)+.span {
   justify-content: center;
   align-items: center;
   text-align: center;
-  gap: 1rem;
   padding: 1rem;
   border: solid .2rem rgb(var(--sal-rgb));
   border-radius: 1rem;
@@ -351,7 +351,7 @@ input:not(:placeholder-shown)+.span {
   border-radius: 1rem;
 }
 
-.formSection3 > label > input {
+.formSection3>label>input {
   height: 5rem;
   width: 100%;
   border-radius: 1rem;
@@ -400,7 +400,7 @@ input:not(:placeholder-shown)+.span {
 }
 
 
-.duvidas textarea{
+.duvidas textarea {
   width: 100%;
   height: 20rem;
   border-radius: 1rem;
@@ -427,7 +427,8 @@ textarea:not(:placeholder-shown)+.span {
   transform: translateY(-1.2rem);
   font-size: 1.6rem;
 }
-.formSection3 button{
+
+.formSection3 button {
   width: 100%;
   height: 5rem;
   border-radius: 1rem;
@@ -442,10 +443,20 @@ textarea:not(:placeholder-shown)+.span {
   cursor: pointer;
 }
 
-.formSection3 button:hover{
+.formSection3 button:hover {
   color: rgb(var(--rosa-escuro-rgb));
   background-color: #fff;
 }
+
+@media screen and (max-width: 768px) {
+  .card {
+    width: 15rem;
+    height: 15rem;
+    font-size: 1.2rem;
+  }
+
+}
+
 
 
 @media screen and (max-width: 490px) {
