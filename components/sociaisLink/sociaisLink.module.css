@@ -1,5 +1,6 @@
 .sociaisLink {
     width: 100%;
+    max-width: 4rem;
     height: 100%;
     display: flex;
     justify-content: center;

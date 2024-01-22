@@ -1,0 +1,96 @@
+.cardContainer {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
+    padding: 1rem;
+    border-radius: 1rem;
+    z-index: 1;
+    background-color: #fff;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
+}
+
+.cardImagem {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 14rem;
+    height: 14rem;
+    border-radius: 50%;
+    padding: 1rem;
+    background-color: #fff;
+
+}
+
+.cardImagem img {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    object-fit: cover;
+    z-index: 1;
+}
+
+.cardImagem::after {
+    content: "";
+    position: absolute;
+    top: 78%;
+    left: 72%;
+    width: 1vw;
+    height: 1vw;
+    border-radius: 50%;
+    background-color: rgba(var(--verde-escuro-rgb), 1);
+    border: solid .2vw #fff;
+    z-index: 1;
+
+
+}
+
+.cardTexto {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    padding: 1rem;
+    border-radius: 1rem;
+}
+
+.cardTexto h3 {
+    position: relative;
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: rgba(var(--cinza-escuro-rgb), 1);
+    margin-bottom: 1rem;
+}
+
+.cardTexto p {
+    position: relative;
+    display: flex;
+    width: 100%;
+    font-size: 1.5rem;
+    max-width: 30rem;
+    font-weight: 500;
+    color: rgba(var(--cinza-escuro-rgb), 0.8);
+    margin-bottom: 1rem;
+}
+.sociais{
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    border-radius: 1rem;
+}
+
+.sociais > * {
+    width: 100%;
+    max-width: 4rem;
+    height: 100%;
+    cursor: pointer;
+}
+
+

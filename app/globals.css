@@ -30,10 +30,32 @@ html {
   padding: 0;
   margin: 0;
   border: 0;
+  scroll-behavior: smooth;
   animation: animation1 1 ease-in-out;
 }
 
+/* largura da barra de fundo */
+::-webkit-scrollbar {
+  width: 1.2rem;
+}
 
+/* Barra de fundo*/
+::-webkit-scrollbar-track {
+  background: #fff;
+}
+
+/* barra de rolagem */
+::-webkit-scrollbar-thumb {
+  border-radius: .5rem;
+  background: rgb(var(--verde-claro-rgb));
+
+}
+
+/* barra de rolagem no hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(var(--rosa-escuro-rgb));
+
+}
 
 html,
 body {

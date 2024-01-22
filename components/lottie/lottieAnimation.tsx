@@ -1,3 +1,4 @@
+'use client'
 import lottie from "lottie-web";
 import { useRef, useEffect } from 'react';
 import styles from './lottie.module.css'
