@@ -9,6 +9,7 @@
   gap: 10rem;
   margin-bottom: 5rem;
   overflow-x: hidden;
+  background-color: rgba(var(--sal-rgb), 1);;
 }
 
 .section1 {
@@ -192,6 +193,7 @@ input:not(:placeholder-shown)+.span {
   font-size: calc(1.6rem + .1vw);
   font-weight: bold;
   line-height: 1.1;
+cursor: pointer;
 
 }
 
@@ -218,6 +220,10 @@ input:not(:placeholder-shown)+.span {
   width: 100%;
   gap: 2rem;
   padding: 2rem;
+}
+.cardWrapper:hover .cardWrapper > *:not(:hover){
+  filter: grayscale(100%);
+  opacity: 0.75;
 }
 
 

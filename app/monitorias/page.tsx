@@ -203,7 +203,7 @@ export default function Monitorias() {
               id='criticas'
               className={styles.card}
               href='#criticas'><LottieAnimation ani={crit} />
-              Dar e Receber Críticas
+              Críticas Construtivas
             </Link>
           </div>
         </div>

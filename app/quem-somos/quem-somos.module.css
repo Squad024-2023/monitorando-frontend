@@ -59,7 +59,6 @@
   color: rgb(var(--sal-rgb));
   font-family: var(--font-pacifico);
   line-height: 0.8;
-  text-shadow: .2rem .2rem .2rem rgba(var(--cinza-escuro-rgb), 1);
 }
 
 .textoTela1 h2 {
