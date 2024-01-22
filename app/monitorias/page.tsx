@@ -1,5 +1,11 @@
 
 import styles from './monitorias.module.css'
+import CardPessoa from '../../components/cardPessoa/cardPessoa'
+import arthur from '@/public/images/arthur.webp'
+import kaua from '@/public/images/kaua.webp'
+import mariana from '@/public/images/mariana.webp'
+import nayara from '@/public/images/nayara.webp'
+import bianca from '@/public/images/bianca.webp'
 
 export default function Monitorias() {
 
@@ -26,8 +32,18 @@ export default function Monitorias() {
             </div>
           </form>
           <h1>Monitores em Destaque</h1>
+          <div className={styles.cardWrapper}>
+            <CardPessoa img={arthur} nome='Arthur Bernard' descricao='Desenvolvedor FullStack, gestor de projetos e especialista em oratória.' />
+
+            
+            <CardPessoa img={arthur} nome='Arthur Bernard' descricao='VAMO DALE PRA NÃO TOMALE' />
+            <CardPessoa img={arthur} nome='Arthur Bernard' descricao='VAMO DALE PRA NÃO TOMALE' />
+            <CardPessoa img={arthur} nome='Arthur Bernard' descricao='VAMO DALE PRA NÃO TOMALE' />
+            <CardPessoa img={arthur} nome='Arthur Bernard' descricao='VAMO DALE PRA NÃO TOMALE' />
+
+          </div>
         </div>
-    
+
 
         Monitoria em turma
         Monitoria individual
