@@ -134,14 +134,18 @@ Para contribuir com o **Monitorando**, siga estas etapas:
 
 ## Colaboradores
 
+O **Monitorando** foi desenvolvido pelo SQUAD 24 no curso Recode PRO 2023.
 
 
-<p> Arthur Bernard 
-<p> Nayara Pereira
-<p> Kauã Alves
-<p> Mariana Moreira
-<p> Bianca Tayla
+| Nome | LinkedIn | GitHub |
+|------|:--------:|:------:|
+| **Arthur Bernard** | <a href="https://www.linkedin.com/in/ber-arthur/" ><img src="https://img.icons8.com/color/38/000000/linkedin.png"/></a>| <a href="https://github.com/Daedaluzz"><img src="https://img.icons8.com/ios-glyphs/38/000000/github.png"/></a> |
+| **Nayara Pereira** | <a href="https://www.linkedin.com/in/nayarabpereira/"><img src="https://img.icons8.com/color/38/000000/linkedin.png"/></a> | <a href="https://github.com/nxyara"><img src="https://img.icons8.com/ios-glyphs/38/000000/github.png"/></a> |
+| **Kauã Alves** |<a href="https://www.linkedin.com/in/kaua-amelo96/" ><img src="https://img.icons8.com/color/38/000000/linkedin.png"/></a>| <a href="https://github.com/kauaamelo"><img src="https://img.icons8.com/ios-glyphs/38/000000/github.png"/></a> | 
+| **Mariana Moreira** | <a href="https://www.linkedin.com/in/mariana-moreira-santos-39417828a/" ><img src="https://img.icons8.com/color/38/000000/linkedin.png"/></a>| <a href="https://github.com/mari-moreira"><img src="https://img.icons8.com/ios-glyphs/38/000000/github.png"/></a> |
+| **Bianca Tayla** | <a href="https://www.linkedin.com/in/bianca-t-7b5972255/" ><img src="https://img.icons8.com/color/38/000000/linkedin.png"/></a>| <a href="https://github.com/Y777-CoderTech"><img src="https://img.icons8.com/ios-glyphs/38/000000/github.png"/></a> |
 
+<br> 
 
 ## Seja um doador
 
@@ -149,6 +153,7 @@ Somos uma organização sem fins lucrativos dedicada a melhorar o desempenho aca
 
 Considere fazer uma doação hoje e ajudar a mudar o futuro dos nossos estudantes!
 
+<br>
 
 ## Licença 
 
