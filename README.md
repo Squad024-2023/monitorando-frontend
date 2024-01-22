@@ -139,7 +139,7 @@ Os integrantes estão apresentados abaixo, fique a vontade para nos encontrar no
 <table>
   <tr>
     <td align="center" style="padding: 10px;">
-        <img src="./public/images/studentTired.webp" width="200px;" alt="Arthur"/><br>
+        <img src="./public/images/arthur.webp" width="200px;" alt="Arthur"/><br>
         <sub>
           <b>Arthur Bernard</b>
           <p> <a href="https://www.linkedin.com/in/ber-arthur/" ><img src="https://img.icons8.com/color/38/000000/linkedin.png"/></a> <a href="https://github.com/Daedaluzz"><img src="https://img.icons8.com/ios-glyphs/38/000000/github.png"/></a>
@@ -147,7 +147,7 @@ Os integrantes estão apresentados abaixo, fique a vontade para nos encontrar no
       </a>
     </td>
     <td align="center" style="padding: 10px;">
-        <img src="./public/images/studentTired.webp" width="200px;" alt="Arthur"/><br>
+        <img src="./public/images/nayara.webp" width="200px;" alt="Arthur"/><br>
         <sub>
           <b>Nayara Pereira</b>
           <p> <a href="https://www.linkedin.com/in/nayarabpereira/"><img src="https://img.icons8.com/color/38/000000/linkedin.png"/></a> <a href="https://github.com/nxyara"><img src="https://img.icons8.com/ios-glyphs/38/000000/github.png"/></a>
@@ -155,7 +155,7 @@ Os integrantes estão apresentados abaixo, fique a vontade para nos encontrar no
       </a>
     </td>
     <td align="center" style="padding: 10px;">
-        <img src="./public/images/studentTired.webp" width="200px;" alt="Arthur"/><br>
+        <img src="./public/images/kaua.webp" width="210px;" alt="Arthur"/><br>
         <sub>
           <b>Kauã Alves</b>
           <p> <a href="https://www.linkedin.com/in/kaua-amelo96/" ><img src="https://img.icons8.com/color/38/000000/linkedin.png"/></a> <a href="https://github.com/kauaamelo"><img src="https://img.icons8.com/ios-glyphs/38/000000/github.png"/></a>
@@ -163,7 +163,7 @@ Os integrantes estão apresentados abaixo, fique a vontade para nos encontrar no
       </a>
     </td>
     <td align="center" style="padding: 10px;">
-        <img src="./public/images/studentTired.webp" width="200px;" alt="Arthur"/><br>
+        <img src="./public/images/mariana.webp" width="200px;" alt="Arthur"/><br>
         <sub>
           <b>Mariana Moreira</b>
           <p> <a href="https://www.linkedin.com/in/mariana-moreira-santos-39417828a/" ><img src="https://img.icons8.com/color/38/000000/linkedin.png"/></a> <a href="https://github.com/mari-moreira"><img src="https://img.icons8.com/ios-glyphs/38/000000/github.png"/></a>
@@ -171,7 +171,7 @@ Os integrantes estão apresentados abaixo, fique a vontade para nos encontrar no
       </a>
     </td>
     <td align="center" style="padding: 10px;">
-        <img src="./public/images/studentTired.webp" width="200px;" alt="Arthur"/><br>
+        <img src="./public/images/bianca.webp" width="200px;" alt="Arthur"/><br>
         <sub>
           <b>Bianca Tayla</b>
           <p> <a href="https://www.linkedin.com/in/bianca-t-7b5972255/" ><img src="https://img.icons8.com/color/38/000000/linkedin.png"/></a> <a href="https://github.com/Y777-CoderTech"><img src="https://img.icons8.com/ios-glyphs/38/000000/github.png"/></a>
