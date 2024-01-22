@@ -18,10 +18,10 @@ export default function QuemSomos() {
                 <div className={styles.tela1}>
                     <div className={styles.textoTela1}>
                         <h1>Nossa Missão</h1>
-                        <h2> monitorando esta aqui para ajudar estudantes a seguirem seus sonhos, oferecendo monitorias e mentorias em disciplinas acadêmicas e sociais.</h2>
+                        <h2> monitorando está aqui para ajudar estudantes a seguirem seus sonhos! Oferecemos monitorias e mentorias em disciplinas acadêmicas e sociais.</h2>
                         <p>
-                            Nosso foco é principalmente nos estudantes que não tem uma boa educação base do ensino médio e se deparam com dificuldades imensas
-                            logo nos seus primeiros meses de faculdade.
+                            Nosso objetivo principal são estudantes que não tiveram uma boa educação base do ensino médio e se deparam com grandes dificuldades
+                            nos seus primeiros meses de faculdade.
                         </p>
                         <Doar />
                     </div>
