@@ -9,7 +9,6 @@ Seu sucesso acadêmico começa aqui! 🎓
 - <a href="#-Contruibuição"> Contruibuição </a>
 - <a href="#-Colaboradores"> Colaboradores </a>
 - <a href="#-Seja-um-doador"> Seja um doador </a>
-- <a href="#-Licença "> Licença  </a>
 
 <br>
 
@@ -39,12 +38,21 @@ Você pode contribuir para o Monitorando de várias maneiras:
 
 ## ⚙️ Instalação
 
+O **Monitorando** foi construído em NextJS, versão 14. Para executar, após realizado o clone do repositório
 
+    `$ git clone https://github.com/Squad024-2023/monitorando-frontend.git`
 
+via terminal, instale e execute:
+```bash
+npm install
+npm run dev
+```
 
+<br>
 
-O Monitorando foi construído em NextJS, versão 14. Para executar, é preciso ter instalados as seguintes dependências:
+## 🛠️ Tecnologias Utilizadas
 
+clonar o repositorio
 
 * NextJS: biblioteca react para a base do projeto;
 
@@ -59,34 +67,18 @@ npx create-next-app@latest monitorando-frontend
 # Would you like to use App Router? (recommended) ...  Yes
 # Would you like to customize the default import alias (@/*)? ... No 
   ```
+
 * Axios: biblioteca para fazer a ligação com back-end;
-* Framer Motion: biblioteca de animações para elevar a interatividade do usuário;
-* Lottie Player: biblioteca criada pela Airbnb usada para implementar animações de ícones em formato .json. Ester ícones tem uma qualidade elevada, são extremamente leves e podem ser animados
-
-
-
-
-### 🛠️ Tecnologias Utilizadas
-
-clonar o repositorio
-
-* NextJS
-```bash
-npm install
-npm run dev
-```
-
-* Axios
 ```
 npm i axios
   ```
 
-* Framer Motion
+* Framer Motion: biblioteca de animações para elevar a interatividade do usuário;
 ```
 npm install framer-motion
   ```
 
-* Lottie Player
+* Lottie Player: biblioteca criada pela Airbnb usada para implementar animações de ícones em formato .json. Ester ícones tem uma qualidade elevada, são extremamente leves e podem ser animados
 ```
 npm install --save @lottiefiles/react-lottie-player
   ```
@@ -155,5 +147,6 @@ Considere fazer uma doação hoje e ajudar a mudar o futuro dos nossos estudante
 
 <br>
 
-## Licença 
+### Licença 
 
+© monitorando. Todos os direitos reservados.
