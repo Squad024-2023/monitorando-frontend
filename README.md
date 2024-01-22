@@ -56,7 +56,7 @@ npm run dev
 Neste projeto, utilizamos as tecnologias listadas abaixo. Após feito o clone do repositório, abra o terminal e execute os códigos listados para instação das bibliotecas:
 
 
-* NextJS: biblioteca react para a base do projeto;
+* **NextJS:** biblioteca react para a base do projeto;
 
 ```sh
 npx create-next-app@latest monitorando-frontend
@@ -68,22 +68,22 @@ npx create-next-app@latest monitorando-frontend
 # Would you like to customize the default import alias (@/*)? ... No 
   ```
 
-* Axios: biblioteca para fazer a ligação com back-end;
+* **Axios:** biblioteca para fazer a ligação com back-end;
 ```sh
 npm i axios
   ```
 
-* Framer Motion: biblioteca de animações para elevar a interatividade do usuário;
+* **Framer Motion:** biblioteca de animações para elevar a interatividade do usuário;
 ```sh
 npm install framer-motion
   ```
 
-* Lottie Player: biblioteca criada pela Airbnb usada para implementar animações de ícones em formato .json. Estes ícones tem uma qualidade elevada, são extremamente leves e podem ser animados
+* **Lottie Player:** biblioteca criada pela Airbnb usada para implementar animações de ícones em formato .json. Estes ícones tem uma qualidade elevada, são extremamente leves e podem ser animados
 ```sh
 npm install --save @lottiefiles/react-lottie-player
   ```
 
-* Para executar
+* Para **executar**
 ```sh
 npm rum dev
   ```
@@ -93,7 +93,9 @@ npm rum dev
 
 ## Layout
 
-Demonstração do nosso site:
+Demonstração da página inicial do nosso site:
+<br>
+
 <img src="./public/github/Monitorando1.png">
 <img src= "./public/github/Monitorando2.png">
 <img src= "./public/github/Monitorando3.png">
