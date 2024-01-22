@@ -33,56 +33,70 @@ export default function Monitorias() {
           </form>
           <h1>Monitores em Destaque</h1>
           <div className={styles.cardWrapper}>
+            <CardPessoa img={kaua}
+              nome='Kauã Alves'
+              descricao='Desenvolvedor FullStack'
+              linked='https://www.linkedin.com/in/kaua-amelo96'
+              git='https://github.com/kauaamelo'
+            />
+
+            <CardPessoa img={bianca}
+              nome='Bianca Tayla'
+              descricao='Desenvolvedora FullStack'
+              linked='https://www.linkedin.com/in/bianca-t-7b5972255'
+              git='https://github.com/Y777-CoderTech'
+            />
+
+            <CardPessoa img={mariana}
+              nome='Mariana Moreira'
+              descricao='Desenvolvedora FullStack'
+              linked='https://www.linkedin.com/in/mariana-moreira-santos-39417828a'
+              git='https://github.com/mari-moreira'
+            />
+
+            <CardPessoa img={nayara}
+              nome='Nayara Pereira'
+              descricao='Desenvolvedora FullStack'
+              linked='https://www.linkedin.com/in/nayarabpereira'
+              git='https://github.com/nxyara'
+            />
+
             <CardPessoa img={arthur}
               nome='Arthur Bernard'
-              descricao='Desenvolvedor FullStack, gestor de projetos e especialista em oratória.'
+              descricao='Desenvolvedor FullStack'
+              linked='https://www.linkedin.com/in/ber-arthur/'
+              git='https://github.com/Daedaluzz'
+            />
+
+
+            <CardPessoa img={arthur}
+              nome='Arthur Bernard'
+              descricao='Desenvolvedor FullStack'
               linked='https://www.linkedin.com/in/ber-arthur/'
               git='https://github.com/Daedaluzz'
             />
 
             <CardPessoa img={arthur}
               nome='Arthur Bernard'
-              descricao='Desenvolvedor FullStack, gestor de projetos e especialista em oratória.'
+              descricao='Desenvolvedor FullStack'
               linked='https://www.linkedin.com/in/ber-arthur/'
               git='https://github.com/Daedaluzz'
             />
 
             <CardPessoa img={arthur}
               nome='Arthur Bernard'
-              descricao='Desenvolvedor FullStack, gestor de projetos e especialista em oratória.'
+              descricao='Desenvolvedor FullStack'
               linked='https://www.linkedin.com/in/ber-arthur/'
               git='https://github.com/Daedaluzz'
             />
-
-            <CardPessoa img={arthur}
-              nome='Arthur Bernard'
-              descricao='Desenvolvedor FullStack, gestor de projetos e especialista em oratória.'
-              linked='https://www.linkedin.com/in/ber-arthur/'
-              git='https://github.com/Daedaluzz'
-            />
-
-            <CardPessoa img={arthur}
-              nome='Arthur Bernard'
-              descricao='Desenvolvedor FullStack, gestor de projetos e especialista em oratória.'
-              linked='https://www.linkedin.com/in/ber-arthur/'
-              git='https://github.com/Daedaluzz'
-            />
-
-
-
-
           </div>
         </div>
-
-        <div className={styles.conteudo}>
-
-        </div>
-
       </section>
       <section className={styles.section2}>
-        <div className={styles.conteudo}>
+    <div className={styles.tela2}>
+TELA 2
 
-        </div>
+    </div>
       </section>
     </main>
   )

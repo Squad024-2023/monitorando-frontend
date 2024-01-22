@@ -46,7 +46,7 @@ export default function Footer() {
                         <li>
                             <div className={styles.sociaisElement}>
                                 <span className={styles.sociaisNome}>Arthur Bernard</span>
-                                <SociaisLink link='https://www.linkedin.com/in/ber-arthur/' ani={linkedin} />
+                                <SociaisLink link='https://www.linkedin.com/in/ber-arthur' ani={linkedin} />
                                 <SociaisLink link='https://github.com/Daedaluzz' ani={github} />
                             </div>
                         </li>
