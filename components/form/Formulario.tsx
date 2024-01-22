@@ -1,6 +1,6 @@
 import styles from './form.module.css'
 
-export default function Form({
+export default function Formulario({
     children,
 }: {
     children: React.ReactNode
