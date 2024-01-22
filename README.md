@@ -2,21 +2,22 @@
 Seu sucesso acadêmico começa aqui! 🎓
 
 ## Índice
-- <a href="##-sobre-o-projeto"> Sobre o projeto </a>
-- <a href="##-Como-podemos-ajudar?"> Como podemos ajudar? </a>
-- <a href="##-Como-contribuir-conosco"> Como contribuir conosco: </a>
-- <a href="#-tecnologias-utilizadas"> Tecnologias Utilizadas </a>
-- <a href="##-Layout"> Layout </a>
+- <a href="#-sobre-o-projeto"> Sobre o projeto </a>
 - <a href="##-Instalação"> Instalação </a>
-- <a href="#-Uso"> Uso </a>
+- <a href="#-tecnologias-utilizadas"> Tecnologias Utilizadas </a>
+- <a href="#-Layout"> Layout </a>
+- <a href="#-Contruibuição"> Contruibuição </a>
+- <a href="#-Colaboradores"> Colaboradores </a>
+- <a href="#-Seja-um-doador"> Seja um doador </a>
+- <a href="#-Licença "> Licença  </a>
 
 <br>
 
 ## Sobre o projeto
 O Monitorando é uma iniciativa dedicada a apoiar estudantes em suas jornadas acadêmicas. Nosso objetivo é fornecer assistência aos estudantes para superar as dificuldades enfrentadas, especialmente por egressos do ensino público e que possuem recursos limitados. Com o Monitorando, possibilitamos que os estudantes superem as dificuldades e continuem em seus cursos de graduação, técnicos e profissionalizantes.
 
-    Acreditamos em um Brasil onde ninguém desiste do sonho de ser quem quiser ser.
 
+>  Acreditamos em um Brasil onde ninguém desiste do sonho de ser quem quiser ser.
 
 
 ### Como podemos ajudar?
@@ -28,23 +29,29 @@ Oferecemos um ambiente de aprendizado colaborativo, onde os estudantes podem ace
 
 Você pode contribuir para o Monitorando de várias maneiras:
 
-* Participando como Monitor: Se você é um aluno avançado, professor ou especialista e deseja fazer uma renda extra enquanto contribui para a nossa causa, entre em contato conosco para se tornar um monitor.
+* **Participando como Monitor:** Se você é um aluno avançado, professor ou especialista e deseja fazer uma renda extra enquanto contribui para a nossa causa, entre em contato conosco para se tornar um monitor.
 
-* Sugira Melhorias: Fique à vontade para abrir problemas relatando bugs, sugerindo novos recursos ou melhorias.
+* **Sugira Melhorias:** Fique à vontade para abrir problemas relatando bugs, sugerindo novos recursos ou melhorias.
 
-* Compartilhe a Iniciativa: Ajude-nos a alcançar mais estudantes compartilhando o Monitorando com sua rede.
+* **Compartilhe a Iniciativa:** Ajude-nos a alcançar mais estudantes compartilhando o Monitorando com sua rede.
 
 <br>
 
-## 🛠️ Tecnologias Utilizadas
+## ⚙️ Instalação
+
+
+
+
 
 O Monitorando foi construído em NextJS, versão 14. Para executar, é preciso ter instalados as seguintes dependências:
 
 
 * NextJS: biblioteca react para a base do projeto;
-npx create-next-app@latest monitorando-frontend
 
 ```bash
+npx create-next-app@latest monitorando-frontend
+
+
 # Would you like to use TypeScript? ...  Yes
 # Would you like to use ESLint? ... No 
 # Would you like to use Tailwind CSS? ... No 
@@ -59,7 +66,7 @@ npx create-next-app@latest monitorando-frontend
 
 
 
-### ⚙️ Instalação
+### 🛠️ Tecnologias Utilizadas
 
 clonar o repositorio
 
@@ -94,28 +101,53 @@ npm rum dev
 
 ## 🖼️ Layout
 
-//print da primeira tela
+(print da primeira tela)
 
 <br>
 
-
-### 💻 Uso
 
 
 
 
 ## Contruibuição
 
+Para contribuir com o **Monitorando**, siga estas etapas:
+
+1. Clone o repositório:
+
+    `$ git clone https://github.com/Squad024-2023/monitorando-frontend.git`
+    
+2. Bifurque o repositório:
+
+    Crie um branch: `git checkout -b <nome_branch>`
+
+3. Faça suas alterações e confirme-as: 
+`git commit -m '<mensagem_commit>'`
+    
+4. Envie para o branch original: 
+`git push origin <nome_do_projeto> / <local>`
+
+5. Crie a solicitação de pull.
 
 
+<br>
 
 ## Colaboradores
 
 
 
+<p> Arthur Bernard 
+<p> Nayara Pereira
+<p> Kauã Alves
+<p> Mariana Moreira
+<p> Bianca Tayla
+
 
 ## Seja um doador
 
+Somos uma organização sem fins lucrativos dedicada a melhorar o desempenho acadêmico dos nossos estudantes para que ninguém desista de ser quem deseja ser! Oferecemos monitorias gratuitas para egressos do ensino público e estudantes do FIES e PROUNI. No entanto, precisamos da sua ajuda para continuar oferecendo esse trabalho tão valioso. Qualquer doação, grande ou pequena, é muito apreciada e fará uma grande diferença na vida dos nossos estudantes. 
+
+Considere fazer uma doação hoje e ajudar a mudar o futuro dos nossos estudantes!
 
 
 ## Licença 
