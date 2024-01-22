@@ -3,17 +3,17 @@
 | Seu sucesso acadêmico começa aqui! 🎓 |
 
 ## Índice
-- <a href="#sobre-o-projeto"> Sobre o projeto </a>
-- <a href="#⚙️-instalação"> Instalação </a>
-- <a href="#🛠️-tecnologias-utilizadas"> Tecnologias Utilizadas </a>
-- <a href="#🖼️-layout"> Layout </a>
-- <a href="#contruibuição"> Contruibuição </a>
-- <a href="#colaboradores"> Colaboradores </a>
-- <a href="#-Seja-um-doador"> Seja um doador </a>
+- <a href="#sobre-o-projeto-📜"> Sobre o projeto </a>
+- <a href="#instalação-⚙️"> Instalação </a>
+- <a href="#tecnologias-utilizadas-🛠️"> Tecnologias Utilizadas </a>
+- <a href="#layout-🖼️"> Layout </a>
+- <a href="#contruibuição-🤝"> Contruibuição </a>
+- <a href="#colaboradores-👨‍💻👩‍💻"> Colaboradores </a>
+- <a href="#seja-um-doador-🪙"> Seja um doador </a>
 
 <br>
 
-## Sobre o projeto
+## Sobre o projeto 📜
 O Monitorando é uma iniciativa dedicada a apoiar estudantes em suas jornadas acadêmicas. Nosso objetivo é fornecer assistência aos estudantes para superar as dificuldades enfrentadas, especialmente por egressos do ensino público e que possuem recursos limitados. Com o Monitorando, possibilitamos que os estudantes superem as dificuldades e continuem em seus cursos de graduação, técnicos e profissionalizantes.
 
 
@@ -37,13 +37,13 @@ Você pode contribuir para o Monitorando de várias maneiras:
 
 <br>
 
-## ⚙️ Instalação
+## Instalação⚙️
 
-O **Monitorando** foi construído em NextJS, versão 14. Para executar, após realizado o clone do repositório
+O **Monitorando** foi construído em NextJS, versão 14. Para executar, realize o clone do repositório
 
     $ git clone https://github.com/Squad024-2023/monitorando-frontend.git
 
-via terminal, instale e execute:
+em seguida, via terminal, instale e execute:
 ```bash
 npm install
 npm run dev
@@ -51,7 +51,7 @@ npm run dev
 
 <br>
 
-## 🛠️ Tecnologias Utilizadas
+## Tecnologias Utilizadas 🛠️
 
 Neste projeto, utilizamos as tecnologias listadas abaixo. Após feito o clone do repositório, abra o terminal e execute os códigos listados para instação das bibliotecas:
 
@@ -91,7 +91,7 @@ npm rum dev
 
 <br>
 
-## 🖼️ Layout
+## Layout🖼️
 
 (print da primeira tela)
 
@@ -99,7 +99,7 @@ npm rum dev
 
 
 
-## Contruibuição
+## Contruibuição 🤝
 
 Para contribuir com o **Monitorando**, siga estas etapas:
 
@@ -122,13 +122,13 @@ Para contribuir com o **Monitorando**, siga estas etapas:
 
 <br>
 
-## Colaboradores
+## Colaboradores 👨‍💻👩‍💻
 
-O **Monitorando** foi desenvolvido pelo SQUAD 24 no curso Recode PRO 2023.
+O **Monitorando** foi desenvolvido pelo Squad 24 no curso Recode PRO 2023.
 
 Os integrantes estão listados abaixo, fique a vontade para nos encontrar no Linkedin e GitHub!
 
-<p>
+<br>
 
 
 | Nome | LinkedIn | GitHub |
@@ -141,7 +141,7 @@ Os integrantes estão listados abaixo, fique a vontade para nos encontrar no Lin
 
 <br> 
 
-## Seja um doador
+## Seja um doador 🪙
 
 Somos uma organização sem fins lucrativos dedicada a melhorar o desempenho acadêmico dos nossos estudantes para que ninguém desista de ser quem deseja ser! Oferecemos monitorias gratuitas para egressos do ensino público e estudantes do FIES e PROUNI. No entanto, precisamos da sua ajuda para continuar oferecendo esse trabalho tão valioso. Qualquer doação, grande ou pequena, é muito apreciada e fará uma grande diferença na vida dos nossos estudantes. 
 
