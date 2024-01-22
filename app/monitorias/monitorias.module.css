@@ -9,7 +9,6 @@
   gap: 10rem;
   margin-bottom: 5rem;
   overflow-x: hidden;
-  background-color: rgba(var(--sal-rgb), 1);
 }
 
 .section1 {
@@ -21,7 +20,6 @@
   width: 100vw;
   min-height: 100vh;
   padding: 2rem 5%;
-  background-color: rgb(var(--sal-rgb));
 
 }
 
@@ -189,7 +187,7 @@
 .tela1 h1:nth-child(0n+3) {
   color: rgb(var(--verde-escuro-rgb));
   font-family: var(--font-pacifico);
-  font-size: calc(1.6rem + 1.5vw);
+  font-size: calc(1.6rem + 1.8vw);
   padding: .5rem;
   border-radius: 1rem;
   z-index: 1;
@@ -204,6 +202,7 @@
   place-content: center;
   width: 100%;
   gap: 2rem;
+  padding: 2rem;
 }
 
 
@@ -217,7 +216,71 @@
   min-height: 100vh;
   margin-top: 5%;
   padding: 5rem 2rem;
+  background-color: rgb(var(--verde-escuro-rgb));
 }
+
+.tela2 {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  padding: 2rem;
+  gap: 2rem;
+  border-radius: 2rem;
+
+}
+
+.tela2 h1 {
+  color: rgb(var(--sal-rgb));
+  font-size: calc(1.6rem + 1.5vw);
+  padding: .5rem;
+  border-radius: 1rem;
+  z-index: 1;
+  margin: 5rem 0;
+}
+
+.cardWrapperTela2 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(23rem, 1fr));
+  place-items: center;
+  gap: 2rem;
+  width: 100%;
+  gap: 2rem;
+  padding: 2rem;
+  border-radius: 1rem;
+
+}
+
+.card {
+  width: 22rem;
+  height: 22rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 1rem;
+  padding: 1rem;
+  border: solid .2rem rgb(var(--sal-rgb));
+  border-radius: 1rem;
+  font-size: 1.6rem;
+  color: rgb(var(--sal-rgb));
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+  background-color: rgba(var(--cinza-escuro-rgb), 1);
+  border: none;
+}
+
+
+
 
 
 

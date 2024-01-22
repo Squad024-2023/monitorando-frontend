@@ -6,6 +6,18 @@ import kaua from '@/public/images/kaua.webp'
 import mariana from '@/public/images/mariana.webp'
 import nayara from '@/public/images/nayara.webp'
 import bianca from '@/public/images/bianca.webp'
+import LottieAnimation from '@/components/lottie/lottieAnimation'
+import Link from 'next/link'
+import math from '@/public/icons/math.json'
+import bank from '@/public/icons/bank.json'
+import clock from '@/public/icons/clock.json'
+import statistics from '@/public/icons/statistics.json'
+import port from '@/public/icons/port.json'
+import code from '@/public/icons/code.json'
+import foco from '@/public/icons/foco.json'
+import quimica from '@/public/icons/quimica.json'
+import coms from '@/public/icons/coms.json'
+import histo from '@/public/icons/histo.json'
 
 export default function Monitorias() {
 
@@ -93,10 +105,73 @@ export default function Monitorias() {
         </div>
       </section>
       <section className={styles.section2}>
-    <div className={styles.tela2}>
-TELA 2
+        <div className={styles.tela2}>
+          <h1>Disciplinas mais solicitadas</h1>
+          <div className={styles.cardWrapperTela2}>
+            <Link
+              id='matematica'
+              className={styles.card}
+              href='#matematica'><LottieAnimation ani={math} />
+              Matemática
+            </Link>
+            <Link
+              id='financas'
+              className={styles.card}
+              href='#financas'><LottieAnimation ani={bank} />
+              Gestão Financeira
+            </Link>
+            <Link
+              id='tempo'
+              className={styles.card}
+              href='#tempo'><LottieAnimation ani={clock} />
+              Gestão de Tempo
+            </Link>
+            <Link
+              id='estatistica'
+              className={styles.card}
+              href='#estatistica'><LottieAnimation ani={statistics} />
+              Estatística
+            </Link>
+            <Link
+              id='portugues'
+              className={styles.card}
+              href='#portugues'><LottieAnimation ani={port} />
+              Português
+            </Link>
+            <Link
+              id='logica'
+              className={styles.card}
+              href='#logica'><LottieAnimation ani={code} />
+              Lógica de Programação
+            </Link>
+            <Link
+              id='foco'
+              className={styles.card}
+              href='#foco'><LottieAnimation ani={foco} />
+              Foco e Produtividade
+            </Link>
+            <Link
+              id='quimica'
+              className={styles.card}
+              href='#quimica'><LottieAnimation ani={quimica} />
+              Química
+            </Link>
+            <Link
+              id='coms'
+              className={styles.card}
+              href='#coms'><LottieAnimation ani={coms} />
+              Comunicação Não Violenta
+            </Link>
+            <Link
+              id='historia'
+              className={styles.card}
+              href='#historia'><LottieAnimation ani={histo} />
+              História
+            </Link>
 
-    </div>
+
+          </div>
+        </div>
       </section>
     </main>
   )
