@@ -86,3 +86,11 @@
     border-radius: 1rem;
 }
 
+.sociais > * {
+    width: 100%;
+    max-width: 4rem;
+    height: 100%;
+    cursor: pointer;
+}
+
+
