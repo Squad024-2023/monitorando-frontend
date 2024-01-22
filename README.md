@@ -1,13 +1,14 @@
 ![Logo](https://private-user-images.githubusercontent.com/142227461/284445758-82e728e1-2823-4830-96d1-19a1992804b0.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MDU3ODc3MjcsIm5iZiI6MTcwNTc4NzQyNywicGF0aCI6Ii8xNDIyMjc0NjEvMjg0NDQ1NzU4LTgyZTcyOGUxLTI4MjMtNDgzMC05NmQxLTE5YTE5OTI4MDRiMC5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjQwMTIwJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI0MDEyMFQyMTUwMjdaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT1lM2NiNmFmZTljM2VmZjU4NmZhMTBiNzA2MTZmNmFjMDljOGUzNTUwMmMwMmFhYTVlNThjYmYyYzM4YThhZDhjJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCZhY3Rvcl9pZD0wJmtleV9pZD0wJnJlcG9faWQ9MCJ9.YS84v-4UuUMSCgdSOFrxS4oblYQ3kPvXJ-vdv3MtIJA)
+
 Seu sucesso acadêmico começa aqui! 🎓
 
 ## Índice
-- <a href="#-sobre-o-projeto"> Sobre o projeto </a>
-- <a href="##-Instalação"> Instalação </a>
-- <a href="#-tecnologias-utilizadas"> Tecnologias Utilizadas </a>
-- <a href="#-Layout"> Layout </a>
-- <a href="#-Contruibuição"> Contruibuição </a>
-- <a href="#-Colaboradores"> Colaboradores </a>
+- <a href="#sobre-o-projeto"> Sobre o projeto </a>
+- <a href="#⚙️-instalação"> Instalação </a>
+- <a href="#🛠️-tecnologias-utilizadas"> Tecnologias Utilizadas </a>
+- <a href="#🖼️-layout"> Layout </a>
+- <a href="#contruibuição"> Contruibuição </a>
+- <a href="#colaboradores"> Colaboradores </a>
 - <a href="#-Seja-um-doador"> Seja um doador </a>
 
 <br>
@@ -40,7 +41,7 @@ Você pode contribuir para o Monitorando de várias maneiras:
 
 O **Monitorando** foi construído em NextJS, versão 14. Para executar, após realizado o clone do repositório
 
-    `$ git clone https://github.com/Squad024-2023/monitorando-frontend.git`
+    $ git clone https://github.com/Squad024-2023/monitorando-frontend.git
 
 via terminal, instale e execute:
 ```bash
@@ -52,14 +53,14 @@ npm run dev
 
 ## 🛠️ Tecnologias Utilizadas
 
-clonar o repositorio
+Utilizamos no 
+
+Clonar o repositorio
 
 * NextJS: biblioteca react para a base do projeto;
 
-```bash
+```sh
 npx create-next-app@latest monitorando-frontend
-
-
 # Would you like to use TypeScript? ...  Yes
 # Would you like to use ESLint? ... No 
 # Would you like to use Tailwind CSS? ... No 
@@ -69,22 +70,22 @@ npx create-next-app@latest monitorando-frontend
   ```
 
 * Axios: biblioteca para fazer a ligação com back-end;
-```
+```sh
 npm i axios
   ```
 
 * Framer Motion: biblioteca de animações para elevar a interatividade do usuário;
-```
+```sh
 npm install framer-motion
   ```
 
-* Lottie Player: biblioteca criada pela Airbnb usada para implementar animações de ícones em formato .json. Ester ícones tem uma qualidade elevada, são extremamente leves e podem ser animados
-```
+* Lottie Player: biblioteca criada pela Airbnb usada para implementar animações de ícones em formato .json. Estes ícones tem uma qualidade elevada, são extremamente leves e podem ser animados
+```sh
 npm install --save @lottiefiles/react-lottie-player
   ```
 
 * Para executar
-```
+```sh
 npm rum dev
   ```
 
@@ -96,8 +97,6 @@ npm rum dev
 (print da primeira tela)
 
 <br>
-
-
 
 
 
@@ -127,6 +126,10 @@ Para contribuir com o **Monitorando**, siga estas etapas:
 ## Colaboradores
 
 O **Monitorando** foi desenvolvido pelo SQUAD 24 no curso Recode PRO 2023.
+
+Os integrantes estão listados abaixo, fique a vontade para nos encontrar no Linkedin e GitHub!
+
+<p>
 
 
 | Nome | LinkedIn | GitHub |
