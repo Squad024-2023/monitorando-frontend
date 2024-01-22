@@ -33,20 +33,47 @@ export default function Monitorias() {
           </form>
           <h1>Monitores em Destaque</h1>
           <div className={styles.cardWrapper}>
-            <CardPessoa img={arthur} nome='Arthur Bernard' descricao='Desenvolvedor FullStack, gestor de projetos e especialista em oratória.' />
+            <CardPessoa img={arthur}
+              nome='Arthur Bernard'
+              descricao='Desenvolvedor FullStack, gestor de projetos e especialista em oratória.'
+              linked='https://www.linkedin.com/in/ber-arthur/'
+              git='https://github.com/Daedaluzz'
+            />
 
-            
-            <CardPessoa img={arthur} nome='Arthur Bernard' descricao='VAMO DALE PRA NÃO TOMALE' />
-            <CardPessoa img={arthur} nome='Arthur Bernard' descricao='VAMO DALE PRA NÃO TOMALE' />
-            <CardPessoa img={arthur} nome='Arthur Bernard' descricao='VAMO DALE PRA NÃO TOMALE' />
-            <CardPessoa img={arthur} nome='Arthur Bernard' descricao='VAMO DALE PRA NÃO TOMALE' />
+            <CardPessoa img={arthur}
+              nome='Arthur Bernard'
+              descricao='Desenvolvedor FullStack, gestor de projetos e especialista em oratória.'
+              linked='https://www.linkedin.com/in/ber-arthur/'
+              git='https://github.com/Daedaluzz'
+            />
+
+            <CardPessoa img={arthur}
+              nome='Arthur Bernard'
+              descricao='Desenvolvedor FullStack, gestor de projetos e especialista em oratória.'
+              linked='https://www.linkedin.com/in/ber-arthur/'
+              git='https://github.com/Daedaluzz'
+            />
+
+            <CardPessoa img={arthur}
+              nome='Arthur Bernard'
+              descricao='Desenvolvedor FullStack, gestor de projetos e especialista em oratória.'
+              linked='https://www.linkedin.com/in/ber-arthur/'
+              git='https://github.com/Daedaluzz'
+            />
+
+            <CardPessoa img={arthur}
+              nome='Arthur Bernard'
+              descricao='Desenvolvedor FullStack, gestor de projetos e especialista em oratória.'
+              linked='https://www.linkedin.com/in/ber-arthur/'
+              git='https://github.com/Daedaluzz'
+            />
+
+
+
 
           </div>
         </div>
 
-
-        Monitoria em turma
-        Monitoria individual
         <div className={styles.conteudo}>
 
         </div>

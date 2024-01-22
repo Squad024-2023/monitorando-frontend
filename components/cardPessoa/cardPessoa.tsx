@@ -1,14 +1,20 @@
+'use client'
+import SociaisLink from '../sociaisLink/sociaisLink'
 import styles from './cardPessoa.module.css'
 import Image from 'next/image'
+import linkedin from '@/public/icons/linkedin.json'
+import github from '@/public/icons/github.json'
 
 
 type Props = {
     img: any,
     nome: string,
-    descricao: string
+    descricao: string,
+    linked: string
+    git: string
 }
 
-export default function CardPessoa({ img, nome, descricao }: Props) {
+export default function CardPessoa({ img, nome, descricao, linked, git }: Props) {
 
 
     return (
@@ -24,6 +30,10 @@ export default function CardPessoa({ img, nome, descricao }: Props) {
             <div className={styles.cardTexto}>
                 <h3>{nome}</h3>
                 <p>{descricao}</p>
+                <div className={styles.sociais}>
+                    <SociaisLink link={linked} ani={linkedin} />
+                    <SociaisLink link={git} ani={github} />
+                </div>
             </div>
         </div>
     )

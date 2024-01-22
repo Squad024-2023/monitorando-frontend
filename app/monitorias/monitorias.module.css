@@ -31,7 +31,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 90vh;
+  height: 100%;
   width: 100%;
   max-width: 1240px;
   padding: 2rem;
@@ -197,13 +197,14 @@
   margin: 5rem 0;
 }
 
-.cardWrapper{
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.cardWrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  grid-auto-rows: 1fr;
+  gap: 2rem;
+  place-content: center;
   width: 100%;
   gap: 2rem;
-  background-color: red;
 }
 
 
