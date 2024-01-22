@@ -1,4 +1,3 @@
-
 import styles from './monitorias.module.css'
 import CardPessoa from '../../components/cardPessoa/cardPessoa'
 import arthur from '@/public/images/arthur.webp'
@@ -22,10 +21,11 @@ import bio from '@/public/icons/bio.json'
 import phis from '@/public/icons/phis.json'
 import apresentacao from '@/public/icons/apresentacao.json'
 import crit from '@/public/icons/feed.json'
-import CtaPrimario from '@/components/cta/ctaPrimario'
-import seta from '@/public/icons/arrow-rosa.json'
+import Input from '@/components/form/input/input'
+import { useState } from 'react'
 
 export default function Monitorias() {
+  
 
 
   return (
@@ -212,24 +212,10 @@ export default function Monitorias() {
         <div className={styles.tela3}>
           <h1>Não encontrou o que precisa ou ficou com dúvidas?</h1>
           <h4>Entre em contato com nosso time! </h4>
-          <form
-            className={styles.formSection3}
-            action="">
-            <label htmlFor="nome">
-              <input type="text" placeholder="Nome" name='nome' />
-              <span className={styles.span}>Nome</span>
-            </label>
-
-            <label htmlFor="email">
-              <input type="text" placeholder="Email" name='email' />
-              <span className={styles.span}>E-mail</span>
-            </label>
-
-            <label htmlFor="telefone">
-              <input type="text" placeholder='Telefone' name='telefone' />
-              <span className={styles.span}>Telefone</span>
-            </label>
-
+          <form className={styles.formSection3}>
+            <Input type='text' nome='nome' placeholder='Nome' />
+            <Input type='email' nome='email' placeholder='E-mail' />
+            <Input type='text' nome='telefone' placeholder='Telefone' />
             <div className={styles.radioContainer}>
               <label>
                 <input type='radio' id='estudante' name='turma' value="estudante" />

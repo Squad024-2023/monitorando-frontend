@@ -9,7 +9,8 @@
   gap: 10rem;
   margin-bottom: 5rem;
   overflow-x: hidden;
-  background-color: rgba(var(--sal-rgb), 1);;
+  background-color: rgba(var(--sal-rgb), 1);
+  ;
 }
 
 .section1 {
@@ -193,7 +194,7 @@ input:not(:placeholder-shown)+.span {
   font-size: calc(1.6rem + .1vw);
   font-weight: bold;
   line-height: 1.1;
-cursor: pointer;
+  cursor: pointer;
 
 }
 
@@ -221,7 +222,8 @@ cursor: pointer;
   gap: 2rem;
   padding: 2rem;
 }
-.cardWrapper:hover .cardWrapper > *:not(:hover){
+
+.cardWrapper:hover .cardWrapper>*:not(:hover) {
   filter: grayscale(100%);
   opacity: 0.75;
 }
@@ -355,6 +357,7 @@ cursor: pointer;
   gap: 2rem;
   padding: 1rem;
   border-radius: 1rem;
+
 }
 
 .formSection3>label>input {
@@ -373,6 +376,8 @@ cursor: pointer;
 
 .formSection3 label {
   position: relative;
+
+
 }
 
 .formSection3 input::placeholder {
