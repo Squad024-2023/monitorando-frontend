@@ -3,17 +3,17 @@
 | Seu sucesso acadêmico começa aqui! 🎓 |
 
 ## Índice
-- <a href="#sobre-o-projeto-📜"> Sobre o projeto </a>
-- <a href="#instalação-⚙️"> Instalação </a>
-- <a href="#tecnologias-utilizadas-🛠️"> Tecnologias Utilizadas </a>
-- <a href="#layout-🖼️"> Layout </a>
-- <a href="#contruibuição-🤝"> Contruibuição </a>
-- <a href="#colaboradores-👨‍💻👩‍💻"> Colaboradores </a>
-- <a href="#seja-um-doador-🪙"> Seja um doador </a>
+- <a href="#sobre-o-projeto"> Sobre o projeto </a>
+- <a href="#instalação"> Instalação </a>
+- <a href="#tecnologias-utilizadas"> Tecnologias Utilizadas </a>
+- <a href="#layout"> Layout </a>
+- <a href="#contruibuição"> Contruibuição </a>
+- <a href="#colaboradores"> Colaboradores </a>
+- <a href="#seja-um-doador"> Seja um doador </a>
 
 <br>
 
-## Sobre o projeto 📜
+## Sobre o projeto
 O Monitorando é uma iniciativa dedicada a apoiar estudantes em suas jornadas acadêmicas. Nosso objetivo é fornecer assistência aos estudantes para superar as dificuldades enfrentadas, especialmente por egressos do ensino público e que possuem recursos limitados. Com o Monitorando, possibilitamos que os estudantes superem as dificuldades e continuem em seus cursos de graduação, técnicos e profissionalizantes.
 
 
@@ -37,7 +37,7 @@ Você pode contribuir para o Monitorando de várias maneiras:
 
 <br>
 
-## Instalação⚙️
+## Instalação
 
 O **Monitorando** foi construído em NextJS, versão 14. Para executar, realize o clone do repositório
 
@@ -51,7 +51,7 @@ npm run dev
 
 <br>
 
-## Tecnologias Utilizadas 🛠️
+## Tecnologias Utilizadas
 
 Neste projeto, utilizamos as tecnologias listadas abaixo. Após feito o clone do repositório, abra o terminal e execute os códigos listados para instação das bibliotecas:
 
@@ -91,15 +91,18 @@ npm rum dev
 
 <br>
 
-## Layout🖼️
+## Layout
 
-(print da primeira tela)
+Demonstração do nosso site:
+<img src="./public/github/Monitorando1.png">
+<img src= "./public/github/Monitorando2.png">
+<img src= "./public/github/Monitorando3.png">
+<img src= "./public/github/Monitorando4.png">
+<img src= "./public/github/Monitorando5.png">
 
 <br>
 
-
-
-## Contruibuição 🤝
+## Contruibuição
 
 Para contribuir com o **Monitorando**, siga estas etapas:
 
@@ -122,26 +125,64 @@ Para contribuir com o **Monitorando**, siga estas etapas:
 
 <br>
 
-## Colaboradores 👨‍💻👩‍💻
+## Colaboradores
 
 O **Monitorando** foi desenvolvido pelo Squad 24 no curso Recode PRO 2023.
 
-Os integrantes estão listados abaixo, fique a vontade para nos encontrar no Linkedin e GitHub!
+Os integrantes estão apresentados abaixo, fique a vontade para nos encontrar no Linkedin e GitHub!
 
 <br>
 
 
-| Nome | LinkedIn | GitHub |
-|------|:--------:|:------:|
-| **Arthur Bernard** | <a href="https://www.linkedin.com/in/ber-arthur/" ><img src="https://img.icons8.com/color/38/000000/linkedin.png"/></a>| <a href="https://github.com/Daedaluzz"><img src="https://img.icons8.com/ios-glyphs/38/000000/github.png"/></a> |
-| **Nayara Pereira** | <a href="https://www.linkedin.com/in/nayarabpereira/"><img src="https://img.icons8.com/color/38/000000/linkedin.png"/></a> | <a href="https://github.com/nxyara"><img src="https://img.icons8.com/ios-glyphs/38/000000/github.png"/></a> |
-| **Kauã Alves** |<a href="https://www.linkedin.com/in/kaua-amelo96/" ><img src="https://img.icons8.com/color/38/000000/linkedin.png"/></a>| <a href="https://github.com/kauaamelo"><img src="https://img.icons8.com/ios-glyphs/38/000000/github.png"/></a> | 
-| **Mariana Moreira** | <a href="https://www.linkedin.com/in/mariana-moreira-santos-39417828a/" ><img src="https://img.icons8.com/color/38/000000/linkedin.png"/></a>| <a href="https://github.com/mari-moreira"><img src="https://img.icons8.com/ios-glyphs/38/000000/github.png"/></a> |
-| **Bianca Tayla** | <a href="https://www.linkedin.com/in/bianca-t-7b5972255/" ><img src="https://img.icons8.com/color/38/000000/linkedin.png"/></a>| <a href="https://github.com/Y777-CoderTech"><img src="https://img.icons8.com/ios-glyphs/38/000000/github.png"/></a> |
+<table>
+  <tr>
+    <td align="center" style="padding: 10px;">
+        <img src="./public/images/studentTired.webp" width="200px;" alt="Arthur"/><br>
+        <sub>
+          <b>Arthur Bernard</b>
+          <p> <a href="https://www.linkedin.com/in/ber-arthur/" ><img src="https://img.icons8.com/color/38/000000/linkedin.png"/></a> <a href="https://github.com/Daedaluzz"><img src="https://img.icons8.com/ios-glyphs/38/000000/github.png"/></a>
+        </sub>
+      </a>
+    </td>
+    <td align="center" style="padding: 10px;">
+        <img src="./public/images/studentTired.webp" width="200px;" alt="Arthur"/><br>
+        <sub>
+          <b>Nayara Pereira</b>
+          <p> <a href="https://www.linkedin.com/in/nayarabpereira/"><img src="https://img.icons8.com/color/38/000000/linkedin.png"/></a> <a href="https://github.com/nxyara"><img src="https://img.icons8.com/ios-glyphs/38/000000/github.png"/></a>
+        </sub>
+      </a>
+    </td>
+    <td align="center" style="padding: 10px;">
+        <img src="./public/images/studentTired.webp" width="200px;" alt="Arthur"/><br>
+        <sub>
+          <b>Kauã Alves</b>
+          <p> <a href="https://www.linkedin.com/in/kaua-amelo96/" ><img src="https://img.icons8.com/color/38/000000/linkedin.png"/></a> <a href="https://github.com/kauaamelo"><img src="https://img.icons8.com/ios-glyphs/38/000000/github.png"/></a>
+        </sub>
+      </a>
+    </td>
+    <td align="center" style="padding: 10px;">
+        <img src="./public/images/studentTired.webp" width="200px;" alt="Arthur"/><br>
+        <sub>
+          <b>Mariana Moreira</b>
+          <p> <a href="https://www.linkedin.com/in/mariana-moreira-santos-39417828a/" ><img src="https://img.icons8.com/color/38/000000/linkedin.png"/></a> <a href="https://github.com/mari-moreira"><img src="https://img.icons8.com/ios-glyphs/38/000000/github.png"/></a>
+        </sub>
+      </a>
+    </td>
+    <td align="center" style="padding: 10px;">
+        <img src="./public/images/studentTired.webp" width="200px;" alt="Arthur"/><br>
+        <sub>
+          <b>Bianca Tayla</b>
+          <p> <a href="https://www.linkedin.com/in/bianca-t-7b5972255/" ><img src="https://img.icons8.com/color/38/000000/linkedin.png"/></a> <a href="https://github.com/Y777-CoderTech"><img src="https://img.icons8.com/ios-glyphs/38/000000/github.png"/></a>
+        </sub>
+      </a>
+    </td>
+  </tr>
+</table>
+
 
 <br> 
 
-## Seja um doador 🪙
+## Seja um doador
 
 Somos uma organização sem fins lucrativos dedicada a melhorar o desempenho acadêmico dos nossos estudantes para que ninguém desista de ser quem deseja ser! Oferecemos monitorias gratuitas para egressos do ensino público e estudantes do FIES e PROUNI. No entanto, precisamos da sua ajuda para continuar oferecendo esse trabalho tão valioso. Qualquer doação, grande ou pequena, é muito apreciada e fará uma grande diferença na vida dos nossos estudantes. 
 
