@@ -1,0 +1,231 @@
+.main {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 100vh;
+  width: 100%;
+  gap: 10rem;
+  margin-bottom: 5rem;
+  overflow-x: hidden;
+  background-color: rgba(var(--sal-rgb), 1);
+}
+
+.section1 {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  min-height: 100vh;
+  padding: 2rem 5%;
+}
+
+.tela1 {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 100%;
+  gap: 2rem;
+  padding: 2rem;
+
+}
+
+.textoTela1 {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  margin-bottom: 5rem;
+  gap: 5rem;
+  z-index: 1;
+
+}
+
+.textoTela1 h1 {
+  color: rgb(var(--sal-rgb));
+  font-size: calc(2rem + 2vw);
+  font-weight: 900;
+  padding: .5rem;
+  border-radius: 1rem;
+  background-color: rgb(var(--verde-escuro-rgb));
+  z-index: 1;
+}
+
+.textoTela1 h5 {
+  font-weight: 400;
+  max-width: 50rem;
+  font-size: calc(1.6rem + .2vw);
+  color: rgba(var(--verde-escuro-rgb), 1);
+}
+
+.textoTela1 p {
+  font-weight: 300;
+  max-width: 50rem;
+  font-size: calc(1.5rem + .1vw);
+  color: rgb(var(--cinza-escuro-rgb));
+}
+
+.imagemTextoTela1 {
+  position: relative;
+  width: 100%;
+  max-width: 50rem;
+  height: auto;
+  object-fit: contain;
+  border-radius: 1rem;
+  box-shadow: 0 2rem 0 rgba(var(--verde-escuro-rgb), 1);
+}
+
+.imagemTela1 {
+  position: relative;
+  max-width: 40rem;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  border-radius: 1rem;
+  box-shadow: 2rem 0 0 rgba(var(--verde-escuro-rgb), 1);
+}
+
+
+
+.section2 {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  min-height: 100vh;
+  padding: 2rem 0;
+
+}
+
+.tela2 {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 100%;
+  gap: 10rem;
+
+}
+
+.textoTela2 {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  margin-bottom: 5rem;
+  gap: 2rem;
+  padding: 2rem;
+  z-index: 1;
+
+}
+
+.textoTela2 h1 {
+  color: rgb(var(--rosa-escuro-rgb));
+  font-size: calc(2rem + 2vw);
+  font-weight: 900;
+  padding: .5rem;
+  border-radius: 1rem;
+  text-align: center;
+  z-index: 1;
+}
+
+.textoTela2 h5 {
+  font-weight: 400;
+  width: 100%;
+  max-width: 50rem;
+  font-size: calc(1.6rem + .2vw);
+  color: rgba(var(--cinza-escuro-rgb), 0.7);
+  text-align: center;
+}
+
+.textoTela2 p {
+  font-weight: 300;
+  width: 100%;
+  max-width: 50rem;
+  font-size: calc(1.5rem + .1vw);
+  color: rgb(var(--cinza-escuro-rgb));
+}
+
+.comoContainer {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+  height: auto;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.textoComo {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: auto;
+  height: 100%;
+  gap: 2rem;
+  z-index: 1;
+
+
+
+}
+
+.textoComo h2 {
+  color: rgb(var(--rosa-escuro-rgb));
+  font-size: calc(1.8rem + 1vw);
+  font-family: var(--font-pacifico);
+}
+
+.textoComo h5 {
+  font-weight: 400;
+  width: 100%;
+  max-width: 50rem;
+  font-size: 1.6rem;
+  color: rgba(var(--cinza-escuro-rgb), 0.8);
+
+}
+
+.imagemTextoComo1 {
+  position: relative;
+  display: flex;
+  width: 100%;
+  max-width: 40rem;
+  height: auto;
+  object-fit: cover;
+  border-radius: 10% 20% 20% 30%;
+  border: 2rem solid white;
+  box-shadow: .6rem .2rem 1rem rgba(var(--cinza-escuro-rgb), 0.2);
+}
+
+.imagemTextoComo2 {
+  position: relative;
+  display: flex;
+  width: 100%;
+  max-width: 40rem;
+  height: auto;
+  object-fit: cover;
+  border-radius: 20% 10% 30% 20%;
+  border: 2rem solid white;
+  box-shadow: -.6rem .2rem 1rem rgba(var(--cinza-escuro-rgb), 0.2);
+}
+
+@media screen and (max-width: 425px) {
+  .comoContainer {
+    border-bottom: solid 1rem rgba(var(--cinza-escuro-rgb), 0.2);
+  }
+}

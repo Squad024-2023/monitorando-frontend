@@ -5,7 +5,6 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border-top: .1rem solid rgba(var(--cinza-escuro-rgb), 1);
 
 }
 
@@ -22,7 +21,7 @@
 
 }
 
-.monitorandoFooter span {
+.monitorandoFooter>span {
     font-size: clamp(1.8rem, 3vw, 2.5rem);
     font-weight: 700;
     max-width: 80rem;
@@ -91,12 +90,14 @@
     align-items: center;
     flex-wrap: wrap;
     gap: 1rem;
+
 }
 
 .sociaisFooter ul {
     list-style: none;
     padding-left: 2rem;
     border-left: solid .1rem rgba(var(--sal-rgb), 0.2);
+  
 }
 
 .sociaisFooter h2 {
@@ -152,7 +153,7 @@
     color: rgba(var(--sal-rgb), 1);
 }
 
-.contatoFooter span {
+.contatoFooter>span {
     font-size: 1.8rem;
     color: rgba(var(--sal-rgb), 1);
 }
@@ -176,16 +177,6 @@
     font-weight: 700;
     color: rgba(var(--rosa-escuro-rgb), 1);
     border-left: solid .3rem rgba(var(--sal-rgb), 1);
-}
-
-
-.contatoFooter :nth-child(4) {
-    background-color: rgba(var(--sal-rgb), 1);
-    border: none;
-}
-
-.contatoFooter span:nth-child(1) {
-    color: rgba(var(--rosa-escuro-rgb), 1);
 }
 
 @media screen and (max-width: 809px) {

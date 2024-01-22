@@ -1,295 +1,252 @@
-'use client'
-import { useState, useEffect } from 'react'
-import styles from './page.module.css'
-import Image from 'next/image'
-import seta from '@/public/icons/arrow-rosa.json'
-import professor from '@/public/icons/teacher.json'
-import HeroImage from '@/components/heroImage/heroImage'
-import heroImage from '@/public/images/studentsBG3.webp'
-import CtaPrimario from '@/components/cta/ctaPrimario'
-import CtaSecundario from '@/components/cta/ctaSecundario'
-import CardGrande from '@/components/cardGrande/cardGrande'
-import teacher from '@/public/icons/teacher.png'
-import students from '@/public/icons/students.png'
-import review from '@/public/icons/review.png'
-import cansada from '@/public/images/studentTired.webp'
-import CardPequeno from '@/components/cardPequeno/cardPequeno'
-import monitores from '@/public/images/osMonitores.svg'
-import linguagem from '@/public/images/aLinguagem.svg'
-import desenvolva from '@/public/images/desenvolva.svg'
-import voceEscolhe from '@/public/images/voceEscolhe.svg'
-import umMonitor from '@/public/images/umMonitor.svg'
-import conectSe from '@/public/images/conecteSe.svg'
+
+import styles from './monitorias.module.css'
+import CardPessoa from '../../components/cardPessoa/cardPessoa'
+import arthur from '@/public/images/arthur.webp'
+import kaua from '@/public/images/kaua.webp'
+import mariana from '@/public/images/mariana.webp'
+import nayara from '@/public/images/nayara.webp'
+import bianca from '@/public/images/bianca.webp'
 import LottieAnimation from '@/components/lottie/lottieAnimation'
-import exclamacao from '@/public/icons/exclamation.json'
-import interogacao from '@/public/icons/question.json'
-import busca from "@/public/icons/search.json"
-import adicionar from "@/public/icons/add.json"
-import alarme from '@/public/icons/alarm.json'
-import calendario from '@/public/icons/calendar.json'
-import notificacao from '@/public/icons/bell.json'
-import check from '@/public/icons/check.json'
-import gratis from '@/public/images/gratis.svg'
-import comprar from '@/public/images/comprar.svg'
-import dinheiro from '@/public/images/dinheiro.svg'
+import Link from 'next/link'
+import math from '@/public/icons/math.json'
+import bank from '@/public/icons/bank.json'
+import clock from '@/public/icons/clock.json'
+import statistics from '@/public/icons/statistics.json'
+import port from '@/public/icons/port.json'
+import code from '@/public/icons/code.json'
+import foco from '@/public/icons/foco.json'
+import quimica from '@/public/icons/quimica.json'
+import coms from '@/public/icons/coms.json'
+import histo from '@/public/icons/histo.json'
+import bio from '@/public/icons/bio.json'
+import phis from '@/public/icons/phis.json'
+import apresentacao from '@/public/icons/apresentacao.json'
+import crit from '@/public/icons/feed.json'
+import CtaPrimario from '@/components/cta/ctaPrimario'
+import seta from '@/public/icons/arrow-rosa.json'
 
-export default function Home() {
-  const [switcher, setSwitch] = useState<boolean>(true);
+export default function Monitorias() {
 
-  const handleClickEvent = () => {
-    setSwitch(!switcher);
-  }
-
-  const [visivel, setVisivel] = useState<{ [key: string]: boolean }>({});
-
-  const handleScroll = () => {
-    const marcadores = document.querySelectorAll('[id^="marcador"]');
-    const marcadoresLi = document.querySelectorAll('[id^="marcadorLi"]');
-
-    marcadores.forEach((element) => {
-      const elementRect = element.getBoundingClientRect();
-      const threshold = 0.7;
-      const triggerPosition = window.innerHeight * threshold;
-      const isElementVisible = elementRect.top < triggerPosition;
-
-      setVisivel((prevVisibility) => ({
-        ...prevVisibility,
-        [element.id]: isElementVisible,
-      }));
-    });
-    marcadoresLi.forEach((element) => {
-      const elementRect = element.getBoundingClientRect();
-      const threshold = 0.65;
-      const triggerPosition = window.innerHeight * threshold;
-      const isElementVisible = elementRect.top < triggerPosition;
-
-      setVisivel((prevVisibility) => ({
-        ...prevVisibility,
-        [element.id]: isElementVisible,
-      }));
-    });
-  };
-
-  useEffect(() => {
-    window.addEventListener('scroll', handleScroll);
-
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
 
   return (
     <main className={styles.main}>
       <section className={styles.section1}>
-        <HeroImage img={heroImage} />
         <div className={styles.tela1}>
-          <div className={styles.textoTela1}>
-            <h1>Seu <span>sucesso acadêmico começa aqui</span></h1>
-            <p>Com monitorias e mentorias personalizadas, didáticas atuais e uma boa dose de empatia,
-              a gente tá virando o jogo no jeito de aprender e ensinar. É tudo pra todo mundo ter chances iguais sucesso.
-            </p>
-          </div>
-          <div className={styles.tela1Bts}>
-            <CtaPrimario link='/' conteudo='Quero aprender' ani={seta} />
-            <CtaSecundario link='/' conteudo='Quero ensinar' ani={professor} />
-          </div>
+          <h1>Encontre seu monitor particular ou turma</h1>
+          <form className={styles.form}>
+            <div className={styles.busca}>
+              <label htmlFor="disciplina">
+                <input type="text" placeholder="Procure sua disciplina" name='disciplina' />
+                <span className={styles.span}>Buscar Disciplina</span>
+              </label>
+              <button type='button' className={styles.buscaBtn}>Buscar</button>
+            </div>
+            <h4>Selecione o tipo de aula</h4>
+            <div className={styles.radioContainer}>
+              <label>
+                <input type='radio' id='coletiva' name='turma' value="coletiva"></input>
+                Turma Coletiva
+              </label>
+              <label>
+                <input type='radio' id='individual' name='turma' value="individual"></input>
+                Turma Individual</label>
+            </div>
+          </form>
+          <h1>Monitores em Destaque</h1>
+          <div className={styles.cardWrapper}>
+            <CardPessoa img={kaua}
+              nome='Kauã Alves'
+              descricao='Desenvolvedor FullStack'
+              linked='https://www.linkedin.com/in/kaua-amelo96'
+              git='https://github.com/kauaamelo'
+            />
 
-        </div>
-        <div className={styles.cardContainer}>
-          <CardGrande titulo='Monitores' img={teacher} />
-          <CardGrande titulo='Monitorias' img={students} />
-          <CardGrande titulo='Depoimentos' img={review} />
+            <CardPessoa img={bianca}
+              nome='Bianca Tayla'
+              descricao='Desenvolvedora FullStack'
+              linked='https://www.linkedin.com/in/bianca-t-7b5972255'
+              git='https://github.com/Y777-CoderTech'
+            />
+
+            <CardPessoa img={mariana}
+              nome='Mariana Moreira'
+              descricao='Desenvolvedora FullStack'
+              linked='https://www.linkedin.com/in/mariana-moreira-santos-39417828a'
+              git='https://github.com/mari-moreira'
+            />
+
+            <CardPessoa img={nayara}
+              nome='Nayara Pereira'
+              descricao='Desenvolvedora FullStack'
+              linked='https://www.linkedin.com/in/nayarabpereira'
+              git='https://github.com/nxyara'
+            />
+
+            <CardPessoa img={arthur}
+              nome='Arthur Bernard'
+              descricao='Desenvolvedor FullStack'
+              linked='https://www.linkedin.com/in/ber-arthur/'
+              git='https://github.com/Daedaluzz'
+            />
+
+
+            <CardPessoa img={arthur}
+              nome='Arthur Bernard'
+              descricao='Desenvolvedor FullStack'
+              linked='https://www.linkedin.com/in/ber-arthur/'
+              git='https://github.com/Daedaluzz'
+            />
+
+            <CardPessoa img={arthur}
+              nome='Arthur Bernard'
+              descricao='Desenvolvedor FullStack'
+              linked='https://www.linkedin.com/in/ber-arthur/'
+              git='https://github.com/Daedaluzz'
+            />
+
+            <CardPessoa img={arthur}
+              nome='Arthur Bernard'
+              descricao='Desenvolvedor FullStack'
+              linked='https://www.linkedin.com/in/ber-arthur/'
+              git='https://github.com/Daedaluzz'
+            />
+          </div>
         </div>
       </section>
       <section className={styles.section2}>
         <div className={styles.tela2}>
-          <Image
-            className={styles.imgTela2}
-            sizes="50vw"
-            quality={100}
-            placeholder='blur'
-            alt='Imagem de estudante cansada'
-            src={cansada}
-          ></Image>
-          <div className={styles.textoTela2}>
-            <h1>Quando o sonho se torna pesadelo</h1>
-            <p>É normal bater aquela confusão e desânimo na faculdade, especialmente nos primeiros semestres.
-              O sentimento de incapacidade e frustração pode acabar afetando nossa saúde mental.
-              Venha descobrir como <span>monitorando</span> pode ser aquele suporte que você não sabia que precisava.
-            </p>
+          <h1>Disciplinas mais solicitadas</h1>
+          <div className={styles.cardWrapperTela2}>
+            <Link
+              id='matematica'
+              className={styles.card}
+              href='#matematica'><LottieAnimation ani={math} />
+              Matemática
+            </Link>
+            <Link
+              id='financas'
+              className={styles.card}
+              href='#financas'><LottieAnimation ani={bank} />
+              Gestão Financeira
+            </Link>
+            <Link
+              id='tempo'
+              className={styles.card}
+              href='#tempo'><LottieAnimation ani={clock} />
+              Gestão de Tempo
+            </Link>
+            <Link
+              id='estatistica'
+              className={styles.card}
+              href='#estatistica'><LottieAnimation ani={statistics} />
+              Estatística
+            </Link>
+            <Link
+              id='portugues'
+              className={styles.card}
+              href='#portugues'><LottieAnimation ani={port} />
+              Português
+            </Link>
+            <Link
+              id='logica'
+              className={styles.card}
+              href='#logica'><LottieAnimation ani={code} />
+              Lógica de Programação
+            </Link>
+            <Link
+              id='foco'
+              className={styles.card}
+              href='#foco'><LottieAnimation ani={foco} />
+              Foco e Produtividade
+            </Link>
+            <Link
+              id='quimica'
+              className={styles.card}
+              href='#quimica'><LottieAnimation ani={quimica} />
+              Química
+            </Link>
+            <Link
+              id='coms'
+              className={styles.card}
+              href='#coms'><LottieAnimation ani={coms} />
+              Comunicação Não Violenta
+            </Link>
+            <Link
+              id='historia'
+              className={styles.card}
+              href='#historia'><LottieAnimation ani={histo} />
+              História
+            </Link>
+
+            <Link
+              id='biologia'
+              className={styles.card}
+              href='#biologia'><LottieAnimation ani={bio} />
+              Biologia
+            </Link>
+
+            <Link
+              id='fisica'
+              className={styles.card}
+              href='#fisica'><LottieAnimation ani={phis} />
+              Física
+            </Link>
+
+            <Link
+              id='apresentacao'
+              className={styles.card}
+              href='#apresentacao'><LottieAnimation ani={apresentacao} />
+              Apresentação de Projetos
+            </Link>
+
+            <Link
+              id='criticas'
+              className={styles.card}
+              href='#criticas'><LottieAnimation ani={crit} />
+              Críticas Construtivas
+            </Link>
           </div>
         </div>
       </section>
       <section className={styles.section3}>
         <div className={styles.tela3}>
-          <h1>Por que escolher a <span>monitorando</span>?</h1>
-          <div className={styles.cardContainer3}>
-            <CardPequeno titulo='Os Monitores'
-              texto='Estão sempre prontos para tirar suas dúvidas. Seja no computador ou no telefone.'
-              ani={monitores} />
-            <CardPequeno titulo='A Linguagem'
-              texto='É dinâmica e fácil de entender, nossa preocupação também é ser acessível pra todos.'
-              ani={linguagem} />
-            <CardPequeno titulo='Desenvolva'
-              texto='Suas disciplinas acadêmicas até as habilidades comportamentais. O pacote completo.'
-              ani={desenvolva} />
-            <CardPequeno titulo='Você Escolhe'
-              texto='O formato da sua monitoria, se vai ser individual ou vai fazer parte de uma turma.'
-              ani={voceEscolhe} />
-            <CardPequeno titulo='Você, Monitor'
-              texto='Pode usar horas de monitoria lencionadas aqui como horas extracurriculares.'
-              ani={umMonitor} />
-            <CardPequeno titulo='Conecte-se'
-              texto='Com outros alunos e monitores, expanda sua network e faça amizades.'
-              ani={conectSe} />
-          </div>
-        </div>
-      </section>
-      <section className={styles.section4}>
-        <div className={styles.tela4}>
-          <h1 className={`${styles.comoComeçar}
-             ${switcher ? styles.alunoH : styles.professorH}`}>
-            Como Começar?
-          </h1>
-          <div className={styles.switcherWrapper}>
-            <span
-              className={`${styles.labelSwitcher} 
-              ${switcher ? styles.alunoH : ''}`}>
-              Alunos
-            </span>
-            <div className={`${styles.switcher} ${switcher ? styles.alunoSwitcher : styles.professorSwitcher}`}
-              onClick={handleClickEvent}>
-              <button
-                className={switcher ? styles.alunoBtn : styles.professorBtn}
-                type='button'
-                onClick={handleClickEvent}>
-              </button>
-            </div>
-            <span className={`${styles.labelSwitcher}
-             ${switcher ? '' : styles.professorH}`}>
-              Professor
-            </span>
-          </div>
-          <ol className={styles.timeline}>
-            <div className={styles.linhaClara}></div>
-            <div className={`${styles.linhaCor}
-             ${switcher ? styles.alunoB : styles.professorB}`}
-              style={{
-                height: visivel.marcador1
-                  ? visivel.marcador2
-                    ? visivel.marcador3
-                      ? visivel.marcador4
-                        ? '90%' : '60%' : '30%' : '0%' : '0%'
-              }}>
-            </div>
-            <div className={styles.marcadorWrapper}>
-              <div id='marcador1'
-                className={`${styles.marcador}
-                 ${visivel.marcador1
-                    ? switcher
-                      ? styles.alunoB : styles.professorB : ''}`}>
-                1
-              </div>
-              <div id='marcador2'
-                className={`${styles.marcador} ${visivel.marcador2
-                  ? switcher
-                    ? styles.alunoB : styles.professorB : ''}`}>
-                2
-              </div>
-              <div id='marcador3'
-                className={`${styles.marcador} ${visivel.marcador3
-                  ? switcher
-                    ? styles.alunoB : styles.professorB : ''}`}>
-                3
-              </div>
-              <div id='marcador4'
-                className={`${styles.marcador} ${visivel.marcador4
-                  ? switcher
-                    ? styles.alunoB : styles.professorB : ''}`}>
-                4
-              </div>
+          <h1>Não encontrou o que precisa ou ficou com dúvidas?</h1>
+          <h4>Entre em contato com nosso time! </h4>
+          <form
+            className={styles.formSection3}
+            action="">
+            <label htmlFor="nome">
+              <input type="text" placeholder="Nome" name='nome' />
+              <span className={styles.span}>Nome</span>
+            </label>
+
+            <label htmlFor="email">
+              <input type="text" placeholder="Email" name='email' />
+              <span className={styles.span}>E-mail</span>
+            </label>
+
+            <label htmlFor="telefone">
+              <input type="text" placeholder='Telefone' name='telefone' />
+              <span className={styles.span}>Telefone</span>
+            </label>
+
+            <div className={styles.radioContainer}>
+              <label>
+                <input type='radio' id='estudante' name='turma' value="estudante" />
+                Estudante
+              </label>
+              <label>
+                <input type='radio' id='professor' name='turma' value="professor" />
+                Professor</label>
             </div>
 
-            <li id='marcadorLi1'
-              className={`${switcher ? styles.alu : styles.pro} 
-              ${visivel.marcadorLi1 ? '' : styles.invis}`}
-            >
-              <div className={styles.timeAluno}>
-                <h5>Realize o seu cadastro como aluno.</h5>
-                <div className={styles.quadrado}><LottieAnimation ani={interogacao} /></div>
-              </div>
-              <div className={styles.timeProfessor}>
-                <h5>Realize o seu cadastro como professor.</h5>
-                <div className={styles.quadrado}><LottieAnimation ani={exclamacao} /></div>
-              </div>
-            </li>
-
-            <li id='marcadorLi2'
-              className={`${switcher ? styles.alu : styles.pro} 
-            ${visivel.marcadorLi2 ? '' : styles.invis}`}
-            >
-              <div className={styles.timeAluno}>
-                <h5>Escolha uma das monitorias disponíveis no nosso site.</h5>
-                <div className={styles.quadrado}><LottieAnimation ani={busca} /></div>
-              </div>
-              <div className={styles.timeProfessor}>
-                <h5>Escolha qual disciplina você irá lecionar.</h5>
-                <div className={styles.quadrado}><LottieAnimation ani={adicionar} /></div>
-              </div>
-            </li>
-
-            <li id='marcadorLi3'
-              className={`${switcher ? styles.alu : styles.pro} 
-                ${visivel.marcadorLi3 ? '' : styles.invis}`}
-            >
-              <div className={styles.timeAluno}>
-                <h5>Escolha a data e o horário da sua monitoria.</h5>
-                <div className={styles.quadrado}><LottieAnimation ani={alarme} /></div>
-              </div>
-              <div className={styles.timeProfessor}>
-                <h5>Defina a data e o horário que você estará disponível.</h5>
-                <div className={styles.quadrado}><LottieAnimation ani={calendario} /></div>
-              </div>
-            </li>
-
-            <li id='marcadorLi4'
-              className={`${switcher ? styles.alu : styles.pro} 
-                ${visivel.marcadorLi4 ? '' : styles.invis}`}
-            >
-              <div className={styles.timeAluno}>
-                <h5>Agora é só esperar sua aula começar!</h5>
-                <div className={styles.quadrado}><LottieAnimation ani={notificacao} /></div>
-              </div>
-              <div className={styles.timeProfessor}>
-                <h5>Agora é só confirmar quando uma monitoria for solicitada!</h5>
-                <div className={styles.quadrado}><LottieAnimation ani={check} /></div>
-              </div>
-            </li>
-
-          </ol>
-        </div>
-
-      </section>
-      <section className={styles.section5}>
-        <h1>O melhor a gente deixa pro final</h1>
-        <div className={styles.tela5}
-        >
-
-          <CardPequeno titulo='Alunos'
-            texto='Cursando graduação através do FIES ou PROUNI não pagam!
-              É tudo de graça para te dar aquela força, sem comprometer sua vida financeira.'
-            ani={gratis} />
-
-          <CardPequeno titulo='Estudantes'
-            texto='Que não se encaixam na nossa gratuidade também podem utilizar nossa plataforma
-              pagando o valor das horas de cada professor.'
-            ani={comprar} />
-
-          <CardPequeno titulo='Monitores'
-            texto='Recebem por horas lecionadas na plataforma, independente de atender alunos
-              que se encaixam no nosso programa de gratuidade.'
-            ani={dinheiro} />
-
+            <label htmlFor="duvidas"
+              className={styles.duvidas} >
+              <textarea placeholder='Dúvidas ou sugestões' name='duvidas' />
+              <span className={styles.span}>Dúvidas ou sugestões</span>
+            </label>
+            <button type='submit'> Enviar</button>
+          </form>
         </div>
       </section>
     </main>

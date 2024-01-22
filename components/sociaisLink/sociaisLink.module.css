@@ -1,10 +1,18 @@
 .sociaisLink {
-
+    width: 100%;
+    max-width: 4rem;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1rem;
 }
-.lottie{
+
+.lottie {
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 5rem;
+    max-width: 4rem;
     aspect-ratio: 1/1;
 }

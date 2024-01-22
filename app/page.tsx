@@ -128,19 +128,19 @@ export default function Home() {
               texto='Estão sempre prontos para tirar suas dúvidas. Seja no computador ou no telefone.'
               ani={monitores} />
             <CardPequeno titulo='A Linguagem'
-              texto='É dinâmica e fácil de entender, nossa preocupação também é ser acessível pra todos.'
+              texto='É dinâmica e fácil de entender, nossa preocupação também é ser acessível para todos.'
               ani={linguagem} />
             <CardPequeno titulo='Desenvolva'
               texto='Suas disciplinas acadêmicas até as habilidades comportamentais. O pacote completo.'
               ani={desenvolva} />
             <CardPequeno titulo='Você Escolhe'
-              texto='O formato da sua monitoria, se vai ser individual ou vai fazer parte de uma turma.'
+              texto='O formato da sua monitoria, se vai ser individual ou se vai fazer parte de uma turma.'
               ani={voceEscolhe} />
             <CardPequeno titulo='Você, Monitor'
-              texto='Pode usar horas de monitoria lencionadas aqui como horas extracurriculares.'
+              texto='Pode usar horas de monitoria lecionadas aqui como horas extracurriculares.'
               ani={umMonitor} />
             <CardPequeno titulo='Conecte-se'
-              texto='Com outros alunos e monitores, expanda sua network e faça amizades.'
+              texto='Com outros alunos e monitores, expanda seu network e faça amizades.'
               ani={conectSe} />
           </div>
         </div>
