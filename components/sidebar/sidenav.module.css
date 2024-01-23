@@ -4,6 +4,7 @@
     height: 100%;
     min-height: 100vh;
     background-color: rgb(var(--cinza-escuro-rgb));
+    box-shadow: .2rem .2rem 1rem rgba(var(--cinza-escuro-rgb), 0.8);
 }
 
 .botaoSideNav {
@@ -25,7 +26,6 @@
     display: flex;
     flex-direction: column;
     color: rgb(var(--sal-rgb));
-     transition: transform 0.3s ease-in-out
 }
 
 .hideNav {
@@ -57,10 +57,6 @@
 .subNav {
     display: flex;
     flex-direction: column;
-    background-color: green;
-    color: rgb(var(--sal-rgb));
-    transform: scaleY(100%);
-    transform-origin: top;
 
 }
 
@@ -76,11 +72,15 @@
     font-size: 1.4rem;
     color: rgb(var(--sal-rgb));
     padding: 1rem;
-    border-bottom: solid .2rem rgb(var(--sal-rgb));
+    border-bottom: solid .1rem rgb(var(--sal-rgb));
     cursor: pointer;
     transition: all .6s ease;
 }
-
+.subNav a:hover {
+    background-color: rgba(var(--sal-rgb), 0.4);
+    font-weight: 500;
+    transition: all .3s ease;
+}
 .hide {
     display: none;
 

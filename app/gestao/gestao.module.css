@@ -19,10 +19,7 @@
     height: 100vh;
     padding: 2rem 5%;
     transition: all 0.3s ease-in-out;
-    background-image: linear-gradient(to right bottom,
-            #4d004d, #5a005a, #680068, #770177,
-            #850185, #920192, #9f019f, #ac01ac,
-            #ba01ba, #c901c9, #d702d7, #e602e6);
+
 }
 
 .tableWrapper {
