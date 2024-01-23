@@ -11,7 +11,8 @@
     transition: all 0.3s ease;
     box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
 }
-.cardContainer:hover{
+
+.cardContainer:hover {
     transform: scale(1.05);
     transition: all 0.6s ease;
 }
@@ -24,7 +25,7 @@
     height: 14rem;
     border-radius: 50%;
     background-color: #fff;
-
+    border: solid .5rem #fff;
 
 }
 
@@ -42,7 +43,7 @@
     content: "";
     position: absolute;
     top: 80%;
-    left: 72%;
+    left: 76%;
     width: 1vw;
     height: 1vw;
     border-radius: 50%;
@@ -81,7 +82,8 @@
     color: rgba(var(--cinza-escuro-rgb), 0.8);
     margin-bottom: 1rem;
 }
-.sociais{
+
+.sociais {
     position: relative;
     display: flex;
     align-items: flex-start;
@@ -89,11 +91,9 @@
     border-radius: 1rem;
 }
 
-.sociais > * {
+.sociais>* {
     width: 100%;
     max-width: 4rem;
     height: 100%;
     cursor: pointer;
 }
-
-

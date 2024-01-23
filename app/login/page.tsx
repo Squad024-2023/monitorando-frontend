@@ -6,16 +6,13 @@ import styles from './login.module.css'
 import Input from '@/components/form/input/input'
 import BotaoForm from '@/components/form/botao/BotaoForm'
 import BotaoFormSec from '@/components/form/botao/BotaoFormSec'
+import RadioInput from '@/components/form/radio/RadioInput'
 
 
 export default function Login() {
 
   const [show, setShow] = useState(true)
 
-  // const HandleClickEvent = () => {
-  //   setShow(!show)
-  //   console.log(show)
-  // }
 
 
   return (
@@ -44,6 +41,13 @@ export default function Login() {
               <Input type='text' nome='telefone' placeholder='Telefone' />
               <Input type='date' nome='dataNascimento' placeholder='' />
               <input type="text" name='tipoUsuario' value='USER' hidden />
+              <RadioInput
+               name='tipoDeCadastro' 
+               texto1='Aluno' texto2='Professor'
+               value1='' value2=''
+              //  checked1={true} checked2={false}
+              //  onChange={}
+               />
               <Input type='password' nome='password' placeholder='Senha' />
               <BotaoForm type='submit' texto='Cadastrar' />
             </Formulario>

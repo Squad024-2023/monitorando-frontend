@@ -17,7 +17,15 @@
   width: 100%;
   height: 100vh;
   padding: 0 5%;
-  background-color: rgb(var(--sal-rgb));
+
+  background-image: url(../../public/images/graduate.webp);
+  background-color: rgba(var(--cinza-escuro-rgb), 0.6);
+  background-blend-mode: saturation;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
 
 }
 
@@ -27,12 +35,14 @@
   align-items: center;
   width: 40rem;
   height: auto;
-  padding: 8rem 0 2rem 0;
+  padding: 6rem 0 2rem 0;
   overflow: hidden;
   border-radius: solid 2rem rgb(var(--rosa-escuro-rgb));
   box-shadow: 0 2px 4px #0000004a;
   border-radius: 1rem;
   transition: all .5s ease-in-out;
+  background-color: #fff;
+  backdrop-filter: blur(10px);
 
 }
 
@@ -64,12 +74,11 @@
 
 .tela1 h1 {
   color: rgb(var(--rosa-escuro-rgb));
-  font-size: calc(1.6rem + 1.5vw);
+  font-size: calc(1.6rem + .5vw);
   padding: .5rem;
   border-radius: 1rem;
-  z-index: 1;
-  text-align: center;
-  margin: 2rem 0;
+  width: 100%;
+
 }
 
 .switchLogin {

@@ -1,3 +1,6 @@
+'use client'
+import { useRef, useEffect } from 'react'
+import lottie from 'lottie-web'
 import styles from './monitorias.module.css'
 import CardPessoa from '../../components/cardPessoa/cardPessoa'
 import arthur from '@/public/images/arthur.webp'
@@ -22,24 +25,58 @@ import phis from '@/public/icons/phis.json'
 import apresentacao from '@/public/icons/apresentacao.json'
 import crit from '@/public/icons/feed.json'
 import Input from '@/components/form/input/input'
-import { useState } from 'react'
+import RadioInput from '@/components/form/radio/RadioInput'
+import buscar from '@/public/icons/buscar.json'
 
 export default function Monitorias() {
-  
+
+
+  const container = useRef<HTMLDivElement | null>(null) //necessário para a animação do lottie funcionar no hover do botão inteiro
+  const aniInstanceRef = useRef<any>(null) //necessário para cada botão ter sua própria instância do lottie 
+
+  useEffect(() => {
+    if (container.current) {
+      aniInstanceRef.current = lottie.loadAnimation({
+        container: container.current,
+        loop: false,
+        autoplay: false,
+        animationData: buscar,
+
+      });
+
+      return () => {
+        if (aniInstanceRef.current) {
+          aniInstanceRef.current.destroy();
+        }
+      };
+    }
+  }, [buscar]);
+
 
 
   return (
     <main className={styles.main}>
       <section className={styles.section1}>
         <div className={styles.tela1}>
-          <h1>Encontre seu monitor particular ou turma</h1>
           <form className={styles.form}>
+            <h1>Encontre seu monitor particular ou sua turma</h1>
             <div className={styles.busca}>
               <label htmlFor="disciplina">
                 <input type="text" placeholder="Procure sua disciplina" name='disciplina' />
-                <span className={styles.span}>Buscar Disciplina</span>
+                <span className={styles.span}>Buscar por matéria</span>
               </label>
-              <button type='button' className={styles.buscaBtn}>Buscar</button>
+              <button type='button' className={styles.buscaBtn}>
+                <div
+                  className={styles.lottieContainer}
+                  onMouseEnter={() => aniInstanceRef.current && aniInstanceRef.current.play()}
+                  onMouseLeave={() => aniInstanceRef.current && aniInstanceRef.current.stop()}
+                >
+                  <div ref={container}
+                    className={styles.lottie}>
+                  </div>
+                </div>
+
+              </button>
             </div>
             <h4>Selecione o tipo de aula</h4>
             <div className={styles.radioContainer}>
@@ -52,6 +89,8 @@ export default function Monitorias() {
                 Turma Individual</label>
             </div>
           </form>
+        </div>
+        <div className={styles.section1Tela2}>
           <h1>Monitores em Destaque</h1>
           <div className={styles.cardWrapper}>
             <CardPessoa img={kaua}
@@ -216,15 +255,13 @@ export default function Monitorias() {
             <Input type='text' nome='nome' placeholder='Nome' />
             <Input type='email' nome='email' placeholder='E-mail' />
             <Input type='text' nome='telefone' placeholder='Telefone' />
-            <div className={styles.radioContainer}>
-              <label>
-                <input type='radio' id='estudante' name='turma' value="estudante" />
-                Estudante
-              </label>
-              <label>
-                <input type='radio' id='professor' name='turma' value="professor" />
-                Professor</label>
-            </div>
+            <RadioInput
+              name='tipoDeCadastro'
+              texto1='Aluno' texto2='Professor'
+              value1='' value2=''
+            //  checked1={true} checked2={false}
+            //  onChange={}
+            />
 
             <label htmlFor="duvidas"
               className={styles.duvidas} >
