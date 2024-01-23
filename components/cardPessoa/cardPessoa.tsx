@@ -1,10 +1,10 @@
 'use client'
-import SociaisLink from '../sociaisLink/sociaisLink'
+import SociaisLink from '../sociaisLink/SociaisLink'
 import styles from './cardPessoa.module.css'
 import Image from 'next/image'
 import linkedin from '@/public/icons/linkedin.json'
 import github from '@/public/icons/github.json'
-import LottieAnimation from '../lottie/lottieAnimation'
+import LottieAnimation from '../lottie/LottieAnimation'
 import chat from '@/public/icons/chat.json'
 
 

@@ -3,7 +3,7 @@
 import { useState } from 'react'
 import Formulario from '@/components/form/Formulario'
 import styles from './login.module.css'
-import Input from '@/components/form/input/input'
+import Input from '@/components/form/input/Input'
 import BotaoForm from '@/components/form/botao/BotaoForm'
 import BotaoFormSec from '@/components/form/botao/BotaoFormSec'
 import RadioInput from '@/components/form/radio/RadioInput'

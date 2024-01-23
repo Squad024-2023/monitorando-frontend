@@ -3,8 +3,8 @@ import { useState, useRef, useEffect } from 'react';
 import { usePathname } from 'next/navigation';
 import styles from './nav.module.css';
 import Link from 'next/link';
-import Logo from '@/components/logo/logo';
-import Doar from '../doar/doar';
+import Logo from '../logo/Logo';
+import Doar from '../doar/Doar';
 import hamb from '@/public/icons/hamburguer.json'
 import lottie from 'lottie-web';
 

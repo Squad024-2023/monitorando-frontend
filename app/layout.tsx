@@ -1,8 +1,8 @@
 import type { Metadata } from 'next'
 import { inter, pacifico, sunSeed } from './fonts'
 import './globals.css'
-import Nav from '@/components/nav/nav'
-import Footer from '@/components/footer/footer'
+import Nav from '@/components/nav/Nav'
+import Footer from '@/components/footer/Footer'
 
 
 export const metadata: Metadata = {

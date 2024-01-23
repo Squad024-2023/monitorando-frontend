@@ -3,11 +3,11 @@ import { usePathname } from 'next/navigation'
 import { useState } from 'react'
 import styles from './footer.module.css'
 import Link from 'next/link'
-import Logo from '../logo/logo';
-import SociaisLink from '../sociaisLink/sociaisLink';
+import Logo from '../logo/Logo';
+import SociaisLink from '../sociaisLink/SociaisLink';
 import linkedin from '@/public/icons/linkedin.json'
 import github from '@/public/icons/github.json'
-import Doar from '@/components/doar/doar'
+import Doar from '@/components/doar/Doar'
 
 export default function Footer() {
 
