@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import styles from './gestao.module.css'
-import Sidenav from '@/components/sidebar/sidenav'
+import Sidenav from '@/components/sidebar/Sidenav'
 
 const inter = Inter({ subsets: ['latin'] })
 

@@ -19,7 +19,6 @@
   align-items: center;
   width: 100%;
   min-height: 100vh;
-  background-color: rgb(var(--sal-rgb));
 }
 
 .tela1 {
@@ -30,8 +29,8 @@
   padding: 2rem 10%;
   width: 100%;
   min-height: 100vh;
-  background-color: rgba(var(--cinza-escuro-rgb), 0.6);
   background-image: url("../../public/images/duvidas.webp");
+  background-color: rgba(var(--cinza-escuro-rgb), 0.6);
   background-blend-mode: saturation;
   background-attachment: fixed;
   background-position: center;

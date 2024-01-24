@@ -1,7 +1,87 @@
 .sidenav {
     display: flex;
-    width: 80px;
-    height: 90vh;
-    background-color: red;
-    align-self: stretch;
+    flex-direction: column;
+    height: 100%;
+    min-height: 100vh;
+    background-color: rgb(var(--cinza-escuro-rgb));
+    box-shadow: .2rem .2rem 1rem rgba(var(--cinza-escuro-rgb), 0.8);
+}
+
+.botaoSideNav {
+    display: flex;
+    justify-content: flex-end;
+    background-color: rgb(var(--sal-rgb));
+}
+
+.lottie {
+    width: 5rem;
+    aspect-ratio: 1/1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.menuNav {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    color: rgb(var(--sal-rgb));
+}
+
+.hideNav {
+    display: none;
+}
+
+.menuNavLi {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+}
+
+.subNavlabel {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: rgb(var(--sal-rgb));
+    padding: 2rem 4rem;
+    border-bottom: solid .2rem rgb(var(--sal-rgb));
+    cursor: pointer;
+}
+
+.subNavlabel:hover {
+    background-color: rgb(var(--sal-rgb));
+    color: rgb(var(--cinza-escuro-rgb));
+    transition: all .3s ease;
+}
+
+.subNav {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.subNav li {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+
+}
+
+.subNav a {
+    font-size: 1.4rem;
+    color: rgb(var(--sal-rgb));
+    padding: 1rem;
+    border-bottom: solid .1rem rgb(var(--sal-rgb));
+    cursor: pointer;
+    transition: all .6s ease;
+}
+.subNav a:hover {
+    background-color: rgba(var(--sal-rgb), 0.4);
+    font-weight: 500;
+    transition: all .3s ease;
+}
+.hide {
+    display: none;
+
 }

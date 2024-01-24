@@ -1,0 +1,164 @@
+.form {
+    width: 100%;
+    max-width: 80rem;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    padding: 1rem;
+    border-radius: 1rem;
+}
+
+.label {
+    display: flex;
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+
+.label input {
+    height: 5rem;
+    width: 100%;
+    border-radius: 1rem;
+    padding-left: 2rem;
+    color: rgba(var(--rosa-escuro-rgb), 1);
+    font-size: calc(1.5rem + .1vw);
+    border: none;
+    outline: none;
+    box-shadow: .6rem .2rem 1rem rgba(var(--cinza-escuro-rgb), 0.2);
+    transition: all 0.3s ease-in-out;
+
+}
+
+.label input::placeholder {
+    opacity: 0;
+}
+
+.label input:focus {
+    outline: none;
+    background-color: rgb(var(--sal-rgb));
+}
+
+
+.span {
+    position: absolute;
+    left: 2rem;
+    top: 0;
+    z-index: 2;
+    color: rgba(var(--rosa-escuro-rgb), 1);
+    transform: translateY(1.2rem);
+    font-size: calc(1.5rem + .1vw);
+    font-weight: 500;
+    transition-duration: 300ms;
+    pointer-events: none;
+    text-shadow: .6rem .2rem 1rem rgba(var(--cinza-escuro-rgb), 0.2);
+}
+
+.label:focus-within span,
+input:not(:placeholder-shown)+.span {
+    color: rgba(var(--cinza-escuro-rgb), 0.8);
+    transform: translateY(-1.2rem);
+    font-size: 1.6rem;
+}
+
+.botaoForm {
+    width: 100%;
+    height: 5rem;
+    border-radius: 1rem;
+    background-color: rgb(var(--rosa-escuro-rgb));
+    color: rgb(var(--sal-rgb));
+    font-size: calc(1.5rem + .1vw);
+    font-weight: 500;
+    box-shadow: .6rem .2rem 1rem rgba(var(--cinza-escuro-rgb), 0.2);
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.botaoForm:hover {
+    color: rgb(var(--rosa-escuro-rgb));
+    background-color: rgb(var(--sal-rgb));
+}
+
+.BotaoFormSec {
+    width: 100%;
+    height: 5rem;
+    border-radius: 1rem;
+    color: rgb(var(--rosa-escuro-rgb));
+    background-color: rgb(var(--sal-rgb));
+    border: .2rem solid rgb(var(--rosa-escuro-rgb));
+    font-size: calc(1.5rem + .1vw);
+    font-weight: 500;
+    box-shadow: .6rem .2rem 1rem rgba(var(--cinza-escuro-rgb), 0.2);
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.BotaoFormSec:hover {
+    color: rgb(var(--sal-rgb));
+    background-color: rgb(var(--rosa-escuro-rgb));
+}
+
+.radioContainer {
+    max-width: 50rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    border-radius: 0.5rem;
+    padding: 1rem;
+  
+  }
+  
+  
+  .radioContainer input[type="radio"] {
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: #fff;
+    margin: 0;
+    font: inherit;
+    color: rgba(var(--rosa-escuro-rgb), 1);
+    width: 2.5rem;
+    height: 2.5rem;
+    border: .2rem solid rgba(var(--rosa-escuro-rgb), 1);
+    border-radius: 50%;
+    transform: translateY(-0.2rem);
+    display: grid;
+    place-content: center;
+  }
+  
+  .radioContainer input[type="radio"]::before {
+    content: "";
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+    transform: scale(0);
+    transition: .3s transform ease-in-out;
+    box-shadow: inset 1em 1em rgba(var(--rosa-escuro-rgb), 1);
+  }
+  
+  .radioContainer input[type="radio"]:checked::before {
+    transform: scale(1);
+  }
+  
+  
+  
+  .radioContainer label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    gap: 0.5em;
+    color: rgba(var(--cinza-escuro-rgb), 1);
+    font-size: calc(1.6rem + .1vw);
+    font-weight: bold;
+    line-height: 1.1;
+    cursor: pointer;
+  
+  }
+  
+  .radioContainer label:focus-within {
+    color: rgba(var(--rosa-escuro-rgb), 1);
+  }

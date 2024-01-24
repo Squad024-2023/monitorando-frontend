@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import styles from './quem-somos.module.css'
-import Doar from '@/components/doar/doar'
+import Doar from '@/components/doar/Doar'
 import arthur from '@/public/images/arthur.webp'
 import kaua from '@/public/images/kaua.webp'
 import mariana from '@/public/images/mariana.webp'
