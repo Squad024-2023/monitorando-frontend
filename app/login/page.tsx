@@ -7,6 +7,10 @@ import styles from './login.module.css'
 import BotaoForm from '@/components/form/botao/BotaoForm'
 import BotaoFormSec from '@/components/form/botao/BotaoFormSec'
 import RadioInput from '@/components/form/radio/RadioInput'
+import Link from 'next/link'
+import BotaoSocial from '@/components/form/botao/BotaoSocial'
+import google from '@/public/icons/googleicon.svg'
+import facebook from '@/public/icons/facebookicon.svg'
 
 
 
@@ -31,6 +35,8 @@ export default function Login() {
               <Input type='password' nome='password' placeholder='Senha' />
               <BotaoForm type='submit' texto='Entrar' />
               <BotaoFormSec type='submit' texto='Esqueci a senha' />
+              <BotaoSocial texto='Entrar com Google' icon={google} link='/' />
+              <BotaoSocial texto='Entrar com Facebook' icon={facebook} link='/' />
             </Formulario>
           </div>
           <div className={show ? styles.container1 : styles.container2}>
@@ -43,12 +49,12 @@ export default function Login() {
               <Input type='date' nome='dataNascimento' placeholder='' />
               <input type="text" name='tipoUsuario' value='USER' readOnly hidden />
               <RadioInput
-               name='tipoDeCadastro' 
-               texto1='Aluno' texto2='Professor'
-               value1='' value2=''
+                name='tipoDeCadastro'
+                texto1='Aluno' texto2='Professor'
+                value1='' value2=''
               //  checked1={true} checked2={false}
               //  onChange={}
-               />
+              />
               <Input type='password' nome='password' placeholder='Senha' />
               <BotaoForm type='submit' texto='Cadastrar' />
             </Formulario>
