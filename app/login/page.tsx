@@ -46,7 +46,7 @@ export default function Login() {
               <Input type='text' nome='cpf' placeholder='CPF' />
               <Input type='email' nome='email' placeholder='E-mail' />
               <Input type='text' nome='telefone' placeholder='Telefone' />
-              <Input type='date' nome='dataNascimento' placeholder='' />
+              <Input type='date' nome='dataNascimento' placeholder='--/--/----' />
               <input type="text" name='tipoUsuario' value='USER' readOnly hidden />
               <RadioInput
                 name='tipoDeCadastro'

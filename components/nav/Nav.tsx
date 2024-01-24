@@ -9,8 +9,10 @@ import hamb from '@/public/icons/hamburguer.json'
 import lottie from 'lottie-web';
 
 export default function Nav() {
+
   const pathname = usePathname();
   const [drop, setDrop] = useState<boolean>(true);
+
   const handleClickEvent = () => {
     if (aniInstanceRef.current) {
       if (drop) {
@@ -21,6 +23,10 @@ export default function Nav() {
     }
 
     setDrop(!drop);
+  };
+  const handleLinkClick = () => {
+    //fechar a navbar quando clicar em algum link
+    setDrop(true);
   };
 
 
@@ -45,7 +51,7 @@ export default function Nav() {
     }
   }, [hamb]);
 
- 
+
 
   return (
     <nav className={styles.nav}>
@@ -54,12 +60,14 @@ export default function Nav() {
         <div ref={container} className={styles.lottie}></div>
       </button>
       <menu className={`${styles.menuNav} ${drop ? styles.hide : ''}`}>
-        <li><Link className={pathname === '/quem-somos' ? styles.active : ''} href='/quem-somos'>Quem Somos</Link></li>
-        <li><Link className={pathname === '/o-que-fazemos' ? styles.active : ''} href='/o-que-fazemos'>O Que Fazemos</Link></li>
-        <li><Link className={pathname === '/monitorias' ? styles.active : ''} href='/monitorias'>Monitorias</Link></li>
-        <li><Link className={pathname === '/login' ? styles.active : ''} href='/login'>Login</Link></li>
-        <li><Link className={pathname === '/gestao' ? styles.active : ''} href='/gestao'>Gestão</Link></li>
-        <li><Doar /></li>
+
+        <li><Link className={pathname === '/quem-somos' ? styles.active : ''} href='/quem-somos' onClick={handleLinkClick}>Quem Somos</Link></li>
+        <li><Link className={pathname === '/o-que-fazemos' ? styles.active : ''} href='/o-que-fazemos' onClick={handleLinkClick}>O Que Fazemos</Link></li>
+        <li><Link className={pathname === '/monitorias' ? styles.active : ''} href='/monitorias' onClick={handleLinkClick}>Monitorias</Link></li>
+        <li><Link className={pathname === '/login' ? styles.active : ''} href='/login' onClick={handleLinkClick}>Login</Link></li>
+        <li><Link className={pathname === '/gestao' ? styles.active : ''} href='/gestao' onClick={handleLinkClick}>Gestão</Link></li>
+        <li onClick={handleLinkClick}><Doar /></li>
+
       </menu>
     </nav>
   )
