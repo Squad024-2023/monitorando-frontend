@@ -1,12 +1,13 @@
 
 'use client'
 import { useState } from 'react'
+import Input from '@/components/form/input/Input'
 import Formulario from '@/components/form/Formulario'
 import styles from './login.module.css'
 import BotaoForm from '@/components/form/botao/BotaoForm'
 import BotaoFormSec from '@/components/form/botao/BotaoFormSec'
 import RadioInput from '@/components/form/radio/RadioInput'
-import Input from '@/components/form/input/Input'
+
 
 
 export default function Login() {
@@ -40,7 +41,7 @@ export default function Login() {
               <Input type='email' nome='email' placeholder='E-mail' />
               <Input type='text' nome='telefone' placeholder='Telefone' />
               <Input type='date' nome='dataNascimento' placeholder='' />
-              <input type="text" name='tipoUsuario' value='USER' hidden />
+              <input type="text" name='tipoUsuario' value='USER' readOnly hidden />
               <RadioInput
                name='tipoDeCadastro' 
                texto1='Aluno' texto2='Professor'
