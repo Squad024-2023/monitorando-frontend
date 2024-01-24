@@ -1,36 +1,197 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+![Logo](https://private-user-images.githubusercontent.com/142227461/284445758-82e728e1-2823-4830-96d1-19a1992804b0.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MDU3ODc3MjcsIm5iZiI6MTcwNTc4NzQyNywicGF0aCI6Ii8xNDIyMjc0NjEvMjg0NDQ1NzU4LTgyZTcyOGUxLTI4MjMtNDgzMC05NmQxLTE5YTE5OTI4MDRiMC5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjQwMTIwJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI0MDEyMFQyMTUwMjdaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT1lM2NiNmFmZTljM2VmZjU4NmZhMTBiNzA2MTZmNmFjMDljOGUzNTUwMmMwMmFhYTVlNThjYmYyYzM4YThhZDhjJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCZhY3Rvcl9pZD0wJmtleV9pZD0wJnJlcG9faWQ9MCJ9.YS84v-4UuUMSCgdSOFrxS4oblYQ3kPvXJ-vdv3MtIJA)
+|--------------------:|
+| Seu sucesso acadêmico começa aqui! 🎓 |
 
-## Getting Started
+## Índice
+- <a href="#sobre-o-projeto"> Sobre o projeto </a>
+- <a href="#instalação"> Instalação </a>
+- <a href="#tecnologias-utilizadas"> Tecnologias Utilizadas </a>
+- <a href="#layout"> Layout </a>
+- <a href="#contruibuição"> Contruibuição </a>
+- <a href="#colaboradores"> Colaboradores </a>
+- <a href="#seja-um-doador"> Seja um doador </a>
 
-First, run the development server:
+<br>
 
+## Sobre o projeto
+O Monitorando é uma iniciativa dedicada a apoiar estudantes em suas jornadas acadêmicas. Nosso objetivo é fornecer assistência aos estudantes para superar as dificuldades enfrentadas, especialmente por egressos do ensino público e que possuem recursos limitados. Com o Monitorando, possibilitamos que os estudantes superem as dificuldades e continuem em seus cursos de graduação, técnicos e profissionalizantes.
+
+
+>  Acreditamos em um Brasil onde ninguém desiste do sonho de ser quem quiser ser.
+
+
+### Como podemos ajudar?
+
+Oferecemos um ambiente de aprendizado colaborativo, onde os estudantes podem acessar monitorias sobre uma variedade de assuntos. Nossos monitores são alunos avançados em graduações, professores e especialistas formados que compartilham seu conhecimento para facilitar o processo de aprendizado dos estudantes.
+
+
+### Como contribuir conosco:
+
+Você pode contribuir para o Monitorando de várias maneiras:
+
+* **Participando como Monitor:** Se você é um aluno avançado, professor ou especialista e deseja fazer uma renda extra enquanto contribui para a nossa causa, entre em contato conosco para se tornar um monitor.
+
+* **Sugira Melhorias:** Fique à vontade para abrir problemas relatando bugs, sugerindo novos recursos ou melhorias.
+
+* **Compartilhe a Iniciativa:** Ajude-nos a alcançar mais estudantes compartilhando o Monitorando com sua rede.
+
+<br>
+
+## Instalação
+
+O **Monitorando** foi construído em NextJS, versão 14. Para executar, realize o clone do repositório
+
+    $ git clone https://github.com/Squad024-2023/monitorando-frontend.git
+
+em seguida, via terminal, instale e execute:
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+<br>
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Tecnologias Utilizadas
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+Neste projeto, utilizamos as tecnologias listadas abaixo. Após feito o clone do repositório, abra o terminal e execute os códigos listados para instação das bibliotecas:
 
-## Learn More
 
-To learn more about Next.js, take a look at the following resources:
+* **NextJS:** biblioteca react para a base do projeto;
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```sh
+npx create-next-app@latest monitorando-frontend
+# Would you like to use TypeScript? ...  Yes
+# Would you like to use ESLint? ... No 
+# Would you like to use Tailwind CSS? ... No 
+# Would you like to use `src/` directory? ... No 
+# Would you like to use App Router? (recommended) ...  Yes
+# Would you like to customize the default import alias (@/*)? ... No 
+  ```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+* **Axios:** biblioteca para fazer a ligação com back-end;
+```sh
+npm i axios
+  ```
 
-## Deploy on Vercel
+* **Framer Motion:** biblioteca de animações para elevar a interatividade do usuário;
+```sh
+npm install framer-motion
+  ```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+* **Lottie Player:** biblioteca criada pela Airbnb usada para implementar animações de ícones em formato .json. Estes ícones tem uma qualidade elevada, são extremamente leves e podem ser animados
+```sh
+npm install --save @lottiefiles/react-lottie-player
+  ```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+* Para **executar**
+```sh
+npm rum dev
+  ```
+
+
+<br>
+
+## Layout
+
+Demonstração da página inicial do nosso site:
+<br>
+
+<img src="./public/github/Monitorando1.png">
+<img src= "./public/github/Monitorando2.png">
+<img src= "./public/github/Monitorando3.png">
+<img src= "./public/github/Monitorando4.png">
+<img src= "./public/github/Monitorando5.png">
+
+<br>
+
+## Contruibuição
+
+Para contribuir com o **Monitorando**, siga estas etapas:
+
+1. Clone o repositório:
+
+    `$ git clone https://github.com/Squad024-2023/monitorando-frontend.git`
+    
+2. Bifurque o repositório:
+
+    Crie um branch: `git checkout -b <nome_branch>`
+
+3. Faça suas alterações e confirme-as: 
+`git commit -m '<mensagem_commit>'`
+    
+4. Envie para o branch original: 
+`git push origin <nome_do_projeto> / <local>`
+
+5. Crie a solicitação de pull.
+
+
+<br>
+
+## Colaboradores
+
+O **Monitorando** foi desenvolvido pelo Squad 24 no curso Recode PRO 2023.
+
+Os integrantes estão apresentados abaixo, fique a vontade para nos encontrar no Linkedin e GitHub!
+
+<br>
+
+
+<table>
+  <tr>
+    <td align="center" style="padding: 10px;">
+        <img src="./public/images/arthur.webp" width="200px;" alt="Arthur"/><br>
+        <sub>
+          <b>Arthur Bernard</b>
+          <p> <a href="https://www.linkedin.com/in/ber-arthur/" ><img src="https://img.icons8.com/color/38/000000/linkedin.png"/></a> <a href="https://github.com/Daedaluzz"><img src="https://img.icons8.com/ios-glyphs/38/000000/github.png"/></a>
+        </sub>
+      </a>
+    </td>
+    <td align="center" style="padding: 10px;">
+        <img src="./public/images/nayara.webp" width="200px;" alt="Arthur"/><br>
+        <sub>
+          <b>Nayara Pereira</b>
+          <p> <a href="https://www.linkedin.com/in/nayarabpereira/"><img src="https://img.icons8.com/color/38/000000/linkedin.png"/></a> <a href="https://github.com/nxyara"><img src="https://img.icons8.com/ios-glyphs/38/000000/github.png"/></a>
+        </sub>
+      </a>
+    </td>
+    <td align="center" style="padding: 10px;">
+        <img src="./public/images/kaua.webp" width="210px;" alt="Arthur"/><br>
+        <sub>
+          <b>Kauã Alves</b>
+          <p> <a href="https://www.linkedin.com/in/kaua-amelo96/" ><img src="https://img.icons8.com/color/38/000000/linkedin.png"/></a> <a href="https://github.com/kauaamelo"><img src="https://img.icons8.com/ios-glyphs/38/000000/github.png"/></a>
+        </sub>
+      </a>
+    </td>
+    <td align="center" style="padding: 10px;">
+        <img src="./public/images/mariana.webp" width="200px;" alt="Arthur"/><br>
+        <sub>
+          <b>Mariana Moreira</b>
+          <p> <a href="https://www.linkedin.com/in/mariana-moreira-santos-39417828a/" ><img src="https://img.icons8.com/color/38/000000/linkedin.png"/></a> <a href="https://github.com/mari-moreira"><img src="https://img.icons8.com/ios-glyphs/38/000000/github.png"/></a>
+        </sub>
+      </a>
+    </td>
+    <td align="center" style="padding: 10px;">
+        <img src="./public/images/bianca.webp" width="200px;" alt="Arthur"/><br>
+        <sub>
+          <b>Bianca Tayla</b>
+          <p> <a href="https://www.linkedin.com/in/bianca-t-7b5972255/" ><img src="https://img.icons8.com/color/38/000000/linkedin.png"/></a> <a href="https://github.com/Y777-CoderTech"><img src="https://img.icons8.com/ios-glyphs/38/000000/github.png"/></a>
+        </sub>
+      </a>
+    </td>
+  </tr>
+</table>
+
+
+<br> 
+
+## Seja um doador
+
+Somos uma organização sem fins lucrativos dedicada a melhorar o desempenho acadêmico dos nossos estudantes para que ninguém desista de ser quem deseja ser! Oferecemos monitorias gratuitas para egressos do ensino público e estudantes do FIES e PROUNI. No entanto, precisamos da sua ajuda para continuar oferecendo esse trabalho tão valioso. Qualquer doação, grande ou pequena, é muito apreciada e fará uma grande diferença na vida dos nossos estudantes. 
+
+Considere fazer uma doação hoje e ajudar a mudar o futuro dos nossos estudantes!
+
+<br>
+
+### Licença 
+
+© monitorando. Todos os direitos reservados.
