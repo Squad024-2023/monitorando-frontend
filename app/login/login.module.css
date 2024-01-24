@@ -20,7 +20,6 @@
   background-image: url(../../public/images/graduate.webp);
   background-color: rgba(var(--cinza-escuro-rgb), 0.6);
   background-blend-mode: saturation;
-  background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -37,9 +36,6 @@
   height: auto;
   overflow: hidden;
   gap: 5%;
-
-
-
 }
 
 .container1 {
@@ -48,7 +44,6 @@
   display: flex;
   flex-direction: column;
   width: 40rem;
-  gap: 2rem;
   padding: 6rem 0 0 0;
   height: auto;
   box-shadow: 0 2px 4px #0000004a;
@@ -65,7 +60,6 @@
   display: flex;
   flex-direction: column;
   width: 40rem;
-  gap: 2rem;
   padding: 6rem 0 0 0;
   height: auto;
   box-shadow: 0 2px 4px #0000004a;

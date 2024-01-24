@@ -35,8 +35,8 @@ export default function Login() {
               <Input type='password' nome='password' placeholder='Senha' />
               <BotaoForm type='submit' texto='Entrar' />
               <BotaoFormSec type='submit' texto='Esqueci a senha' />
-              <BotaoSocial texto='Entrar com Google' icon={google} link='/' />
-              <BotaoSocial texto='Entrar com Facebook' icon={facebook} link='/' />
+              <BotaoSocial texto='Entrar com Google' icon={google} link='' />
+              <BotaoSocial texto='Entrar com Facebook' icon={facebook} link='' />
             </Formulario>
           </div>
           <div className={show ? styles.container1 : styles.container2}>

@@ -6,7 +6,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 2rem;
+    gap: 1rem;
     padding: 1rem;
     border-radius: 1rem;
 }
@@ -19,10 +19,9 @@
 }
 
 .label input {
-    height: 5rem;
     width: 100%;
     border-radius: 1rem;
-    padding-left: 2rem;
+    padding: 1rem 1rem 1.5rem 2rem;
     color: rgba(var(--rosa-escuro-rgb), 1);
     font-size: calc(1.5rem + .1vw);
     border: none;
@@ -53,24 +52,25 @@
     font-weight: 500;
     transition-duration: 300ms;
     pointer-events: none;
-    text-shadow: .6rem .2rem 1rem rgba(var(--cinza-escuro-rgb), 0.2);
+
 }
 
 .label:focus-within span,
 input:not(:placeholder-shown)+.span {
     color: rgba(var(--cinza-escuro-rgb), 0.8);
-    transform: translateY(-1.2rem);
-    font-size: 1.6rem;
+    transform: translateY(-.6rem);
+    font-size: 1.2rem;
+    font-weight: 600;
 }
 
 .botaoForm {
     width: 100%;
-    height: 5rem;
     border-radius: 1rem;
     background-color: rgb(var(--rosa-escuro-rgb));
     color: rgb(var(--sal-rgb));
     font-size: calc(1.5rem + .1vw);
     font-weight: 500;
+    padding: 1.5rem 2rem;
     box-shadow: .6rem .2rem 1rem rgba(var(--cinza-escuro-rgb), 0.2);
     transition: all 0.3s ease-in-out;
     cursor: pointer;
@@ -83,13 +83,13 @@ input:not(:placeholder-shown)+.span {
 
 .BotaoFormSec {
     width: 100%;
-    height: 5rem;
     border-radius: 1rem;
     color: rgb(var(--rosa-escuro-rgb));
     background-color: rgb(var(--sal-rgb));
-    border: .2rem solid rgb(var(--rosa-escuro-rgb));
+    border: .1rem solid rgb(var(--rosa-escuro-rgb));
     font-size: calc(1.5rem + .1vw);
     font-weight: 500;
+    padding: 1.5rem 2rem;
     box-shadow: .6rem .2rem 1rem rgba(var(--cinza-escuro-rgb), 0.2);
     transition: all 0.3s ease-in-out;
     cursor: pointer;
@@ -152,7 +152,7 @@ input:not(:placeholder-shown)+.span {
     width: auto;
     gap: 0.5em;
     color: rgba(var(--cinza-escuro-rgb), 1);
-    font-size: calc(1.6rem + .1vw);
+    font-size: calc(1.5rem + .1vw);
     font-weight: bold;
     line-height: 1.1;
     cursor: pointer;
