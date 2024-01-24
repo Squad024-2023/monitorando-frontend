@@ -171,6 +171,7 @@
 .copyFooter p {
     font-size: 1.6rem;
     color: rgba(var(--sal-rgb), 1);
+    text-align: center;
 }
 
 .active {
