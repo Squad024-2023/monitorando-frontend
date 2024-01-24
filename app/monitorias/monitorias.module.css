@@ -239,6 +239,7 @@ input:not(:placeholder-shown)+.span {
   max-width: 1240px;
   padding: 2rem;
   gap: 2rem;
+  
 }
 
 .section1Tela2 h1 {
