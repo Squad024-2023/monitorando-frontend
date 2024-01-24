@@ -6,7 +6,7 @@ import { motion, AnimatePresence } from "framer-motion"
 export default function Gestao() {
   return (
     <section className={styles.gestao}>
-      <h1>gestão</h1>
+      <h1>Gestão</h1>
     </section>
   )
 }
