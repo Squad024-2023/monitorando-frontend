@@ -64,11 +64,11 @@ export default function Sidenav() {
         </li>
 
         <li className={styles.menuNavLi}>
-          <SubNav label='Disciplinas' link1='/gestao/disciplinas' link2='' link3='' />
+          <SubNav label='Disciplinas' link1='/gestao/disciplinas' link2='/gestao/disciplinas/cadastrar' link3='' />
         </li>
 
         <li className={styles.menuNavLi}>
-          <SubNav label='Turmas' link1='/gestao/turmas' link2='' link3='' />
+          <SubNav label='Turmas' link1='/gestao/turmas' link2='/gestao/turmas/cadastrar' link3='' />
         </li>
 
       </menu>

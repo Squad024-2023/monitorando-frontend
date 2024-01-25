@@ -5,7 +5,6 @@ import axios from 'axios';
 import styles from '../../gestao.module.css';
 import Formulario from '@/components/form/Formulario';
 import Input from '@/components/form/input/Input';
-import RadioInput from '@/components/form/radio/RadioInput';
 import BotaoForm from '@/components/form/botao/BotaoForm';
 
 type Aluno = {
@@ -41,10 +40,10 @@ export default function CadastrarAlunoes() {
         const { name, value, checked } = e.target;
 
         if (e.target.type === 'checkbox') {
-            // Update checked state for the specific discipline
+            // atualiza o estado marcado para a turma específica
             setNewAluno((prevAluno) => {
                 const updatedTurmas = checked
-                    ? [...prevAluno.turmas, { id: value, materiaTurma: name }]  // Use both id and name
+                    ? [...prevAluno.turmas, { id: value, materiaTurma: name }]  // usando id e nome para adicionar
                     : prevAluno.turmas.filter((turma) => turma.id !== value);
 
                 return { ...prevAluno, turmas: updatedTurmas };
@@ -111,8 +110,6 @@ export default function CadastrarAlunoes() {
                             ))}
                         </div>
                     </div>
-
-
                     <BotaoForm type='submit' texto='Cadastrar' onClick={handleAddClient} />
                 </Formulario>
 

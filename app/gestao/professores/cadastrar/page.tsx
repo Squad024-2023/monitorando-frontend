@@ -43,12 +43,11 @@ export default function CadastrarProfessores() {
         const { name, value, checked } = e.target;
 
         if (e.target.type === 'checkbox') {
-            // Update checked state for the specific discipline
+            // atualiza o estado marcado para a disciplina específica
             setNewProfessor((prevProfessor) => {
                 const updatedDisciplinas = checked
-                    ? [...prevProfessor.disciplinas, { id: value, nome: name }]  // Use both id and name
+                    ? [...prevProfessor.disciplinas, { id: value, nome: name }]   // usando id e nome para adicionar
                     : prevProfessor.disciplinas.filter((disciplina) => disciplina.id !== value);
-
                 return { ...prevProfessor, disciplinas: updatedDisciplinas };
             });
         } else {
@@ -63,7 +62,6 @@ export default function CadastrarProfessores() {
             .get('http://localhost:8080/disciplinas')
             .then((response) => {
                 setDisciplinas(response.data);
-                console.log(response.data);
             })
             .catch((error) => {
                 console.error("Erro ao buscar a lista de disciplinas:", error);
@@ -73,7 +71,7 @@ export default function CadastrarProfessores() {
 
     const handleAddClient = () => {
         axios
-            .post("http://localhost:8080/professores", novoProfessor)
+            .post("http://localhost:8080/professor", novoProfessor)
             .then((response) => {
                 alert("Professor cadastrado com sucesso!");
                 router.push("/gestao/professores");
@@ -87,7 +85,6 @@ export default function CadastrarProfessores() {
         <section className={styles.professores}>
             <h1>Cadastrar Professor</h1>
             <div className={styles.formContainer}>
-
                 <Formulario>
                     <Input type='text' nome='nome' placeholder='Nome' value={novoProfessor.nome} onChange={handleInputChange} />
                     <Input type='text' nome='telefone' placeholder='Telefone' value={novoProfessor.telefone} onChange={handleInputChange} />
@@ -120,11 +117,8 @@ export default function CadastrarProfessores() {
                             ))}
                         </div>
                     </div>
-
-
                     <BotaoForm type='submit' texto='Cadastrar' onClick={handleAddClient} />
                 </Formulario>
-
             </div>
         </section>
     )
