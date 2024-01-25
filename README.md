@@ -1,4 +1,4 @@
-<img src="./public/icons/logo-pink.svg">
+![Logo](./public/icons/logo-pink.svg)
 |--------------------:|
 | Seu sucesso acadêmico começa aqui! 🎓 |
 
