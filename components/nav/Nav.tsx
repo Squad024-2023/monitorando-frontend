@@ -60,9 +60,7 @@ export default function Nav() {
         <li><Link className={pathname === '/login' ? styles.active : ''} href='/login'>Login</Link></li>
         <li><Link className={pathname === '/gestao' ? styles.active : ''} href='/gestao'>Gestão</Link></li>
         <li><Doar /></li>
-
       </menu>
-
     </nav>
   )
 }

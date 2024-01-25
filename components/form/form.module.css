@@ -6,7 +6,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 2rem;
+    gap: 1rem;
     padding: 1rem;
     border-radius: 1rem;
 }
@@ -19,10 +19,9 @@
 }
 
 .label input {
-    height: 5rem;
     width: 100%;
     border-radius: 1rem;
-    padding-left: 2rem;
+    padding: 1rem 1rem 1.5rem 2rem;
     color: rgba(var(--rosa-escuro-rgb), 1);
     font-size: calc(1.5rem + .1vw);
     border: none;
@@ -53,24 +52,25 @@
     font-weight: 500;
     transition-duration: 300ms;
     pointer-events: none;
-    text-shadow: .6rem .2rem 1rem rgba(var(--cinza-escuro-rgb), 0.2);
+
 }
 
 .label:focus-within span,
 input:not(:placeholder-shown)+.span {
     color: rgba(var(--cinza-escuro-rgb), 0.8);
-    transform: translateY(-1.2rem);
-    font-size: 1.6rem;
+    transform: translateY(-.6rem);
+    font-size: 1.2rem;
+    font-weight: 600;
 }
 
 .botaoForm {
     width: 100%;
-    height: 5rem;
     border-radius: 1rem;
     background-color: rgb(var(--rosa-escuro-rgb));
     color: rgb(var(--sal-rgb));
     font-size: calc(1.5rem + .1vw);
     font-weight: 500;
+    padding: 1.5rem 2rem;
     box-shadow: .6rem .2rem 1rem rgba(var(--cinza-escuro-rgb), 0.2);
     transition: all 0.3s ease-in-out;
     cursor: pointer;
@@ -83,13 +83,13 @@ input:not(:placeholder-shown)+.span {
 
 .BotaoFormSec {
     width: 100%;
-    height: 5rem;
     border-radius: 1rem;
     color: rgb(var(--rosa-escuro-rgb));
     background-color: rgb(var(--sal-rgb));
-    border: .2rem solid rgb(var(--rosa-escuro-rgb));
+    border: .1rem solid rgb(var(--rosa-escuro-rgb));
     font-size: calc(1.5rem + .1vw);
     font-weight: 500;
+    padding: 1.5rem 2rem;
     box-shadow: .6rem .2rem 1rem rgba(var(--cinza-escuro-rgb), 0.2);
     transition: all 0.3s ease-in-out;
     cursor: pointer;
@@ -109,11 +109,11 @@ input:not(:placeholder-shown)+.span {
     gap: 1rem;
     border-radius: 0.5rem;
     padding: 1rem;
-  
-  }
-  
-  
-  .radioContainer input[type="radio"] {
+
+}
+
+
+.radioContainer input[type="radio"] {
     -webkit-appearance: none;
     appearance: none;
     background-color: #fff;
@@ -127,9 +127,9 @@ input:not(:placeholder-shown)+.span {
     transform: translateY(-0.2rem);
     display: grid;
     place-content: center;
-  }
-  
-  .radioContainer input[type="radio"]::before {
+}
+
+.radioContainer input[type="radio"]::before {
     content: "";
     width: 1.5rem;
     height: 1.5rem;
@@ -137,28 +137,59 @@ input:not(:placeholder-shown)+.span {
     transform: scale(0);
     transition: .3s transform ease-in-out;
     box-shadow: inset 1em 1em rgba(var(--rosa-escuro-rgb), 1);
-  }
-  
-  .radioContainer input[type="radio"]:checked::before {
+}
+
+.radioContainer input[type="radio"]:checked::before {
     transform: scale(1);
-  }
-  
-  
-  
-  .radioContainer label {
+}
+
+
+
+.radioContainer label {
     display: flex;
     justify-content: center;
     align-items: center;
     width: auto;
     gap: 0.5em;
     color: rgba(var(--cinza-escuro-rgb), 1);
-    font-size: calc(1.6rem + .1vw);
+    font-size: calc(1.5rem + .1vw);
     font-weight: bold;
     line-height: 1.1;
     cursor: pointer;
-  
-  }
-  
-  .radioContainer label:focus-within {
+
+}
+
+.radioContainer label:focus-within {
     color: rgba(var(--rosa-escuro-rgb), 1);
-  }
+}
+
+.btnSocial {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    height: 5rem;
+    width: 100%;
+    border-radius: 1rem;
+    padding-left: 2rem;
+    box-shadow: 0 .1rem .1rem rgba(var(--cinza-escuro-rgb), 0.1);
+
+}
+
+.btnSocial span {
+    font-size: calc(1.5rem + .1vw);
+    font-weight: 300;
+    color: rgba(var(--cinza-escuro-rgb), 1);
+    transition: all 0.3s ease-in-out;
+}
+
+.btnSocial:hover span {
+    color: rgba(var(--rosa-escuro-rgb), 1);
+}
+
+.btnSocialIcon {
+    height: 3rem;
+    width: 3rem;
+    transition: all 0.3s ease-in-out;
+    background-color: #fff;
+}

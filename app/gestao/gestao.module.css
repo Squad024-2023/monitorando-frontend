@@ -18,7 +18,14 @@
     width: 100%;
     height: 100vh;
     padding: 2rem 5%;
+    background-color: rgba(var(--rosa-escuro-rgb));
     transition: all 0.3s ease-in-out;
+
+}
+.gestao h1{
+    font-size: clamp(2rem, 5vw, 3rem);
+    color: rgba(var(--sal-rgb));
+    margin-bottom: 2rem;
 
 }
 
