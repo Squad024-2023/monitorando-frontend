@@ -236,6 +236,7 @@
     width: 100%;
     height: auto;
     display: flex;
+    flex-wrap: wrap;
     gap: 1rem;
     font-size: calc(1.5rem + .1vw);
 }

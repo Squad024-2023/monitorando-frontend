@@ -60,7 +60,7 @@ export default function Sidenav() {
         </li>
 
         <li className={styles.menuNavLi}>
-          <SubNav label='Alunos' link1='/gestao/alunos' link2='' link3='' />
+          <SubNav label='Alunos' link1='/gestao/alunos' link2='/gestao/alunos/cadastrar' link3='' />
         </li>
 
         <li className={styles.menuNavLi}>
