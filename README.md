@@ -1,7 +1,9 @@
 ![Logo](./public/icons/logo-pink.svg)
 
-|---------------------------:|
-| Seu sucesso acadêmico começa aqui! 🎓 |
+<div style="text-align: right;">
+  <p>Seu sucesso acadêmico começa aqui! 🎓</p>
+</div>
+
 
 ## Índice
 - <a href="#sobre-o-projeto"> Sobre o projeto </a>
