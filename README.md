@@ -1,5 +1,6 @@
 ![Logo](./public/icons/logo-pink.svg)
-|--------------------:|
+
+|---------------------------:|
 | Seu sucesso acadêmico começa aqui! 🎓 |
 
 ## Índice
