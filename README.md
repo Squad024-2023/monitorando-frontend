@@ -1,4 +1,4 @@
-<img src="./public/github/monitorando-roxo-fundo-branco.png">
+<img src="./public/icons/logo-pink.svg">
 |--------------------:|
 | Seu sucesso acadêmico começa aqui! 🎓 |
 
