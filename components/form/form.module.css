@@ -101,7 +101,6 @@ input:not(:placeholder-shown)+.span {
 }
 
 .radioContainer {
-    max-width: 50rem;
     width: 100%;
     display: flex;
     align-items: center;

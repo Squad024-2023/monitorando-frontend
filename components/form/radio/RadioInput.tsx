@@ -3,8 +3,7 @@ import styles from '../form.module.css'
 type Props = {
     name: string;
     texto1: string; texto2: string;
-    value1?: any; value2?: any;
-    checked1?: boolean; checked2?: boolean;
+    value?: string;
     onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;
 
 }
@@ -12,18 +11,27 @@ type Props = {
 export default function RadioInput({
     name,
     texto1, texto2,
-    value1, value2,
-    checked1, checked2,
+    value,
     onChange }: Props) {
 
     return (
         <div className={styles.radioContainer}>
             <label>
-                <input type='radio' id={texto1} name={name} value={value1} checked={checked1} onChange={onChange} />
+                <input type="radio"
+                    name={name}
+                    value={texto1}
+                    checked={value === texto1}
+                    onChange={onChange} />
                 {texto1}
             </label>
             <label>
-                <input type='radio' id={texto2} name={name} value={value2} checked={checked2} onChange={onChange} />
+                <input
+                    type="radio"
+                    name={name}
+                    value={texto2}
+                    checked={value === texto2}
+                    onChange={onChange}
+                />
                 {texto2}</label>
         </div>
     )

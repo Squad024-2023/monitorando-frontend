@@ -17,6 +17,7 @@ import facebook from '@/public/icons/facebookicon.svg'
 export default function Login() {
 
   const [show, setShow] = useState(true)
+  
 
 
 
@@ -46,14 +47,12 @@ export default function Login() {
               <Input type='text' nome='cpf' placeholder='CPF' />
               <Input type='email' nome='email' placeholder='E-mail' />
               <Input type='text' nome='telefone' placeholder='Telefone' />
-              <Input type='date' nome='dataNascimento' placeholder='--/--/----' />
+              <Input type='date' nome='dataNascimento' placeholder='Data de Nascimento' />
               <input type="text" name='tipoUsuario' value='USER' readOnly hidden />
               <RadioInput
                 name='tipoDeCadastro'
-                texto1='Aluno' texto2='Professor'
-                value1='' value2=''
-              //  checked1={true} checked2={false}
-              //  onChange={}
+                texto1='ALUNO' texto2='PROFESSOR'
+                value=''
               />
               <Input type='password' nome='password' placeholder='Senha' />
               <BotaoForm type='submit' texto='Cadastrar' />

@@ -222,7 +222,7 @@
 }
 
 .comoComeçar {
-  font-size: 4rem;
+  font-size: clamp(3rem, 4vw, 4rem);
   color: rgb(var(--rosa-escuro-rgb));
   line-height: 0.8;
   text-align: center;
@@ -241,7 +241,7 @@
 }
 
 .labelSwitcher {
-  font-size: 2.5rem;
+  font-size: clamp(2rem, 4vw, 2.5rem);
   font-weight: 500;
   color: rgba(var(--cinza-escuro-rgb), 0.5);
   transition: all 600ms ease;
@@ -465,7 +465,7 @@
 }
 
 .section5 h1 {
-  font-size: 4rem;
+  font-size: clamp(3rem, 4vw, 4rem);
   text-align: center;
   color: rgb(var(--rosa-escuro-rgb));
   line-height: 0.8;

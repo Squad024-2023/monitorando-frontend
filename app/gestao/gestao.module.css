@@ -19,12 +19,17 @@
     height: 100vh;
     padding: 2rem 5%;
     gap: 2rem;
-    background-color: rgba(var(--rosa-escuro-rgb),1);
+    background-color: rgba(var(--cinza-escuro-rgb), 1);
     transition: all 0.3s ease-in-out;
 
 }
 
-.gestao h1 {
+
+.gestao h1,
+.professores h1,
+.alunos h1,
+.turmas h1,
+.disciplinas h1 {
     font-size: clamp(2rem, 5vw, 3rem);
     color: rgba(var(--sal-rgb));
     margin-bottom: 2rem;
@@ -139,6 +144,11 @@
     border-radius: var(--border-radius);
     background-color: rgba(var(--sal-rgb));
 }
+.arrays{
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
 
 .table td span {
     color: rgba(var(--rosa-escuro-rgb));
@@ -189,6 +199,60 @@
 .create:hover>img,
 .read:hover>img {
     transform: scale(1.1)
+}
+
+
+.formContainer {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 60rem;
+    height: auto;
+    overflow: hidden;
+    gap: 5%;
+    border-radius: 1rem;
+    background-color: #fff;
+}
+
+.checks {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 2rem;
+    gap: 1rem;
+    border-radius: 1rem;
+    box-shadow: .6rem .2rem 1rem rgba(var(--cinza-escuro-rgb), 0.2);
+
+}
+
+.checksSpan {
+    color: rgba(var(--rosa-escuro-rgb), 1);
+    font-size: calc(1.5rem + .1vw);
+}
+
+.checksOpcoes {
+    width: 100%;
+    height: auto;
+    display: flex;
+    gap: 1rem;
+    font-size: calc(1.5rem + .1vw);
+}
+
+.checksOpcoes label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem;
+
+}
+
+.checksOpcoes input {}
+
+
+.checksOpcoes span {
+    color: rgba(var(--rosa-escuro-rgb), 1);
 }
 
 @media screen and (max-width: 40rem) {

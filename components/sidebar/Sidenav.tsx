@@ -56,7 +56,7 @@ export default function Sidenav() {
       </div>
       <menu className={`${styles.menuNav} ${drop ? styles.hideNav : ''}`}>
         <li className={styles.menuNavLi}>
-          <SubNav label='Professores' link1='/gestao/professores' link2='' link3='' />
+          <SubNav label='Professores' link1='/gestao/professores' link2='/gestao/professores/cadastrar' link3='' />
         </li>
 
         <li className={styles.menuNavLi}>

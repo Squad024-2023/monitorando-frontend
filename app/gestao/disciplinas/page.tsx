@@ -50,18 +50,24 @@ export default function Disciplinas() {
                         </tr>
                     </thead>
                     <tbody>
-                       {/* Map para listar os alunos dentro do vetor */}
+                        {/* Map para listar os alunos dentro do vetor */}
                         {disciplinas.map((disciplina, index) => (
                             <tr className={styles.tr} key={index}>
                                 <td key={index}>{disciplina.id}</td>
                                 <td>{disciplina.nome}</td>
-                                <td>{disciplina.professores.map((professor, index) => (
-                                    <span key={index}>{professor.nome}</span>
-                                ))}
+                                <td>
+                                    <div className={styles.arrays} >
+                                        {disciplina.professores.map((professor, index) => (
+                                            <span key={index}>{professor.nome}</span>
+                                        ))}
+                                    </div>
                                 </td>
-                                <td>{disciplina.turmas.map((turma, index) => (
-                                    <span key={index}>{turma.materiaTurma}</span>
-                                ))}
+                                <td>
+                                    <div className={styles.arrays}>
+                                        {disciplina.turmas.map((turma, index) => (
+                                            <span key={index}>{turma.materiaTurma}</span>
+                                        ))}
+                                    </div>
                                 </td>
                                 <td>
                                     <div className={styles.bts}>
