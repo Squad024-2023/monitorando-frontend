@@ -14,12 +14,11 @@ type Turma = {
     dataAula: string;
     professor: Professor;
 };
+
 type Professor = {
     id: string;
     nome: string;
 };
-
-
 
 export default function CadastrarTurmas() {
 
@@ -97,7 +96,7 @@ export default function CadastrarTurmas() {
                                         type='checkbox'
                                         id={professor.id}
                                         value={professor.id}
-                                        onChange={handleInputChange}
+                                        onChange={handleProfessorChange}
                                     />
                                     <span>{professor.nome}</span>
                                 </label>

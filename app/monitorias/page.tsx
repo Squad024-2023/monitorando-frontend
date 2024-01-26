@@ -258,7 +258,6 @@ export default function Monitorias() {
             <RadioInput
               name='tipoDeCadastro'
               texto1='Aluno' texto2='Professor'
-              value1='' value2=''
             //  checked1={true} checked2={false}
             //  onChange={}
             />
