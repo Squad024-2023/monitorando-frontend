@@ -33,7 +33,7 @@ export default function CadastrarDisciplinas() {
     };
 
 
-    const handleAddClient = () => {
+    const handleAddDisciplina = () => {
         axios
             .post("http://localhost:8080/disciplinas", novaDisciplina)
             .then((response) => {
@@ -51,7 +51,7 @@ export default function CadastrarDisciplinas() {
             <div className={styles.formContainer}>
                 <Formulario>
                     <Input type='text' nome='nome' placeholder='Nome' value={novaDisciplina.nome} onChange={handleInputChange} />
-                    <BotaoForm type='submit' texto='Cadastrar' onClick={handleAddClient} />
+                    <BotaoForm type='submit' texto='Cadastrar' onClick={handleAddDisciplina} />
                 </Formulario>
             </div>
         </section>

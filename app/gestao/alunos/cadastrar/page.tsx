@@ -68,7 +68,7 @@ export default function CadastrarAlunoes() {
     }, []);
 
 
-    const handleAddClient = () => {
+    const handleAddAlunos = () => {
         axios
             .post("http://localhost:8080/alunos", novoAluno)
             .then((response) => {
@@ -110,7 +110,7 @@ export default function CadastrarAlunoes() {
                             ))}
                         </div>
                     </div>
-                    <BotaoForm type='submit' texto='Cadastrar' onClick={handleAddClient} />
+                    <BotaoForm type='submit' texto='Cadastrar' onClick={handleAddAlunos} />
                 </Formulario>
 
             </div>

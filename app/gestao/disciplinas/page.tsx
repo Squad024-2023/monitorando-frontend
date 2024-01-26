@@ -10,12 +10,9 @@ import styles from '../gestao.module.css';
 type Disciplinas = {
     id: string;
     nome: string;
-    professores: Professores[];
 };
 
-type Professores = {
-    nome: string;
-};
+
 
 export default function Disciplinas() {
     const [disciplinas, setDisciplinas] = useState<Disciplinas[]>([]);
@@ -25,7 +22,6 @@ export default function Disciplinas() {
             .get('http://localhost:8080/disciplinas')
             .then((response) => {
                 setDisciplinas(response.data);
-                console.log(response.data);
             })
             .catch((error) => {
                 console.error("Erro ao buscar a lista de disciplinas:", error);
@@ -40,7 +36,6 @@ export default function Disciplinas() {
                         <tr>
                             <th>ID</th>
                             <th>Nome</th>
-                            <th>Professores</th>
                             <th>Ações</th>
                         </tr>
                     </thead>
@@ -50,13 +45,6 @@ export default function Disciplinas() {
                             <tr className={styles.tr} key={index}>
                                 <td key={index}>{disciplina.id}</td>
                                 <td>{disciplina.nome}</td>
-                                <td>
-                                    <div className={styles.arrays} >
-                                        {disciplina.professores.map((professor, index) => (
-                                            <span key={index}>{professor.nome}</span>
-                                        ))}
-                                    </div>
-                                </td>
                                 <td>
                                     <div className={styles.bts}>
                                         <Link className={styles.edit} href={'/'}><Image

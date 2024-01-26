@@ -1,14 +1,15 @@
 'use client'
 import { useState, useEffect, ChangeEvent } from 'react';
-import { useRouter } from 'next/navigation';
+import { redirect, useRouter } from 'next/navigation';
 import axios from 'axios';
-import styles from '../../gestao.module.css';
+import styles from '../../../gestao.module.css';
 import Formulario from '@/components/form/Formulario';
 import Input from '@/components/form/input/Input';
 import RadioInput from '@/components/form/radio/RadioInput';
 import BotaoForm from '@/components/form/botao/BotaoForm';
 
 type Professor = {
+
     nome: string;
     telefone: string;
     dataNascimento: string;
@@ -24,9 +25,9 @@ type Disciplina = {
     nome: string;
 };
 
-export default function CadastrarProfessores() {
+export default function EditarProfessores({ params }: { params: { id: any } }) {
 
-    const [novoProfessor, setNewProfessor] = useState<Professor>({
+    const [professor, setProfessor] = useState<Professor>({
         nome: '',
         telefone: '',
         dataNascimento: '',
@@ -36,22 +37,36 @@ export default function CadastrarProfessores() {
         senha: '',
         disciplinas: [],
     });
+
+    useEffect(() => {
+        // Faça uma chamada GET para a API para obter detalhes do professor a ser atualizado
+        axios
+            .get("http://localhost:8080/professores/" + params.id)
+            .then((response) => {
+                setProfessor(response.data);
+            })
+            .catch((error) => {
+                console.error("Erro ao buscar detalhes do professor:", error);
+            });
+    }, [params.id]);
+
     const [disciplinas, setDisciplinas] = useState<Disciplina[]>([]);
     const router = useRouter();
 
     const handleInputChange = (e: ChangeEvent<HTMLInputElement>) => {
+        console.log(professor.disciplinas);
         const { name, value, checked } = e.target;
 
         if (e.target.type === 'checkbox') {
             // atualiza o estado marcado para a disciplina específica
-            setNewProfessor((prevProfessor) => {
+            setProfessor((prevProfessor) => {
                 const updatedDisciplinas = checked
                     ? [...prevProfessor.disciplinas, { id: value, nome: name }]   // usando id e nome para adicionar
                     : prevProfessor.disciplinas.filter((disciplina) => disciplina.id !== value);
                 return { ...prevProfessor, disciplinas: updatedDisciplinas };
             });
         } else {
-            setNewProfessor((prevProfessor) => ({ ...prevProfessor, [name]: value }));
+            setProfessor((prevProfessor) => ({ ...prevProfessor, [name]: value }));
         }
     };
 
@@ -69,16 +84,17 @@ export default function CadastrarProfessores() {
     }, []);
 
 
-    const handleAddProfessor = () => {
+    const handleUpdateProfessor = () => {
+        console.log(professor);
         axios
-            .post("http://localhost:8080/professores", novoProfessor)
+            .put("http://localhost:8080/professores/" + params.id, professor)
             .then((response) => {
-                alert("Professor cadastrado com sucesso!");
-                router.push("/gestao/professores");
+                alert("Professor atualizado com sucesso!");
+                router.push('/gestao/professores');
+
             })
             .catch((error) => {
-                alert("Erro ao inserir professor:" + error);
-           
+                console.error("Erro ao atualizar o professor:", error);
             });
     };
 
@@ -87,19 +103,19 @@ export default function CadastrarProfessores() {
             <h1>Cadastrar Professor</h1>
             <div className={styles.formContainer}>
                 <Formulario>
-                    <Input type='text' nome='nome' placeholder='Nome' value={novoProfessor.nome} onChange={handleInputChange} />
-                    <Input type='text' nome='telefone' placeholder='Telefone' value={novoProfessor.telefone} onChange={handleInputChange} />
-                    <Input type='date' nome='dataNascimento' placeholder='Data de Nascimento' value={novoProfessor.dataNascimento} onChange={handleInputChange} />
-                    <Input type='email' nome='email' placeholder='E-mail' value={novoProfessor.email} onChange={handleInputChange} />
+                    <Input type='text' nome='nome' placeholder='Nome' value={professor.nome} onChange={handleInputChange} />
+                    <Input type='text' nome='telefone' placeholder='Telefone' value={professor.telefone} onChange={handleInputChange} />
+                    <Input type='date' nome='dataNascimento' placeholder='Data de Nascimento' value={professor.dataNascimento} onChange={handleInputChange} />
+                    <Input type='email' nome='email' placeholder='E-mail' value={professor.email} onChange={handleInputChange} />
                     <RadioInput
                         name='tipoUsuario'
                         texto1='ADMIN'
                         texto2='USER'
-                        value={novoProfessor.tipoUsuario}
+                        value={professor.tipoUsuario}
                         onChange={handleInputChange}
                     />
-                    <Input type='text' nome='profDescricao' placeholder='Descrição do Professor' value={novoProfessor.profDescricao} onChange={handleInputChange} />
-                    <Input type='password' nome='senha' placeholder='Senha' value={novoProfessor.senha} onChange={handleInputChange} />
+                    <Input type='text' nome='profDescricao' placeholder='Descrição do Professor' value={professor.profDescricao} onChange={handleInputChange} />
+                    <Input type='password' nome='senha' placeholder='Senha' value={professor.senha} onChange={handleInputChange} />
 
                     <div className={styles.checks}>
                         <span className={styles.checksSpan}>Disciplinas</span>
@@ -107,7 +123,7 @@ export default function CadastrarProfessores() {
                             {disciplinas.map((disciplina, index) => (
                                 <label key={index} htmlFor={disciplina.id}>
                                     <input
-                                        name={disciplina.nome}
+                                        name='disciplinas'
                                         type='checkbox'
                                         id={disciplina.id}
                                         value={disciplina.id}
@@ -118,7 +134,7 @@ export default function CadastrarProfessores() {
                             ))}
                         </div>
                     </div>
-                    <BotaoForm type='submit' texto='Cadastrar' onClick={handleAddProfessor} />
+                    <BotaoForm type='submit' texto='Cadastrar' onClick={handleUpdateProfessor} />
                 </Formulario>
             </div>
         </section>
