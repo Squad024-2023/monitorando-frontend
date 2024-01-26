@@ -99,7 +99,7 @@ export default function EditarProfessores({ params }: { params: { id: any } }) {
 
     return (
         <section className={styles.professores}>
-            <h1>Cadastrar Professor</h1>
+            <h1>Editar Professor</h1>
             <div className={styles.formContainer}>
                 <Formulario>
                     <Input type='text' nome='nome' placeholder='Nome' value={professor.nome} onChange={handleInputChange} />
@@ -135,7 +135,7 @@ export default function EditarProfessores({ params }: { params: { id: any } }) {
                             ))}
                         </div>
                     </div>
-                    <BotaoForm type='submit' texto='Cadastrar' onClick={handleUpdateProfessor} />
+                    <BotaoForm type='submit' texto='Atualizar' onClick={handleUpdateProfessor} />
                 </Formulario>
             </div>
         </section>

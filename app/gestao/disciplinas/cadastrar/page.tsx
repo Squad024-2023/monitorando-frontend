@@ -1,5 +1,5 @@
 'use client'
-import { useState, useEffect, ChangeEvent } from 'react';
+import { useState, ChangeEvent, FormEvent } from 'react';
 import { useRouter } from 'next/navigation';
 import axios from 'axios';
 import styles from '../../gestao.module.css';
@@ -33,7 +33,8 @@ export default function CadastrarDisciplinas() {
     };
 
 
-    const handleAddDisciplina = () => {
+    const handleAddDisciplina = (e: FormEvent) => {
+        e.preventDefault(); // Previne o reload completo da página após o submit
         axios
             .post("http://localhost:8080/disciplinas", novaDisciplina)
             .then((response) => {

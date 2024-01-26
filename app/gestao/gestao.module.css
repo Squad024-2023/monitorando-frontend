@@ -123,8 +123,6 @@
     padding: 0.5rem;
 }
 
-.table tr {}
-
 .table tr:last-child {
     border-bottom: none;
 }

@@ -99,7 +99,7 @@ export default function Professores() {
                                             width={24}
                                             height={24}
                                             src={edit}
-                                            alt='edit'
+                                            alt='editar'
                                         /></Link>
                                         <Link className={styles.delete} href=''
                                             onClick={() => {
@@ -112,7 +112,7 @@ export default function Professores() {
                                                 width={24}
                                                 height={24}
                                                 src={deleteI}
-                                                alt='edit'
+                                                alt='deletar'
                                             /></Link>
                                     </div>
                                 </td>

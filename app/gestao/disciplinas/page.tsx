@@ -15,6 +15,7 @@ type Disciplinas = {
 
 
 export default function Disciplinas() {
+
     const [disciplinas, setDisciplinas] = useState<Disciplinas[]>([]);
     useEffect(() => {
         // Faça uma chamada GET para a API Spring Boot
@@ -27,6 +28,22 @@ export default function Disciplinas() {
                 console.error("Erro ao buscar a lista de disciplinas:", error);
             });
     }, []);
+
+    const handleDeleteDisciplina = (id: string) => {
+        console.log('o id é: ' + id);
+        axios
+            .delete(`http://localhost:8080/disciplinas/${id}`)
+            .then((response) => {
+                alert("Disciplina deletada com sucesso!");
+                // Atualizar o estado baseado no professor deletado
+                setDisciplinas((prevDisciplinas) =>
+                    prevDisciplinas.filter((disciplina) => disciplina.id !== id)
+                );
+            })
+            .catch((error) => {
+                alert("Erro ao deletar disciplina:" + error);
+            });
+    };
     return (
         <section className={styles.disciplinas}>
             <div className={styles.tableWrapper}>
@@ -47,20 +64,26 @@ export default function Disciplinas() {
                                 <td>{disciplina.nome}</td>
                                 <td>
                                     <div className={styles.bts}>
-                                        <Link className={styles.edit} href={'/'}><Image
+                                        <Link className={styles.edit} href={`/gestao/disciplinas/editar/${disciplina.id}`}><Image
                                             className={styles.edit}
                                             width={24}
                                             height={24}
                                             src={edit}
-                                            alt="edit"
+                                            alt="editar"
                                         /></Link>
-                                        <Link className={styles.delete} href={'/'}><Image
-                                            className={styles.delete}
-                                            width={24}
-                                            height={24}
-                                            src={deleteI}
-                                            alt="edit"
-                                        /></Link>
+                                        <Link className={styles.delete} href=''
+                                            onClick={() => {
+                                                const confirmed = window.confirm('Tem certeza que deseja deletar a disciplina?');
+                                                if (confirmed) {
+                                                    handleDeleteDisciplina(disciplina.id);
+                                                }
+                                            }}><Image
+                                                className={styles.delete}
+                                                width={24}
+                                                height={24}
+                                                src={deleteI}
+                                                alt='deletar'
+                                            /></Link>
                                     </div>
                                 </td>
                             </tr>
