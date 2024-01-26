@@ -27,7 +27,7 @@ export default function Professores() {
     useEffect(() => {
         // Faça uma chamada GET para a API Spring Boot
         axios
-            .get('http://localhost:8080/professor')
+            .get('http://localhost:8080/professores')
             .then((response) => {
                 setProfessores(response.data);
                 console.log(response.data);

@@ -12,23 +12,14 @@ type Turma = {
     materiaTurma: string;
     tipoTurma: string;
     dataAula: string;
-    disciplina: string;
-    professor: string;
-    alunos: Aluno[];
-};
-type Disciplina = {
-    id: string;
-    nome: string;
+    professor: Professor;
 };
 type Professor = {
     id: string;
     nome: string;
 };
-type Aluno = {
-    id: string;
-    nome: string;
-};
-type SelectChangeEvent = ChangeEvent<HTMLSelectElement>;
+
+
 
 export default function CadastrarTurmas() {
 
@@ -36,47 +27,33 @@ export default function CadastrarTurmas() {
         materiaTurma: '',
         tipoTurma: '',
         dataAula: '',
-        disciplina: '',
-        professor: '',
-        alunos: [],
+        professor: { id: '', nome: '' },
     });
-    const [disciplinas, setDisciplinas] = useState<Disciplina[]>([]);
     const [professores, setProfessores] = useState<Professor[]>([]);
-    const [alunos, setAlunos] = useState<Aluno[]>([]);
     const router = useRouter();
 
     const handleInputChange = (e: ChangeEvent<HTMLInputElement>) => {
         setNewTurma({ ...novaTurma, [e.target.name]: e.target.value });
     };
-    const handleDisciplinaChange = (e: SelectChangeEvent) => {
-        setNewTurma({ ...novaTurma, disciplina: e.target.value });
-        console.log(e.target.value);
-    };
-    const handleProfessorChange = (e: SelectChangeEvent) => {
-        setNewTurma({ ...novaTurma, professor: e.target.value });
-        console.log(e.target.value);
+    const handleProfessorChange = (e: ChangeEvent<HTMLInputElement>) => {
+        const selectedProfessorId = e.target.value;
+        const selectedProfessor = professores.find(professor => professor.id == selectedProfessorId);
+
+        setNewTurma({
+            ...novaTurma,
+            professor: selectedProfessor || { id: '', nome: '' }
+
+        });
+        console.log(selectedProfessor)
     };
 
     useEffect(() => {
         // Faça uma chamada GET para a API Spring Boot
         axios
-            .get('http://localhost:8080/disciplinas')
-            .then((response) => {
-                setDisciplinas(response.data);
-            })
-
-            .catch((error) => {
-                console.error("Erro ao buscar a lista de disciplinas:", error);
-            });
-    }, []);
-    useEffect(() => {
-        // Faça uma chamada GET para a API Spring Boot
-        axios
-            .get('http://localhost:8080/professor')
+            .get('http://localhost:8080/professores')
             .then((response) => {
                 setProfessores(response.data);
             })
-
             .catch((error) => {
                 console.error("Erro ao buscar a lista de professores:", error);
             });
@@ -84,6 +61,7 @@ export default function CadastrarTurmas() {
 
 
     const handleAddClient = () => {
+        console.log(novaTurma.professor)
         axios
             .post("http://localhost:8080/turmas", novaTurma)
             .then((response) => {
@@ -109,18 +87,23 @@ export default function CadastrarTurmas() {
                         value={novaTurma.tipoTurma}
                         onChange={handleInputChange}
                     />
-                     <select name='disciplina' value={novaTurma.disciplina} onChange={handleDisciplinaChange}>
-                        <option value='' disabled>Selecione a disciplina da turma</option>
-                        {disciplinas.map((disciplina, index) => (
-                            <option key={index} value={disciplina.id}>{disciplina.nome}</option>
-                        ))}
-                    </select>
-                    <select name='professor' value={novaTurma.professor} onChange={handleProfessorChange}>
-                        <option value='' disabled>Selecione o professor da turma</option>
-                        {professores.map((professor, index) => (
-                            <option key={index} value={professor.id}>{professor.nome}</option>
-                        ))}
-                    </select>
+                    <div className={styles.checks}>
+                        <span className={styles.checksSpan}>Professores</span>
+                        <div className={styles.checksOpcoes}>
+                            {professores.map((professor, index) => (
+                                <label key={index} htmlFor={professor.id}>
+                                    <input
+                                        name={professor.nome}
+                                        type='checkbox'
+                                        id={professor.id}
+                                        value={professor.id}
+                                        onChange={handleInputChange}
+                                    />
+                                    <span>{professor.nome}</span>
+                                </label>
+                            ))}
+                        </div>
+                    </div>
                     <BotaoForm type='submit' texto='Cadastrar' onClick={handleAddClient} />
                 </Formulario>
             </div>

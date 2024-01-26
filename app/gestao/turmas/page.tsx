@@ -15,7 +15,6 @@ type Turmas = {
     professor: Professor;
     alunos: Aluno[];
 };
-
 type Aluno = {
     nome: string;
 };
@@ -58,7 +57,6 @@ export default function Turmas() {
                     <tbody>
                         {/* Map para listar os alunos dentro do vetor */}
                         {turmas.map((turma, index) => (
-                              
                             <tr className={styles.tr} key={index}>
                                 <td key={index}>{turma.id}</td>
                                 <td>{turma.materiaTurma}</td>
