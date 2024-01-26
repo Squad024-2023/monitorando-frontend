@@ -39,6 +39,18 @@ export default function EditarProfessores({ params }: { params: { id: any } }) {
     });
 
     useEffect(() => {
+        // Faça uma chamada GET para a API Spring Boot
+        axios
+            .get('http://localhost:8080/disciplinas')
+            .then((response) => {
+                setDisciplinas(response.data);
+            })
+            .catch((error) => {
+                console.error("Erro ao buscar a lista de disciplinas:", error);
+            });
+    }, []);
+
+    useEffect(() => {
         // Faça uma chamada GET para a API para obter detalhes do professor a ser atualizado
         axios
             .get("http://localhost:8080/professores/" + params.id)
@@ -54,15 +66,15 @@ export default function EditarProfessores({ params }: { params: { id: any } }) {
     const router = useRouter();
 
     const handleInputChange = (e: ChangeEvent<HTMLInputElement>) => {
-        console.log(professor.disciplinas);
+        
         const { name, value, checked } = e.target;
 
         if (e.target.type === 'checkbox') {
-            // atualiza o estado marcado para a disciplina específica
             setProfessor((prevProfessor) => {
                 const updatedDisciplinas = checked
-                    ? [...prevProfessor.disciplinas, { id: value, nome: name }]   // usando id e nome para adicionar
-                    : prevProfessor.disciplinas.filter((disciplina) => disciplina.id !== value);
+                    ? [...prevProfessor.disciplinas, { id: String(value), nome: name }]
+                    : prevProfessor.disciplinas.filter((disciplina) => String(disciplina.id) !== String(value));
+
                 return { ...prevProfessor, disciplinas: updatedDisciplinas };
             });
         } else {
@@ -71,17 +83,7 @@ export default function EditarProfessores({ params }: { params: { id: any } }) {
     };
 
 
-    useEffect(() => {
-        // Faça uma chamada GET para a API Spring Boot
-        axios
-            .get('http://localhost:8080/disciplinas')
-            .then((response) => {
-                setDisciplinas(response.data);
-            })
-            .catch((error) => {
-                console.error("Erro ao buscar a lista de disciplinas:", error);
-            });
-    }, []);
+
 
 
     const handleUpdateProfessor = () => {
@@ -126,8 +128,10 @@ export default function EditarProfessores({ params }: { params: { id: any } }) {
                                         name='disciplinas'
                                         type='checkbox'
                                         id={disciplina.id}
+                                        checked={professor.disciplinas.some((d) => d.id === disciplina.id? true : false)}
                                         value={disciplina.id}
                                         onChange={handleInputChange}
+                                        
                                     />
                                     <span>{disciplina.nome}</span>
                                 </label>
