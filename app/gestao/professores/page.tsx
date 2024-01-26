@@ -65,10 +65,10 @@ export default function Professores() {
                         <tr>
                             <th>ID</th>
                             <th>Nome</th>
-                            {/* <th>Telefone</th>
+                            <th>Telefone</th>
                             <th>Data de Nascimento</th>
                             <th>E-Mail</th>
-                            <th>Credencial</th> */}
+                            <th>Credencial</th>
                             <th>Disciplinas</th>
                             <th>Descrição</th>
                             <th>Ações</th>
@@ -80,10 +80,10 @@ export default function Professores() {
                             <tr className={styles.tr} key={index}>
                                 <td key={index}>{professor.id}</td>
                                 <td>{professor.nome}</td>
-                                {/* <td>{professor.telefone}</td>
+                                <td>{professor.telefone}</td>
                                 <td>{professor.dataNascimento}</td>
                                 <td>{professor.email}</td>
-                                <td>{professor.tipoUsuario}</td> */}
+                                <td>{professor.tipoUsuario}</td>
                                      <td>
                                     <div className={styles.arrays} >
                                         {professor.disciplinas.map((disciplina, index) => (

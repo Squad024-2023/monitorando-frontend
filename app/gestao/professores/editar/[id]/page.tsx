@@ -1,6 +1,6 @@
 'use client'
-import { useState, useEffect, ChangeEvent } from 'react';
-import { redirect, useRouter } from 'next/navigation';
+import { useState, useEffect, ChangeEvent, FormEvent } from 'react';
+import { useRouter } from 'next/navigation';
 import axios from 'axios';
 import styles from '../../../gestao.module.css';
 import Formulario from '@/components/form/Formulario';
@@ -82,14 +82,15 @@ export default function EditarProfessores({ params }: { params: { id: any } }) {
         }
     };
 
-    const handleUpdateProfessor = () => {
+    const handleUpdateProfessor = (e: FormEvent) => {
+        e.preventDefault(); // Previne o reload completo da página após o submit
+    
         console.log(professor);
         axios
             .put("http://localhost:8080/professores/" + params.id, professor)
             .then((response) => {
                 alert("Professor atualizado com sucesso!");
                 router.push('/gestao/professores');
-
             })
             .catch((error) => {
                 console.error("Erro ao atualizar o professor:", error);
