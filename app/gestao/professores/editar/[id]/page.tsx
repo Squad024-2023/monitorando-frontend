@@ -66,7 +66,7 @@ export default function EditarProfessores({ params }: { params: { id: any } }) {
     const router = useRouter();
 
     const handleInputChange = (e: ChangeEvent<HTMLInputElement>) => {
-        
+
         const { name, value, checked } = e.target;
 
         if (e.target.type === 'checkbox') {
@@ -81,10 +81,6 @@ export default function EditarProfessores({ params }: { params: { id: any } }) {
             setProfessor((prevProfessor) => ({ ...prevProfessor, [name]: value }));
         }
     };
-
-
-
-
 
     const handleUpdateProfessor = () => {
         console.log(professor);
@@ -125,13 +121,13 @@ export default function EditarProfessores({ params }: { params: { id: any } }) {
                             {disciplinas.map((disciplina, index) => (
                                 <label key={index} htmlFor={disciplina.id}>
                                     <input
-                                        name='disciplinas'
+                                        name={disciplina.nome}
                                         type='checkbox'
                                         id={disciplina.id}
-                                        checked={professor.disciplinas.some((d) => d.id === disciplina.id? true : false)}
+                                        defaultChecked={professor.disciplinas.some((d) => d.id === disciplina.id)}
                                         value={disciplina.id}
                                         onChange={handleInputChange}
-                                        
+
                                     />
                                     <span>{disciplina.nome}</span>
                                 </label>
