@@ -9,7 +9,6 @@ import RadioInput from '@/components/form/radio/RadioInput';
 import BotaoForm from '@/components/form/botao/BotaoForm';
 
 type Professor = {
-
     nome: string;
     telefone: string;
     dataNascimento: string;

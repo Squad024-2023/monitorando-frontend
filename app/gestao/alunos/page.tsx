@@ -35,6 +35,23 @@ export default function Alunos() {
                 console.error("Erro ao buscar a lista de alunos:", error);
             });
     }, []);
+
+    const handleDeleteAluno = (id: string) => {
+        console.log('o id é: ' + id);
+        axios
+            .delete(`http://localhost:8080/alunos/${id}`)
+            .then((response) => {
+                alert("Aluno deletado com sucesso!");
+                // Atualizar o estado baseado no Aluno deletado
+                setAlunos((prevAlunos) =>
+                    prevAlunos.filter((aluno) => aluno.id !== id)
+                );
+            })
+            .catch((error) => {
+                alert("Erro ao deletar aluno:" + error);
+            });
+    };
+
     return (
         <section className={styles.alunos}>
             <div className={styles.tableWrapper}>
@@ -63,20 +80,26 @@ export default function Alunos() {
                                 <td>{aluno.tipoUsuario}</td>
                                 <td>
                                     <div className={styles.bts}>
-                                        <Link className={styles.edit} href={'/'}><Image
+                                        <Link className={styles.edit} href={`/gestao/alunos/editar/${aluno.id}`}><Image
                                             className={styles.edit}
                                             width={24}
                                             height={24}
                                             src={edit}
-                                            alt="edit"
+                                            alt='editar'
                                         /></Link>
-                                        <Link className={styles.delete} href={'/'}><Image
-                                            className={styles.delete}
-                                            width={24}
-                                            height={24}
-                                            src={deleteI}
-                                            alt="edit"
-                                        /></Link>
+                                        <Link className={styles.delete} href=''
+                                            onClick={() => {
+                                                const confirmed = window.confirm('Tem certeza que deseja deletar o aluno?');
+                                                if (confirmed) {
+                                                    handleDeleteAluno(aluno.id);
+                                                }
+                                            }}><Image
+                                                className={styles.delete}
+                                                width={24}
+                                                height={24}
+                                                src={deleteI}
+                                                alt='deletar'
+                                            /></Link>
                                     </div>
                                 </td>
                             </tr>
