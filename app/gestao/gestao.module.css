@@ -305,8 +305,7 @@
     width: 100%;
     max-width: 40rem;
     height: auto;
-    overflow: hidden;
-    gap: 2rem;
+    gap: 1rem;
     border-radius: 1rem;
     background-color: #fff;
 }
@@ -315,6 +314,7 @@
     font-size: clamp(2rem, 3vw, 3rem);
     color: rgb(var(--cinza-escuro-rgb));
     width: 100%;
+    margin-top: 2rem;
     text-align: center;
 }
 
@@ -344,7 +344,7 @@
 
 .busca h3 {
     width: 100%;
-    font-size: 2rem;
+    font-size: clamp(1.6rem, 2vw, 1.8rem);
     text-align: center;
     padding: 1rem;
     border-top: solid 0.1rem rgba(var(--cinza-escuro-rgb), 0.8);
@@ -352,7 +352,7 @@
 }
 
 .busca h4 {
-    font-size: 1.5rem;
+    font-size: clamp(1.5rem, 2vw, 1.7rem);
     text-align: center;
     color: rgba(var(--rosa-escuro-rgb), 1);
 }
@@ -360,11 +360,20 @@
 
 .busca h5 {
     margin-bottom: -10px;
-    font-size: 1.6rem;
+    font-size: clamp(1.4rem, 2vw, 1.6rem);
     color: rgba(var(--rosa-escuro-rgb), 1);
 }
 
 .element {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.elementArray {
     width: 100%;
     display: flex;
     justify-content: center;
