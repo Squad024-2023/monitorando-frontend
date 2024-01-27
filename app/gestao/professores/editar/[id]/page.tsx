@@ -1,6 +1,6 @@
 'use client'
-import { useState, useEffect, ChangeEvent } from 'react';
-import { redirect, useRouter } from 'next/navigation';
+import { useState, useEffect, ChangeEvent, FormEvent } from 'react';
+import { useRouter } from 'next/navigation';
 import axios from 'axios';
 import styles from '../../../gestao.module.css';
 import Formulario from '@/components/form/Formulario';
@@ -9,7 +9,6 @@ import RadioInput from '@/components/form/radio/RadioInput';
 import BotaoForm from '@/components/form/botao/BotaoForm';
 
 type Professor = {
-
     nome: string;
     telefone: string;
     dataNascimento: string;
@@ -38,6 +37,9 @@ export default function EditarProfessores({ params }: { params: { id: any } }) {
         disciplinas: [],
     });
 
+    const [disciplinas, setDisciplinas] = useState<Disciplina[]>([]);
+    const router = useRouter();
+
     useEffect(() => {
         // Faça uma chamada GET para a API Spring Boot
         axios
@@ -62,11 +64,9 @@ export default function EditarProfessores({ params }: { params: { id: any } }) {
             });
     }, [params.id]);
 
-    const [disciplinas, setDisciplinas] = useState<Disciplina[]>([]);
-    const router = useRouter();
-
+    //usado para outros inputs e para lidar com arrays mapeados em checkboxes
     const handleInputChange = (e: ChangeEvent<HTMLInputElement>) => {
-        
+
         const { name, value, checked } = e.target;
 
         if (e.target.type === 'checkbox') {
@@ -82,18 +82,15 @@ export default function EditarProfessores({ params }: { params: { id: any } }) {
         }
     };
 
+    const handleUpdateProfessor = (e: FormEvent) => {
+        e.preventDefault(); // Previne o reload completo da página após o submit
 
-
-
-
-    const handleUpdateProfessor = () => {
         console.log(professor);
         axios
             .put("http://localhost:8080/professores/" + params.id, professor)
             .then((response) => {
                 alert("Professor atualizado com sucesso!");
                 router.push('/gestao/professores');
-
             })
             .catch((error) => {
                 console.error("Erro ao atualizar o professor:", error);
@@ -102,7 +99,7 @@ export default function EditarProfessores({ params }: { params: { id: any } }) {
 
     return (
         <section className={styles.professores}>
-            <h1>Cadastrar Professor</h1>
+            <h1>Editar Professor</h1>
             <div className={styles.formContainer}>
                 <Formulario>
                     <Input type='text' nome='nome' placeholder='Nome' value={professor.nome} onChange={handleInputChange} />
@@ -125,20 +122,19 @@ export default function EditarProfessores({ params }: { params: { id: any } }) {
                             {disciplinas.map((disciplina, index) => (
                                 <label key={index} htmlFor={disciplina.id}>
                                     <input
-                                        name='disciplinas'
+                                        name={disciplina.nome}
                                         type='checkbox'
                                         id={disciplina.id}
-                                        checked={professor.disciplinas.some((d) => d.id === disciplina.id? true : false)}
+                                        defaultChecked={professor.disciplinas.some((d) => d.id === disciplina.id)}
                                         value={disciplina.id}
                                         onChange={handleInputChange}
-                                        
                                     />
                                     <span>{disciplina.nome}</span>
                                 </label>
                             ))}
                         </div>
                     </div>
-                    <BotaoForm type='submit' texto='Cadastrar' onClick={handleUpdateProfessor} />
+                    <BotaoForm type='submit' texto='Atualizar' onClick={handleUpdateProfessor} />
                 </Formulario>
             </div>
         </section>

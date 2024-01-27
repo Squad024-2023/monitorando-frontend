@@ -22,7 +22,6 @@ type Professor = {
     nome: string;
 };
 
-
 export default function Turmas() {
     const [turmas, setTurmas] = useState<Turmas[]>([]);
     useEffect(() => {
@@ -37,13 +36,28 @@ export default function Turmas() {
                 console.error("Erro ao buscar a lista de clientes:", error);
             });
     }, []);
+
+    const handleDeleteTurma = (id: string) => {
+        axios
+            .delete(`http://localhost:8080/turmas/${id}`)
+            .then((response) => {
+                alert("Turmas deletado com sucesso!");
+                // Atualizar o estado baseado no professor deletado
+                setTurmas((prevTurmas) =>
+                    prevTurmas.filter((turma) => turma.id !== id)
+                );
+            })
+            .catch((error) => {
+                alert("Erro ao deletar turma:" + error);
+            });
+    };
+
     return (
         <section className={styles.turmas}>
             <div className={styles.tableWrapper}>
                 <h1>Turmas</h1>
                 <table className={styles.table}>
                     <thead>
-           
                         <tr>
                             <th>ID</th>
                             <th>Matéria</th>
@@ -63,26 +77,35 @@ export default function Turmas() {
                                 <td>{turma.tipoTurma}</td>
                                 <td>{turma.dataAula}</td>
                                 <td>{turma.professor.nome}</td>
-                                <td>{turma.alunos.map((aluno, index) => (
-                                    <span key={index}>{aluno.nome}</span>
-                                ))}
+                                <td>
+                                    <div className={styles.arrays} >
+                                        {turma.alunos.map((aluno, index) => (
+                                            <span key={index}>{aluno.nome}</span>
+                                        ))}
+                                    </div>
                                 </td>
                                 <td>
                                     <div className={styles.bts}>
-                                        <Link className={styles.edit} href={'/'}><Image
+                                        <Link className={styles.edit} href={`/gestao/turmas/editar/${turma.id}`}><Image
                                             className={styles.edit}
                                             width={24}
                                             height={24}
                                             src={edit}
-                                            alt="edit"
+                                            alt='editar'
                                         /></Link>
-                                        <Link className={styles.delete} href={'/'}><Image
-                                            className={styles.delete}
-                                            width={24}
-                                            height={24}
-                                            src={deleteI}
-                                            alt="edit"
-                                        /></Link>
+                                        <Link className={styles.delete} href=''
+                                            onClick={() => {
+                                                const confirmed = window.confirm('Tem certeza que deseja deletar a Turma?');
+                                                if (confirmed) {
+                                                    handleDeleteTurma(turma.id);
+                                                }
+                                            }}><Image
+                                                className={styles.delete}
+                                                width={24}
+                                                height={24}
+                                                src={deleteI}
+                                                alt='deletar'
+                                            /></Link>
                                     </div>
                                 </td>
                             </tr>

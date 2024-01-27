@@ -16,6 +16,7 @@ export default function Input({ type, nome, placeholder, value, onChange }: Prop
                 className={styles.label}
                 htmlFor={nome}>
                 <input type={type}
+                    required
                     id={nome}
                     name={nome}
                     placeholder={placeholder}

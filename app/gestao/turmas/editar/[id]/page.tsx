@@ -2,7 +2,7 @@
 import { useState, useEffect, ChangeEvent, FormEvent } from 'react';
 import { useRouter } from 'next/navigation';
 import axios from 'axios';
-import styles from '../../gestao.module.css';
+import styles from '../../../gestao.module.css';
 import Formulario from '@/components/form/Formulario';
 import Input from '@/components/form/input/Input';
 import RadioInput from '@/components/form/radio/RadioInput';
@@ -24,9 +24,9 @@ type Professor = {
     nome: string;
 };
 
-export default function CadastrarTurmas() {
+export default function EditarTurmas({ params }: { params: { id: any } }) {
 
-    const [novaTurma, setNewTurma] = useState<Turma>({
+    const [turma, setTurma] = useState<Turma>({
         materiaTurma: '',
         tipoTurma: '',
         dataAula: '',
@@ -39,7 +39,7 @@ export default function CadastrarTurmas() {
     const router = useRouter();
 
     useEffect(() => {
-        // Fetch professors and students only once
+        // Chamada GET para api de professores e alunos simultaneamente
         Promise.all([
             axios.get('http://localhost:8080/professores'),
             axios.get('http://localhost:8080/alunos'),
@@ -53,41 +53,58 @@ export default function CadastrarTurmas() {
             });
     }, []);
 
+    useEffect(() => {
+        // Faça uma chamada GET para a API para obter detalhes da turma a ser atualizada
+        axios
+            .get("http://localhost:8080/turmas/" + params.id)
+            .then((response) => {
+                setTurma(response.data);
+            })
+            .catch((error) => {
+                console.error("Erro ao buscar detalhes da turma:", error);
+            });
+    }, [params.id]);
+
+    //usado exclusivamente para o select de professores para evidar estados inconsistentes
     const handleProfessorChange = (e: ChangeEvent<HTMLSelectElement>) => {
         const selectedProfessorId = e.target.value;
         const selectedProfessor = professores.find(professor => professor.id == selectedProfessorId);
-        setNewTurma({
-            ...novaTurma,
+        setTurma({
+            ...turma,
             professor: selectedProfessor || { id: '', nome: '' },
         });
     };
-
+    //usado para outros inputs e para lidar com arrays mapeados em checkboxes
     const handleInputChange = (e: ChangeEvent<HTMLInputElement>) => {
+
         const { name, value, checked } = e.target;
 
         if (e.target.type === 'checkbox') {
-            // atualiza o estado marcado para o aluno específico
-            setNewTurma((prevTurma) => {
+            setTurma((prevTurma) => {
                 const updatedAlunos = checked
-                    ? [...prevTurma.alunos, { id: value, nome: name }]   // usando id e nome para adicionar
-                    : prevTurma.alunos.filter((aluno) => aluno.id !== value);
+                    ? [...prevTurma.alunos, { id: String(value), nome: name }]
+                    : prevTurma.alunos.filter((aluno) => String(aluno.id) !== String(value));
+
                 return { ...prevTurma, alunos: updatedAlunos };
             });
         } else {
-            setNewTurma((prevTurma) => ({ ...prevTurma, [name]: value }));
+            setTurma((prevTurma) => ({ ...prevTurma, [name]: value }));
         }
     };
 
-    const handleAddTurma = (e: FormEvent) => {
-        e.preventDefault();
+
+    const handleUpdateTurma = (e: FormEvent) => {
+        e.preventDefault(); // Previne o reload completo da página após o submit
+
+        console.log(turma);
         axios
-            .post("http://localhost:8080/turmas", novaTurma)
+            .put("http://localhost:8080/turmas/" + params.id, turma)
             .then((response) => {
-                alert("Turma cadastrada com sucesso!");
-                router.push("/gestao/turmas");
+                alert("Turmas atualizado com sucesso!");
+                router.push('/gestao/turmas');
             })
             .catch((error) => {
-                alert("Erro ao inserir turma:" + error);
+                console.error("Erro ao atualizar a turma:", error);
             });
     };
 
@@ -96,18 +113,18 @@ export default function CadastrarTurmas() {
             <h1>Cadastrar Turma</h1>
             <div className={styles.formContainer}>
                 <Formulario>
-                    <Input type='text' nome='materiaTurma' placeholder='Matéria da Turma' value={novaTurma.materiaTurma} onChange={handleInputChange} />
-                    <Input type='datetime-local' nome='dataAula' placeholder='Data da Aula' value={novaTurma.dataAula} onChange={handleInputChange} />
+                    <Input type='text' nome='materiaTurma' placeholder='Matéria da Turma' value={turma.materiaTurma} onChange={handleInputChange} />
+                    <Input type='datetime-local' nome='dataAula' placeholder='Data da Aula' value={turma.dataAula} onChange={handleInputChange} />
                     <RadioInput
                         name='tipoTurma'
                         texto1='INDIVIDUAL'
                         texto2='COLETIVA'
-                        value={novaTurma.tipoTurma}
+                        value={turma.tipoTurma}
                         onChange={handleInputChange}
                     />
                     <div className={styles.select}>
                         <label htmlFor='professor'>Professor da Turma</label>
-                        <select name='professor' id='professor' value={novaTurma.professor.id} onChange={handleProfessorChange}>
+                        <select name='professor' id='professor' value={turma.professor.id} onChange={handleProfessorChange}>
                             <option value='' disabled>Selecione um professor</option>
                             {professores.map((professor, index) => (
                                 <option key={index} value={professor.id}>
@@ -125,6 +142,7 @@ export default function CadastrarTurmas() {
                                         name={aluno.nome}
                                         type='checkbox'
                                         id={aluno.id}
+                                        defaultChecked={turma.alunos.some((a) => a.id === aluno.id)}
                                         value={aluno.id}
                                         onChange={handleInputChange}
                                     />
@@ -133,7 +151,7 @@ export default function CadastrarTurmas() {
                             ))}
                         </div>
                     </div>
-                    <BotaoForm type='submit' texto='Cadastrar' onClick={handleAddTurma} />
+                    <BotaoForm type='submit' texto='Cadastrar' onClick={handleUpdateTurma} />
                 </Formulario>
             </div>
         </section>

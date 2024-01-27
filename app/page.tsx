@@ -1,5 +1,6 @@
 'use client'
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
+import { useScroll, useTransform, motion } from 'framer-motion'
 import styles from './page.module.css'
 import Image from 'next/image'
 import seta from '@/public/icons/arrow-rosa.json'
@@ -33,19 +34,24 @@ import gratis from '@/public/images/gratis.svg'
 import comprar from '@/public/images/comprar.svg'
 import dinheiro from '@/public/images/dinheiro.svg'
 
-export default function Home() {
-  const [switcher, setSwitch] = useState<boolean>(true);
 
+export default function Home() {
+
+  //controlador de estado para o switcher de aluno e professor
+  const [switcher, setSwitch] = useState<boolean>(true);
   const handleClickEvent = () => {
     setSwitch(!switcher);
   }
 
+  //controlador de estado para o mostrar ao scrollar para baixo
   const [visivel, setVisivel] = useState<{ [key: string]: boolean }>({});
 
+  //função para selecionar os objetoos pelo id onde ele soma o nome e um número, ex: marcador1, marcador2, marcador3...
   const handleScroll = () => {
     const marcadores = document.querySelectorAll('[id^="marcador"]');
     const marcadoresLi = document.querySelectorAll('[id^="marcadorLi"]');
 
+    //lógica para verificar se o elemento está visível na tela. Threshold é o valor que define o quanto do elemento precisa estar visível para ser considerado(0.7 = 70% da tela)
     marcadores.forEach((element) => {
       const elementRect = element.getBoundingClientRect();
       const threshold = 0.7;
@@ -57,6 +63,8 @@ export default function Home() {
         [element.id]: isElementVisible,
       }));
     });
+
+    //lógica para verificar se o elemento está visível na tela. Threshold é o valor que define o quanto do elemento precisa estar visível para ser considerado(0.7 = 70% da tela)
     marcadoresLi.forEach((element) => {
       const elementRect = element.getBoundingClientRect();
       const threshold = 0.65;
@@ -69,7 +77,7 @@ export default function Home() {
       }));
     });
   };
-
+  //desmonta o evento de scroll
   useEffect(() => {
     window.addEventListener('scroll', handleScroll);
 
@@ -80,7 +88,9 @@ export default function Home() {
 
   return (
     <main className={styles.main}>
-      <section className={styles.section1}>
+      <section
+       className={styles.section1} 
+       >
         <HeroImage img={heroImage} />
         <div className={styles.tela1}>
           <div className={styles.textoTela1}>

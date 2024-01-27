@@ -4,6 +4,8 @@
     min-height: 100vh;
     width: 100%;
     margin-bottom: 5rem;
+    padding-left: 5rem;
+    background-color: red;
 }
 
 .gestao,
@@ -16,14 +18,13 @@
     flex-direction: column;
     align-items: center;
     width: 100%;
-    height: 100vh;
-    padding: 2rem 5%;
+    min-height: 100vh;
+    padding: 10rem 2rem;
     gap: 2rem;
     background-color: rgba(var(--cinza-escuro-rgb), 1);
     transition: all 0.3s ease-in-out;
 
 }
-
 
 .gestao h1,
 .professores h1,
@@ -38,16 +39,26 @@
 
 .linksGestao {
     width: 100%;
-    height: 4rem;
+    height: auto;
     list-style: none;
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-wrap: wrap;
     gap: 1rem;
 }
 
+.linksGestao li {
+    display: flex;
+
+}
+
 .linksGestao>li>a {
-    padding: 1rem 2rem;
+    height: 4rem;
+    width: 12rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-size: clamp(1.2rem, 2.5vw, 1.6rem);
     color: rgba(var(--cinza-escuro-rgb));
     border-radius: 1rem;
@@ -93,6 +104,9 @@
     justify-content: center;
     align-items: center;
     gap: var(--espaco-interno);
+    border-radius: 1rem;
+    width: 100%;
+
 }
 
 .tableWrapper h1::first-letter {
@@ -110,6 +124,7 @@
 
 .table {
     border-collapse: collapse;
+    width: 100%;
 
 }
 
@@ -118,17 +133,13 @@
     padding: 0.5rem;
 }
 
-.table tr {
-    border-bottom: solid 3px rgba(var(--rosa-escuro-rgb));
-}
-
 .table tr:last-child {
     border-bottom: none;
 }
 
 .table tr:hover td,
 .table tr:hover span {
-    color: rgba(var(--rosa-claro-rgb));
+    color: rgba(var(--rosa-escuro-rgb));
     background-color: white;
 
 }
@@ -136,22 +147,29 @@
 
 .table th,
 .table td {
-    color: rgba(var(--rosa-escuro-rgb));
-    padding: 1rem;
+    color: rgba(var(--cinza-escuro-rgb));
+    padding: .5rem 1rem;
     font-size: clamp(1.2rem, 2.5vw, 1.6rem);
     text-align: center;
-    border: solid 1px rgba(var(--rosa-escuro-rgb));
+    border: solid .2rem rgba(var(--cinza-escuro-rgb));
     border-radius: var(--border-radius);
     background-color: rgba(var(--sal-rgb));
 }
-.arrays{
+
+.arrays {
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
     gap: .5rem;
+    justify-content: center;
+    align-items: center;
 }
 
 .table td span {
-    color: rgba(var(--rosa-escuro-rgb));
+    color: rgba(var(--cinza-escuro-rgb));
+}
+
+.table td span::after {
+    content: ', ';
 }
 
 
@@ -173,7 +191,7 @@
 .read>img,
 .edit>img,
 .delete>img {
-    width: clamp(2rem, 6vw, 4rem);
+    width: clamp(3rem, 6vw, 4rem);
     padding: 0.5rem;
     background-color: rgba(var(--rosa-escuro-rgb));
     box-shadow: 0 2px 4px #0000005a;
@@ -250,15 +268,294 @@
 
 }
 
-/* .checksOpcoes input {} */
-
-
 .checksOpcoes span {
     color: rgba(var(--rosa-escuro-rgb), 1);
 }
+
+.select {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.select label {
+    padding: 0 1rem;
+    color: rgba(var(--rosa-escuro-rgb), 1);
+    font-size: calc(1.5rem + .1vw);
+}
+
+.select select {
+    width: 100%;
+    height: 4rem;
+    padding: 0 1rem;
+    border-radius: 1rem;
+    background-color: #fff;
+    font-size: calc(1.5rem + .1vw);
+    color: rgba(var(--rosa-escuro-rgb));
+    border: solid .1rem rgba(var(--cinza-escuro-rgb), 0.1);
+    box-shadow: .6rem .2rem 1rem rgba(var(--cinza-escuro-rgb), 0.2);
+    cursor: pointer;
+}
+
+.select select option {
+    padding: 1rem;
+    font-size: calc(1.5rem + .1vw);
+    color: rgba(var(--rosa-escuro-rgb));
+    background-color: #fff;
+    cursor: pointer;
+}
+
+.busca {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 40rem;
+    height: auto;
+    gap: 1rem;
+    border-radius: 1rem;
+    background-color: #fff;
+}
+
+.busca h1 {
+    font-size: clamp(2rem, 3vw, 3rem);
+    color: rgb(var(--cinza-escuro-rgb));
+    width: 100%;
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.busca h2 {
+    font-size: clamp(1.8rem, 2vw, 2rem);
+    color: rgb(var(--cinza-escuro-rgb));
+    width: 100%;
+    text-align: center;
+}
+
+.buscarForm {
+    padding: 1rem 2rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.buscarForm input {
+    box-shadow: .6rem .2rem 1rem rgba(var(--cinza-escuro-rgb), 0.4);
+}
+
+.buscarForm button {
+    box-shadow: .6rem .2rem 1rem rgba(var(--cinza-escuro-rgb), 0.4);
+}
+
+
+.busca h3 {
+    width: 100%;
+    font-size: clamp(1.6rem, 2vw, 1.8rem);
+    text-align: center;
+    padding: 1rem;
+    border-top: solid 0.1rem rgba(var(--cinza-escuro-rgb), 0.8);
+    color: rgba(var(--rosa-escuro-rgb), 1);
+}
+
+.busca h4 {
+    font-size: clamp(1.5rem, 2vw, 1.7rem);
+    text-align: center;
+    color: rgba(var(--rosa-escuro-rgb), 1);
+}
+
+
+.busca h5 {
+    margin-bottom: -10px;
+    font-size: clamp(1.4rem, 2vw, 1.6rem);
+    color: rgba(var(--rosa-escuro-rgb), 1);
+}
+
+.element {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.elementArray {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.element2 {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    padding: 1rem;
+}
+
+
 
 @media screen and (max-width: 40rem) {
     .tableRead>tr {
         line-height: 2rem;
     }
 }
+
+@media screen and (max-width: 1000px) {
+    .table thead {
+        display: none;
+    }
+
+    .table td {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    /*Responsividade da tabela de professores*/
+    .professores .table td:nth-child(1)::before {
+        content: 'ID: ';
+        font-weight: 600;
+    }
+
+    .professores .table td:nth-child(2)::before {
+        content: 'Nome: ';
+        font-weight: 600;
+    }
+
+    .professores .table td:nth-child(3)::before {
+        content: 'Telefone: ';
+        font-weight: 600;
+    }
+
+    .professores .table td:nth-child(4)::before {
+        content: 'Data de Nascimento: ';
+        font-weight: 600;
+    }
+
+    .professores .table td:nth-child(5)::before {
+        content: 'E-mail: ';
+        font-weight: 600;
+    }
+
+    .professores .table td:nth-child(6)::before {
+        content: 'Credencial: ';
+        font-weight: 600;
+    }
+
+    .professores .table td:nth-child(7)::before {
+        content: 'Disciplinas: ';
+        font-weight: 600;
+    }
+
+    .professores .table td:nth-child(8)::before {
+        content: 'Descrição: ';
+        font-weight: 600;
+    }
+
+    .professores .table td:nth-child(9)::before {
+        content: 'Ações: ';
+        font-weight: 600;
+    }
+
+    /*Responsividade da tabela de alunos*/
+
+    .alunos .table td:nth-child(1)::before {
+        content: 'ID: ';
+        font-weight: 600;
+    }
+
+    .alunos .table td:nth-child(2)::before {
+        content: 'Nome: ';
+        font-weight: 600;
+    }
+
+    .alunos .table td:nth-child(3)::before {
+        content: 'Telefone: ';
+        font-weight: 600;
+    }
+
+    .alunos .table td:nth-child(4)::before {
+        content: 'Data de Nascimento: ';
+        font-weight: 600;
+    }
+
+    .alunos .table td:nth-child(5)::before {
+        content: 'E-mail: ';
+        font-weight: 600;
+    }
+
+    .alunos .table td:nth-child(6)::before {
+        content: 'Credencial: ';
+        font-weight: 600;
+    }
+
+    .alunos .table td:nth-child(7)::before {
+        content: 'Ações: ';
+        font-weight: 600;
+    }
+
+    /*Responsividade da tabela de disciplinas*/
+
+    .disciplinas .table td:nth-child(1)::before {
+        content: 'ID: ';
+        font-weight: 600;
+    }
+
+    .disciplinas .table td:nth-child(2)::before {
+        content: 'Nome: ';
+        font-weight: 600;
+    }
+
+    .disciplinas .table td:nth-child(3)::before {
+        content: 'Ações: ';
+        font-weight: 600;
+    }
+
+    /*Responsividade da tabela de turmas*/
+
+    .turmas .table td:nth-child(1)::before {
+        content: 'ID: ';
+        font-weight: 600;
+    }
+
+    .turmas .table td:nth-child(2)::before {
+        content: 'Matéria da Turma: ';
+        font-weight: 600;
+    }
+    .turmas .table td:nth-child(3)::before {
+        content: 'Tipo de Turma: ';
+        font-weight: 600;
+    }
+    .turmas .table td:nth-child(4)::before {
+        content: 'Data da Aula: ';
+        font-weight: 600;
+    }
+    .turmas .table td:nth-child(5)::before {
+        content: 'Professor: ';
+        font-weight: 600;
+    }
+    .turmas .table td:nth-child(6)::before {
+        content: 'Alunos: ';
+        font-weight: 600;
+    }
+    .turmas .table td:nth-child(7)::before {
+        content: 'Ações: ';
+        font-weight: 600;
+    }
+
+
+    .table td:last-child {
+        margin-bottom: 2rem;
+    }
+
+}
+

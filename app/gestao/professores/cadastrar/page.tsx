@@ -1,5 +1,5 @@
 'use client'
-import { useState, useEffect, ChangeEvent } from 'react';
+import { useState, useEffect, ChangeEvent, FormEvent } from 'react';
 import { useRouter } from 'next/navigation';
 import axios from 'axios';
 import styles from '../../gestao.module.css';
@@ -36,8 +36,21 @@ export default function CadastrarProfessores() {
         senha: '',
         disciplinas: [],
     });
+
     const [disciplinas, setDisciplinas] = useState<Disciplina[]>([]);
     const router = useRouter();
+
+    useEffect(() => {
+        // Faça uma chamada GET para a API Spring Boot
+        axios
+            .get('http://localhost:8080/disciplinas')
+            .then((response) => {
+                setDisciplinas(response.data);
+            })
+            .catch((error) => {
+                console.error("Erro ao buscar a lista de disciplinas:", error);
+            });
+    }, []);
 
     const handleInputChange = (e: ChangeEvent<HTMLInputElement>) => {
         const { name, value, checked } = e.target;
@@ -55,21 +68,8 @@ export default function CadastrarProfessores() {
         }
     };
 
-
-    useEffect(() => {
-        // Faça uma chamada GET para a API Spring Boot
-        axios
-            .get('http://localhost:8080/disciplinas')
-            .then((response) => {
-                setDisciplinas(response.data);
-            })
-            .catch((error) => {
-                console.error("Erro ao buscar a lista de disciplinas:", error);
-            });
-    }, []);
-
-
-    const handleAddProfessor = () => {
+    const handleAddProfessor = (e: FormEvent) => {
+        e.preventDefault(); // Previne o reload completo da página após o submit
         axios
             .post("http://localhost:8080/professores", novoProfessor)
             .then((response) => {
@@ -78,7 +78,7 @@ export default function CadastrarProfessores() {
             })
             .catch((error) => {
                 alert("Erro ao inserir professor:" + error);
-           
+
             });
     };
 
