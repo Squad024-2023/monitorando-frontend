@@ -54,7 +54,6 @@ export default function CadastrarTurmas() {
     }, []);
 
     const handleProfessorChange = (e: ChangeEvent<HTMLSelectElement>) => {
-        console.log(e.target.value)
         const selectedProfessorId = e.target.value;
         const selectedProfessor = professores.find(professor => professor.id == selectedProfessorId);
         setNewTurma({
@@ -81,7 +80,6 @@ export default function CadastrarTurmas() {
 
     const handleAddTurma = (e: FormEvent) => {
         e.preventDefault();
-        console.log(novaTurma.alunos)
         axios
             .post("http://localhost:8080/turmas", novaTurma)
             .then((response) => {
@@ -107,15 +105,17 @@ export default function CadastrarTurmas() {
                         value={novaTurma.tipoTurma}
                         onChange={handleInputChange}
                     />
-                    <label htmlFor="professor">Professor da Turma</label>
-                    <select name="professor" value={novaTurma.professor.id} onChange={handleProfessorChange}>
-                        <option value="" disabled>Selecione um professor</option>
-                        {professores.map((professor, index) => (
-                            <option key={index} value={professor.id}>
-                                {professor.nome}
-                            </option>
-                        ))}
-                    </select>
+                    <div className={styles.select}>
+                        <label htmlFor='professor'>Professor da Turma</label>
+                        <select name='professor' id='professor' value={novaTurma.professor.id} onChange={handleProfessorChange}>
+                            <option value='' disabled>Selecione um professor</option>
+                            {professores.map((professor, index) => (
+                                <option key={index} value={professor.id}>
+                                    {professor.nome}
+                                </option>
+                            ))}
+                        </select>
+                    </div>
                     <div className={styles.checks}>
                         <span className={styles.checksSpan}>Alunos</span>
                         <div className={styles.checksOpcoes}>

@@ -17,13 +17,12 @@
     align-items: center;
     width: 100%;
     height: 100vh;
-    padding: 2rem 5%;
+    padding: 10rem 2rem;
     gap: 2rem;
     background-color: rgba(var(--cinza-escuro-rgb), 1);
     transition: all 0.3s ease-in-out;
 
 }
-
 
 .gestao h1,
 .professores h1,
@@ -93,7 +92,6 @@
     justify-content: center;
     align-items: center;
     gap: var(--espaco-interno);
-
     border-radius: 1rem;
     width: 100%;
 
@@ -157,6 +155,7 @@
 .table td span {
     color: rgba(var(--cinza-escuro-rgb));
 }
+
 .table td span::after {
     content: ', ';
 }
@@ -257,12 +256,134 @@
 
 }
 
-/* .checksOpcoes input {} */
-
-
 .checksOpcoes span {
     color: rgba(var(--rosa-escuro-rgb), 1);
 }
+
+.select {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.select label {
+    padding: 0 1rem;
+    color: rgba(var(--rosa-escuro-rgb), 1);
+    font-size: calc(1.5rem + .1vw);
+}
+
+.select select {
+    width: 100%;
+    height: 4rem;
+    padding: 0 1rem;
+    border-radius: 1rem;
+    background-color: #fff;
+    font-size: calc(1.5rem + .1vw);
+    color: rgba(var(--rosa-escuro-rgb));
+    border: solid .1rem rgba(var(--cinza-escuro-rgb), 0.1);
+    box-shadow: .6rem .2rem 1rem rgba(var(--cinza-escuro-rgb), 0.2);
+    cursor: pointer;
+}
+
+.select select option {
+    padding: 1rem;
+    font-size: calc(1.5rem + .1vw);
+    color: rgba(var(--rosa-escuro-rgb));
+    background-color: #fff;
+    cursor: pointer;
+}
+
+
+
+
+.busca {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 40rem;
+    height: auto;
+    overflow: hidden;
+    gap: 2rem;
+    border-radius: 1rem;
+    background-color: #fff;
+}
+
+.busca h1 {
+    font-size: clamp(2rem, 3vw, 3rem);
+    color: rgb(var(--cinza-escuro-rgb));
+    width: 100%;
+    text-align: center;
+}
+
+.busca h2 {
+    font-size: clamp(1.8rem, 2vw, 2rem);
+    color: rgb(var(--cinza-escuro-rgb));
+    width: 100%;
+    text-align: center;
+}
+
+.buscarForm {
+    padding: 1rem 2rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.buscarForm input {
+    box-shadow: .6rem .2rem 1rem rgba(var(--cinza-escuro-rgb), 0.4);
+}
+
+.buscarForm button {
+    box-shadow: .6rem .2rem 1rem rgba(var(--cinza-escuro-rgb), 0.4);
+}
+
+
+.busca h3 {
+    width: 100%;
+    font-size: 2rem;
+    text-align: center;
+    padding: 1rem;
+    border-top: solid 0.1rem rgba(var(--cinza-escuro-rgb), 0.8);
+    color: rgba(var(--rosa-escuro-rgb), 1);
+}
+
+.busca h4 {
+    font-size: 1.5rem;
+    text-align: center;
+    color: rgba(var(--rosa-escuro-rgb), 1);
+}
+
+
+.busca h5 {
+    margin-bottom: -10px;
+    font-size: 1.6rem;
+    color: rgba(var(--rosa-escuro-rgb), 1);
+}
+
+.element {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.element2 {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    padding: 1rem;
+}
+
+
 
 @media screen and (max-width: 40rem) {
     .tableRead>tr {

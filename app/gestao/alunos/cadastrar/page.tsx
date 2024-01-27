@@ -93,24 +93,6 @@ export default function CadastrarAlunoes() {
                     <Input type='email' nome='email' placeholder='E-mail' value={novoAluno.email} onChange={handleInputChange} />
                     <input type="text" name='tipoUsuario' value='USER' hidden />
                     <Input type='password' nome='senha' placeholder='Senha' value={novoAluno.senha} onChange={handleInputChange} />
-{/* 
-                    <div className={styles.checks}>
-                        <span className={styles.checksSpan}>Turmas</span>
-                        <div className={styles.checksOpcoes}>
-                            {turmas.map((turma, index) => (
-                                <label key={index} htmlFor={turma.id}>
-                                    <input
-                                        name={turma.materiaTurma}
-                                        type='checkbox'
-                                        id={turma.id}
-                                        value={turma.id}
-                                        onChange={handleInputChange}
-                                    />
-                                    <span>{turma.materiaTurma}</span>
-                                </label>
-                            ))}
-                        </div>
-                    </div> */}
                     <BotaoForm type='submit' texto='Cadastrar' onClick={handleAddAlunos} />
                 </Formulario>
 

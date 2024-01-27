@@ -37,6 +37,9 @@ export default function EditarProfessores({ params }: { params: { id: any } }) {
         disciplinas: [],
     });
 
+    const [disciplinas, setDisciplinas] = useState<Disciplina[]>([]);
+    const router = useRouter();
+
     useEffect(() => {
         // Faça uma chamada GET para a API Spring Boot
         axios
@@ -61,9 +64,7 @@ export default function EditarProfessores({ params }: { params: { id: any } }) {
             });
     }, [params.id]);
 
-    const [disciplinas, setDisciplinas] = useState<Disciplina[]>([]);
-    const router = useRouter();
-
+    //usado para outros inputs e para lidar com arrays mapeados em checkboxes
     const handleInputChange = (e: ChangeEvent<HTMLInputElement>) => {
 
         const { name, value, checked } = e.target;
@@ -83,7 +84,7 @@ export default function EditarProfessores({ params }: { params: { id: any } }) {
 
     const handleUpdateProfessor = (e: FormEvent) => {
         e.preventDefault(); // Previne o reload completo da página após o submit
-    
+
         console.log(professor);
         axios
             .put("http://localhost:8080/professores/" + params.id, professor)
@@ -127,7 +128,6 @@ export default function EditarProfessores({ params }: { params: { id: any } }) {
                                         defaultChecked={professor.disciplinas.some((d) => d.id === disciplina.id)}
                                         value={disciplina.id}
                                         onChange={handleInputChange}
-
                                     />
                                     <span>{disciplina.nome}</span>
                                 </label>
