@@ -25,7 +25,10 @@ export default function Footer() {
             <div className={styles.monitorandoFooter}>
                 <Logo />
                 <span>monitorando é uma instituição fictícia, criada para o
-                    demonstrar as habilidades adquiridas no curso recode pro 2023
+                    demonstrar as habilidades adquiridas no curso recode pro 2023.
+                </span>
+                <span>Gostou do nosso trabalho? O código pode ser encontrado aqui no nosso github.
+                    <SociaisLink link='https://github.com/Squad024-2023' ani={github} />
                 </span>
             </div>
             <div className={styles.footerMain}>
@@ -84,7 +87,7 @@ export default function Footer() {
                     <h2>Contatos</h2>
                     <span>monitorando@hotmail.com</span>
                     <span>(11)9 7233-5888</span>
-                    <Doar/>
+                    <Doar />
                 </div>
             </div>
             <div className={styles.copyFooter}>

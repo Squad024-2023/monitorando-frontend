@@ -4,6 +4,8 @@
     min-height: 100vh;
     width: 100%;
     margin-bottom: 5rem;
+    padding-left: 5rem;
+    background-color: red;
 }
 
 .gestao,
@@ -16,7 +18,7 @@
     flex-direction: column;
     align-items: center;
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
     padding: 10rem 2rem;
     gap: 2rem;
     background-color: rgba(var(--cinza-escuro-rgb), 1);
@@ -37,16 +39,26 @@
 
 .linksGestao {
     width: 100%;
-    height: 4rem;
+    height: auto;
     list-style: none;
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-wrap: wrap;
     gap: 1rem;
 }
 
+.linksGestao li {
+    display: flex;
+
+}
+
 .linksGestao>li>a {
-    padding: 1rem 2rem;
+    height: 4rem;
+    width: 12rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-size: clamp(1.2rem, 2.5vw, 1.6rem);
     color: rgba(var(--cinza-escuro-rgb));
     border-radius: 1rem;
@@ -396,3 +408,154 @@
         line-height: 2rem;
     }
 }
+
+@media screen and (max-width: 1000px) {
+    .table thead {
+        display: none;
+    }
+
+    .table td {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    /*Responsividade da tabela de professores*/
+    .professores .table td:nth-child(1)::before {
+        content: 'ID: ';
+        font-weight: 600;
+    }
+
+    .professores .table td:nth-child(2)::before {
+        content: 'Nome: ';
+        font-weight: 600;
+    }
+
+    .professores .table td:nth-child(3)::before {
+        content: 'Telefone: ';
+        font-weight: 600;
+    }
+
+    .professores .table td:nth-child(4)::before {
+        content: 'Data de Nascimento: ';
+        font-weight: 600;
+    }
+
+    .professores .table td:nth-child(5)::before {
+        content: 'E-mail: ';
+        font-weight: 600;
+    }
+
+    .professores .table td:nth-child(6)::before {
+        content: 'Credencial: ';
+        font-weight: 600;
+    }
+
+    .professores .table td:nth-child(7)::before {
+        content: 'Disciplinas: ';
+        font-weight: 600;
+    }
+
+    .professores .table td:nth-child(8)::before {
+        content: 'Descrição: ';
+        font-weight: 600;
+    }
+
+    .professores .table td:nth-child(9)::before {
+        content: 'Ações: ';
+        font-weight: 600;
+    }
+
+    /*Responsividade da tabela de alunos*/
+
+    .alunos .table td:nth-child(1)::before {
+        content: 'ID: ';
+        font-weight: 600;
+    }
+
+    .alunos .table td:nth-child(2)::before {
+        content: 'Nome: ';
+        font-weight: 600;
+    }
+
+    .alunos .table td:nth-child(3)::before {
+        content: 'Telefone: ';
+        font-weight: 600;
+    }
+
+    .alunos .table td:nth-child(4)::before {
+        content: 'Data de Nascimento: ';
+        font-weight: 600;
+    }
+
+    .alunos .table td:nth-child(5)::before {
+        content: 'E-mail: ';
+        font-weight: 600;
+    }
+
+    .alunos .table td:nth-child(6)::before {
+        content: 'Credencial: ';
+        font-weight: 600;
+    }
+
+    .alunos .table td:nth-child(7)::before {
+        content: 'Ações: ';
+        font-weight: 600;
+    }
+
+    /*Responsividade da tabela de disciplinas*/
+
+    .disciplinas .table td:nth-child(1)::before {
+        content: 'ID: ';
+        font-weight: 600;
+    }
+
+    .disciplinas .table td:nth-child(2)::before {
+        content: 'Nome: ';
+        font-weight: 600;
+    }
+
+    .disciplinas .table td:nth-child(3)::before {
+        content: 'Ações: ';
+        font-weight: 600;
+    }
+
+    /*Responsividade da tabela de turmas*/
+
+    .turmas .table td:nth-child(1)::before {
+        content: 'ID: ';
+        font-weight: 600;
+    }
+
+    .turmas .table td:nth-child(2)::before {
+        content: 'Matéria da Turma: ';
+        font-weight: 600;
+    }
+    .turmas .table td:nth-child(3)::before {
+        content: 'Tipo de Turma: ';
+        font-weight: 600;
+    }
+    .turmas .table td:nth-child(4)::before {
+        content: 'Data da Aula: ';
+        font-weight: 600;
+    }
+    .turmas .table td:nth-child(5)::before {
+        content: 'Professor: ';
+        font-weight: 600;
+    }
+    .turmas .table td:nth-child(6)::before {
+        content: 'Alunos: ';
+        font-weight: 600;
+    }
+    .turmas .table td:nth-child(7)::before {
+        content: 'Ações: ';
+        font-weight: 600;
+    }
+
+
+    .table td:last-child {
+        margin-bottom: 2rem;
+    }
+
+}
+

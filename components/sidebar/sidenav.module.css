@@ -1,11 +1,14 @@
 .sidenav {
+    position: absolute;
+    bottom: 0;
+    left: 0rem;
     display: flex;
     flex-direction: column;
-    height: 100%;
-    min-height: 100vh;
+    min-height: 100%;
     background-color: rgb(var(--cinza-escuro-rgb));
     box-shadow: .2rem .2rem 1rem rgba(var(--cinza-escuro-rgb), 0.8);
     border-right: solid .2rem rgb(var(--sal-rgb));
+    z-index: 3;
 }
 
 .botaoSideNav {
@@ -77,11 +80,13 @@
     cursor: pointer;
     transition: all .6s ease;
 }
+
 .subNav a:hover {
     background-color: rgba(var(--sal-rgb), 0.4);
     font-weight: 500;
     transition: all .3s ease;
 }
+
 .hide {
     display: none;
 
