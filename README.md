@@ -1,4 +1,4 @@
-<img src="./public/icons/logo-pink.svg">
+<img src="./public/github/logo-pink.png">
 
 <div style="text-align: right;">
   <p>Seu sucesso acadêmico começa aqui! 🎓</p>
@@ -99,7 +99,7 @@ npm rum dev
 Demonstração da página inicial do nosso site:
 <br>
 
-<img src="./public/github/site-mobile.svg">
+<img src="./public/github/site-mobile.png">
 <img src="./public/github/Monitorando1.png">
 <img src= "./public/github/Monitorando2.png">
 <img src= "./public/github/Monitorando3.png">
