@@ -1,5 +1,5 @@
 'use client'
-import { useState, useEffect, ChangeEvent } from 'react';
+import { useState, useEffect, ChangeEvent, FormEvent } from 'react';
 import { useRouter } from 'next/navigation';
 import axios from 'axios';
 import styles from '../../gestao.module.css';
@@ -13,8 +13,12 @@ type Turma = {
     tipoTurma: string;
     dataAula: string;
     professor: Professor;
+    alunos: Aluno[];
 };
-
+type Aluno = {
+    id: string;
+    nome: string;
+}
 type Professor = {
     id: string;
     nome: string;
@@ -27,40 +31,57 @@ export default function CadastrarTurmas() {
         tipoTurma: '',
         dataAula: '',
         professor: { id: '', nome: '' },
+        alunos: [],
     });
+
     const [professores, setProfessores] = useState<Professor[]>([]);
+    const [alunos, setAlunos] = useState<Aluno[]>([]);
     const router = useRouter();
 
-    const handleInputChange = (e: ChangeEvent<HTMLInputElement>) => {
-        setNewTurma({ ...novaTurma, [e.target.name]: e.target.value });
-    };
-    const handleProfessorChange = (e: ChangeEvent<HTMLInputElement>) => {
-        const selectedProfessorId = e.target.value;
-        const selectedProfessor = professores.find(professor => professor.id == selectedProfessorId);
-
-        setNewTurma({
-            ...novaTurma,
-            professor: selectedProfessor || { id: '', nome: '' }
-
-        });
-        console.log(selectedProfessor)
-    };
-
     useEffect(() => {
-        // Faça uma chamada GET para a API Spring Boot
-        axios
-            .get('http://localhost:8080/professores')
-            .then((response) => {
-                setProfessores(response.data);
+        // Fetch professors and students only once
+        Promise.all([
+            axios.get('http://localhost:8080/professores'),
+            axios.get('http://localhost:8080/alunos'),
+        ])
+            .then(([professoresResponse, alunosResponse]) => {
+                setProfessores(professoresResponse.data);
+                setAlunos(alunosResponse.data);
             })
             .catch((error) => {
-                console.error("Erro ao buscar a lista de professores:", error);
+                console.error("Erro ao buscar a lista de professores ou alunos:", error);
             });
     }, []);
 
+    const handleProfessorChange = (e: ChangeEvent<HTMLSelectElement>) => {
+        console.log(e.target.value)
+        const selectedProfessorId = e.target.value;
+        const selectedProfessor = professores.find(professor => professor.id == selectedProfessorId);
+        setNewTurma({
+            ...novaTurma,
+            professor: selectedProfessor || { id: '', nome: '' },
+        });
+    };
 
-    const handleAddClient = () => {
-        console.log(novaTurma.professor)
+    const handleInputChange = (e: ChangeEvent<HTMLInputElement>) => {
+        const { name, value, checked } = e.target;
+
+        if (e.target.type === 'checkbox') {
+            // atualiza o estado marcado para o aluno específico
+            setNewTurma((prevTurma) => {
+                const updatedAlunos = checked
+                    ? [...prevTurma.alunos, { id: value, nome: name }]   // usando id e nome para adicionar
+                    : prevTurma.alunos.filter((aluno) => aluno.id !== value);
+                return { ...prevTurma, alunos: updatedAlunos };
+            });
+        } else {
+            setNewTurma((prevTurma) => ({ ...prevTurma, [name]: value }));
+        }
+    };
+
+    const handleAddTurma = (e: FormEvent) => {
+        e.preventDefault();
+        console.log(novaTurma.alunos)
         axios
             .post("http://localhost:8080/turmas", novaTurma)
             .then((response) => {
@@ -86,24 +107,33 @@ export default function CadastrarTurmas() {
                         value={novaTurma.tipoTurma}
                         onChange={handleInputChange}
                     />
+                    <label htmlFor="professor">Professor da Turma</label>
+                    <select name="professor" value={novaTurma.professor.id} onChange={handleProfessorChange}>
+                        <option value="" disabled>Selecione um professor</option>
+                        {professores.map((professor, index) => (
+                            <option key={index} value={professor.id}>
+                                {professor.nome}
+                            </option>
+                        ))}
+                    </select>
                     <div className={styles.checks}>
-                        <span className={styles.checksSpan}>Professores</span>
+                        <span className={styles.checksSpan}>Alunos</span>
                         <div className={styles.checksOpcoes}>
-                            {professores.map((professor, index) => (
-                                <label key={index} htmlFor={professor.id}>
+                            {alunos.map((aluno, index) => (
+                                <label key={index} htmlFor={aluno.id}>
                                     <input
-                                        name={professor.nome}
+                                        name={aluno.nome}
                                         type='checkbox'
-                                        id={professor.id}
-                                        value={professor.id}
-                                        onChange={handleProfessorChange}
+                                        id={aluno.id}
+                                        value={aluno.id}
+                                        onChange={handleInputChange}
                                     />
-                                    <span>{professor.nome}</span>
+                                    <span>{aluno.nome}</span>
                                 </label>
                             ))}
                         </div>
                     </div>
-                    <BotaoForm type='submit' texto='Cadastrar' onClick={handleAddClient} />
+                    <BotaoForm type='submit' texto='Cadastrar' onClick={handleAddTurma} />
                 </Formulario>
             </div>
         </section>

@@ -1,5 +1,5 @@
 'use client'
-import { useRef, useEffect } from 'react'
+import { useRef, useEffect, ChangeEvent, useState } from 'react'
 import lottie from 'lottie-web'
 import styles from './monitorias.module.css'
 import CardPessoa from '@/components/cardPessoa/CardPessoa'
@@ -51,6 +51,12 @@ export default function Monitorias() {
       };
     }
   }, [buscar]);
+
+  const [selectedValue, setSelectedValue] = useState('');
+
+  const handleRadioChange = (event: ChangeEvent<HTMLInputElement>) => {
+    setSelectedValue(event.target.value);
+  };
 
 
 
@@ -157,60 +163,70 @@ export default function Monitorias() {
           <h1>Disciplinas mais solicitadas</h1>
           <div className={styles.cardWrapperTela2}>
             <Link
+              prefetch={false}
               id='matematica'
               className={styles.card}
               href='#matematica'><LottieAnimation ani={math} />
               Matemática
             </Link>
             <Link
+              prefetch={false}
               id='financas'
               className={styles.card}
               href='#financas'><LottieAnimation ani={bank} />
               Gestão Financeira
             </Link>
             <Link
+              prefetch={false}
               id='tempo'
               className={styles.card}
               href='#tempo'><LottieAnimation ani={clock} />
               Gestão de Tempo
             </Link>
             <Link
+              prefetch={false}
               id='estatistica'
               className={styles.card}
               href='#estatistica'><LottieAnimation ani={statistics} />
               Estatística
             </Link>
             <Link
+              prefetch={false}
               id='portugues'
               className={styles.card}
               href='#portugues'><LottieAnimation ani={port} />
               Português
             </Link>
             <Link
+              prefetch={false}
               id='logica'
               className={styles.card}
               href='#logica'><LottieAnimation ani={code} />
               Lógica de Programação
             </Link>
             <Link
+              prefetch={false}
               id='foco'
               className={styles.card}
               href='#foco'><LottieAnimation ani={foco} />
               Foco e Produtividade
             </Link>
             <Link
+              prefetch={false}
               id='quimica'
               className={styles.card}
               href='#quimica'><LottieAnimation ani={quimica} />
               Química
             </Link>
             <Link
+              prefetch={false}
               id='coms'
               className={styles.card}
               href='#coms'><LottieAnimation ani={coms} />
               Comunicação Não Violenta
             </Link>
             <Link
+              prefetch={false}
               id='historia'
               className={styles.card}
               href='#historia'><LottieAnimation ani={histo} />
@@ -218,6 +234,7 @@ export default function Monitorias() {
             </Link>
 
             <Link
+              prefetch={false}
               id='biologia'
               className={styles.card}
               href='#biologia'><LottieAnimation ani={bio} />
@@ -225,6 +242,7 @@ export default function Monitorias() {
             </Link>
 
             <Link
+              prefetch={false}
               id='fisica'
               className={styles.card}
               href='#fisica'><LottieAnimation ani={phis} />
@@ -232,6 +250,7 @@ export default function Monitorias() {
             </Link>
 
             <Link
+              prefetch={false}
               id='apresentacao'
               className={styles.card}
               href='#apresentacao'><LottieAnimation ani={apresentacao} />
@@ -257,7 +276,10 @@ export default function Monitorias() {
             <Input type='text' nome='telefone' placeholder='Telefone' />
             <RadioInput
               name='tipoDeCadastro'
-              texto1='Aluno' texto2='Professor'
+              texto1='Aluno'
+              texto2='Professor'
+              value={selectedValue}
+              onChange={handleRadioChange}
             //  checked1={true} checked2={false}
             //  onChange={}
             />

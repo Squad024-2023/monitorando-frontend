@@ -36,8 +36,21 @@ export default function CadastrarProfessores() {
         senha: '',
         disciplinas: [],
     });
+
     const [disciplinas, setDisciplinas] = useState<Disciplina[]>([]);
     const router = useRouter();
+
+    useEffect(() => {
+        // Faça uma chamada GET para a API Spring Boot
+        axios
+            .get('http://localhost:8080/disciplinas')
+            .then((response) => {
+                setDisciplinas(response.data);
+            })
+            .catch((error) => {
+                console.error("Erro ao buscar a lista de disciplinas:", error);
+            });
+    }, []);
 
     const handleInputChange = (e: ChangeEvent<HTMLInputElement>) => {
         const { name, value, checked } = e.target;
@@ -54,20 +67,6 @@ export default function CadastrarProfessores() {
             setNewProfessor((prevProfessor) => ({ ...prevProfessor, [name]: value }));
         }
     };
-
-
-    useEffect(() => {
-        // Faça uma chamada GET para a API Spring Boot
-        axios
-            .get('http://localhost:8080/disciplinas')
-            .then((response) => {
-                setDisciplinas(response.data);
-            })
-            .catch((error) => {
-                console.error("Erro ao buscar a lista de disciplinas:", error);
-            });
-    }, []);
-
 
     const handleAddProfessor = (e: FormEvent) => {
         e.preventDefault(); // Previne o reload completo da página após o submit

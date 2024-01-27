@@ -43,7 +43,7 @@ export default function Turmas() {
                 <h1>Turmas</h1>
                 <table className={styles.table}>
                     <thead>
-           
+
                         <tr>
                             <th>ID</th>
                             <th>Matéria</th>
@@ -63,9 +63,12 @@ export default function Turmas() {
                                 <td>{turma.tipoTurma}</td>
                                 <td>{turma.dataAula}</td>
                                 <td>{turma.professor.nome}</td>
-                                <td>{turma.alunos.map((aluno, index) => (
-                                    <span key={index}>{aluno.nome}</span>
-                                ))}
+                                <td>
+                                    <div className={styles.arrays} >
+                                        {turma.alunos.map((aluno, index) => (
+                                            <span key={index}>{aluno.nome}</span>
+                                        ))}
+                                    </div>
                                 </td>
                                 <td>
                                     <div className={styles.bts}>

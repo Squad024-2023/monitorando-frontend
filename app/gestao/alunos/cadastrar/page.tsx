@@ -1,5 +1,5 @@
 'use client'
-import { useState, useEffect, ChangeEvent } from 'react';
+import { useState, useEffect, ChangeEvent, FormEvent } from 'react';
 import { useRouter } from 'next/navigation';
 import axios from 'axios';
 import styles from '../../gestao.module.css';
@@ -68,7 +68,8 @@ export default function CadastrarAlunoes() {
     }, []);
 
 
-    const handleAddAlunos = () => {
+    const handleAddAlunos = (e: FormEvent) => {
+        event?.preventDefault();
         axios
             .post("http://localhost:8080/alunos", novoAluno)
             .then((response) => {
@@ -92,7 +93,7 @@ export default function CadastrarAlunoes() {
                     <Input type='email' nome='email' placeholder='E-mail' value={novoAluno.email} onChange={handleInputChange} />
                     <input type="text" name='tipoUsuario' value='USER' hidden />
                     <Input type='password' nome='senha' placeholder='Senha' value={novoAluno.senha} onChange={handleInputChange} />
-
+{/* 
                     <div className={styles.checks}>
                         <span className={styles.checksSpan}>Turmas</span>
                         <div className={styles.checksOpcoes}>
@@ -109,7 +110,7 @@ export default function CadastrarAlunoes() {
                                 </label>
                             ))}
                         </div>
-                    </div>
+                    </div> */}
                     <BotaoForm type='submit' texto='Cadastrar' onClick={handleAddAlunos} />
                 </Formulario>
 
