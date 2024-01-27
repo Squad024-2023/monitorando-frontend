@@ -1,8 +1,9 @@
 'use client'
 import { useEffect, useState } from 'react';
+import { useRouter } from 'next/navigation';
 import axios from 'axios';
-import Link from "next/link";
-import Image from "next/image";
+import Link from 'next/link';
+import Image from 'next/image';
 import edit from '@/public/icons/edit-32-32.svg';
 import deleteI from '@/public/icons/delete-32-32.svg'
 import styles from '../gestao.module.css';
@@ -23,19 +24,38 @@ type Disciplina = {
 };
 
 export default function Professores() {
+
+    const router = useRouter();
     const [professores, setProfessores] = useState<Professores[]>([]);
+
     useEffect(() => {
         // Faça uma chamada GET para a API Spring Boot
         axios
             .get('http://localhost:8080/professores')
             .then((response) => {
                 setProfessores(response.data);
-                console.log(response.data);
             })
             .catch((error) => {
-                console.error("Erro ao buscar a lista de professores:", error);
+                console.error('Erro ao buscar a lista de professores:', error);
             });
     }, []);
+
+    const handleDeleteProfessor = (id: string) => {
+        console.log('o id é: ' + id);
+        axios
+            .delete(`http://localhost:8080/professores/${id}`)
+            .then((response) => {
+                alert("Professor deletado com sucesso!");
+                // Atualizar o estado baseado no professor deletado
+                setProfessores((prevProfessores) =>
+                    prevProfessores.filter((professor) => professor.id !== id)
+                );
+            })
+            .catch((error) => {
+                alert("Erro ao deletar professor:" + error);
+            });
+    };
+
     return (
         <section className={styles.professores}>
             <div className={styles.tableWrapper}>
@@ -45,10 +65,11 @@ export default function Professores() {
                         <tr>
                             <th>ID</th>
                             <th>Nome</th>
-                            <th>Telefone</th>
+                            {/* <th>Telefone</th>
                             <th>Data de Nascimento</th>
                             <th>E-Mail</th>
-                            <th>Credencial</th>
+                            <th>Credencial</th> */}
+                            <th>Disciplinas</th>
                             <th>Descrição</th>
                             <th>Ações</th>
                         </tr>
@@ -59,27 +80,40 @@ export default function Professores() {
                             <tr className={styles.tr} key={index}>
                                 <td key={index}>{professor.id}</td>
                                 <td>{professor.nome}</td>
-                                <td>{professor.telefone}</td>
+                                {/* <td>{professor.telefone}</td>
                                 <td>{professor.dataNascimento}</td>
                                 <td>{professor.email}</td>
-                                <td>{professor.tipoUsuario}</td>
+                                <td>{professor.tipoUsuario}</td> */}
+                                     <td>
+                                    <div className={styles.arrays} >
+                                        {professor.disciplinas.map((disciplina, index) => (
+                                            <span key={index}>{disciplina.nome}</span>
+                                        ))}
+                                    </div>
+                                </td>
                                 <td>{professor.profDescricao}</td>
                                 <td>
                                     <div className={styles.bts}>
-                                        <Link className={styles.edit} href={'/'}><Image
+                                        <Link className={styles.edit} href={`/gestao/professores/editar/${professor.id}`}><Image
                                             className={styles.edit}
                                             width={24}
                                             height={24}
                                             src={edit}
-                                            alt="edit"
+                                            alt='edit'
                                         /></Link>
-                                        <Link className={styles.delete} href={'/'}><Image
-                                            className={styles.delete}
-                                            width={24}
-                                            height={24}
-                                            src={deleteI}
-                                            alt="edit"
-                                        /></Link>
+                                        <Link className={styles.delete} href=''
+                                            onClick={() => {
+                                                const confirmed = window.confirm('Tem certeza que deseja deletar o professor?');
+                                                if (confirmed) {
+                                                    handleDeleteProfessor(professor.id);
+                                                }
+                                            }}><Image
+                                                className={styles.delete}
+                                                width={24}
+                                                height={24}
+                                                src={deleteI}
+                                                alt='edit'
+                                            /></Link>
                                     </div>
                                 </td>
                             </tr>

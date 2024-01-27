@@ -4,8 +4,8 @@
     min-height: 100vh;
     width: 100%;
     margin-bottom: 5rem;
-    border-top: solid 1rem rgb(var(--cinza-escuro-rgb));
 }
+
 .gestao,
 .professores,
 .alunos,
@@ -18,16 +18,74 @@
     width: 100%;
     height: 100vh;
     padding: 2rem 5%;
-    background-color: rgba(var(--rosa-escuro-rgb));
+    gap: 2rem;
+    background-color: rgba(var(--cinza-escuro-rgb), 1);
     transition: all 0.3s ease-in-out;
 
 }
-.gestao h1{
+
+
+.gestao h1,
+.professores h1,
+.alunos h1,
+.turmas h1,
+.disciplinas h1 {
     font-size: clamp(2rem, 5vw, 3rem);
     color: rgba(var(--sal-rgb));
     margin-bottom: 2rem;
 
 }
+
+.linksGestao {
+    width: 100%;
+    height: 4rem;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.linksGestao>li>a {
+    padding: 1rem 2rem;
+    font-size: clamp(1.2rem, 2.5vw, 1.6rem);
+    color: rgba(var(--cinza-escuro-rgb));
+    border-radius: 1rem;
+    font-weight: 600;
+    background-color: rgba(var(--sal-rgb));
+    box-shadow: .2rem .2rem .6rem rgba(var(--cinza-escuro-rgb), 0.6);
+}
+
+.linksGestao>li>a:hover {
+    font-size: clamp(1.2rem, 2.5vw, 1.6rem);
+    color: rgba(var(--sal-rgb));
+    background-color: rgba(var(--cinza-escuro-rgb));
+}
+
+.textoGestao {
+    width: 100%;
+    max-width: 70rem;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    gap: 2rem;
+    justify-content: center;
+    border-radius: 1rem;
+}
+
+.textoGestao h2 {
+    font-size: clamp(1.6rem, 2.5vw, 1.8rem);
+    color: rgba(var(--sal-rgb));
+    font-weight: 600;
+    text-align: center;
+}
+
+.textoGestao p {
+    font-size: clamp(1.2rem, 2.5vw, 1.6rem);
+    color: rgba(var(--sal-rgb));
+}
+
 
 .tableWrapper {
     display: flex;
@@ -86,6 +144,11 @@
     border-radius: var(--border-radius);
     background-color: rgba(var(--sal-rgb));
 }
+.arrays{
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
 
 .table td span {
     color: rgba(var(--rosa-escuro-rgb));
@@ -136,6 +199,62 @@
 .create:hover>img,
 .read:hover>img {
     transform: scale(1.1)
+}
+
+
+.formContainer {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 60rem;
+    height: auto;
+    overflow: hidden;
+    gap: 5%;
+    border-radius: 1rem;
+    background-color: #fff;
+}
+
+.checks {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 2rem;
+    gap: 1rem;
+    border-radius: 1rem;
+    box-shadow: .6rem .2rem 1rem rgba(var(--cinza-escuro-rgb), 0.2);
+
+}
+
+.checksSpan {
+    color: rgba(var(--rosa-escuro-rgb), 1);
+    font-size: calc(1.5rem + .1vw);
+}
+
+.checksOpcoes {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    font-size: calc(1.5rem + .1vw);
+}
+
+.checksOpcoes label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem;
+    cursor: pointer;
+
+}
+
+/* .checksOpcoes input {} */
+
+
+.checksOpcoes span {
+    color: rgba(var(--rosa-escuro-rgb), 1);
 }
 
 @media screen and (max-width: 40rem) {

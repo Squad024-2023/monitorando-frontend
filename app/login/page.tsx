@@ -1,6 +1,6 @@
 
 'use client'
-import { useState } from 'react'
+import { useState, ChangeEvent } from 'react'
 import Input from '@/components/form/input/Input'
 import Formulario from '@/components/form/Formulario'
 import styles from './login.module.css'
@@ -17,8 +17,11 @@ import facebook from '@/public/icons/facebookicon.svg'
 export default function Login() {
 
   const [show, setShow] = useState(true)
+  const [selectedValue, setSelectedValue] = useState('');
 
-
+  const handleRadioChange = (event: ChangeEvent<HTMLInputElement>) => {
+    setSelectedValue(event.target.value);
+  };
 
   return (
     <main className={styles.main}>
@@ -46,15 +49,17 @@ export default function Login() {
               <Input type='text' nome='cpf' placeholder='CPF' />
               <Input type='email' nome='email' placeholder='E-mail' />
               <Input type='text' nome='telefone' placeholder='Telefone' />
-              <Input type='date' nome='dataNascimento' placeholder='' />
+              <Input type='date' nome='dataNascimento' placeholder='Data de Nascimento' />
               <input type="text" name='tipoUsuario' value='USER' readOnly hidden />
               <RadioInput
-                name='tipoDeCadastro'
-                texto1='Aluno' texto2='Professor'
-                value1='' value2=''
-              //  checked1={true} checked2={false}
-              //  onChange={}
+                name="tipoUsuario"
+                texto1="ADMIN"
+                texto2="USER"
+                value={selectedValue}
+                onChange={handleRadioChange}
               />
+
+
               <Input type='password' nome='password' placeholder='Senha' />
               <BotaoForm type='submit' texto='Cadastrar' />
             </Formulario>

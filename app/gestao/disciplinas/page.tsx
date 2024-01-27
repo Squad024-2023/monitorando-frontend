@@ -10,16 +10,9 @@ import styles from '../gestao.module.css';
 type Disciplinas = {
     id: string;
     nome: string;
-    professores: Professores[];
-    turmas: Turmas[];
 };
 
-type Professores = {
-    nome: string;
-};
-type Turmas = {
-    materiaTurma: string;
-};
+
 
 export default function Disciplinas() {
     const [disciplinas, setDisciplinas] = useState<Disciplinas[]>([]);
@@ -29,7 +22,6 @@ export default function Disciplinas() {
             .get('http://localhost:8080/disciplinas')
             .then((response) => {
                 setDisciplinas(response.data);
-                console.log(response.data);
             })
             .catch((error) => {
                 console.error("Erro ao buscar a lista de disciplinas:", error);
@@ -44,25 +36,15 @@ export default function Disciplinas() {
                         <tr>
                             <th>ID</th>
                             <th>Nome</th>
-                            <th>Professores</th>
-                            <th>Turmas</th>
                             <th>Ações</th>
                         </tr>
                     </thead>
                     <tbody>
-                       {/* Map para listar os alunos dentro do vetor */}
+                        {/* Map para listar os alunos dentro do vetor */}
                         {disciplinas.map((disciplina, index) => (
                             <tr className={styles.tr} key={index}>
                                 <td key={index}>{disciplina.id}</td>
                                 <td>{disciplina.nome}</td>
-                                <td>{disciplina.professores.map((professor, index) => (
-                                    <span key={index}>{professor.nome}</span>
-                                ))}
-                                </td>
-                                <td>{disciplina.turmas.map((turma, index) => (
-                                    <span key={index}>{turma.materiaTurma}</span>
-                                ))}
-                                </td>
                                 <td>
                                     <div className={styles.bts}>
                                         <Link className={styles.edit} href={'/'}><Image
