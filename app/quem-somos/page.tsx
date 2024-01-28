@@ -45,7 +45,7 @@ export default function QuemSomos() {
                             />
                             <div className={styles.cardTexto}>
                                 <h1>Arthur Bernard</h1>
-                                <p>HTML | CSS | Oratória | Gestão de projetos Desenvolvedor frontend formando em design gráfico. Ajuda com apresentações, trabalhos em grupos e organização é comigo!</p>
+                                <p>HTML | CSS | Oratória | Gestão de projetos Desenvolvedor frontend formado em design gráfico. Ajuda com apresentações, trabalhos em grupos e organização é comigo!</p>
                             </div>
                         </div>
                     </Reveal>

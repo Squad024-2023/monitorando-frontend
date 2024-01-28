@@ -1,5 +1,5 @@
 'use client'
-import { useState, useEffect} from 'react'
+import { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
 import { Reveal } from '@/components/reveal/Reveal'
 import styles from './page.module.css'
@@ -121,9 +121,9 @@ export default function Home() {
           animate='visible'
           transition={{ duration: 0.6, delay: 0.75 }}
         >
-          <CardGrande titulo='Monitores' img={teacher} />
-          <CardGrande titulo='Monitorias' img={students} />
-          <CardGrande titulo='Depoimentos' img={review} />
+          <CardGrande titulo='Monitores' img={teacher} link='/monitorias/#monitores' />
+          <CardGrande titulo='Monitorias' img={students} link='/monitorias/#monitorias' />
+          <CardGrande titulo='Depoimentos' img={review} link='' />
         </motion.div>
       </section>
       <section className={styles.section2}>
@@ -331,7 +331,6 @@ export default function Home() {
               ani={dinheiro} />
           </Reveal>
         </div>
-
       </section>
     </main>
   )

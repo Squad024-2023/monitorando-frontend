@@ -4,6 +4,7 @@ import axios from 'axios';
 import Input from '@/components/form/input/Input'
 import styles from '../../gestao.module.css'
 import BotaoForm from '@/components/form/botao/BotaoForm'
+import BotaoVoltar from '@/components/form/botaoVoltar/BotaoVoltar'
 
 export default function BuscarAluno() {
     type Aluno = {
@@ -76,8 +77,9 @@ export default function BuscarAluno() {
                     </div>
                 </div>
             </div>
-
-
+            <div className={styles.linksUteis}>
+                <BotaoVoltar />
+            </div>
         </section>
     )
 }

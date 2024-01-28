@@ -5,14 +5,15 @@ import Image from 'next/image'
 type Props = {
     titulo: string  //titulo do card
     img: any //imagem do card
+    link: string //link do card
 }
 
 
-export default function CardGrande({ titulo, img }: Props) {
+export default function CardGrande({ titulo, img, link }: Props) {
 
 
     return (
-        <Link href='/'
+        <Link href={link}
             className={styles.cardWrapper}>
             <Image
                 src={img}

@@ -7,6 +7,7 @@ import Image from 'next/image';
 import edit from '@/public/icons/edit-32-32.svg';
 import deleteI from '@/public/icons/delete-32-32.svg'
 import styles from '../gestao.module.css';
+import BotaoVoltar from '@/components/form/botaoVoltar/BotaoVoltar';
 
 type Professores = {
     id: string;
@@ -84,7 +85,7 @@ export default function Professores() {
                                 <td>{professor.dataNascimento}</td>
                                 <td>{professor.email}</td>
                                 <td>{professor.tipoUsuario}</td>
-                                     <td>
+                                <td>
                                     <div className={styles.arrays} >
                                         {professor.disciplinas.map((disciplina, index) => (
                                             <span key={index}>{disciplina.nome}</span>
@@ -120,6 +121,9 @@ export default function Professores() {
                         ))}
                     </tbody>
                 </table>
+            </div>
+            <div className={styles.linksUteis}>
+                <BotaoVoltar />
             </div>
         </section>
     )

@@ -5,7 +5,6 @@
     justify-content: center;
     align-items: center;
     border-radius: 1rem;
-    box-shadow: .1rem .1rem .5rem rgba(var(--cinza-escuro-rgb), 0.3);
 }
 
 .lottie {

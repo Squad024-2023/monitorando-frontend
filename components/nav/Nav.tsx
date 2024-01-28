@@ -28,6 +28,7 @@ export default function Nav() {
   const handleLinkClick = () => {
     //fechar a navbar quando clicar em algum link
     setDrop(true);
+    aniInstanceRef.current.playSegments([60, 0], true);
   };
 
 

@@ -192,3 +192,26 @@ input:not(:placeholder-shown)+.span {
     transition: all 0.3s ease-in-out;
     background-color: #fff;
 }
+
+.botaoVoltar {
+    height: 4rem;
+    width: 12rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: clamp(1.2rem, 2.5vw, 1.6rem);
+    color: rgba(var(--cinza-escuro-rgb));
+    border-radius: 1rem;
+    font-weight: 600;
+    background-color: rgba(var(--sal-rgb));
+    box-shadow: .2rem .2rem .6rem rgba(var(--cinza-escuro-rgb), 0.6);
+    cursor: pointer;
+}
+
+
+.botaoVoltar:hover {
+    font-size: clamp(1.2rem, 2.5vw, 1.6rem);
+    color: rgba(var(--sal-rgb));
+    background-color: rgba(var(--cinza-escuro-rgb));
+    border: solid .2rem rgba(var(--sal-rgb));
+}

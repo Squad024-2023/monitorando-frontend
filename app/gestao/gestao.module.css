@@ -74,6 +74,28 @@
     background-color: rgba(var(--cinza-escuro-rgb));
 }
 
+.linksUteis {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.linksUteis a {
+    height: 4rem;
+    width: 12rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: clamp(1.2rem, 2.5vw, 1.6rem);
+    color: rgba(var(--cinza-escuro-rgb));
+    border-radius: 1rem;
+    font-weight: 600;
+    background-color: rgba(var(--sal-rgb));
+    box-shadow: .2rem .2rem .6rem rgba(var(--cinza-escuro-rgb), 0.6);
+}
+
 .textoGestao {
     width: 100%;
     max-width: 70rem;
@@ -97,7 +119,8 @@
     font-size: clamp(1.2rem, 2.5vw, 1.6rem);
     color: rgba(var(--sal-rgb));
 }
-.textoGestao p span{
+
+.textoGestao p span {
     font-size: clamp(1.4rem, 2.5vw, 1.8rem);
     color: rgba(var(--verde-claro-rgb));
 }
@@ -536,22 +559,27 @@
         content: 'Matéria da Turma: ';
         font-weight: 600;
     }
+
     .turmas .table td:nth-child(3)::before {
         content: 'Tipo de Turma: ';
         font-weight: 600;
     }
+
     .turmas .table td:nth-child(4)::before {
         content: 'Data da Aula: ';
         font-weight: 600;
     }
+
     .turmas .table td:nth-child(5)::before {
         content: 'Professor: ';
         font-weight: 600;
     }
+
     .turmas .table td:nth-child(6)::before {
         content: 'Alunos: ';
         font-weight: 600;
     }
+
     .turmas .table td:nth-child(7)::before {
         content: 'Ações: ';
         font-weight: 600;
@@ -563,4 +591,3 @@
     }
 
 }
-

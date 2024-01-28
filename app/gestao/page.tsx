@@ -1,3 +1,4 @@
+import BotaoVoltar from '@/components/form/botaoVoltar/BotaoVoltar'
 import styles from './gestao.module.css'
 import Link from 'next/link'
 
@@ -18,6 +19,9 @@ export default function Gestao() {
         <p>Só é possível cadastrar uma Turma, após o cadastro de ao menos um Professor.</p>
         <p>Essas diretrizes são baseadas no modelo de negócios do projeto monitorando e devem ser seguidas.</p>
         <p>Qualquer dúvida ou sugestão, favor entrar em contato com algum dos nossos desenvolvedores.</p>
+        <div className={styles.linksUteis}>
+          <BotaoVoltar />
+        </div>
       </div>
     </section>
   )
