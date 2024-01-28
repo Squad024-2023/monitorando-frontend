@@ -52,8 +52,8 @@ export default function Login() {
               <input type="text" name='tipoUsuario' value='USER' readOnly hidden />
               <RadioInput
                 name="tipoUsuario"
-                texto1="ADMIN"
-                texto2="USER"
+                texto1="Aluno"
+                texto2="Professor"
                 value={selectedValue}
                 onChange={handleRadioChange}
               />
