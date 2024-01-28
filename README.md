@@ -1,9 +1,8 @@
 <img src="./public/github/logo-pink.png">
 
-<div style="text-align: right;">
-  <p>Seu sucesso acadêmico começa aqui! 🎓</p>
+<div style="text-align: right">
+  <p>Seu sucesso acadêmico começa aqui! 🎓 </p>
 </div>
-
 
 ## Índice
 - <a href="#sobre-o-projeto"> Sobre o projeto </a>
@@ -12,7 +11,7 @@
 - <a href="#layout"> Layout </a>
 - <a href="#contruibuição"> Contruibuição </a>
 - <a href="#colaboradores"> Colaboradores </a>
-- <a href="#seja-um-doador"> Seja um doador </a>
+- <a href="#seja-um-doador"> Seja um doador </a>  
 
 <br>
 
@@ -96,15 +95,16 @@ npm rum dev
 
 ## Layout
 
-Demonstração da página inicial do nosso site:
+Demonstração da página inicial do nosso site: **https://monitorando-chi.vercel.app/**
 <br>
 
-<img src="./public/github/site-mobile.png">
-<img src="./public/github/Monitorando1.png">
-<img src= "./public/github/Monitorando2.png">
-<img src= "./public/github/Monitorando3.png">
-<img src= "./public/github/Monitorando4.png">
-<img src= "./public/github/Monitorando5.png">
+
+<img src="./public/github/site-mobile.png" alt="layout-responsivel">
+<img src="./public/github/Monitorando1.png" alt="tela1">
+<img src= "./public/github/Monitorando2.png" alt="tela2">
+<img src= "./public/github/Monitorando3.png" alt="tela3">
+<img src= "./public/github/Monitorando4.png" alt="tela4">
+<img src= "./public/github/Monitorando5.png" alt="tela5">
 
 <br>
 
