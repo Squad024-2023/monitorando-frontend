@@ -60,7 +60,7 @@
 .textoTela1 h5 {
   font-weight: 400;
   max-width: 50rem;
-  font-size: calc(1.6rem + .2vw);
+  font-size: calc(1.6rem + .5vw);
   color: rgba(var(--verde-escuro-rgb), 1);
 }
 

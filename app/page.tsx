@@ -1,5 +1,5 @@
 'use client'
-import { useState, useEffect, useRef } from 'react'
+import { useState, useEffect} from 'react'
 import { motion } from 'framer-motion'
 import { Reveal } from '@/components/reveal/Reveal'
 import styles from './page.module.css'

@@ -1,3 +1,5 @@
+'use client'
+import { motion } from 'framer-motion'
 import { Reveal } from '@/components/reveal/Reveal'
 import styles from './o-que-fazemos.module.css'
 import Image from 'next/image'
@@ -9,11 +11,26 @@ import results from '@/public/images/results.webp'
 
 export default function OqueFazemos() {
 
+  const variantes = {
+    hidden: { opacity: 0, x: -20 },
+    visible: { opacity: 1, x: 0 },
+  }
+  const variantes2 = {
+    hidden: { opacity: 0, x: 20 },
+    visible: { opacity: 1, x: 0 },
+  }
+
+
   return (
     <main className={styles.main}>
       <section className={styles.section1}>
         <div className={styles.tela1}>
-          <div className={styles.textoTela1}>
+          <motion.div className={styles.textoTela1}
+            variants={variantes}
+            initial='hidden'
+            animate='visible'
+            transition={{ duration: 0.6, delay: 0.45 }}
+          >
             <h1>O Que Fazemos?</h1>
             <h5>Atualmente temos mais de 200 mil horas de aprendizado, divididas entre mentorias e monitorias para alunos em mais de 15 estados brasileiros e 300 universidades diferentes.</h5>
             <Image
@@ -24,15 +41,23 @@ export default function OqueFazemos() {
               placeholder='blur'
               alt='Imagem de estudante com notebook'
             />
-          </div>
-          <Image
+          </motion.div>
+          <motion.div
             className={styles.imagemTela1}
-            src={student}
-            priority
-            quality={100}
-            placeholder='blur'
-            alt='Imagem de estudante com notebook'
-          />
+            variants={variantes2}
+            initial='hidden'
+            animate='visible'
+            transition={{ duration: 0.6, delay: 0.45 }}
+          >
+            <Image
+              className={styles.imagemTela1}
+              src={student}
+              priority
+              quality={100}
+              placeholder='blur'
+              alt='Imagem de estudante com notebook'
+            />
+          </motion.div>
         </div>
       </section>
       <section className={styles.section2}>
