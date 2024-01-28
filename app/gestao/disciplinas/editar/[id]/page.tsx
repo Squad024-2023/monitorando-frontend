@@ -5,7 +5,6 @@ import axios from 'axios';
 import styles from '../../../gestao.module.css';
 import Formulario from '@/components/form/Formulario';
 import Input from '@/components/form/input/Input';
-import RadioInput from '@/components/form/radio/RadioInput';
 import BotaoForm from '@/components/form/botao/BotaoForm';
 
 
@@ -24,7 +23,7 @@ export default function EditarDiscplina({ params }: { params: { id: any } }) {
     useEffect(() => {
         // Faça uma chamada GET para a API para obter detalhes do disciplina a ser atualizado
         axios
-            .get("http://localhost:8080/disciplinas/" + params.id)
+            .get("https://monitorando-deploy.onrender.com/disciplinas/" + params.id)
             .then((response) => {
                 setDisciplina(response.data);
             })
@@ -44,7 +43,7 @@ export default function EditarDiscplina({ params }: { params: { id: any } }) {
 
         console.log(disciplina);
         axios
-            .put("http://localhost:8080/disciplinas/" + params.id, disciplina)
+            .put("https://monitorando-deploy.onrender.com/disciplinas/" + params.id, disciplina)
             .then((response) => {
                 alert("Disciplina atualizado com sucesso!");
                 router.push('/gestao/disciplinas');

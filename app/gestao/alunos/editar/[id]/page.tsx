@@ -38,7 +38,7 @@ export default function EditarAlunos({ params }: { params: { id: any } }) {
     useEffect(() => {
         // Faça uma chamada GET para a API Spring Boot
         axios
-            .get('http://localhost:8080/turmas')
+            .get('https://monitorando-deploy.onrender.com/turmas')
             .then((response) => {
                 setTurmas(response.data);
             })
@@ -50,7 +50,7 @@ export default function EditarAlunos({ params }: { params: { id: any } }) {
     useEffect(() => {
         // Faça uma chamada GET para a API para obter detalhes do aluno a ser atualizado
         axios
-            .get("http://localhost:8080/alunos/" + params.id)
+            .get("https://monitorando-deploy.onrender.com/alunos/" + params.id)
             .then((response) => {
                 setAluno(response.data);
             })
@@ -84,7 +84,7 @@ export default function EditarAlunos({ params }: { params: { id: any } }) {
 
         console.log(aluno);
         axios
-            .put("http://localhost:8080/alunos/" + params.id, aluno)
+            .put("https://monitorando-deploy.onrender.com/alunos/" + params.id, aluno)
             .then((response) => {
                 alert("Aluno atualizado com sucesso!");
                 router.push('/gestao/alunos');
@@ -105,25 +105,6 @@ export default function EditarAlunos({ params }: { params: { id: any } }) {
                     <Input type='email' nome='email' placeholder='E-mail' value={aluno.email} onChange={handleInputChange} />
                     <input type="text" name='tipoUsuario' value='USER' hidden />
                     <Input type='password' nome='senha' placeholder='Senha' value={aluno.senha} onChange={handleInputChange} />
-                    {/* <div className={styles.checks}>
-                        <span className={styles.checksSpan}>Disciplinas</span>
-                        <div className={styles.checksOpcoes}>
-                            {turmas.map((turma, index) => (
-                                <label key={index} htmlFor={turma.id}>
-                                    <input
-                                        name={turma.materiaTurma}
-                                        type='checkbox'
-                                        id={turma.id}
-                                        defaultChecked={aluno.turmas.some((d) => d.id === turma.id)}
-                                        value={turma.id}
-                                        onChange={handleInputChange}
-
-                                    />
-                                    <span>{turma.materiaTurma}</span>
-                                </label>
-                            ))}
-                        </div>
-                    </div> */}
                     <BotaoForm type='submit' texto='Atualizar' onClick={handleUpdateProfessor} />
                 </Formulario>
             </div>

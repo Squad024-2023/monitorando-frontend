@@ -1,6 +1,6 @@
 'use client'
 import { useState, useEffect, useRef } from 'react'
-import { useScroll, useTransform, motion } from 'framer-motion'
+import { motion } from 'framer-motion'
 import styles from './page.module.css'
 import Image from 'next/image'
 import seta from '@/public/icons/arrow-rosa.json'
@@ -33,6 +33,7 @@ import check from '@/public/icons/check.json'
 import gratis from '@/public/images/gratis.svg'
 import comprar from '@/public/images/comprar.svg'
 import dinheiro from '@/public/images/dinheiro.svg'
+import { Reveal } from '@/components/reveal/Reveal'
 
 
 export default function Home() {
@@ -89,10 +90,20 @@ export default function Home() {
   return (
     <main className={styles.main}>
       <section
-       className={styles.section1} 
-       >
+        className={styles.section1}
+      >
         <HeroImage img={heroImage} />
-        <div className={styles.tela1}>
+        <motion.div
+          className={styles.tela1}
+          variants={{
+            hidden: { opacity: 0, y: 75 },
+            visible: { opacity: 1, y: 0 },
+          }}
+          initial='hidden'
+          animate='visible'
+          transition={{ duration: 0.6, delay: 0.5 }}
+
+        >
           <div className={styles.textoTela1}>
             <h1>Seu <span>sucesso acadêmico começa aqui</span></h1>
             <p>Com monitorias e mentorias personalizadas, didáticas atuais e uma boa dose de empatia,
@@ -103,13 +114,22 @@ export default function Home() {
             <CtaPrimario link='/' conteudo='Quero aprender' ani={seta} />
             <CtaSecundario link='/' conteudo='Quero ensinar' ani={professor} />
           </div>
-
-        </div>
-        <div className={styles.cardContainer}>
+        </motion.div>
+        <motion.div
+          className={styles.cardContainer}
+          variants={{
+            hidden: { opacity: 0, y: 75 },
+            visible: { opacity: 1, y: 0 },
+        }}
+        initial='hidden'
+        animate='visible'
+        transition={{duration: 0.6, delay: 1.5}}
+          
+          >
           <CardGrande titulo='Monitores' img={teacher} />
           <CardGrande titulo='Monitorias' img={students} />
           <CardGrande titulo='Depoimentos' img={review} />
-        </div>
+        </motion.div>
       </section>
       <section className={styles.section2}>
         <div className={styles.tela2}>

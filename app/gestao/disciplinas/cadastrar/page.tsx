@@ -5,7 +5,6 @@ import axios from 'axios';
 import styles from '../../gestao.module.css';
 import Formulario from '@/components/form/Formulario';
 import Input from '@/components/form/input/Input';
-import RadioInput from '@/components/form/radio/RadioInput';
 import BotaoForm from '@/components/form/botao/BotaoForm';
 
 type Disciplina = {
@@ -36,7 +35,7 @@ export default function CadastrarDisciplinas() {
     const handleAddDisciplina = (e: FormEvent) => {
         e.preventDefault(); // Previne o reload completo da página após o submit
         axios
-            .post("http://localhost:8080/disciplinas", novaDisciplina)
+            .post("https://monitorando-deploy.onrender.com/disciplinas", novaDisciplina)
             .then((response) => {
                 alert("Disciplina cadastrada com sucesso!");
                 router.push("/gestao/disciplinas");

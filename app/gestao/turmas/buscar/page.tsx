@@ -41,7 +41,7 @@ export default function TurmasProfessor() {
 
         console.log(turma);
         axios
-            .get(`http://localhost:8080/turmas/${id}`)
+            .get(`https://monitorando-deploy.onrender.com/turmas/${id}`)
             .then((response) => {
                 setTurma(response.data);
             })

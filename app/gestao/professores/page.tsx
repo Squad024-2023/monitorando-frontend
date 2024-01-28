@@ -31,7 +31,7 @@ export default function Professores() {
     useEffect(() => {
         // Faça uma chamada GET para a API Spring Boot
         axios
-            .get('http://localhost:8080/professores')
+            .get('https://monitorando-deploy.onrender.com/professores')
             .then((response) => {
                 setProfessores(response.data);
             })
@@ -43,7 +43,7 @@ export default function Professores() {
     const handleDeleteProfessor = (id: string) => {
         console.log('o id é: ' + id);
         axios
-            .delete(`http://localhost:8080/professores/${id}`)
+            .delete(`https://monitorando-deploy.onrender.com/professores/${id}`)
             .then((response) => {
                 alert("Professor deletado com sucesso!");
                 // Atualizar o estado baseado no professor deletado

@@ -26,7 +26,7 @@ export default function Alunos() {
     useEffect(() => {
         // Faça uma chamada GET para a API Spring Boot
         axios
-            .get('http://localhost:8080/alunos')
+            .get('https://monitorando-deploy.onrender.com/alunos')
             .then((response) => {
                 setAlunos(response.data);
                 console.log(response.data);
@@ -39,7 +39,7 @@ export default function Alunos() {
     const handleDeleteAluno = (id: string) => {
         console.log('o id é: ' + id);
         axios
-            .delete(`http://localhost:8080/alunos/${id}`)
+            .delete(`https://monitorando-deploy.onrender.com/alunos/${id}`)
             .then((response) => {
                 alert("Aluno deletado com sucesso!");
                 // Atualizar o estado baseado no Aluno deletado

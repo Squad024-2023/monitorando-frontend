@@ -20,7 +20,7 @@ export default function Disciplinas() {
     useEffect(() => {
         // Faça uma chamada GET para a API Spring Boot
         axios
-            .get('http://localhost:8080/disciplinas')
+            .get('https://monitorando-deploy.onrender.com/disciplinas')
             .then((response) => {
                 setDisciplinas(response.data);
             })
@@ -32,7 +32,7 @@ export default function Disciplinas() {
     const handleDeleteDisciplina = (id: string) => {
         console.log('o id é: ' + id);
         axios
-            .delete(`http://localhost:8080/disciplinas/${id}`)
+            .delete(`https://monitorando-deploy.onrender.com/disciplinas/${id}`)
             .then((response) => {
                 alert("Disciplina deletada com sucesso!");
                 // Atualizar o estado baseado no professor deletado

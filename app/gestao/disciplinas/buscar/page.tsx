@@ -26,7 +26,7 @@ export default function BuscarDisciplina() {
         e.preventDefault(); // Previne o reload completo da página após o submit
 
         axios
-            .get(`http://localhost:8080/disciplinas/${id}`)
+            .get(`https://monitorando-deploy.onrender.com/disciplinas/${id}`)
             .then((response) => {
                 setDisciplina(response.data);
             })

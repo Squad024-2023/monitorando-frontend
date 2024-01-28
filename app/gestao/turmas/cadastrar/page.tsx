@@ -41,8 +41,8 @@ export default function CadastrarTurmas() {
     useEffect(() => {
         // Fetch professors and students only once
         Promise.all([
-            axios.get('http://localhost:8080/professores'),
-            axios.get('http://localhost:8080/alunos'),
+            axios.get('https://monitorando-deploy.onrender.com/professores'),
+            axios.get('https://monitorando-deploy.onrender.com/alunos'),
         ])
             .then(([professoresResponse, alunosResponse]) => {
                 setProfessores(professoresResponse.data);
@@ -81,7 +81,7 @@ export default function CadastrarTurmas() {
     const handleAddTurma = (e: FormEvent) => {
         e.preventDefault();
         axios
-            .post("http://localhost:8080/turmas", novaTurma)
+            .post("https://monitorando-deploy.onrender.com/turmas", novaTurma)
             .then((response) => {
                 alert("Turma cadastrada com sucesso!");
                 router.push("/gestao/turmas");

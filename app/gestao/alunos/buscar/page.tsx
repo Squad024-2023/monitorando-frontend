@@ -34,7 +34,7 @@ export default function BuscarAluno() {
 
         console.log(aluno);
         axios
-            .get(`http://localhost:8080/alunos/${id}`)
+            .get(`https://monitorando-deploy.onrender.com/alunos/${id}`)
             .then((response) => {
                 setAluno(response.data);
             })

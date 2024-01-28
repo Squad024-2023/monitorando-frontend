@@ -43,7 +43,7 @@ export default function EditarProfessores({ params }: { params: { id: any } }) {
     useEffect(() => {
         // Faça uma chamada GET para a API Spring Boot
         axios
-            .get('http://localhost:8080/disciplinas')
+            .get('https://monitorando-deploy.onrender.com/disciplinas')
             .then((response) => {
                 setDisciplinas(response.data);
             })
@@ -55,7 +55,7 @@ export default function EditarProfessores({ params }: { params: { id: any } }) {
     useEffect(() => {
         // Faça uma chamada GET para a API para obter detalhes do professor a ser atualizado
         axios
-            .get("http://localhost:8080/professores/" + params.id)
+            .get("https://monitorando-deploy.onrender.com/professores/" + params.id)
             .then((response) => {
                 setProfessor(response.data);
             })
@@ -87,7 +87,7 @@ export default function EditarProfessores({ params }: { params: { id: any } }) {
 
         console.log(professor);
         axios
-            .put("http://localhost:8080/professores/" + params.id, professor)
+            .put("https://monitorando-deploy.onrender.com/professores/" + params.id, professor)
             .then((response) => {
                 alert("Professor atualizado com sucesso!");
                 router.push('/gestao/professores');
