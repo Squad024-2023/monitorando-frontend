@@ -95,7 +95,7 @@ npm rum dev
 
 ## Layout
 
-Demonstração da página inicial do nosso site: **https://monitorando-chi.vercel.app/**
+Demonstração da página inicial do nosso site: <a href="https://monitorando-chi.vercel.app/" target="_blank"> <b> https://monitorando-chi.vercel.app/  </b> </a>
 <br>
 
 
