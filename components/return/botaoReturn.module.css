@@ -1,0 +1,20 @@
+.return {
+    position: fixed;
+    right: 2rem;
+    bottom: 2rem;
+    width: 4rem;
+    height: 4rem;
+    z-index: 10;
+    border-radius: 1rem;
+    background-color: rgb(var(--cinza-escuro-rgb));
+    box-shadow: .1rem .1rem .5rem rgba(var(--cinza-escuro-rgb), 0.3);
+}
+
+.lottie {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 4rem;
+    aspect-ratio: 1/1;
+}
