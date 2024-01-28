@@ -69,6 +69,7 @@ body {
   font-size: 1.4rem;
   background-color: white;
   font-family: var(--font-inter);
+  position: relative;
 }
 
 

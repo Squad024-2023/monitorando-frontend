@@ -41,7 +41,6 @@ export default function Nav() {
         loop: false,
         autoplay: false,
         animationData: hamb,
-
       });
 
       return () => {
@@ -52,31 +51,51 @@ export default function Nav() {
     }
   }, [hamb]);
 
+  const variantes = {
+    hidden: { opacity: 0, y: -20 },
+    visible: { opacity: 1, y: 0 },
+  }
+
 
 
   return (
-    <nav className={styles.nav}>
+    <nav className={styles.nav} id='nav'>
       <Logo />
       <button className={styles.btn} onClick={handleClickEvent}>
         <div ref={container} className={styles.lottie}></div>
       </button>
       <menu className={`${styles.menuNav} ${drop ? styles.hide : ''}`}>
-
         <motion.li
-          variants={{
-            hidden: { opacity: 0, y: -20 },
-            visible: { opacity: 1, y: 0 },
-          }}
+          variants={variantes}
           initial='hidden'
           animate='visible'
           transition={{ duration: 0.6, delay: 0.25 }}
         ><Link className={pathname === '/quem-somos' ? styles.active : ''} href='/quem-somos' onClick={handleLinkClick}>Quem Somos</Link></motion.li>
-        <motion.li><Link className={pathname === '/o-que-fazemos' ? styles.active : ''} href='/o-que-fazemos' onClick={handleLinkClick}>O Que Fazemos</Link></motion.li>
-        <motion.li><Link className={pathname === '/monitorias' ? styles.active : ''} href='/monitorias' onClick={handleLinkClick}>Monitorias</Link></motion.li>
-        <motion.li><Link className={pathname === '/login' ? styles.active : ''} href='/login' onClick={handleLinkClick}>Login</Link></motion.li>
-        <motion.li><Link className={pathname === '/gestao' ? styles.active : ''} href='/gestao' onClick={handleLinkClick}>Gestão</Link></motion.li>
-        <motion.li onClick={handleLinkClick}><Doar /></motion.li>
-
+        <motion.li variants={variantes}
+          initial='hidden'
+          animate='visible'
+          transition={{ duration: 0.6, delay: 0.35 }}
+        ><Link className={pathname === '/o-que-fazemos' ? styles.active : ''} href='/o-que-fazemos' onClick={handleLinkClick}>O Que Fazemos</Link></motion.li>
+        <motion.li variants={variantes}
+          initial='hidden'
+          animate='visible'
+          transition={{ duration: 0.6, delay: 0.45 }}
+        ><Link className={pathname === '/monitorias' ? styles.active : ''} href='/monitorias' onClick={handleLinkClick}>Monitorias</Link></motion.li>
+        <motion.li variants={variantes}
+          initial='hidden'
+          animate='visible'
+          transition={{ duration: 0.6, delay: 0.55 }}
+        ><Link className={pathname === '/login' ? styles.active : ''} href='/login' onClick={handleLinkClick}>Login</Link></motion.li>
+        <motion.li variants={variantes}
+          initial='hidden'
+          animate='visible'
+          transition={{ duration: 0.6, delay: 0.65 }}
+        ><Link className={pathname === '/gestao' ? styles.active : ''} href='/gestao' onClick={handleLinkClick}>Gestão</Link></motion.li>
+        <motion.li onClick={handleLinkClick}
+          initial='hidden'
+          animate='visible'
+          transition={{ duration: 0.6, delay: 0.75 }}
+        ><Doar /></motion.li>
       </menu>
     </nav>
   )

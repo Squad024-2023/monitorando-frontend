@@ -6,6 +6,7 @@
     margin-bottom: 5rem;
     padding-left: 5rem;
     background-color: red;
+    scroll-behavior: smooth;
 }
 
 .gestao,
@@ -95,6 +96,10 @@
 .textoGestao p {
     font-size: clamp(1.2rem, 2.5vw, 1.6rem);
     color: rgba(var(--sal-rgb));
+}
+.textoGestao p span{
+    font-size: clamp(1.4rem, 2.5vw, 1.8rem);
+    color: rgba(var(--verde-claro-rgb));
 }
 
 

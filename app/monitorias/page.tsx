@@ -1,5 +1,6 @@
 'use client'
 import { useRef, useEffect, ChangeEvent, useState } from 'react'
+import { Reveal } from '@/components/reveal/Reveal'
 import lottie from 'lottie-web'
 import styles from './monitorias.module.css'
 import CardPessoa from '@/components/cardPessoa/CardPessoa'
@@ -30,7 +31,6 @@ import buscar from '@/public/icons/buscar.json'
 
 export default function Monitorias() {
 
-
   const container = useRef<HTMLDivElement | null>(null) //necessário para a animação do lottie funcionar no hover do botão inteiro
   const aniInstanceRef = useRef<any>(null) //necessário para cada botão ter sua própria instância do lottie 
 
@@ -41,9 +41,7 @@ export default function Monitorias() {
         loop: false,
         autoplay: false,
         animationData: buscar,
-
       });
-
       return () => {
         if (aniInstanceRef.current) {
           aniInstanceRef.current.destroy();
@@ -52,109 +50,116 @@ export default function Monitorias() {
     }
   }, [buscar]);
 
+  
   const [selectedValue, setSelectedValue] = useState('');
-
   const handleRadioChange = (event: ChangeEvent<HTMLInputElement>) => {
     setSelectedValue(event.target.value);
   };
-
-
 
   return (
     <main className={styles.main}>
       <section className={styles.section1}>
         <div className={styles.tela1}>
-          <form className={styles.form}>
-            <h1>Encontre seu monitor particular ou sua turma</h1>
-            <div className={styles.busca}>
-              <label htmlFor="disciplina">
-                <input type="text" placeholder="Procure sua disciplina" name='disciplina' />
-                <span className={styles.span}>Buscar por matéria</span>
-              </label>
-              <button type='button' className={styles.buscaBtn}>
-                <div
-                  className={styles.lottieContainer}
-                  onMouseEnter={() => aniInstanceRef.current && aniInstanceRef.current.play()}
-                  onMouseLeave={() => aniInstanceRef.current && aniInstanceRef.current.stop()}
-                >
-                  <div ref={container}
-                    className={styles.lottie}>
+          <Reveal delay={0.25}>
+            <form className={styles.form}>
+              <h1>Encontre seu monitor particular ou sua turma</h1>
+              <div className={styles.busca}>
+                <label htmlFor="disciplina">
+                  <input type="text" placeholder="Procure sua disciplina" name='disciplina' />
+                  <span className={styles.span}>Buscar por matéria</span>
+                </label>
+                <button type='button' className={styles.buscaBtn}>
+                  <div
+                    className={styles.lottieContainer}
+                    onMouseEnter={() => aniInstanceRef.current && aniInstanceRef.current.play()}
+                    onMouseLeave={() => aniInstanceRef.current && aniInstanceRef.current.stop()}
+                  >
+                    <div ref={container}
+                      className={styles.lottie}>
+                    </div>
                   </div>
-                </div>
-
-              </button>
-            </div>
-            <h4>Selecione o tipo de aula</h4>
-            <div className={styles.radioContainer}>
-              <label>
-                <input type='radio' id='coletiva' name='turma' value="coletiva"></input>
-                Turma Coletiva
-              </label>
-              <label>
-                <input type='radio' id='individual' name='turma' value="individual"></input>
-                Turma Individual</label>
-            </div>
-          </form>
+                </button>
+              </div>
+              <h4>Selecione o tipo de aula</h4>
+              <div className={styles.radioContainer}>
+                <label>
+                  <input type='radio' id='coletiva' name='turma' value="coletiva"></input>
+                  Turma Coletiva
+                </label>
+                <label>
+                  <input type='radio' id='individual' name='turma' value="individual"></input>
+                  Turma Individual</label>
+              </div>
+            </form>
+          </Reveal>
         </div>
         <div className={styles.section1Tela2}>
           <h1>Monitores em Destaque</h1>
           <div className={styles.cardWrapper}>
-            <CardPessoa img={kaua}
-              nome='Kauã Alves'
-              descricao='Desenvolvedor FullStack'
-              linked='https://www.linkedin.com/in/kaua-amelo96'
-              git='https://github.com/kauaamelo'
-            />
-
-            <CardPessoa img={bianca}
-              nome='Bianca Tayla'
-              descricao='Desenvolvedora FullStack'
-              linked='https://www.linkedin.com/in/bianca-t-7b5972255'
-              git='https://github.com/Y777-CoderTech'
-            />
-
-            <CardPessoa img={mariana}
-              nome='Mariana Moreira'
-              descricao='Desenvolvedora FullStack'
-              linked='https://www.linkedin.com/in/mariana-moreira-santos-39417828a'
-              git='https://github.com/mari-moreira'
-            />
-
-            <CardPessoa img={nayara}
-              nome='Nayara Pereira'
-              descricao='Desenvolvedora FullStack'
-              linked='https://www.linkedin.com/in/nayarabpereira'
-              git='https://github.com/nxyara'
-            />
-
-            <CardPessoa img={arthur}
-              nome='Arthur Bernard'
-              descricao='Desenvolvedor FullStack'
-              linked='https://www.linkedin.com/in/ber-arthur/'
-              git='https://github.com/Daedaluzz'
-            />
-
-
-            <CardPessoa img={arthur}
-              nome='Arthur Bernard'
-              descricao='Desenvolvedor FullStack'
-              linked='https://www.linkedin.com/in/ber-arthur/'
-              git='https://github.com/Daedaluzz'
-            />
-
-            <CardPessoa img={arthur}
-              nome='Arthur Bernard'
-              descricao='Desenvolvedor FullStack'
-              linked='https://www.linkedin.com/in/ber-arthur/'
-              git='https://github.com/Daedaluzz'
-            />
-
-            <CardPessoa img={arthur}
-              nome='Arthur Bernard'
-              descricao='Desenvolvedor FullStack'
-              linked='https://www.linkedin.com/in/ber-arthur/'
-              git='https://github.com/Daedaluzz'
-            />
+            <Reveal delay={0.25}>
+              <CardPessoa img={kaua}
+                nome='Kauã Alves'
+                descricao='Desenvolvedor FullStack'
+                linked='https://www.linkedin.com/in/kaua-amelo96'
+                git='https://github.com/kauaamelo'
+              />
+            </Reveal>
+            <Reveal delay={0.35}>
+              <CardPessoa img={bianca}
+                nome='Bianca Tayla'
+                descricao='Desenvolvedora FullStack'
+                linked='https://www.linkedin.com/in/bianca-t-7b5972255'
+                git='https://github.com/Y777-CoderTech'
+              />
+            </Reveal>
+            <Reveal delay={0.45}>
+              <CardPessoa img={mariana}
+                nome='Mariana Moreira'
+                descricao='Desenvolvedora FullStack'
+                linked='https://www.linkedin.com/in/mariana-moreira-santos-39417828a'
+                git='https://github.com/mari-moreira'
+              />
+            </Reveal>
+            <Reveal delay={0.55}>
+              <CardPessoa img={nayara}
+                nome='Nayara Pereira'
+                descricao='Desenvolvedora FullStack'
+                linked='https://www.linkedin.com/in/nayarabpereira'
+                git='https://github.com/nxyara'
+              />
+            </Reveal>
+            <Reveal delay={0.65}>
+              <CardPessoa img={arthur}
+                nome='Arthur Bernard'
+                descricao='Desenvolvedor FullStack'
+                linked='https://www.linkedin.com/in/ber-arthur/'
+                git='https://github.com/Daedaluzz'
+              />
+            </Reveal>
+            <Reveal delay={0.75}>
+              <CardPessoa img={arthur}
+                nome='Arthur Bernard'
+                descricao='Desenvolvedor FullStack'
+                linked='https://www.linkedin.com/in/ber-arthur/'
+                git='https://github.com/Daedaluzz'
+              />
+            </Reveal>
+            <Reveal delay={0.85}>
+              <CardPessoa img={arthur}
+                nome='Arthur Bernard'
+                descricao='Desenvolvedor FullStack'
+                linked='https://www.linkedin.com/in/ber-arthur/'
+                git='https://github.com/Daedaluzz'
+              />
+            </Reveal>
+            <Reveal delay={0.95}>
+              <CardPessoa img={arthur}
+                nome='Arthur Bernard'
+                descricao='Desenvolvedor FullStack'
+                linked='https://www.linkedin.com/in/ber-arthur/'
+                git='https://github.com/Daedaluzz'
+              />
+            </Reveal>
           </div>
         </div>
       </section>
@@ -232,7 +237,6 @@ export default function Monitorias() {
               href='#historia'><LottieAnimation ani={histo} />
               História
             </Link>
-
             <Link
               prefetch={false}
               id='biologia'
@@ -240,7 +244,6 @@ export default function Monitorias() {
               href='#biologia'><LottieAnimation ani={bio} />
               Biologia
             </Link>
-
             <Link
               prefetch={false}
               id='fisica'
@@ -248,7 +251,6 @@ export default function Monitorias() {
               href='#fisica'><LottieAnimation ani={phis} />
               Física
             </Link>
-
             <Link
               prefetch={false}
               id='apresentacao'
@@ -256,7 +258,6 @@ export default function Monitorias() {
               href='#apresentacao'><LottieAnimation ani={apresentacao} />
               Apresentação de Projetos
             </Link>
-
             <Link
               id='criticas'
               className={styles.card}
@@ -280,16 +281,13 @@ export default function Monitorias() {
               texto2='Professor'
               value={selectedValue}
               onChange={handleRadioChange}
-            //  checked1={true} checked2={false}
-            //  onChange={}
             />
-
             <label htmlFor="duvidas"
               className={styles.duvidas} >
               <textarea placeholder='Dúvidas ou sugestões' name='duvidas' />
               <span className={styles.span}>Dúvidas ou sugestões</span>
             </label>
-            <button type='submit'> Enviar</button>
+            <button type='submit'>Enviar</button>
           </form>
         </div>
       </section>

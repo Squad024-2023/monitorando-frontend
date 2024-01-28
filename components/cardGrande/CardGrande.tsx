@@ -8,7 +8,6 @@ type Props = {
 }
 
 
-
 export default function CardGrande({ titulo, img }: Props) {
 
 
