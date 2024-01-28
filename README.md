@@ -1,6 +1,6 @@
 <img src="./public/github/logo-pink.png">
 
-<div style="text-align: right">
+<div style="text-align: right;">
   <p>Seu sucesso acadêmico começa aqui! 🎓 </p>
 </div>
 
