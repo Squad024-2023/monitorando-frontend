@@ -1,6 +1,8 @@
-![Logo](https://private-user-images.githubusercontent.com/142227461/284445758-82e728e1-2823-4830-96d1-19a1992804b0.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MDU3ODc3MjcsIm5iZiI6MTcwNTc4NzQyNywicGF0aCI6Ii8xNDIyMjc0NjEvMjg0NDQ1NzU4LTgyZTcyOGUxLTI4MjMtNDgzMC05NmQxLTE5YTE5OTI4MDRiMC5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjQwMTIwJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI0MDEyMFQyMTUwMjdaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT1lM2NiNmFmZTljM2VmZjU4NmZhMTBiNzA2MTZmNmFjMDljOGUzNTUwMmMwMmFhYTVlNThjYmYyYzM4YThhZDhjJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCZhY3Rvcl9pZD0wJmtleV9pZD0wJnJlcG9faWQ9MCJ9.YS84v-4UuUMSCgdSOFrxS4oblYQ3kPvXJ-vdv3MtIJA)
-|--------------------:|
-| Seu sucesso acadêmico começa aqui! 🎓 |
+<img src="./public/github/logo-pink.png">
+
+>  Seu sucesso acadêmico começa aqui! 🎓
+
+<br>
 
 ## Índice
 - <a href="#sobre-o-projeto"> Sobre o projeto </a>
@@ -9,7 +11,7 @@
 - <a href="#layout"> Layout </a>
 - <a href="#contruibuição"> Contruibuição </a>
 - <a href="#colaboradores"> Colaboradores </a>
-- <a href="#seja-um-doador"> Seja um doador </a>
+- <a href="#seja-um-doador"> Seja um doador </a>  
 
 <br>
 
@@ -93,14 +95,16 @@ npm rum dev
 
 ## Layout
 
-Demonstração da página inicial do nosso site:
+Demonstração da página inicial do nosso site: <a href="https://monitorando-chi.vercel.app/" target="_blank"> <b> https://monitorando-chi.vercel.app/  </b> </a>
 <br>
 
-<img src="./public/github/Monitorando1.png">
-<img src= "./public/github/Monitorando2.png">
-<img src= "./public/github/Monitorando3.png">
-<img src= "./public/github/Monitorando4.png">
-<img src= "./public/github/Monitorando5.png">
+
+<img src="./public/github/site-mobile.png" alt="layout-responsivel">
+<img src="./public/github/Monitorando1.png" alt="tela1">
+<img src= "./public/github/Monitorando2.png" alt="tela2">
+<img src= "./public/github/Monitorando3.png" alt="tela3">
+<img src= "./public/github/Monitorando4.png" alt="tela4">
+<img src= "./public/github/Monitorando5.png" alt="tela5">
 
 <br>
 
