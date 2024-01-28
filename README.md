@@ -1,10 +1,6 @@
 <img src="./public/github/logo-pink.png">
 
-<div>
-<div style="text-align: right;">
-  <p>Seu sucesso acadêmico começa aqui! 🎓 </p>
-</div>
-</div>
+>  Seu sucesso acadêmico começa aqui! 🎓
 
 ## Índice
 - <a href="#sobre-o-projeto"> Sobre o projeto </a>
