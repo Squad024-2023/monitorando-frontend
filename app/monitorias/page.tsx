@@ -93,7 +93,7 @@ export default function Monitorias() {
             </form>
           </Reveal>
         </div>
-        <div className={styles.section1Tela2}>
+        <div className={styles.section1Tela2} id='monitores'>
           <h1>Monitores em Destaque</h1>
           <div className={styles.cardWrapper}>
             <Reveal delay={0.25}>
@@ -163,9 +163,9 @@ export default function Monitorias() {
           </div>
         </div>
       </section>
-      <section className={styles.section2}>
+      <section className={styles.section2}  id='monitorias'>
         <div className={styles.tela2}>
-          <h1>Disciplinas mais solicitadas</h1>
+          <h1>Monitorias mais Acessadas</h1>
           <div className={styles.cardWrapperTela2}>
             <Link
               prefetch={false}

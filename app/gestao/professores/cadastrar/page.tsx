@@ -7,6 +7,7 @@ import Formulario from '@/components/form/Formulario';
 import Input from '@/components/form/input/Input';
 import RadioInput from '@/components/form/radio/RadioInput';
 import BotaoForm from '@/components/form/botao/BotaoForm';
+import BotaoVoltar from '@/components/form/botaoVoltar/BotaoVoltar';
 
 type Professor = {
     nome: string;
@@ -120,6 +121,9 @@ export default function CadastrarProfessores() {
                     </div>
                     <BotaoForm type='submit' texto='Cadastrar' onClick={handleAddProfessor} />
                 </Formulario>
+            </div>
+            <div className={styles.linksUteis}>
+                <BotaoVoltar />
             </div>
         </section>
     )

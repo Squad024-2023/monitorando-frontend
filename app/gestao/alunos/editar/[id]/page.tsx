@@ -5,8 +5,8 @@ import axios from 'axios';
 import styles from '../../../gestao.module.css';
 import Formulario from '@/components/form/Formulario';
 import Input from '@/components/form/input/Input';
-import RadioInput from '@/components/form/radio/RadioInput';
 import BotaoForm from '@/components/form/botao/BotaoForm';
+import BotaoVoltar from '@/components/form/botaoVoltar/BotaoVoltar';
 
 type Aluno = {
     nome: string;
@@ -107,6 +107,9 @@ export default function EditarAlunos({ params }: { params: { id: any } }) {
                     <Input type='password' nome='senha' placeholder='Senha' value={aluno.senha} onChange={handleInputChange} />
                     <BotaoForm type='submit' texto='Atualizar' onClick={handleUpdateProfessor} />
                 </Formulario>
+            </div>
+            <div className={styles.linksUteis}>
+                <BotaoVoltar />
             </div>
         </section>
     )

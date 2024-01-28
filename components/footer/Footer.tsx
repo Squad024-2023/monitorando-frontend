@@ -37,12 +37,12 @@ export default function Footer() {
                     <ul className={styles.mapaFooter}>
                         <h2 onClick={handleClickEvent}>Mapa do Site</h2>
                         <div className={drop ? styles.show : styles.hide} >
-                            <li><Link className={pathname === '/' ? styles.active : ''} href='/'>Home</Link></li>
-                            <li><Link className={pathname === '/quem-somos' ? styles.active : ''} href='/quem-somos'>Quem Somos</Link></li>
-                            <li><Link className={pathname === '/o-que-fazemos' ? styles.active : ''} href='/o-que-fazemos'>O Que Fazemos</Link></li>
-                            <li><Link className={pathname === '/monitorias' ? styles.active : ''} href='/monitorias'>Monitorias</Link></li>
-                            <li><Link className={pathname === '/login' ? styles.active : ''} href='/login'>Login</Link></li>
-                            <li><Link className={pathname === '/gestao' ? styles.active : ''} href='/gestao'>Gestão</Link></li>
+                            <li><Link className={pathname === '/' ? styles.active : ''} href='/' onClick={handleClickEvent}>Home</Link></li>
+                            <li><Link className={pathname === '/quem-somos' ? styles.active : ''} href='/quem-somos' onClick={handleClickEvent}>Quem Somos</Link></li>
+                            <li><Link className={pathname === '/o-que-fazemos' ? styles.active : ''} href='/o-que-fazemos' onClick={handleClickEvent}>O Que Fazemos</Link></li>
+                            <li><Link className={pathname === '/monitorias' ? styles.active : ''} href='/monitorias' onClick={handleClickEvent}>Monitorias</Link></li>
+                            <li><Link className={pathname === '/login' ? styles.active : ''} href='/login' onClick={handleClickEvent}>Login</Link></li>
+                            <li><Link className={pathname === '/gestao' ? styles.active : ''} href='/gestao' onClick={handleClickEvent}>Gestão</Link></li>
                         </div>
                     </ul>
                 </RevealX>

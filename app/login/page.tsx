@@ -7,7 +7,6 @@ import styles from './login.module.css'
 import BotaoForm from '@/components/form/botao/BotaoForm'
 import BotaoFormSec from '@/components/form/botao/BotaoFormSec'
 import RadioInput from '@/components/form/radio/RadioInput'
-import Link from 'next/link'
 import BotaoSocial from '@/components/form/botao/BotaoSocial'
 import google from '@/public/icons/googleicon.svg'
 import facebook from '@/public/icons/facebookicon.svg'
@@ -58,8 +57,6 @@ export default function Login() {
                 value={selectedValue}
                 onChange={handleRadioChange}
               />
-
-
               <Input type='password' nome='password' placeholder='Senha' />
               <BotaoForm type='submit' texto='Cadastrar' />
             </Formulario>

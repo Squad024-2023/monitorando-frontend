@@ -6,6 +6,7 @@ import Image from "next/image";
 import edit from '@/public/icons/edit-32-32.svg';
 import deleteI from '@/public/icons/delete-32-32.svg'
 import styles from '../gestao.module.css';
+import BotaoVoltar from '@/components/form/botaoVoltar/BotaoVoltar';
 
 type Turmas = {
     id: string;
@@ -112,6 +113,9 @@ export default function Turmas() {
                         ))}
                     </tbody>
                 </table>
+            </div>
+            <div className={styles.linksUteis}>
+                <BotaoVoltar />
             </div>
         </section>
     )

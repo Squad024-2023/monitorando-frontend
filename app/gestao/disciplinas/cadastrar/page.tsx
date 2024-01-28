@@ -6,6 +6,7 @@ import styles from '../../gestao.module.css';
 import Formulario from '@/components/form/Formulario';
 import Input from '@/components/form/input/Input';
 import BotaoForm from '@/components/form/botao/BotaoForm';
+import BotaoVoltar from '@/components/form/botaoVoltar/BotaoVoltar';
 
 type Disciplina = {
     nome: string;
@@ -53,6 +54,9 @@ export default function CadastrarDisciplinas() {
                     <Input type='text' nome='nome' placeholder='Nome' value={novaDisciplina.nome} onChange={handleInputChange} />
                     <BotaoForm type='submit' texto='Cadastrar' onClick={handleAddDisciplina} />
                 </Formulario>
+            </div>
+            <div className={styles.linksUteis}>
+                <BotaoVoltar />
             </div>
         </section>
     )
