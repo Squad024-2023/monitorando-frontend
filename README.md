@@ -1,7 +1,9 @@
 <img src="./public/github/logo-pink.png">
 
+<div>
 <div style="text-align: right;">
   <p>Seu sucesso acadêmico começa aqui! 🎓 </p>
+</div>
 </div>
 
 ## Índice
