@@ -2,6 +2,8 @@
 
 >  Seu sucesso acadêmico começa aqui! 🎓
 
+<br>
+
 ## Índice
 - <a href="#sobre-o-projeto"> Sobre o projeto </a>
 - <a href="#instalação"> Instalação </a>
