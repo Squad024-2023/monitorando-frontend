@@ -41,8 +41,8 @@ export default function EditarTurmas({ params }: { params: { id: any } }) {
     useEffect(() => {
         // Chamada GET para api de professores e alunos simultaneamente
         Promise.all([
-            axios.get('http://localhost:8080/professores'),
-            axios.get('http://localhost:8080/alunos'),
+            axios.get('https://monitorando-deploy.onrender.com/professores'),
+            axios.get('https://monitorando-deploy.onrender.com/alunos'),
         ])
             .then(([professoresResponse, alunosResponse]) => {
                 setProfessores(professoresResponse.data);
@@ -56,7 +56,7 @@ export default function EditarTurmas({ params }: { params: { id: any } }) {
     useEffect(() => {
         // Faça uma chamada GET para a API para obter detalhes da turma a ser atualizada
         axios
-            .get("http://localhost:8080/turmas/" + params.id)
+            .get("https://monitorando-deploy.onrender.com/turmas/" + params.id)
             .then((response) => {
                 setTurma(response.data);
             })
@@ -98,7 +98,7 @@ export default function EditarTurmas({ params }: { params: { id: any } }) {
 
         console.log(turma);
         axios
-            .put("http://localhost:8080/turmas/" + params.id, turma)
+            .put("https://monitorando-deploy.onrender.com/turmas/" + params.id, turma)
             .then((response) => {
                 alert("Turmas atualizado com sucesso!");
                 router.push('/gestao/turmas');

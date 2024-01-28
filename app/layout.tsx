@@ -19,6 +19,7 @@ export default function RootLayout({
   return (
     <html lang="pt">
       <body className={`${inter.variable} ${pacifico.variable} ${sunSeed.variable}`}>
+        
         <Nav />
         {children}
         <Footer />

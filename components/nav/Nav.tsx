@@ -1,6 +1,7 @@
 'use client'
 import { useState, useRef, useEffect } from 'react';
 import { usePathname } from 'next/navigation';
+import { motion } from 'framer-motion';
 import styles from './nav.module.css';
 import Link from 'next/link';
 import Logo from '../logo/Logo';
@@ -61,12 +62,20 @@ export default function Nav() {
       </button>
       <menu className={`${styles.menuNav} ${drop ? styles.hide : ''}`}>
 
-        <li><Link className={pathname === '/quem-somos' ? styles.active : ''} href='/quem-somos' onClick={handleLinkClick}>Quem Somos</Link></li>
-        <li><Link className={pathname === '/o-que-fazemos' ? styles.active : ''} href='/o-que-fazemos' onClick={handleLinkClick}>O Que Fazemos</Link></li>
-        <li><Link className={pathname === '/monitorias' ? styles.active : ''} href='/monitorias' onClick={handleLinkClick}>Monitorias</Link></li>
-        <li><Link className={pathname === '/login' ? styles.active : ''} href='/login' onClick={handleLinkClick}>Login</Link></li>
-        <li><Link className={pathname === '/gestao' ? styles.active : ''} href='/gestao' onClick={handleLinkClick}>Gestão</Link></li>
-        <li onClick={handleLinkClick}><Doar /></li>
+        <motion.li
+          variants={{
+            hidden: { opacity: 0, y: -20 },
+            visible: { opacity: 1, y: 0 },
+          }}
+          initial='hidden'
+          animate='visible'
+          transition={{ duration: 0.6, delay: 0.25 }}
+        ><Link className={pathname === '/quem-somos' ? styles.active : ''} href='/quem-somos' onClick={handleLinkClick}>Quem Somos</Link></motion.li>
+        <motion.li><Link className={pathname === '/o-que-fazemos' ? styles.active : ''} href='/o-que-fazemos' onClick={handleLinkClick}>O Que Fazemos</Link></motion.li>
+        <motion.li><Link className={pathname === '/monitorias' ? styles.active : ''} href='/monitorias' onClick={handleLinkClick}>Monitorias</Link></motion.li>
+        <motion.li><Link className={pathname === '/login' ? styles.active : ''} href='/login' onClick={handleLinkClick}>Login</Link></motion.li>
+        <motion.li><Link className={pathname === '/gestao' ? styles.active : ''} href='/gestao' onClick={handleLinkClick}>Gestão</Link></motion.li>
+        <motion.li onClick={handleLinkClick}><Doar /></motion.li>
 
       </menu>
     </nav>

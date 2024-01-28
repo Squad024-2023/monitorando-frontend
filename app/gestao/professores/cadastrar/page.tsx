@@ -43,7 +43,7 @@ export default function CadastrarProfessores() {
     useEffect(() => {
         // Faça uma chamada GET para a API Spring Boot
         axios
-            .get('http://localhost:8080/disciplinas')
+            .get('https://monitorando-deploy.onrender.com/disciplinas')
             .then((response) => {
                 setDisciplinas(response.data);
             })
@@ -71,7 +71,7 @@ export default function CadastrarProfessores() {
     const handleAddProfessor = (e: FormEvent) => {
         e.preventDefault(); // Previne o reload completo da página após o submit
         axios
-            .post("http://localhost:8080/professores", novoProfessor)
+            .post("https://monitorando-deploy.onrender.com/professores", novoProfessor)
             .then((response) => {
                 alert("Professor cadastrado com sucesso!");
                 router.push("/gestao/professores");

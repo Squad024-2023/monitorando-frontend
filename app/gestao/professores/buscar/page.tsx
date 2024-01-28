@@ -43,7 +43,7 @@ export default function BuscarProfessor() {
 
         console.log(professor);
         axios
-            .get(`http://localhost:8080/professores/${id}`)
+            .get(`https://monitorando-deploy.onrender.com/professores/${id}`)
             .then((response) => {
                 setProfessor(response.data);
             })

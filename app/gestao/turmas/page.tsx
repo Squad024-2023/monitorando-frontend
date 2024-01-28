@@ -27,7 +27,7 @@ export default function Turmas() {
     useEffect(() => {
         // Faça uma chamada GET para a API Spring Boot
         axios
-            .get('http://localhost:8080/turmas')
+            .get('https://monitorando-deploy.onrender.com/turmas')
             .then((response) => {
                 setTurmas(response.data);
                 console.log(response.data);
@@ -39,7 +39,7 @@ export default function Turmas() {
 
     const handleDeleteTurma = (id: string) => {
         axios
-            .delete(`http://localhost:8080/turmas/${id}`)
+            .delete(`https://monitorando-deploy.onrender.com/turmas/${id}`)
             .then((response) => {
                 alert("Turmas deletado com sucesso!");
                 // Atualizar o estado baseado no professor deletado

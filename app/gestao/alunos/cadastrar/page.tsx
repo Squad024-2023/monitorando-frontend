@@ -57,7 +57,7 @@ export default function CadastrarAlunoes() {
     useEffect(() => {
         // Faça uma chamada GET para a API Spring Boot
         axios
-            .get('http://localhost:8080/turmas')
+            .get('https://monitorando-deploy.onrender.com/turmas')
             .then((response) => {
                 setTurmas(response.data);
                 console.log(response.data);
@@ -71,7 +71,7 @@ export default function CadastrarAlunoes() {
     const handleAddAlunos = (e: FormEvent) => {
         event?.preventDefault();
         axios
-            .post("http://localhost:8080/alunos", novoAluno)
+            .post("https://monitorando-deploy.onrender.com/alunos", novoAluno)
             .then((response) => {
                 alert("Aluno cadastrado com sucesso!");
                 router.push("/gestao/alunos");
