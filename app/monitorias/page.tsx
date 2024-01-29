@@ -50,7 +50,7 @@ export default function Monitorias() {
     }
   }, [buscar]);
 
-  
+
   const [selectedValue, setSelectedValue] = useState('');
   const handleRadioChange = (event: ChangeEvent<HTMLInputElement>) => {
     setSelectedValue(event.target.value);
@@ -163,7 +163,7 @@ export default function Monitorias() {
           </div>
         </div>
       </section>
-      <section className={styles.section2}  id='monitorias'>
+      <section className={styles.section2} id='monitorias'>
         <div className={styles.tela2}>
           <h1>Monitorias mais Acessadas</h1>
           <div className={styles.cardWrapperTela2}>
